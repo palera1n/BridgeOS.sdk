@@ -1,0 +1,9 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/i18n/libiconv_none.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ __citrus_iconv_none_iconv_getops,
+                       __citrus_iconv_none_iconv_ops ]
+...

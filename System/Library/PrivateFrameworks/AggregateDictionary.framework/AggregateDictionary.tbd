@@ -1,0 +1,22 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/AggregateDictionary.framework/AggregateDictionary'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _ADClientAddValueForScalarKey,
+                       _ADClientBatchKeys,
+                       _ADClientCheckpoint,
+                       _ADClientClearDistributionKey,
+                       _ADClientClearScalarKey,
+                       _ADClientCommit,
+                       _ADClientIsEnabled,
+                       _ADClientPushValueForDistributionKey,
+                       _ADClientSetValueForDistributionKey,
+                       _ADClientSetValueForScalarKey,
+                       _ADClientSignificantTimeChanged,
+                       _ADDaysSince1970,
+                       _ADMonotonicTimeGetCurrent,
+                       _ADPushTimeIntervalForDistributionKeySinceStartTime,
+                       _ADPushTimeIntervalForDistributionKeyTimingBlock ]
+...

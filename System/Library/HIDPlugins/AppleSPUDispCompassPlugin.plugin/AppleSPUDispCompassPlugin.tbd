@@ -1,0 +1,27 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/HIDPlugins/AppleSPUDispCompassPlugin.plugin/AppleSPUDispCompassPlugin'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _AppleSPUDispCompassServicePluginFactory,
+                       __ZN25AppleSPUDispCompassPlugin11getPropertyEP14ServiceContextjPvmPm,
+                       __ZN25AppleSPUDispCompassPlugin11setPropertyEP14ServiceContextjPvm,
+                       __ZN25AppleSPUDispCompassPlugin13openInterfaceEP14ServiceContextP14__IOHIDService,
+                       __ZN25AppleSPUDispCompassPlugin14QueryInterfaceE11CFUUIDBytesPPv,
+                       __ZN25AppleSPUDispCompassPlugin14performCommandEP14ServiceContextjPvmS2_Pm,
+                       __ZN25AppleSPUDispCompassPlugin25getIOHIDServiceRegistryIDEP14__IOHIDService,
+                       __ZN25AppleSPUDispCompassPlugin4openEP14__IOHIDServicej,
+                       __ZN25AppleSPUDispCompassPlugin4vtblE,
+                       __ZN25AppleSPUDispCompassPlugin5allocEPK13__CFAllocator,
+                       __ZN25AppleSPUDispCompassPlugin5closeEP14__IOHIDServicej,
+                       __ZN25AppleSPUDispCompassPlugin5matchEP14__IOHIDServicej,
+                       __ZN25AppleSPUDispCompassPlugin6AddRefEv,
+                       __ZN25AppleSPUDispCompassPlugin6filterEP12__IOHIDEvent,
+                       __ZN25AppleSPUDispCompassPlugin7ReleaseEv,
+                       __ZN25AppleSPUDispCompassPluginC1EPK13__CFAllocator,
+                       __ZN25AppleSPUDispCompassPluginC2EPK13__CFAllocator,
+                       __ZN25AppleSPUDispCompassPluginD1Ev,
+                       __ZN25AppleSPUDispCompassPluginD2Ev,
+                       __ZN25AppleSPUDispCompassPlugindlEPv ]
+...

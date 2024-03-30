@@ -1,0 +1,24 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/libsysdiagnose.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_Libsysdiagnose,
+                       _OBJC_METACLASS_$_Libsysdiagnose,
+                       _metricCompression,
+                       _metricGetLogCopying,
+                       _metricGetLogGeneration,
+                       _metricGetOSLogArchive,
+                       _metricGetTimeSensitive,
+                       _metricLogCopying,
+                       _metricLogGeneration,
+                       _metricOSLogarchiveGeneration,
+                       _metricStartToTar,
+                       _metricTimeSensitive,
+                       _metricTotalSize,
+                       _sdProgressDiagnosticId,
+                       _sdProgressPercent,
+                       _sdProgressPhase ]    
+    objc-classes:    [ Libsysdiagnose ]
+...

@@ -1,0 +1,26 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/libPPM.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_IOKitUserClientInterface,
+                       _OBJC_CLASS_$_PPMClient,
+                       _OBJC_METACLASS_$_IOKitUserClientInterface,
+                       _OBJC_METACLASS_$_PPMClient,
+                       _clientNumberAlrt,
+                       _clientNumberBsbd,
+                       _clientNumberPlat,
+                       _clientNumberStck,
+                       _clientNumberWifi,
+                       _gNotifyPort,
+                       _kApplePPM ]    
+    objc-classes:    [ IOKitUserClientInterface,
+                       PPMClient ]    
+    objc-ivars:      [ IOKitUserClientInterface._attribute,
+                       IOKitUserClientInterface._connect,
+                       PPMClient.connect,
+                       PPMClient.identifier,
+                       PPMClient.userClient,
+                       PPMClient.version ]
+...

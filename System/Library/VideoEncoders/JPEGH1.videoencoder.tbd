@@ -1,0 +1,10 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/VideoEncoders/JPEGH1.videoencoder'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _H1JPEGEncoder_CheckExistence,
+                       _H1JPEGEncoder_CreateInstance,
+                       _JPEGH1EncoderRegister ]
+...

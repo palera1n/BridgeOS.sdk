@@ -1,0 +1,9 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/system/libsystem_featureflags.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ __os_feature_enabled_impl,
+                       __os_feature_enabled_simple_impl ]
+...

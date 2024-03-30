@@ -1,0 +1,39 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/Frameworks/AudioToolbox.framework/libEmbeddedSystemAUs.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _AUBandpassFactory,
+                       _AUConverterFactory,
+                       _AUDeferredRendererFactory,
+                       _AUDelayFactory,
+                       _AUDistortionFactory,
+                       _AUDynamicsProcessorFactory,
+                       _AUGenericOutputFactory,
+                       _AUHapticSynthFactory,
+                       _AUHighShelfFilterFactory,
+                       _AUHipassFactory,
+                       _AULopassFactory,
+                       _AULowShelfFilterFactory,
+                       _AUMatrixMixerFactory,
+                       _AUMatrixReverbLiteFactory,
+                       _AUMergerFactory,
+                       _AUMultiChannelMixerFactory,
+                       _AUMultiSplitterFactory,
+                       _AUNewPitchFactory,
+                       _AUNewTimePitchFactory,
+                       _AUNotQuiteSoSimpleTimeFactory,
+                       _AUParametricEQFactory,
+                       _AUPeakLimiterFactory,
+                       _AUPitchFactory,
+                       _AUSampleDelayFactory,
+                       _AUSimpleTimeFactory,
+                       _AUSpecialPurposeSweepFilterFactory,
+                       _AUSplitterFactory,
+                       _AUVarispeedFactory,
+                       _MIDISynthFactory,
+                       _RegisterAudioUnits_Instruments,
+                       _RegisterAudioUnits_Toolbox,
+                       _SamplerFactory ]
+...

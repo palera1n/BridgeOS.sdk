@@ -1,0 +1,44 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/CPMS.framework/CPMS'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _CPMSErrorDomain,
+                       _CPMSVersionNumber,
+                       _CPMSVersionString,
+                       _OBJC_CLASS_$_CPMSAgent,
+                       _OBJC_CLASS_$_CPMSClientDescription,
+                       _OBJC_CLASS_$_CPMSStateReader,
+                       _OBJC_METACLASS_$_CPMSAgent,
+                       _OBJC_METACLASS_$_CPMSClientDescription,
+                       _OBJC_METACLASS_$_CPMSStateReader,
+                       _kCPMSPowerTimeScale100ms,
+                       _kCPMSPowerTimeScale1s,
+                       _kCPMSPowerTimeScaleInstantaneous,
+                       _kCPMSPowerTimeScaleThermal,
+                       _kPPMBatteryModelStepBaseDurationStr,
+                       _kPPMBatteryModelStepBaseStr,
+                       _kPPMBatteryModelStepPulseDurationStr,
+                       _kPPMBatteryModelStepPulseStr,
+                       _kPPMBatteryModelStepSpikeDurationStr,
+                       _kPPMBatteryModelStepSpikeStr,
+                       _kPPMBatteryModelStepUVLODurationStr,
+                       _kPPMBatteryModelStepUVLOStr,
+                       _suppressAssert ]    
+    objc-classes:    [ CPMSAgent,
+                       CPMSClientDescription,
+                       CPMSStateReader ]    
+    objc-ivars:      [ CPMSAgent._clientSet,
+                       CPMSAgent._connect,
+                       CPMSAgent._notificationPort,
+                       CPMSAgent._notificationQueue,
+                       CPMSAgent._ppmService,
+                       CPMSAgent._timeScalesSet,
+                       CPMSClientDescription._clientId,
+                       CPMSClientDescription._getCurrentPower,
+                       CPMSClientDescription._isContinuous,
+                       CPMSClientDescription._notificationCallback,
+                       CPMSClientDescription._powerBudgetUpdateMinimumPeriod,
+                       CPMSClientDescription._powerLevels ]
+...

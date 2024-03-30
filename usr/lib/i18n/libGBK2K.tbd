@@ -1,0 +1,9 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/i18n/libGBK2K.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ __citrus_GBK2K_stdenc_getops,
+                       __citrus_GBK2K_stdenc_ops ]
+...

@@ -1,0 +1,40 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/LowPowerMode.framework/LowPowerMode'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$__PMCoreSmartPowerNap,
+                       _OBJC_CLASS_$__PMLowPowerMode,
+                       _OBJC_CLASS_$__PMSmartPowerNap,
+                       _OBJC_METACLASS_$__PMCoreSmartPowerNap,
+                       _OBJC_METACLASS_$__PMLowPowerMode,
+                       _OBJC_METACLASS_$__PMSmartPowerNap,
+                       _kPMCoreSmartPowerNapServiceName,
+                       _kPMLPMSourceControlCenter,
+                       _kPMLPMSourceLostMode,
+                       _kPMLPMSourceReenableBulletin,
+                       _kPMLPMSourceSettings,
+                       _kPMLPMSourceSiri,
+                       _kPMLPMSourceSpringBoardAlert,
+                       _kPMLPMSourceSystemDisable,
+                       _kPMLPMSourceWorkouts,
+                       _kPMLowPowerModeServiceName,
+                       _kPMSmartPowerNapServiceName ]    
+    objc-classes:    [ _PMCoreSmartPowerNap,
+                       _PMLowPowerMode,
+                       _PMSmartPowerNap ]    
+    objc-ivars:      [ _PMCoreSmartPowerNap._callback,
+                       _PMCoreSmartPowerNap._callback_queue,
+                       _PMCoreSmartPowerNap._connection,
+                       _PMCoreSmartPowerNap._connection_interrupted,
+                       _PMCoreSmartPowerNap._current_state,
+                       _PMCoreSmartPowerNap._identifier,
+                       _PMLowPowerMode._connection,
+                       _PMSmartPowerNap._callback,
+                       _PMSmartPowerNap._callback_queue,
+                       _PMSmartPowerNap._connection,
+                       _PMSmartPowerNap._connection_interrupted,
+                       _PMSmartPowerNap._current_state,
+                       _PMSmartPowerNap._identifier ]
+...

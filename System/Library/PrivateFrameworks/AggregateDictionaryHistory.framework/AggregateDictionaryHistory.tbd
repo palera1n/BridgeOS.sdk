@@ -1,0 +1,14 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/AggregateDictionaryHistory.framework/AggregateDictionaryHistory'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_ADHistory,
+                       _OBJC_CLASS_$_ADHistoryDistributionEnumerator,
+                       _OBJC_METACLASS_$_ADHistory,
+                       _OBJC_METACLASS_$_ADHistoryDistributionEnumerator ]    
+    objc-classes:    [ ADHistory,
+                       ADHistoryDistributionEnumerator ]    
+    objc-ivars:      [ ADHistory._path ]
+...

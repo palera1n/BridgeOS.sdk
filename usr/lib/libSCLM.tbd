@@ -1,0 +1,40 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/libSCLM.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _DERDecodeItem,
+                       _DERDecodeItemPartialBuffer,
+                       _DERDecodeItemPartialBufferGetLength,
+                       _DERDecodeSeqContentInit,
+                       _DERDecodeSeqInit,
+                       _DERDecodeSeqNext,
+                       _DERDecodeSequenceContentWithBlock,
+                       _DERDecodeSequenceWithBlock,
+                       _DERParseBitString,
+                       _DERParseBoolean,
+                       _DERParseBooleanWithDefault,
+                       _DERParseInteger,
+                       _DERParseInteger64,
+                       _DERParseSequence,
+                       _DERParseSequenceContent,
+                       _DERParseSequenceContentToObject,
+                       _DERParseSequenceToObject,
+                       _OBJC_CLASS_$_LibSCLM,
+                       _OBJC_CLASS_$_SLAMObjC,
+                       _OBJC_CLASS_$_ScriptInfo,
+                       _OBJC_METACLASS_$_LibSCLM,
+                       _OBJC_METACLASS_$_SLAMObjC,
+                       _OBJC_METACLASS_$_ScriptInfo,
+                       __ZN4SLAM4SLAM13PerformScriptENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEN3gsl8not_nullINS1_10shared_ptrINS_8SEHandleEEEEENS9_INSA_INS_7LogSinkEEEEE,
+                       __ZN4SLAM4SLAM13PerformScriptEyN3gsl8not_nullINSt3__110shared_ptrINS_8SEHandleEEEEENS2_INS4_INS_7LogSinkEEEEE,
+                       __ZN4SLAM4SLAM15PerformRecoveryEN3gsl8not_nullINSt3__110shared_ptrINS_8SEHandleEEEEENS2_INS4_INS_7LogSinkEEEEE ]    
+    objc-classes:    [ LibSCLM,
+                       SLAMObjC,
+                       ScriptInfo ]    
+    objc-ivars:      [ ScriptInfo._apduCount,
+                       ScriptInfo._scriptID,
+                       ScriptInfo._scriptName,
+                       ScriptInfo._scriptType ]
+...

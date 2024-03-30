@@ -1,0 +1,8 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libQuadrature.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _quadrature_integrate ]
+...

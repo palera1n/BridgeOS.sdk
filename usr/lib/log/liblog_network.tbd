@@ -1,0 +1,8 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/log/liblog_network.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OSLogCopyFormattedString ]
+...

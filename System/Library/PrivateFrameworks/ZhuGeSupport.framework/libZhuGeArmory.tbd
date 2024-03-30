@@ -1,0 +1,36 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/ZhuGeSupport.framework/libZhuGeArmory.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_ZhuGeArmory,
+                       _OBJC_CLASS_$_ZhuGeLockerArmory ]    
+    objc-classes:    [ ZhuGeArmory,
+                       ZhuGeArmoryHelperArmory,
+                       ZhuGeCacheArmory,
+                       ZhuGeKeysActionArmory,
+                       ZhuGeKeysConfigArmory,
+                       ZhuGeLockerArmory,
+                       ZhuGeModuleArmory,
+                       ZhuGeSingletonArmory ]    
+    objc-ivars:      [ ZhuGeArmory._actionClass,
+                       ZhuGeArmory._config,
+                       ZhuGeArmory._configClass,
+                       ZhuGeArmory._dependencyPath,
+                       ZhuGeArmory._helper,
+                       ZhuGeArmory._key,
+                       ZhuGeArmory._option,
+                       ZhuGeArmoryHelperArmory._aliasesMap,
+                       ZhuGeArmoryHelperArmory._flexibleList,
+                       ZhuGeArmoryHelperArmory._keysConfig,
+                       ZhuGeArmoryHelperArmory._propertiesCache,
+                       ZhuGeCacheArmory._cacheDict,
+                       ZhuGeCacheArmory._cacheList,
+                       ZhuGeCacheArmory._cacheType,
+                       ZhuGeCacheArmory._capacity,
+                       ZhuGeCacheArmory._name,
+                       ZhuGeCacheArmory.aRecursiveMutex,
+                       ZhuGeLockerArmory._logHandler,
+                       ZhuGeLockerArmory._xpcConnection ]
+...

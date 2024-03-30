@@ -1,0 +1,10 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/SignpostNotification.framework/SignpostNotification'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _EnableSignpostNotificationGeneration,
+                       _SignpostGetNewNotificationConnection,
+                       _SignpostNotificationSendNotificationSubscriptionRequestOnConnection ]
+...

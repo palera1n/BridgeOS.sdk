@@ -1,0 +1,12 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/CoreSpeechExclave.framework/CoreSpeechExclave'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _CoreSpeechExclaveVersionNumber,
+                       _CoreSpeechExclaveVersionString,
+                       _OBJC_CLASS_$_CSSecureSiriAudioProvidingProxy,
+                       _OBJC_METACLASS_$_CSSecureSiriAudioProvidingProxy ]    
+    objc-classes:    [ CSSecureSiriAudioProvidingProxy ]
+...

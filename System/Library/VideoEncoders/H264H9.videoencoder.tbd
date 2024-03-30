@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/VideoEncoders/H264H9.videoencoder'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _AVE_DEBUG_H264PrintWhereIAm,
+                       _AVE_DEBUG_H264SetCallback,
+                       _AVE_H264CreateInstance,
+                       _AVE_Log_CheckConsole,
+                       _AVE_Log_CheckLevel,
+                       _AVE_Log_GetLevelStr,
+                       _AVE_Log_Init,
+                       _AVE_Log_PresetCfg,
+                       _AVE_Log_ReadCfg,
+                       _AVE_Log_SetLevel,
+                       _AVE_RemoteSession_H264SetCallback,
+                       _H264H9EncoderRegister ]
+...

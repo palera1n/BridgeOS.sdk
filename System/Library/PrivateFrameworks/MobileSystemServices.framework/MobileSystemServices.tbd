@@ -1,0 +1,37 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/MobileSystemServices.framework/MobileSystemServices'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _MOCreateCFTypeFromSerializedBuffer,
+                       _MOCreateSerializedData,
+                       _MOLogClose,
+                       _MOLogEnableDiskLogging,
+                       _MOLogGetLogLevel,
+                       _MOLogOpen,
+                       _MOLogSetLogLevel,
+                       _MOLogWrite,
+                       _MOLogWriteV,
+                       _MOXPCTransportClose,
+                       _MOXPCTransportOpen,
+                       _MOXPCTransportReceiveMessage,
+                       _MOXPCTransportResume,
+                       _MOXPCTransportRunTransactionalTask,
+                       _MOXPCTransportSendMessage,
+                       _MOXPCTransportSendMessageOnConnection,
+                       _MOXPCTransportSetConnectionAuthHandler,
+                       _MOXPCTransportSetMessageHandler,
+                       _OBJC_CLASS_$_MOSplunkLogger ]    
+    objc-classes:    [ MOSplunkLogger ]    
+    objc-ivars:      [ MOSplunkLogger._allowInvalidCert,
+                       MOSplunkLogger._configurationURL,
+                       MOSplunkLogger._events,
+                       MOSplunkLogger._lastSuccessfulConfigurationLoad,
+                       MOSplunkLogger._path,
+                       MOSplunkLogger._queue,
+                       MOSplunkLogger._samplingPercentage,
+                       MOSplunkLogger._splunkTopic,
+                       MOSplunkLogger._splunkUploadURL,
+                       MOSplunkLogger._version ]
+...

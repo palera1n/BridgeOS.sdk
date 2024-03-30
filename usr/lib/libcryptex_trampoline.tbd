@@ -1,0 +1,11 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/libcryptex_trampoline.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _cryptex_trampoline_upgrade_wait,
+                       _cryptex_trampoline_upgrade_wait_options_create,
+                       _cryptex_trampoline_upgrade_wait_options_destroy,
+                       _cryptex_trampoline_upgrade_wait_options_set_cryptex_name ]
+...

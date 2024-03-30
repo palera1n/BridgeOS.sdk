@@ -1,0 +1,9 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/SoftLinking.framework/SoftLinking'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ __sl_dlopen,
+                       __sl_dlopen_audited ]
+...

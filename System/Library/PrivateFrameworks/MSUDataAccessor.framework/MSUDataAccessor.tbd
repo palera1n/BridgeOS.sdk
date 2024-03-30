@@ -1,0 +1,16 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/MSUDataAccessor.framework/MSUDataAccessor'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_MSUDataAccessor,
+                       _OBJC_METACLASS_$_MSUDataAccessor,
+                       _kMSUDAErrorDomain,
+                       _lookupPathForPersistentData,
+                       _lookupPathForPersonalizedData ]    
+    objc-classes:    [ MSUDataAccessor,
+                       MSUDataAccessorRestore,
+                       MSUDataAccessorSymbolicPathResolver ]    
+    objc-ivars:      [ MSUDataAccessorSymbolicPathResolver._overrides ]
+...

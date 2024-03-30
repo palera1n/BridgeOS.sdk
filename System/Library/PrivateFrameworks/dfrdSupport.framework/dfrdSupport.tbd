@@ -1,0 +1,28 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/dfrdSupport.framework/dfrdSupport'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _DFRSupportAddAnimation,
+                       _DFRSupportAddButton,
+                       _DFRSupportAddImage,
+                       _DFRSupportAddObject,
+                       _DFRSupportClientActivate,
+                       _DFRSupportClientCancel,
+                       _DFRSupportClientCopyProperty,
+                       _DFRSupportClientCreate,
+                       _DFRSupportClientSetProperty,
+                       _DFRSupportDropDatabase,
+                       _DFRSupportSendDebugCommand,
+                       _DFRSupportSetState,
+                       _DFRSupportStart,
+                       _DFRSupportStartWithDisconnectHandler,
+                       _DFRSupportStop,
+                       _DFRSupportUpdateScreen,
+                       _IsDFRSupported,
+                       _dfrdSupportVersionNumber,
+                       _dfrdSupportVersionString,
+                       _gDebug,
+                       _gStartTime ]
+...

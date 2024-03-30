@@ -1,0 +1,21 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/OSASubmissionClient.framework/OSASubmissionClient'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_OSASubmissionClient,
+                       _OBJC_CLASS_$_OSASubmissionClientOptions,
+                       _OBJC_CLASS_$_OSASubmissionScheduler,
+                       _OBJC_METACLASS_$_OSASubmissionClient,
+                       _OBJC_METACLASS_$_OSASubmissionClientOptions,
+                       _OBJC_METACLASS_$_OSASubmissionScheduler,
+                       _OSASubmissionClientVersionNumber,
+                       _OSASubmissionClientVersionString ]    
+    objc-classes:    [ OSASubmissionClient,
+                       OSASubmissionClientOptions,
+                       OSASubmissionScheduler ]    
+    objc-ivars:      [ OSASubmissionClient._connection,
+                       OSASubmissionClient._synchRemoteObjectProxy,
+                       OSASubmissionClientOptions._urgentSubmission ]
+...

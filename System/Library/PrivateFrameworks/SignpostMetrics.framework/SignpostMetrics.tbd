@@ -1,0 +1,11 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/SignpostMetrics.framework/SignpostMetrics'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_SignpostMetricsSnapshotter,
+                       _OBJC_METACLASS_$_SignpostMetricsSnapshotter,
+                       __MXSignpostMetricsSnapshot ]    
+    objc-classes:    [ SignpostMetricsSnapshotter ]
+...

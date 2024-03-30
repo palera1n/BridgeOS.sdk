@@ -1,0 +1,11 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/apfs_boot_mount.framework/apfs_boot_mount'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _abm_get_isc_device_node,
+                       _abm_get_isc_device_path,
+                       _abm_get_recovery_device_node,
+                       _abm_get_recovery_device_path ]
+...

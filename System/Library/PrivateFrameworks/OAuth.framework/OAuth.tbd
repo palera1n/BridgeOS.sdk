@@ -1,0 +1,45 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/OAuth.framework/OAuth'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ OBJC_IVAR_$_OACredential._consumerKey,
+                       OBJC_IVAR_$_OACredential._consumerSecret,
+                       OBJC_IVAR_$_OACredential._oauthToken,
+                       OBJC_IVAR_$_OACredential._oauthTokenSecret,
+                       OBJC_IVAR_$_OAURLRequestSigner._credential,
+                       OBJC_IVAR_$_OAURLRequestSigner._signatureMethod,
+                       _OAAuthTokenKey,
+                       _OAConsumerKeyKey,
+                       _OANonceKey,
+                       _OASignatureKey,
+                       _OASignatureMethodKey,
+                       _OATimestampKey,
+                       _OAVersionKey,
+                       _OBJC_CLASS_$_OACredential,
+                       _OBJC_CLASS_$_OAHMAC_SHA1Signer,
+                       _OBJC_CLASS_$_OAPlainTextSigner,
+                       _OBJC_CLASS_$_OAURLRequestSigner,
+                       _OBJC_IVAR_$_OACredential._consumerKey,
+                       _OBJC_IVAR_$_OACredential._consumerSecret,
+                       _OBJC_IVAR_$_OACredential._oauthToken,
+                       _OBJC_IVAR_$_OACredential._oauthTokenSecret,
+                       _OBJC_IVAR_$_OAURLRequestSigner._credential,
+                       _OBJC_IVAR_$_OAURLRequestSigner._signatureMethod,
+                       _OBJC_METACLASS_$_OACredential,
+                       _OBJC_METACLASS_$_OAHMAC_SHA1Signer,
+                       _OBJC_METACLASS_$_OAPlainTextSigner,
+                       _OBJC_METACLASS_$_OAURLRequestSigner,
+                       _oauth_version ]    
+    objc-classes:    [ OACredential,
+                       OAHMAC_SHA1Signer,
+                       OAPlainTextSigner,
+                       OAURLRequestSigner ]    
+    objc-ivars:      [ OACredential._consumerKey,
+                       OACredential._consumerSecret,
+                       OACredential._oauthToken,
+                       OACredential._oauthTokenSecret,
+                       OAURLRequestSigner._credential,
+                       OAURLRequestSigner._signatureMethod ]
+...

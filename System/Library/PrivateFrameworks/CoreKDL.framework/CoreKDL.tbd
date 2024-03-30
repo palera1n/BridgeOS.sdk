@@ -1,0 +1,28 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/CoreKDL.framework/CoreKDL'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_CoreKDL,
+                       _OBJC_CLASS_$_CoreKDLKext,
+                       _OBJC_METACLASS_$_CoreKDL,
+                       _OBJC_METACLASS_$_CoreKDLKext ]    
+    objc-classes:    [ CoreKDL,
+                       CoreKDLKext,
+                       KDLError,
+                       KDLIOKitClient,
+                       KDLLoggingStrings,
+                       KDLUtils,
+                       KDLXPCClient ]    
+    objc-ivars:      [ CoreKDL._notificationCallback,
+                       CoreKDL._notifyToken,
+                       CoreKDL._transport,
+                       CoreKDLKext._CDHash,
+                       CoreKDLKext._bundleID,
+                       CoreKDLKext._bundleIDHash,
+                       CoreKDLKext._teamID,
+                       CoreKDLKext._version,
+                       KDLIOKitClient._connect,
+                       KDLXPCClient._xpcConnection ]
+...

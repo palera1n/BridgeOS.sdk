@@ -1,0 +1,15 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/CoreCaptureControl.framework/CoreCaptureControl'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _CoreCaptureControlCapture,
+                       _CoreCaptureControlCaptureWithComponentDirectory,
+                       _CoreCaptureControlConfigurePipe,
+                       _CoreCaptureControlConfigureProfile,
+                       _CoreCaptureControlConfigureStream,
+                       _CoreCaptureControlCreate,
+                       _CoreCaptureControlStart,
+                       _CoreCaptureControlStop ]
+...

@@ -1,0 +1,35 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/libMacEFIManagerUC.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ __Z13UnicodeStrLenPKDs,
+                       __Z15mem_log_consolePK10__CFStringz,
+                       __Z17getNvramCmdStringh,
+                       __Z18getSignatureStringj,
+                       __Z20AsciiStrToUnicodeStrPKcPDsm,
+                       __Z20UnicodeStrToAsciiStrPKDsPcm,
+                       __Z20getSectionTypeString11SectionType,
+                       __Z25AsciiStrUnicodeStrComparePKcPKDs,
+                       __ZN26MacEFIManagerUserClientLib10getROMSizeEPm,
+                       __ZN26MacEFIManagerUserClientLib10nvramClearEPh,
+                       __ZN26MacEFIManagerUserClientLib14allowX86ToBootEv,
+                       __ZN26MacEFIManagerUserClientLib14getBaseROMHashEPvPj,
+                       __ZN26MacEFIManagerUserClientLib14getSectionSizeE11SectionTypePm,
+                       __ZN26MacEFIManagerUserClientLib15clearEventTokenEjiPNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE,
+                       __ZN26MacEFIManagerUserClientLib16InterestCallbackEPvjjS0_,
+                       __ZN26MacEFIManagerUserClientLib20getFirstBootDetectedEPb,
+                       __ZN26MacEFIManagerUserClientLib21createSectionSnapshotE11SectionTypePvPm,
+                       __ZN26MacEFIManagerUserClientLib22restoreSectionSnapshotE11SectionTypePvm,
+                       __ZN26MacEFIManagerUserClientLib23unregisterDispatchQueueEP16dispatch_queue_s,
+                       __ZN26MacEFIManagerUserClientLib24nvramGetVariableBridgeOSERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES7_RNS0_6vectorIhNS4_IhEEEE,
+                       __ZN26MacEFIManagerUserClientLib24nvramSetVariableBridgeOSERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES7_RKNS0_6vectorIhNS4_IhEEEE,
+                       __ZN26MacEFIManagerUserClientLib33registerCallbackWithDispatchQueueEPFv30MacEFIManagerNotificationEventjPvEP16dispatch_queue_sS1_,
+                       __ZN26MacEFIManagerUserClientLib38nvramSetVariableBridgeOSWithAttributesERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES7_RKNS0_6vectorIhNS4_IhEEEEj,
+                       __ZN26MacEFIManagerUserClientLib8initeSPIEPvjS0_j,
+                       __ZN26MacEFIManagerUserClientLibC1E21MacEFIManagerTaskType,
+                       __ZN26MacEFIManagerUserClientLibC2E21MacEFIManagerTaskType,
+                       __ZN26MacEFIManagerUserClientLibD1Ev,
+                       __ZN26MacEFIManagerUserClientLibD2Ev ]
+...

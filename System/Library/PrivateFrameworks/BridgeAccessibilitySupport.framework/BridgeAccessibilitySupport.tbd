@@ -1,0 +1,15 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/BridgeAccessibilitySupport.framework/BridgeAccessibilitySupport'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _BridgeAXGetSMCAudioPlaybackCodeFor,
+                       _BridgeAccessibilitySupportVersionNumber,
+                       _BridgeAccessibilitySupportVersionString,
+                       _OBJC_CLASS_$_BAXEFIAudioPlayback,
+                       _OBJC_METACLASS_$_BAXEFIAudioPlayback ]    
+    objc-classes:    [ BAXEFIAudioPlayback ]    
+    objc-ivars:      [ BAXEFIAudioPlayback.__spearkerMutedStateFromNotification,
+                       BAXEFIAudioPlayback._audioPlayer ]
+...

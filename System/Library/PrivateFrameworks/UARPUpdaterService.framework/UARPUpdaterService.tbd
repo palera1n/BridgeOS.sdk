@@ -1,0 +1,37 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/UARPUpdaterService.framework/UARPUpdaterService'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _OBJC_CLASS_$_UARPServiceUpdaterAccessoryMatchingRule,
+                       _OBJC_CLASS_$_UARPServiceUpdaterDASMatchingRule,
+                       _OBJC_CLASS_$_UARPServiceUpdaterMatchedEARule,
+                       _OBJC_CLASS_$_UARPServiceUpdaterMatchedIOKitRule,
+                       _OBJC_CLASS_$_UARPUpdaterServiceBase,
+                       _OBJC_CLASS_$_UARPUpdaterServicePreferences,
+                       _OBJC_METACLASS_$_UARPServiceUpdaterAccessoryMatchingRule,
+                       _OBJC_METACLASS_$_UARPServiceUpdaterDASMatchingRule,
+                       _OBJC_METACLASS_$_UARPServiceUpdaterMatchedEARule,
+                       _OBJC_METACLASS_$_UARPServiceUpdaterMatchedIOKitRule,
+                       _OBJC_METACLASS_$_UARPUpdaterServiceBase,
+                       _OBJC_METACLASS_$_UARPUpdaterServicePreferences,
+                       _UARPUpdaterServiceVersionNumber,
+                       _UARPUpdaterServiceVersionString ]    
+    objc-classes:    [ UARPServiceUpdaterAccessoryMatchingRule,
+                       UARPServiceUpdaterDASMatchingRule,
+                       UARPServiceUpdaterMatchedEARule,
+                       UARPServiceUpdaterMatchedIOKitRule,
+                       UARPUpdaterServiceBase,
+                       UARPUpdaterServicePreferences ]    
+    objc-ivars:      [ UARPServiceUpdaterAccessoryMatchingRule._identifier,
+                       UARPServiceUpdaterAccessoryMatchingRule._matchingDictionary,
+                       UARPServiceUpdaterAccessoryMatchingRule._xpcEventStream,
+                       UARPServiceUpdaterDASMatchingRule._identifier,
+                       UARPServiceUpdaterDASMatchingRule._matchingDictionary,
+                       UARPServiceUpdaterMatchedEARule._accessorySerialNumber,
+                       UARPServiceUpdaterMatchedEARule._eaIdentifier,
+                       UARPServiceUpdaterMatchedIOKitRule._identifier,
+                       UARPServiceUpdaterMatchedIOKitRule._registryEntryID,
+                       UARPUpdaterServicePreferences._domain ]
+...

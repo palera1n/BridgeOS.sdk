@@ -1,0 +1,9 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/usr/lib/i18n/libUTF8.dylib'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ __citrus_UTF8_stdenc_getops,
+                       __citrus_UTF8_stdenc_ops ]
+...

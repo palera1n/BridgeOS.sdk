@@ -1,0 +1,11 @@
+--- !tapi-tbd
+tbd-version:          4
+targets:              [ arm64-bridgeos ]
+install-name:         '/System/Library/PrivateFrameworks/BiometricSupport.framework/BiometricSupport'
+exports:
+  - targets:          [ arm64-bridgeos ]
+    symbols:          [ _MCDMExtractMessageData,
+                       ___osLog,
+                       ___osLogLatency,
+                       ___osLogTrace ]
+...
