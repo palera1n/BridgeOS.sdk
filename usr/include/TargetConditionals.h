@@ -529,6 +529,9 @@
     #define TARGET_OS_NANO              TARGET_OS_WATCH /* deprecated */
 #endif
 
-
+#define TARGET_OS_BRIDGE 1
+#define TARGET_OS_IPHONE 1
+#define TARGET_OS_OSX 0
+#define TARGET_OS_MACCATALYST 0
 
 #endif  /* __TARGETCONDITIONALS__ */
