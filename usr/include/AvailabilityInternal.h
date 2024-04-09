@@ -198,9 +198,6 @@
    #define __API_AVAILABLE_PLATFORM_tvos(x) tvos,introduced=x
    #define __API_DEPRECATED_PLATFORM_tvos(x,y) tvos,introduced=x,deprecated=y
    #define __API_UNAVAILABLE_PLATFORM_tvos tvos,unavailable
-   #define __API_AVAILABLE_PLATFORM_bridgeos(x) bridgeos,introduced=x
-   #define __API_DEPRECATED_PLATFORM_bridgeos(x,y) bridgeos,introduced=x,deprecated=y
-   #define __API_UNAVAILABLE_PLATFORM_bridgeos bridgeos,unavailable
    
    
    

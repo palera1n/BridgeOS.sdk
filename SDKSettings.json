@@ -84,7 +84,7 @@
             "DeviceFamilies": [
                 {
                     "Identifier": "5",
-                    "Name": "ibridge",
+                    "Name": "bridge",
                     "DisplayName": "iBridge"
                 }
             ],

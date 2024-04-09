@@ -8,6 +8,11 @@
 #if !0
 #import <Foundation/NSItemProvider.h>
 #endif
+
+#define TARGET_OS_BRIDGE 1
+#define TARGET_OS_OSX 0
+#define TARGET_OS_MACCATALYST 0
+
 #if TARGET_OS_OSX || TARGET_OS_MACCATALYST
 #import <Foundation/NSURLHandle.h>
 #endif
