@@ -529,9 +529,12 @@
     #define TARGET_OS_NANO              TARGET_OS_WATCH /* deprecated */
 #endif
 
-#define TARGET_OS_BRIDGE 1
-#define TARGET_OS_IPHONE 1
-#define TARGET_OS_OSX 0
-#define TARGET_OS_MACCATALYST 0
+#define TARGET_OS_MAC               1
+#define TARGET_OS_IPHONE            1
+#define TARGET_OS_IOS               0
+#define TARGET_OS_BRIDGE            1
+#define TARGET_OS_SIMULATOR         0
+#define TARGET_OS_UNIX              0
+#define DYNAMIC_TARGETS_ENABLED     0
 
 #endif  /* __TARGETCONDITIONALS__ */
