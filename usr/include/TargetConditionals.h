@@ -530,6 +530,8 @@
 #endif
 
 #define TARGET_OS_MAC               1
+#define TARGET_OS_OSX               0
+#define TARGET_OS_OSX_X86           0
 #define TARGET_OS_IPHONE            1
 #define TARGET_OS_IOS               0
 #define TARGET_OS_BRIDGE            1
