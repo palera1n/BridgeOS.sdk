@@ -199,7 +199,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 ///
 /// - Parameter resumeData: Resume data blob from an incomplete upload, such as data returned by the cancelByProducingResumeData: method.
 /// - Returns: A new session upload task, or nil if the resumeData is invalid.
-- (NSURLSessionUploadTask *)uploadTaskWithResumeData:(NSData *)resumeData API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+- (NSURLSessionUploadTask *)uploadTaskWithResumeData:(NSData *)resumeData API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 /* Creates an upload task with the given request.  The previously set body stream of the request (if any) is ignored and the URLSession:task:needNewBodyStream: delegate will be called when the body payload is required. */
 - (NSURLSessionUploadTask *)uploadTaskWithStreamedRequest:(NSURLRequest *)request;
@@ -224,19 +224,19 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 
 /* Creates a WebSocket task given the url. The given url must have a ws or wss scheme.
  */
-- (NSURLSessionWebSocketTask *)webSocketTaskWithURL:(NSURL *)url API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (NSURLSessionWebSocketTask *)webSocketTaskWithURL:(NSURL *)url API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* Creates a WebSocket task given the url and an array of protocols. The protocols will be used in the WebSocket handshake to
  * negotiate a preferred protocol with the server
  * Note - The protocol will not affect the WebSocket framing. More details on the protocol can be found by reading the WebSocket RFC
  */
-- (NSURLSessionWebSocketTask *)webSocketTaskWithURL:(NSURL *)url protocols:(NSArray<NSString *>*)protocols API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (NSURLSessionWebSocketTask *)webSocketTaskWithURL:(NSURL *)url protocols:(NSArray<NSString *>*)protocols API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* Creates a WebSocket task given the request. The request properties can be modified and will be used by the task during the HTTP handshake phase.
  * Clients who want to add custom protocols can do so by directly adding headers with the key Sec-WebSocket-Protocol
  * and a comma separated list of protocols they wish to negotiate with the server. The custom HTTP headers provided by the client will remain unchanged for the handshake with the server.
  */
-- (NSURLSessionWebSocketTask *)webSocketTaskWithRequest:(NSURLRequest *)request API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (NSURLSessionWebSocketTask *)webSocketTaskWithRequest:(NSURLRequest *)request API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 
 - (instancetype)init API_DEPRECATED("Please use +[NSURLSession sessionWithConfiguration:] or other class methods to create instances", macos(10.9,10.15), ios(7.0,13.0), watchos(2.0,6.0), tvos(9.0,13.0));
@@ -277,7 +277,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 /// - Parameter resumeData: Resume data blob from an incomplete upload, such as data returned by the cancelByProducingResumeData: method.
 /// - Parameter completionHandler: The completion handler to call when the load request is complete.
 /// - Returns: A new session upload task, or nil if the resumeData is invalid.
-- (NSURLSessionUploadTask *)uploadTaskWithResumeData:(NSData *)resumeData completionHandler:(void (NS_SWIFT_SENDABLE ^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+- (NSURLSessionUploadTask *)uploadTaskWithResumeData:(NSData *)resumeData completionHandler:(void (NS_SWIFT_SENDABLE ^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 /*
  * download task convenience methods.  When a download successfully
@@ -319,13 +319,13 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
  * Delegate is strongly referenced until the task completes, after which it is
  * reset to `nil`.
  */
-@property (nullable, retain) id <NSURLSessionTaskDelegate> delegate API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+@property (nullable, retain) id <NSURLSessionTaskDelegate> delegate API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /*
  * NSProgress object which represents the task progress.
  * It can be used for task progress tracking.
  */
-@property (readonly, strong) NSProgress *progress API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly, strong) NSProgress *progress API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*
  * Start the network load for this task no earlier than the specified date. If
@@ -334,15 +334,15 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
  * Only applies to tasks created from background NSURLSession instances; has no
  * effect for tasks created from other session types.
  */
-@property (nullable, copy) NSDate *earliestBeginDate API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nullable, copy) NSDate *earliestBeginDate API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*
  * The number of bytes that the client expects (a best-guess upper-bound) will
  * be sent and received by this task. These values are used by system scheduling
  * policy. If unspecified, NSURLSessionTransferSizeUnknown is used.
  */
-@property int64_t countOfBytesClientExpectsToSend API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
-@property int64_t countOfBytesClientExpectsToReceive API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property int64_t countOfBytesClientExpectsToSend API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
+@property int64_t countOfBytesClientExpectsToReceive API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 
 /* Byte count properties may be zero if no body is expected, 
@@ -470,7 +470,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 /// https://datatracker.ietf.org/doc/draft-ietf-httpbis-resumable-upload/
 ///
 /// - Parameter completionHandler: The completion handler to call when the upload has been successfully canceled.
-- (void)cancelByProducingResumeData:(void (NS_SWIFT_SENDABLE ^)(NSData * _Nullable resumeData))completionHandler API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+- (void)cancelByProducingResumeData:(void (NS_SWIFT_SENDABLE ^)(NSData * _Nullable resumeData))completionHandler API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 @end
 
@@ -583,14 +583,14 @@ API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0))
 typedef NS_ENUM(NSInteger, NSURLSessionWebSocketMessageType) {
     NSURLSessionWebSocketMessageTypeData = 0,
     NSURLSessionWebSocketMessageTypeString = 1,
-} API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+} API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* The client can create a WebSocket message object that will be passed to the send calls
  * and will be delivered from the receive calls. The message can be initialized with data or string.
  * If initialized with data, the string property will be nil and vice versa.
  */
 NS_SWIFT_SENDABLE
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 @interface NSURLSessionWebSocketMessage : NSObject
 
 /* Create a message with data type
@@ -628,7 +628,7 @@ typedef NS_ENUM(NSInteger, NSURLSessionWebSocketCloseCode)
     NSURLSessionWebSocketCloseCodeMandatoryExtensionMissing =        1010,
     NSURLSessionWebSocketCloseCodeInternalServerError =              1011,
     NSURLSessionWebSocketCloseCodeTLSHandshakeFailure =              1015,
-} API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+} API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * A WebSocket task can be created with a ws or wss url. A client can also provide
@@ -641,7 +641,7 @@ typedef NS_ENUM(NSInteger, NSURLSessionWebSocketCloseCode)
  * outgoing HTTP handshake requests.
  */
 NS_SWIFT_SENDABLE
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 @interface NSURLSessionWebSocketTask : NSURLSessionTask
 
 /* Sends a WebSocket message. If an error occurs, any outstanding work will also fail.
@@ -753,13 +753,13 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 @property BOOL allowsCellularAccess;
 
 /* allow request to route over expensive networks.  Defaults to YES. */
-@property BOOL allowsExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property BOOL allowsExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* allow request to route over networks in constrained mode. Defaults to YES. */
-@property BOOL allowsConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property BOOL allowsConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* requires requests from the session to be made with DNSSEC validation enabled. Defaults to NO. */
-@property BOOL requiresDNSSECValidation API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+@property BOOL requiresDNSSECValidation API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*
  * Causes tasks to wait for network connectivity to become available, rather
@@ -775,7 +775,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
  * Default value is NO. Ignored by background sessions, as background sessions
  * always wait for connectivity.
  */
-@property BOOL waitsForConnectivity API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property BOOL waitsForConnectivity API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /* allows background tasks to be scheduled at the discretion of the system for optimal performance. */
 @property (getter=isDiscretionary) BOOL discretionary API_AVAILABLE(macos(10.10), ios(7.0), watchos(2.0), tvos(9.0));
@@ -805,10 +805,10 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 @property SSLProtocol TLSMaximumSupportedProtocol API_DEPRECATED_WITH_REPLACEMENT("TLSMaximumSupportedProtocolVersion", macos(10.9, API_TO_BE_DEPRECATED), ios(7.0, API_TO_BE_DEPRECATED), watchos(2.0, API_TO_BE_DEPRECATED), tvos(9.0, API_TO_BE_DEPRECATED));
 
 /* The minimum allowable versions of the TLS protocol, from <Security/SecProtocolTypes.h> */
-@property tls_protocol_version_t TLSMinimumSupportedProtocolVersion API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property tls_protocol_version_t TLSMinimumSupportedProtocolVersion API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* The maximum allowable versions of the TLS protocol, from <Security/SecProtocolTypes.h> */
-@property tls_protocol_version_t TLSMaximumSupportedProtocolVersion API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property tls_protocol_version_t TLSMaximumSupportedProtocolVersion API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* Allow the use of HTTP pipelining */
 @property BOOL HTTPShouldUsePipelining;
@@ -867,7 +867,7 @@ typedef NS_ENUM(NSInteger, NSURLSessionDelayedRequestDisposition) {
     NSURLSessionDelayedRequestContinueLoading = 0,  /* Use the original request provided when the task was created; the request parameter is ignored. */
     NSURLSessionDelayedRequestUseNewRequest = 1,    /* Use the specified request, which may not be nil. */
     NSURLSessionDelayedRequestCancel = 2,           /* Cancel the task; the request parameter is ignored. */
-} NS_SWIFT_NAME(URLSession.DelayedRequestDisposition) API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+} NS_SWIFT_NAME(URLSession.DelayedRequestDisposition) API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 typedef NS_ENUM(NSInteger, NSURLSessionAuthChallengeDisposition) {
     NSURLSessionAuthChallengeUseCredential = 0,                                       /* Use the specified credential, which may be nil */
@@ -942,7 +942,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
  * invoked synchronously before the task creation method returns.
  */
 - (void)URLSession:(NSURLSession *)session didCreateTask:(NSURLSessionTask *)task
-    API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+    API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*
  * Sent when the system is ready to begin work for a task with a delayed start
@@ -969,7 +969,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
                         willBeginDelayedRequest:(NSURLRequest *)request
                               completionHandler:(void (NS_SWIFT_SENDABLE ^)(NSURLSessionDelayedRequestDisposition disposition, NSURLRequest * _Nullable newRequest))completionHandler
-    API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+    API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*
  * Sent when a task cannot start the network loading process because the current
@@ -983,7 +983,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
  * the waitForConnectivity property is ignored by those sessions.
  */
 - (void)URLSession:(NSURLSession *)session taskIsWaitingForConnectivity:(NSURLSessionTask *)task
-    API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+    API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /* An HTTP request is attempting to perform a redirection to a different
  * URL. You must invoke the completion routine to allow the
@@ -1024,7 +1024,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 /// - Parameter completionHandler: A completion handler that your delegate method should call with the new body stream.
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
                     needNewBodyStreamFromOffset:(int64_t)offset
-                              completionHandler:(void (NS_SWIFT_SENDABLE ^)(NSInputStream * _Nullable bodyStream))completionHandler NS_SWIFT_NAME(urlSession(_:task:needNewBodyStreamFrom:completionHandler:)) NS_SWIFT_ASYNC_NAME(urlSession(_:needNewBodyStreamForTask:from:)) API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+                              completionHandler:(void (NS_SWIFT_SENDABLE ^)(NSInputStream * _Nullable bodyStream))completionHandler NS_SWIFT_NAME(urlSession(_:task:needNewBodyStreamFrom:completionHandler:)) NS_SWIFT_ASYNC_NAME(urlSession(_:needNewBodyStreamForTask:from:)) API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 /* Sent periodically to notify the delegate of upload progress.  This
  * information is also available as properties of the task.
@@ -1036,7 +1036,7 @@ API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0))
 
 /* Sent for each informational response received except 101 switching protocols.
  */
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveInformationalResponse:(NSHTTPURLResponse *)response API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveInformationalResponse:(NSHTTPURLResponse *)response API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 /*
  * Sent when complete statistics information has been collected for the task.
@@ -1187,7 +1187,7 @@ API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0))
 
 @end
 
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 @protocol NSURLSessionWebSocketDelegate <NSURLSessionTaskDelegate>
 @optional
 
@@ -1208,7 +1208,7 @@ API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
 FOUNDATION_EXPORT NSString * const NSURLSessionDownloadTaskResumeData API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0));
 
 /// Key in the userInfo dictionary of an NSError received during a failed upload.
-FOUNDATION_EXPORT NSString * const NSURLSessionUploadTaskResumeData API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+FOUNDATION_EXPORT NSString * const NSURLSessionUploadTaskResumeData API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 @interface NSURLSessionConfiguration (NSURLSessionDeprecated)
 + (NSURLSessionConfiguration *)backgroundSessionConfiguration:(NSString *)identifier API_DEPRECATED_WITH_REPLACEMENT("-backgroundSessionConfigurationWithIdentifier:", macos(10.9, 10.10), ios(7.0, 8.0), watchos(2.0, 2.0), tvos(9.0, 9.0));
@@ -1233,7 +1233,7 @@ typedef NS_ENUM(NSInteger, NSURLSessionTaskMetricsDomainResolutionProtocol) {
     NSURLSessionTaskMetricsDomainResolutionProtocolTCP,     /* Resolution used DNS over TCP. */
     NSURLSessionTaskMetricsDomainResolutionProtocolTLS,     /* Resolution used DNS over TLS. */
     NSURLSessionTaskMetricsDomainResolutionProtocolHTTPS,   /* Resolution used DNS over HTTPS. */
-} API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+} API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*
  * This class defines the performance metrics collected for a request/response transaction during the task execution.
@@ -1367,34 +1367,34 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
 /*
  * countOfRequestHeaderBytesSent is the number of bytes transferred for request header.
  */
-@property (readonly) int64_t countOfRequestHeaderBytesSent API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) int64_t countOfRequestHeaderBytesSent API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * countOfRequestBodyBytesSent is the number of bytes transferred for request body.
  * It includes protocol-specific framing, transfer encoding, and content encoding.
  */
-@property (readonly) int64_t countOfRequestBodyBytesSent API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) int64_t countOfRequestBodyBytesSent API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * countOfRequestBodyBytesBeforeEncoding is the size of upload body data, file, or stream.
  */
-@property (readonly) int64_t countOfRequestBodyBytesBeforeEncoding API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) int64_t countOfRequestBodyBytesBeforeEncoding API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * countOfResponseHeaderBytesReceived is the number of bytes transferred for response header.
  */
-@property (readonly) int64_t countOfResponseHeaderBytesReceived API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) int64_t countOfResponseHeaderBytesReceived API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * countOfResponseBodyBytesReceived is the number of bytes transferred for response header.
  * It includes protocol-specific framing, transfer encoding, and content encoding.
  */
-@property (readonly) int64_t countOfResponseBodyBytesReceived API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) int64_t countOfResponseBodyBytesReceived API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * countOfResponseBodyBytesAfterDecoding is the size of data delivered to your delegate or completion handler.
  */
-@property (readonly) int64_t countOfResponseBodyBytesAfterDecoding API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) int64_t countOfResponseBodyBytesAfterDecoding API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * localAddress is the IP address string of the local interface for the connection.
@@ -1403,7 +1403,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
  *
  * If a connection was not used, this attribute is set to nil.
  */
-@property (nullable, copy, readonly) NSString *localAddress API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, copy, readonly) NSString *localAddress API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * localPort is the port number of the local interface for the connection.
@@ -1412,7 +1412,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
  *
  * If a connection was not used, this attribute is set to nil.
  */
-@property (nullable, copy, readonly) NSNumber *localPort API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, copy, readonly) NSNumber *localPort API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * remoteAddress is the IP address string of the remote interface for the connection.
@@ -1421,7 +1421,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
  *
  * If a connection was not used, this attribute is set to nil.
  */
-@property (nullable, copy, readonly) NSString *remoteAddress API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, copy, readonly) NSString *remoteAddress API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * remotePort is the port number of the remote interface for the connection.
@@ -1430,7 +1430,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
  *
  * If a connection was not used, this attribute is set to nil.
  */
-@property (nullable, copy, readonly) NSNumber *remotePort API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, copy, readonly) NSNumber *remotePort API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * negotiatedTLSProtocolVersion is the TLS protocol version negotiated for the connection.
@@ -1440,7 +1440,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
  *
  * If an encrypted connection was not used, this attribute is set to nil.
  */
-@property (nullable, copy, readonly) NSNumber *negotiatedTLSProtocolVersion API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, copy, readonly) NSNumber *negotiatedTLSProtocolVersion API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * negotiatedTLSCipherSuite is the TLS cipher suite negotiated for the connection.
@@ -1450,32 +1450,32 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
  *
  * If an encrypted connection was not used, this attribute is set to nil.
  */
-@property (nullable, copy, readonly) NSNumber *negotiatedTLSCipherSuite API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, copy, readonly) NSNumber *negotiatedTLSCipherSuite API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * Whether the connection is established over a cellular interface.
  */
-@property (readonly, getter=isCellular) BOOL cellular API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly, getter=isCellular) BOOL cellular API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * Whether the connection is established over an expensive interface.
  */
-@property (readonly, getter=isExpensive) BOOL expensive API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly, getter=isExpensive) BOOL expensive API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * Whether the connection is established over a constrained interface.
  */
-@property (readonly, getter=isConstrained) BOOL constrained API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly, getter=isConstrained) BOOL constrained API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * Whether a multipath protocol is successfully negotiated for the connection.
  */
-@property (readonly, getter=isMultipath) BOOL multipath API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly, getter=isMultipath) BOOL multipath API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  * DNS protocol used for domain resolution.
  */
-@property (readonly) NSURLSessionTaskMetricsDomainResolutionProtocol domainResolutionProtocol API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+@property (readonly) NSURLSessionTaskMetricsDomainResolutionProtocol domainResolutionProtocol API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 
 - (instancetype)init API_DEPRECATED("Not supported", macos(10.12,10.15), ios(10.0,13.0), watchos(3.0,6.0), tvos(10.0,13.0));

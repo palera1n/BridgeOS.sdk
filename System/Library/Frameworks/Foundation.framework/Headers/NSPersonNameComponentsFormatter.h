@@ -50,7 +50,7 @@ API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0))
 
 /* Specifies the locale to format names. Defaults to autoupdatingCurrentLocale. Also resets to autoupdatingCurrentLocale on assignment of nil.
  */
-@property (null_resettable, copy) NSLocale *locale API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+@property (null_resettable, copy) NSLocale *locale API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /* Shortcut for converting an NSPersonNameComponents object into a string without explicitly creating an instance.
     Create an instance for greater customizability.

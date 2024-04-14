@@ -20,7 +20,7 @@ typedef NSString *AVAudioSessionPort NS_STRING_ENUM;
 
 /* input port types */
 /// Continuity microphone for appletv.
-OS_EXPORT AVAudioSessionPort const AVAudioSessionPortContinuityMicrophone API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionPort const AVAudioSessionPortContinuityMicrophone API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
 /// Line level input on a dock connector
 OS_EXPORT AVAudioSessionPort const AVAudioSessionPortLineIn      		API_AVAILABLE(ios(6.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos);
 /// Built-in microphone on an iOS device
@@ -67,22 +67,22 @@ OS_EXPORT AVAudioSessionPort const AVAudioSessionPortUSBAudio     		API_AVAILABL
 OS_EXPORT AVAudioSessionPort const AVAudioSessionPortCarAudio     		API_AVAILABLE(ios(7.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos);
 
 /// Input or output that does not correspond to real audio hardware
-OS_EXPORT AVAudioSessionPort const AVAudioSessionPortVirtual            API_AVAILABLE(ios(14.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionPort const AVAudioSessionPortVirtual            API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
 
 /// Input or output connected via the PCI (Peripheral Component Interconnect) bus
-OS_EXPORT AVAudioSessionPort const AVAudioSessionPortPCI                API_AVAILABLE(ios(14.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionPort const AVAudioSessionPortPCI                API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
 
 /// Input or output connected via FireWire
-OS_EXPORT AVAudioSessionPort const AVAudioSessionPortFireWire           API_AVAILABLE(ios(14.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionPort const AVAudioSessionPortFireWire           API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
 
 /// Input or output connected via DisplayPort
-OS_EXPORT AVAudioSessionPort const AVAudioSessionPortDisplayPort        API_AVAILABLE(ios(14.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionPort const AVAudioSessionPortDisplayPort        API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
 
 /// Input or output connected via AVB (Audio Video Bridging)
-OS_EXPORT AVAudioSessionPort const AVAudioSessionPortAVB                API_AVAILABLE(ios(14.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionPort const AVAudioSessionPortAVB                API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
 
 /// Input or output connected via Thunderbolt
-OS_EXPORT AVAudioSessionPort const AVAudioSessionPortThunderbolt        API_AVAILABLE(ios(14.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionPort const AVAudioSessionPortThunderbolt        API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
 
 #pragma mark -- audio session categories --
 
@@ -175,7 +175,7 @@ OS_EXPORT AVAudioSessionMode const AVAudioSessionModeSpokenAudio API_AVAILABLE(i
  connected to certain audio devices such as CarPlay. An example of an app that would use this mode is a turn by turn navigation app that
  plays short prompts to the user. Typically, these same types of applications would also configure their session to use
  AVAudioSessionCategoryOptionDuckOthers and AVAudioSessionCategoryOptionInterruptSpokenAudioAndMixWithOthers */
-OS_EXPORT AVAudioSessionMode const AVAudioSessionModeVoicePrompt API_AVAILABLE(ios(12.0), watchos(5.0), tvos(12.0)) API_UNAVAILABLE(macos);
+OS_EXPORT AVAudioSessionMode const AVAudioSessionModeVoicePrompt API_AVAILABLE(ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0)) API_UNAVAILABLE(macos);
 
 #pragma mark-- enumerations --
 
@@ -427,7 +427,7 @@ typedef NS_ENUM(NSUInteger, AVAudioSessionInterruptionReason) {
     AVAudioSessionInterruptionReasonSceneWasBackgrounded = 3,
 #endif // TARGET_OS_XR
     ///The audio session was interrupted because route was disconnected.
-    AVAudioSessionInterruptionReasonRouteDisconnected API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos) = 4
+    AVAudioSessionInterruptionReasonRouteDisconnected API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos) = 4
 } NS_SWIFT_NAME(AVAudioSession.InterruptionReason);
 
 ///  options for use when calling setActive:withOptions:error:

@@ -143,7 +143,7 @@ CV_EXPORT void CVPixelFormatDescriptionRegisterDescriptionWithPixelFormatType(CF
 	@param      pixelFormatType compressed pixel format.
 	@result     True if pixel format is supported on the current platform.
 */
-CV_EXPORT Boolean CVIsCompressedPixelFormatAvailable( OSType pixelFormatType ) API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0));
+CV_EXPORT Boolean CVIsCompressedPixelFormatAvailable( OSType pixelFormatType ) API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0));
 
 #if COREVIDEO_SUPPORTS_DIRECT3D
 CV_EXPORT const CFStringRef CV_NONNULL kCVPixelFormatDirect3DFormat;

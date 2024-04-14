@@ -16,7 +16,7 @@ FOUNDATION_EXPORT NSValueTransformerName const NSIsNotNilTransformerName	API_AVA
 
 FOUNDATION_EXPORT NSValueTransformerName const NSUnarchiveFromDataTransformerName       API_DEPRECATED_WITH_REPLACEMENT("NSSecureUnarchiveFromDataTransformerName", macos(10.3, 10.14), ios(3.0, 12.0), watchos(2.0, 5.0), tvos(9.0, 12.0));
 FOUNDATION_EXPORT NSValueTransformerName const NSKeyedUnarchiveFromDataTransformerName  API_DEPRECATED_WITH_REPLACEMENT("NSSecureUnarchiveFromDataTransformerName", macos(10.3, 10.14), ios(3.0, 12.0), watchos(2.0, 5.0), tvos(9.0, 12.0));
-FOUNDATION_EXPORT NSValueTransformerName const NSSecureUnarchiveFromDataTransformerName API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0));
+FOUNDATION_EXPORT NSValueTransformerName const NSSecureUnarchiveFromDataTransformerName API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0));
 
 API_AVAILABLE(macos(10.3), ios(3.0), watchos(2.0), tvos(9.0))
 @interface NSValueTransformer : NSObject {
@@ -38,7 +38,7 @@ API_AVAILABLE(macos(10.3), ios(3.0), watchos(2.0), tvos(9.0))
 @end
 
 /// A value transformer which transforms values to and from \c NSData by archiving and unarchiving using secure coding.
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 @interface NSSecureUnarchiveFromDataTransformer : NSValueTransformer
 
 /// The list of allowable classes which the top-level object in the archive must conform to on encoding and decoding.

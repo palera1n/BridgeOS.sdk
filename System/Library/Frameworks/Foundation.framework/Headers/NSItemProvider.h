@@ -16,21 +16,21 @@ NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 typedef NS_ENUM(NSInteger, NSItemProviderRepresentationVisibility) {
     NSItemProviderRepresentationVisibilityAll = 0,                                  // All processes can see this representation
     NSItemProviderRepresentationVisibilityTeam                                      // Only processes from the same dev team can see this representation
-    API_AVAILABLE(ios(11.0), watchos(4.0), tvos(11.0)) API_UNAVAILABLE(macos) = 1,
+    API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) API_UNAVAILABLE(macos) = 1,
     NSItemProviderRepresentationVisibilityGroup                                     // Only processes from the same group can see this representation
     API_AVAILABLE(macos(10.13)) API_UNAVAILABLE(ios, watchos, tvos) = 2 ,
     NSItemProviderRepresentationVisibilityOwnProcess = 3,                           // Ony the originator's process can see this representation
-} API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+} API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 
 // The default behavior is to copy files.
 typedef NS_OPTIONS(NSInteger, NSItemProviderFileOptions) {
     NSItemProviderFileOptionOpenInPlace = 1,
-} API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+} API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 
 // This protocol allows a class to export its data to a variety of binary representations.
-API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0))
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0))
 @protocol NSItemProviderWriting <NSObject>
 
 @property (class, NS_NONATOMIC_IOSONLY, readonly, copy) NSArray<NSString *> *writableTypeIdentifiersForItemProvider;
@@ -54,7 +54,7 @@ API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0))
 
 
 // This protocol allows a class to be constructed from a variety of binary representations.
-API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0))
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0))
 @protocol NSItemProviderReading <NSObject>
 
 @property (class, NS_NONATOMIC_IOSONLY, readonly, copy) NSArray<NSString *> *readableTypeIdentifiersForItemProvider;
@@ -87,7 +87,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 // Registers a data-backed representation.
 - (void)registerDataRepresentationForTypeIdentifier:(NSString *)typeIdentifier
                                          visibility:(NSItemProviderRepresentationVisibility)visibility
-                                        loadHandler:(NSProgress * _Nullable (NS_SWIFT_SENDABLE ^)(void (NS_SWIFT_SENDABLE ^completionHandler)(NSData * _Nullable data, NSError * _Nullable error)))loadHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                                        loadHandler:(NSProgress * _Nullable (NS_SWIFT_SENDABLE ^)(void (NS_SWIFT_SENDABLE ^completionHandler)(NSData * _Nullable data, NSError * _Nullable error)))loadHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Registers a file-backed representation.
 // Set `coordinated` to YES if the returned file must be accessed using NSFileCoordinator.
@@ -95,7 +95,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 - (void)registerFileRepresentationForTypeIdentifier:(NSString *)typeIdentifier
                                         fileOptions:(NSItemProviderFileOptions)fileOptions
                                          visibility:(NSItemProviderRepresentationVisibility)visibility
-                                        loadHandler:(NSProgress * _Nullable (NS_SWIFT_SENDABLE ^)(void (NS_SWIFT_SENDABLE ^completionHandler)(NSURL * _Nullable url, BOOL coordinated, NSError * _Nullable error)))loadHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                                        loadHandler:(NSProgress * _Nullable (NS_SWIFT_SENDABLE ^)(void (NS_SWIFT_SENDABLE ^completionHandler)(NSURL * _Nullable url, BOOL coordinated, NSError * _Nullable error)))loadHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 
 #pragma mark Consumer
@@ -104,26 +104,26 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 // Returns the list of registered type identifiers, in the order they were registered.
 @property (copy, readonly, atomic) NSArray<NSString *> *registeredTypeIdentifiers;
 
-- (NSArray<NSString *> *)registeredTypeIdentifiersWithFileOptions:(NSItemProviderFileOptions)fileOptions API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (NSArray<NSString *> *)registeredTypeIdentifiersWithFileOptions:(NSItemProviderFileOptions)fileOptions API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Returns YES if the item provider has at least one item that conforms to the supplied type identifier.
 - (BOOL)hasItemConformingToTypeIdentifier:(NSString *)typeIdentifier;
 
 - (BOOL)hasRepresentationConformingToTypeIdentifier:(NSString *)typeIdentifier
-                                        fileOptions:(NSItemProviderFileOptions)fileOptions API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                                        fileOptions:(NSItemProviderFileOptions)fileOptions API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Copies the provided data into an NSData object.
 - (NSProgress *)loadDataRepresentationForTypeIdentifier:(NSString *)typeIdentifier
-                                      completionHandler:(void(NS_SWIFT_SENDABLE ^)(NSData * _Nullable data, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                                      completionHandler:(void(NS_SWIFT_SENDABLE ^)(NSData * _Nullable data, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Writes a copy of the data to a temporary file. This file will be deleted when the completion handler returns. Your program should copy or move the file within the completion handler.
 - (NSProgress *)loadFileRepresentationForTypeIdentifier:(NSString *)typeIdentifier
-                                      completionHandler:(void(NS_SWIFT_SENDABLE ^)(NSURL * _Nullable url, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                                      completionHandler:(void(NS_SWIFT_SENDABLE ^)(NSURL * _Nullable url, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Open the original file in place, if possible.
 // If a file is not available for opening in place, a copy of the file is written to a temporary location, and `isInPlace` is set to NO. Your program may then copy or move the file, or the system will delete this file at some point in the future.
 - (NSProgress *)loadInPlaceFileRepresentationForTypeIdentifier:(NSString *)typeIdentifier
-                                             completionHandler:(void (NS_SWIFT_SENDABLE ^)(NSURL * _Nullable url, BOOL isInPlace, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                                             completionHandler:(void (NS_SWIFT_SENDABLE ^)(NSURL * _Nullable url, BOOL isInPlace, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 
 #pragma mark Metadata
@@ -136,21 +136,21 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 
 
 // Instantiate an NSItemProvider by querying an object for its eligible type identifiers via the NSItemProviderWriting protocol.
-- (instancetype)initWithObject:(id<NSItemProviderWriting>)object API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (instancetype)initWithObject:(id<NSItemProviderWriting>)object API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Add representations from an object using the NSItemProviderWriting protocol. Duplicate representations are ignored.
-- (void)registerObject:(id<NSItemProviderWriting>)object visibility:(NSItemProviderRepresentationVisibility)visibility API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (void)registerObject:(id<NSItemProviderWriting>)object visibility:(NSItemProviderRepresentationVisibility)visibility API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Add representations from a class, but defer loading the object until needed.
 - (void)registerObjectOfClass:(Class<NSItemProviderWriting>)aClass
                    visibility:(NSItemProviderRepresentationVisibility)visibility
-                  loadHandler:(NSProgress * _Nullable (NS_SWIFT_SENDABLE ^)(void (NS_SWIFT_SENDABLE ^completionHandler)(__kindof id<NSItemProviderWriting> _Nullable object, NSError * _Nullable error)))loadHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                  loadHandler:(NSProgress * _Nullable (NS_SWIFT_SENDABLE ^)(void (NS_SWIFT_SENDABLE ^completionHandler)(__kindof id<NSItemProviderWriting> _Nullable object, NSError * _Nullable error)))loadHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
-- (BOOL)canLoadObjectOfClass:(Class<NSItemProviderReading>)aClass API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (BOOL)canLoadObjectOfClass:(Class<NSItemProviderReading>)aClass API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 // Instantiate an object using the NSItemProviderReading protocol.
 - (NSProgress *)loadObjectOfClass:(Class<NSItemProviderReading>)aClass
-                completionHandler:(void (NS_SWIFT_SENDABLE ^)(__kindof id<NSItemProviderReading> _Nullable object, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+                completionHandler:(void (NS_SWIFT_SENDABLE ^)(__kindof id<NSItemProviderReading> _Nullable object, NSError * _Nullable error))completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 
 #pragma mark - Coercing interface

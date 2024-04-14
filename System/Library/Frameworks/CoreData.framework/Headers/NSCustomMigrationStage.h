@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  * a source model reference and a destination model reference. NSCustomMigrationStage provides optional handlers
  * that run immediately prior to and after the migration stage.
  */
-API_AVAILABLE(macosx(14.0),ios(17.0),tvos(17.0),watchos(10.0))
+API_AVAILABLE(macosx(14.0),ios(17.0), bridgeos(8.0),tvos(17.0),watchos(10.0))
 @interface NSCustomMigrationStage : NSMigrationStage
 
 @property (readonly, strong) NSManagedObjectModelReference *currentModel;

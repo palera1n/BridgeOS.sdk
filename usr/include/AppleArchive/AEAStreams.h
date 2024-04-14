@@ -39,7 +39,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AEAEncryptionOutputStreamOpen(
   AEAContext context,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Create a new encryption output stream appending data to an existing archive
@@ -66,7 +66,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AEAEncryptionOutputStreamOpenExisting(
   AEAContext context,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Close encryption output stream and collect archive attributes
@@ -107,7 +107,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.3), ios(14.5), watchos(7.4), tvos(14.5));
 APPLE_ARCHIVE_API int AEAContextDecryptAttributes(
   AEAContext context
 )
-APPLE_ARCHIVE_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+APPLE_ARCHIVE_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 #pragma mark - Decryption stream open
 
@@ -135,7 +135,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AEADecryptionInputStreamOpen(
   AEAContext context,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Create a new random access decryption input stream
@@ -166,7 +166,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AEADecryptionRandomAccessInputStreamOpe
   size_t alloc_limit,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Stream signing
 
@@ -193,7 +193,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API int AEAStreamSign(
   AAByteStream encrypted_stream,
   AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #ifdef __cplusplus
 }

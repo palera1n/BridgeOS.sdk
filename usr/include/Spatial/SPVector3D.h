@@ -19,7 +19,7 @@
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DMake(double x, double y, double z)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -38,7 +38,7 @@ SPVector3D SPVector3DMake(double x, double y, double z) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DMakeWithVector(simd_double3 xyz)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -57,7 +57,7 @@ SPVector3D SPVector3DMakeWithVector(simd_double3 xyz) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DMakeWithRotationAxis(SPRotationAxis3D axis)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -76,7 +76,7 @@ SPVector3D SPVector3DMakeWithRotationAxis(SPRotationAxis3D axis) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DMakeWithSize(SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -95,7 +95,7 @@ SPVector3D SPVector3DMakeWithSize(SPSize3D size) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DMakeWithPoint(SPPoint3D point)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -109,7 +109,7 @@ SPVector3D SPVector3DMakeWithPoint(SPPoint3D point) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPVector3DEqualToVector(SPVector3D vector1, SPVector3D vector2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -131,7 +131,7 @@ bool SPVector3DEqualToVector(SPVector3D vector1, SPVector3D vector2) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DScaleBy(SPVector3D vector, double x, double y, double z)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -154,7 +154,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DApplyAffineTransform(SPVector3D vector,
                                           SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -181,7 +181,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DApplyProjectiveTransform(SPVector3D vector,
                                               SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -208,7 +208,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DUnapplyAffineTransform(SPVector3D vector,
                                             SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -233,7 +233,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DUnapplyProjectiveTransform(SPVector3D vector,
                                                 SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -257,7 +257,7 @@ SPVector3D SPVector3DUnapplyProjectiveTransform(SPVector3D vector,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPVector3DRotationToVector(SPVector3D vector, SPVector3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -292,7 +292,7 @@ SPVector3D SPVector3DShear(SPVector3D vector,
                            SPAxis shearAxis,
                            double shearFactor0,
                            double shearFactor1)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -320,7 +320,7 @@ SPVector3D SPVector3DShear(SPVector3D vector,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DScaleBySize(SPVector3D vector, SPSize3D scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -341,7 +341,7 @@ SPVector3D SPVector3DScaleBySize(SPVector3D vector, SPSize3D scale) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DScaleUniform(SPVector3D vector, double scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -362,7 +362,7 @@ SPVector3D SPVector3DScaleUniform(SPVector3D vector, double scale) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DRotate(SPVector3D vector, SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -385,7 +385,7 @@ SPVector3D SPVector3DRotate(SPVector3D vector, SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DRotateByQuaternion(SPVector3D vector, simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -404,7 +404,7 @@ SPVector3D SPVector3DRotateByQuaternion(SPVector3D vector, simd_quatd quaternion
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPVector3DDotProduct(SPVector3D x, SPVector3D y)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -420,7 +420,7 @@ double SPVector3DDotProduct(SPVector3D x, SPVector3D y) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DCrossProduct(SPVector3D x, SPVector3D y)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -436,7 +436,7 @@ SPVector3D SPVector3DCrossProduct(SPVector3D x, SPVector3D y) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DNormalize(SPVector3D x)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -452,7 +452,7 @@ SPVector3D SPVector3DNormalize(SPVector3D x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DProject(SPVector3D x, SPVector3D y)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -468,7 +468,7 @@ SPVector3D SPVector3DProject(SPVector3D x, SPVector3D y) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DReflect(SPVector3D x, SPVector3D y)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -484,7 +484,7 @@ SPVector3D SPVector3DReflect(SPVector3D x, SPVector3D y) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPVector3DLength(SPVector3D x)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -499,7 +499,7 @@ double SPVector3DLength(SPVector3D x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPVector3DLengthSquared(SPVector3D x)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -521,7 +521,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DApplyPose(SPVector3D vector,
                                SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -542,7 +542,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPVector3DUnapplyPose(SPVector3D vector,
                                  SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

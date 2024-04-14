@@ -66,7 +66,7 @@ You can invoke this method on one thread and then message the returned NSProgres
 
 /* Become current, do some work, then resign current.
  */
-- (void)performAsCurrentWithPendingUnitCount:(int64_t)unitCount usingBlock:(void (NS_NOESCAPE ^)(void))work API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
+- (void)performAsCurrentWithPendingUnitCount:(int64_t)unitCount usingBlock:(void (NS_NOESCAPE ^)(void))work API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
 
 /* Balance the most recent previous invocation of -becomeCurrentWithPendingUnitCount: on the same thread by restoring the current progress object to what it was before -becomeCurrentWithPendingUnitCount: was invoked.
 */
@@ -171,41 +171,41 @@ You can invoke this method on one thread and then message the returned NSProgres
    This property is optional. If present, NSProgress will use the information to present more information in its localized description.
    This property sets a value in the userInfo dictionary.
  */
-@property (nullable, copy) NSNumber *estimatedTimeRemaining API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
+@property (nullable, copy) NSNumber *estimatedTimeRemaining API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
 
 /* How fast data is being processed, as an NSNumber containing bytes per second.
  This property is optional. If present, NSProgress will use the information to present more information in its localized description.
  This property sets a value in the userInfo dictionary.
  */
-@property (nullable, copy) NSNumber *throughput API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
+@property (nullable, copy) NSNumber *throughput API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
 
 /*
  When the kind property is NSProgressKindFile, this value should be set. It describes the kind of file operation being performed.
  If present, NSProgress will use the information to present more information in its localized description.
  This property sets a value in the userInfo dictionary.
  */
-@property (nullable, copy) NSProgressFileOperationKind fileOperationKind API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nullable, copy) NSProgressFileOperationKind fileOperationKind API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*
  A URL identifying the item on which progress is being made. This is required for any NSProgress that is published using -publish to be reported to subscribers registered with +addSubscriberForFileURL:withPublishingHandler:
  If present, NSProgress will use the information to present more information in its localized description.
  This property sets a value in the userInfo dictionary.
  */
-@property (nullable, copy) NSURL *fileURL API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nullable, copy) NSURL *fileURL API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*
  If the progress is operating on a set of files, then set to the total number of files in the operation.
  This property is optional. If present, NSProgress will use the information to present more information in its localized description.
  This property sets a value in the userInfo dictionary.
  */
-@property (nullable, copy) NSNumber *fileTotalCount API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
+@property (nullable, copy) NSNumber *fileTotalCount API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
 
 /*
  If the progress is operating on a set of files, then set to the number of completed files in the operation.
  This property is optional. If present, NSProgress will use the information to present more information in its localized description.
  This property sets a value in the userInfo dictionary.
  */
-@property (nullable, copy) NSNumber *fileCompletedCount API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
+@property (nullable, copy) NSNumber *fileCompletedCount API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) NS_REFINED_FOR_SWIFT;
 
 #pragma mark *** Reporting Progress to Other Processes (OS X Only) ***
 
@@ -275,7 +275,7 @@ FOUNDATION_EXPORT NSProgressFileOperationKind const NSProgressFileOperationKindD
 FOUNDATION_EXPORT NSProgressFileOperationKind const NSProgressFileOperationKindReceiving API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0));
 FOUNDATION_EXPORT NSProgressFileOperationKind const NSProgressFileOperationKindCopying API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0));
 FOUNDATION_EXPORT NSProgressFileOperationKind const NSProgressFileOperationKindUploading API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0));
-FOUNDATION_EXPORT NSProgressFileOperationKind const NSProgressFileOperationKindDuplicating API_AVAILABLE(macosx(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+FOUNDATION_EXPORT NSProgressFileOperationKind const NSProgressFileOperationKindDuplicating API_AVAILABLE(macosx(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 
 /* A user info dictionary key. The value must be an NSURL identifying the item on which progress is being made. This is required for any NSProgress that is published using -publish to be reported to subscribers registered with +addSubscriberForFileURL:withPublishingHandler:.

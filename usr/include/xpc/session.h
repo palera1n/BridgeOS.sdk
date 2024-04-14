@@ -71,7 +71,7 @@ typedef void (^xpc_session_reply_handler_t)(xpc_object_t _Nullable reply,
  * should be disposed of with free(3) when done. This will return NULL if a
  * string description could not be generated.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT XPC_WARN_RESULT
 char * _Nullable
 xpc_session_copy_description(xpc_session_t session);
@@ -179,7 +179,7 @@ xpc_session_create_mach_service(const char *mach_service,
  * This can only be called on an inactive session. Calling this on a session
  * with an existing event handler will replace it.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT
 void
 xpc_session_set_incoming_message_handler(xpc_session_t session,
@@ -200,7 +200,7 @@ xpc_session_set_incoming_message_handler(xpc_session_t session,
  * with an existing cancel handler will replace the existing cancel handler with
  * the one provided.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT
 void
 xpc_session_set_cancel_handler(xpc_session_t session,
@@ -224,7 +224,7 @@ xpc_session_set_cancel_handler(xpc_session_t session,
  * with an existing target queue will replace the existing target queue with
  * the one provided.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT
 void
 xpc_session_set_target_queue(xpc_session_t session,
@@ -252,7 +252,7 @@ xpc_session_set_target_queue(xpc_session_t session,
  *
  * If activation fails, the session is automatically cancelled. 
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT
 bool
 xpc_session_activate(xpc_session_t session,
@@ -272,7 +272,7 @@ xpc_session_activate(xpc_session_t session,
  * Session must have been activated to be canceled. Cancellation is asynchronous
  * and non-preemptive.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT
 void
 xpc_session_cancel(xpc_session_t session);
@@ -304,7 +304,7 @@ xpc_session_cancel(xpc_session_t session);
  * XPC_SESSION_CREATE_INACTIVE flag and hasn't yet been activated, the process
  * will crash.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT XPC_RETURNS_RETAINED XPC_WARN_RESULT
 xpc_rich_error_t _Nullable
 xpc_session_send_message(xpc_session_t session, xpc_object_t message);
@@ -345,7 +345,7 @@ xpc_session_send_message(xpc_session_t session, xpc_object_t message);
  * may wish to consider allowing the API to take a queue and callback block so
  * that results may be delivered asynchronously if possible.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT XPC_RETURNS_RETAINED XPC_WARN_RESULT
 xpc_object_t _Nullable
 xpc_session_send_message_with_reply_sync(xpc_session_t session,
@@ -377,7 +377,7 @@ xpc_session_send_message_with_reply_sync(xpc_session_t session,
  * If this is invoked on a cancelled session, this will generate a simulated
  * crash.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 XPC_EXPORT XPC_SWIFT_NOEXPORT
 void
 xpc_session_send_message_with_reply_async(xpc_session_t session,

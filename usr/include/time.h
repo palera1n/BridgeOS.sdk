@@ -195,7 +195,7 @@ int clock_settime(clockid_t __clock_id, const struct timespec *__tp);
         (defined(__cplusplus) && __cplusplus >= 201703L)
 /* ISO/IEC 9899:201x 7.27.2.5 The timespec_get function */
 #define TIME_UTC	1	/* time elapsed since epoch */
-__API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0), watchos(6.0))
+__API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0))
 int timespec_get(struct timespec *ts, int base);
 #endif
 

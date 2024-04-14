@@ -241,26 +241,26 @@ API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(macos, watchos, tvos)
  *   The NEHotspotConfiguration class represents set of properties that are required
  *   to configure a Wi-Fi Network.
  */
-API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
+API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
 @interface NEHotspotConfiguration : NSObject <NSCopying,NSSecureCoding>
 
 /*!
  * @property SSID
  * @discussion SSID of the Wi-Fi Network.
  */
-@property (readonly) NSString * SSID API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+@property (readonly) NSString * SSID API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @property SSIDPrefix
  * @discussion Prefix string of SSID of the Wi-Fi Network.
  */
-@property (readonly) NSString * SSIDPrefix API_AVAILABLE(ios(13.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+@property (readonly) NSString * SSIDPrefix API_AVAILABLE(ios(13.0), bridgeos(4.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @property joinOnce
  * @discussion if set to YES the configuration will not be persisted. Default is NO.
  */
-@property BOOL joinOnce API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+@property BOOL joinOnce API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @property lifeTimeInDays
@@ -269,13 +269,13 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  *   A configuration does not get deleted automatically if this property is not set or set to an invalid value.
  *   This property does not apply to Enterprise and HS2.0 networks.
  */
-@property (copy) NSNumber * lifeTimeInDays API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+@property (copy) NSNumber * lifeTimeInDays API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @property hidden
  * @discussion if set to YES the system will perform active scan of the SSID. Default is NO.
  */
-@property BOOL hidden API_AVAILABLE(ios(13.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+@property BOOL hidden API_AVAILABLE(ios(13.0), bridgeos(4.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @method initWithSSID:
@@ -286,7 +286,7 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  * @param SSID The SSID of the Open Wi-Fi Network.
  *   Length of SSID must be between 1 and 32 characters.
  */
-- (instancetype)initWithSSID:(NSString *)SSID API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+- (instancetype)initWithSSID:(NSString *)SSID API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @method initWithSSID:passphrase:isWEP
@@ -302,7 +302,7 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  * @param isWEP YES specifies WEP Wi-Fi Network else WPA/WPA2 Personal Wi-Fi Network
  */
 - (instancetype)initWithSSID:(NSString *)SSID
-					  passphrase:(NSString *)passphrase isWEP:(BOOL)isWEP API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+					  passphrase:(NSString *)passphrase isWEP:(BOOL)isWEP API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @method initWithSSID:eapSettings
@@ -337,7 +337,7 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  * @param SSIDPrefix The prefix string of SSID of the Open Wi-Fi Network.
  *   Length of SSIDPrefix must be between 3 and 32 characters.
  */
-- (instancetype)initWithSSIDPrefix:(NSString *)SSIDPrefix API_AVAILABLE(ios(13.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+- (instancetype)initWithSSIDPrefix:(NSString *)SSIDPrefix API_AVAILABLE(ios(13.0), bridgeos(4.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @method initWithSSIDPrefix:passphrase:isWEP
@@ -354,12 +354,12 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  * @param isWEP YES specifies WEP Wi-Fi Network else WPA/WPA2 Personal Wi-Fi Network
  */
 - (instancetype)initWithSSIDPrefix:(NSString *)SSIDPrefix
-				  passphrase:(NSString *)passphrase isWEP:(BOOL)isWEP API_AVAILABLE(ios(13.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+				  passphrase:(NSString *)passphrase isWEP:(BOOL)isWEP API_AVAILABLE(ios(13.0), bridgeos(4.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 @end
 
 /*! @const NEHotspotConfigurationErrorDomain The Hotspot Configuration error domain */
-NEHSCFG_EXPORT NSString * const NEHotspotConfigurationErrorDomain API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+NEHSCFG_EXPORT NSString * const NEHotspotConfigurationErrorDomain API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @typedef NEHotspotConfigurationError
@@ -398,7 +398,7 @@ typedef NS_ENUM(NSInteger, NEHotspotConfigurationError) {
 	NEHotspotConfigurationErrorAlreadyAssociated 			= 13,
 	NEHotspotConfigurationErrorApplicationIsNotInForeground 	= 14,
 	NEHotspotConfigurationErrorInvalidSSIDPrefix 				= 15
-} API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+} API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @interface NEHotspotConfigurationManager
@@ -406,7 +406,7 @@ typedef NS_ENUM(NSInteger, NEHotspotConfigurationError) {
  *   The NEHotspotConfigurationManager class allows an application to
  *   Add/Update/Remove Wi-Fi Network Configuraton.
  */
-API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
+API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
 @interface NEHotspotConfigurationManager : NSObject
 
 @property (class, readonly, strong) NEHotspotConfigurationManager *sharedManager;
@@ -424,7 +424,7 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  *
  */
 - (void)applyConfiguration:(NEHotspotConfiguration *)configuration
-						completionHandler:(void (^ __nullable)(NSError * __nullable error))completionHandler API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+						completionHandler:(void (^ __nullable)(NSError * __nullable error))completionHandler API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @method removeConfigurationForSSID:
@@ -433,7 +433,7 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  *   after the configuration is removed.
  * @param SSID Wi-Fi SSID for which the configuration is to be deleted.
  */
-- (void)removeConfigurationForSSID:(NSString *)SSID API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+- (void)removeConfigurationForSSID:(NSString *)SSID API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @method removeConfigurationForNetworkName:
@@ -448,7 +448,7 @@ API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos)
  * @discussion This function returns array of SSIDs and HS2.0 Domain Names that the calling application has configured.
  *   It returns nil if there are no networks configurred by the calling application.
  */
-- (void)getConfiguredSSIDsWithCompletionHandler:(void (^)(NSArray<NSString *> *))completionHandler API_AVAILABLE(ios(11.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
+- (void)getConfiguredSSIDsWithCompletionHandler:(void (^)(NSArray<NSString *> *))completionHandler API_AVAILABLE(ios(11.0), bridgeos(2.0), watchos(7.0)) API_UNAVAILABLE(macos, tvos);
 
 @end
 

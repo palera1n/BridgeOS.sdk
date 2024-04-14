@@ -83,7 +83,7 @@ CM_EXPORT const CMImageDescriptionFlavor kCMImageDescriptionFlavor_3GPFamily			A
 	@abstract	Chooses the ISO family sample description format with use of Apple extensions where appropriate for M4V and M4A.
 	@discussion	This implies kCMImageDescriptionFlavor_ISOFamily and adds additional rules specific to the .m4a, .m4b, and .m4v file formats.
 */
-CM_EXPORT const CMImageDescriptionFlavor kCMImageDescriptionFlavor_ISOFamilyWithAppleExtensions			API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0));	// M4A, M4V, etc (implies ISO)
+CM_EXPORT const CMImageDescriptionFlavor kCMImageDescriptionFlavor_ISOFamilyWithAppleExtensions			API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0));	// M4A, M4V, etc (implies ISO)
 
 CM_ASSUME_NONNULL_END
 	

@@ -48,7 +48,7 @@ NW_OBJECT_DECL(nw_group_descriptor);
  *		An instantiated group descriptor object or nil if the specified
  *		endpoint is not valid.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 NW_RETURNS_RETAINED nw_group_descriptor_t
 nw_group_descriptor_create_multiplex(nw_endpoint_t remote_endpoint);
 
@@ -67,7 +67,7 @@ nw_group_descriptor_create_multiplex(nw_endpoint_t remote_endpoint);
  *		endpoint is not an address endpoint representing a valid multicast
  *		group.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED nw_group_descriptor_t
 nw_group_descriptor_create_multicast(nw_endpoint_t multicast_group);
 
@@ -86,7 +86,7 @@ nw_group_descriptor_create_multicast(nw_endpoint_t multicast_group);
  * @result Returns true if the endpoint was added, false if the endpoint was
  * 		not of a valid type and therefore not added.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 bool
 nw_group_descriptor_add_endpoint(nw_group_descriptor_t descriptor,
 								 nw_endpoint_t endpoint);
@@ -121,7 +121,7 @@ typedef bool (^nw_group_descriptor_enumerate_endpoints_block_t)(nw_endpoint_t en
  *		Returning true from the block will continue to enumerate, and returning false will stop
  *		enumerating.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_group_descriptor_enumerate_endpoints(nw_group_descriptor_t descriptor,
 										NW_NOESCAPE nw_group_descriptor_enumerate_endpoints_block_t enumerate_block);
@@ -140,7 +140,7 @@ nw_group_descriptor_enumerate_endpoints(nw_group_descriptor_t descriptor,
  * @param source
  *		An endpoint describing the source for this descriptor.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_multicast_group_descriptor_set_specific_source(nw_group_descriptor_t multicast_descriptor,
 												  nw_endpoint_t source);
@@ -157,7 +157,7 @@ nw_multicast_group_descriptor_set_specific_source(nw_group_descriptor_t multicas
  * @param disable_unicast_traffic
  *		A boolean indicating if receiving unicast traffic should be disabled.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_multicast_group_descriptor_set_disable_unicast_traffic(nw_group_descriptor_t multicast_descriptor,
 														  bool disable_unicast_traffic);
@@ -173,7 +173,7 @@ nw_multicast_group_descriptor_set_disable_unicast_traffic(nw_group_descriptor_t 
  *
  * @result A boolean indicating if receiving unicast traffic should be disabled.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 bool
 nw_multicast_group_descriptor_get_disable_unicast_traffic(nw_group_descriptor_t multicast_descriptor);
 

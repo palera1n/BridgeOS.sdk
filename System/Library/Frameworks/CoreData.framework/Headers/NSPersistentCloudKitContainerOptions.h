@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  NSPersistentCloudKitContainerOptions provides customization of how NSPersistentCloudKitContainer aligns a given instance of NSPersistentStoreDescription with a CloudKit database.
  */
-API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0))
+API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0))
 @interface NSPersistentCloudKitContainerOptions : NSObject
 /**
  The container identifier of the CKContainer to use with a given instance of NSPersistentStoreDescription
@@ -33,9 +33,9 @@ API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0))
  Currently only CKDatabaseScopePrivate and CKDatabaseScopePublic are supported.
  */
 #ifndef __swift__
-@property(nonatomic) CKDatabaseScope databaseScope API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0));
+@property(nonatomic) CKDatabaseScope databaseScope API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0));
 #else
-@property(nonatomic) NSInteger databaseScope API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0)) NS_REFINED_FOR_SWIFT;
+@property(nonatomic) NSInteger databaseScope API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0)) NS_REFINED_FOR_SWIFT;
 #endif
 
 - (instancetype)init NS_UNAVAILABLE;

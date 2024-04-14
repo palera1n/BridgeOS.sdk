@@ -73,7 +73,7 @@ typedef uint64_t dispatch_time_t;
 
 enum {
 	DISPATCH_WALLTIME_NOW DISPATCH_ENUM_API_AVAILABLE
-			(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))	= ~1ull,
+			(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))	= ~1ull,
 };
 
 #define DISPATCH_TIME_NOW (0ull)

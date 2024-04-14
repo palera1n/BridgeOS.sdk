@@ -157,7 +157,7 @@ typedef NS_ENUM(NSInteger, AVAudio3DMixingRenderingAlgorithm) {
     AVAudio3DMixingRenderingAlgorithmSoundField             = 3,
     AVAudio3DMixingRenderingAlgorithmStereoPassThrough      = 5,
     AVAudio3DMixingRenderingAlgorithmHRTFHQ                 = 6,
-    AVAudio3DMixingRenderingAlgorithmAuto   API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos)     = 7
+    AVAudio3DMixingRenderingAlgorithmAuto   API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos)     = 7
 } NS_ENUM_AVAILABLE(10_10, 8_0);
 
 
@@ -196,7 +196,7 @@ typedef NS_ENUM(NSInteger, AVAudio3DMixingSourceMode) {
     AVAudio3DMixingSourceModeBypass             = 1,
     AVAudio3DMixingSourceModePointSource        = 2,
     AVAudio3DMixingSourceModeAmbienceBed        = 3
-} API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos);
 
 
 /*! @enum AVAudio3DMixingPointSourceInHeadMode
@@ -217,7 +217,7 @@ typedef NS_ENUM(NSInteger, AVAudio3DMixingSourceMode) {
 typedef NS_ENUM(NSInteger, AVAudio3DMixingPointSourceInHeadMode) {
     AVAudio3DMixingPointSourceInHeadModeMono    = 0,
     AVAudio3DMixingPointSourceInHeadModeBypass  = 1
-} API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos);
 
 
 /*! @protocol   AVAudio3DMixing
@@ -243,7 +243,7 @@ typedef NS_ENUM(NSInteger, AVAudio3DMixingPointSourceInHeadMode) {
         Default:    AVAudio3DMixingSourceModeSpatializeIfMono
         Mixer:      AVAudioEnvironmentNode
 */
-@property (nonatomic) AVAudio3DMixingSourceMode sourceMode API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos) ;
+@property (nonatomic) AVAudio3DMixingSourceMode sourceMode API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos) ;
 
 /*! @property pointSourceInHeadMode
     @abstract In-head rendering choice for AVAudio3DMixingSourceModePointSource in AVAudio3DMixingRenderingAlgorithmAuto
@@ -251,7 +251,7 @@ typedef NS_ENUM(NSInteger, AVAudio3DMixingPointSourceInHeadMode) {
         Default:    AVAudio3DMixingPointSourceInHeadModeMono
         Mixer:      AVAudioEnvironmentNode
  */
-@property (nonatomic) AVAudio3DMixingPointSourceInHeadMode pointSourceInHeadMode API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos) ;
+@property (nonatomic) AVAudio3DMixingPointSourceInHeadMode pointSourceInHeadMode API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos) ;
 
 /*! @property rate
     @abstract Changes the playback rate of the input signal

@@ -140,7 +140,7 @@ typedef int (*AAByteStreamCloseProc)(
 All callbacks are initially empty
  */
 APPLE_ARCHIVE_API AAByteStream _Nullable AACustomByteStreamOpen(void)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream data
@@ -152,7 +152,7 @@ This value is passed as first argument to all callbacks
 @param data stream data
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetData(AAByteStream s, void * _Nullable data)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream close callback
@@ -164,7 +164,7 @@ If the stream data is non NULL, a non NULL close callback is mandatory
 @param proc callback
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetCloseProc(AAByteStream s, AAByteStreamCloseProc _Nullable proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream read callback
@@ -173,7 +173,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 @param proc callback
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetReadProc(AAByteStream s, AAByteStreamReadProc _Nullable proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream pread callback
@@ -182,7 +182,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 @param proc callback
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetPReadProc(AAByteStream s, AAByteStreamPReadProc _Nullable proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream write callback
@@ -191,7 +191,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 @param proc callback
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetWriteProc(AAByteStream s, AAByteStreamWriteProc _Nullable proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream pwrite callback
@@ -200,7 +200,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 @param proc callback
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetPWriteProc(AAByteStream s, AAByteStreamPWriteProc _Nullable proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream seek callback
@@ -209,7 +209,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 @param proc callback
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetSeekProc(AAByteStream s, AAByteStreamSeekProc _Nullable proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
 @abstract Set custom byte stream cancel callback
@@ -218,7 +218,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 @param proc callback
  */
 APPLE_ARCHIVE_API void AACustomByteStreamSetCancelProc(AAByteStream s, AAByteStreamCancelProc _Nullable proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #ifdef __cplusplus
 }

@@ -184,7 +184,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), tvos(9.0)) API_UNAVAILABLE(watchos)
  @param eventList
 	the MIDIEventList
   */
-- (void)sendMIDIEventList:(const struct MIDIEventList *)eventList API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+- (void)sendMIDIEventList:(const struct MIDIEventList *)eventList API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 #endif
 
 @end

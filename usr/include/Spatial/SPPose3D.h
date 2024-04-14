@@ -13,7 +13,7 @@
 /*!
  @abstract The identity pose.
  */
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_REFINED_FOR_SWIFT
 static const SPPose3D SPPose3DIdentity = {
     .position = (SPPoint3D){ 0, 0, 0 },
@@ -35,7 +35,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMake(SPPoint3D position,
                       SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -60,7 +60,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMakeWithVector(simd_double3 position,
                                 simd_quatd rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -84,7 +84,7 @@ SPPose3D SPPose3DMakeWithVector(simd_double3 position,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 simd_double4x4 SPPose3DGet4x4Matrix(SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -102,7 +102,7 @@ simd_double4x4 SPPose3DGet4x4Matrix(SPPose3D pose) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPPose3DEqualToPose(SPPose3D pose1, SPPose3D pose2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -126,7 +126,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPPose3DAlmostEqualToPose(SPPose3D p1,
                                SPPose3D p2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_OVERLOADABLE
 SPATIAL_REFINED_FOR_SWIFT
@@ -150,7 +150,7 @@ SPATIAL_OVERLOADABLE
 bool SPPose3DAlmostEqualToPose(SPPose3D p1,
                                SPPose3D p2,
                                double tolerance)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_OVERLOADABLE
 SPATIAL_REFINED_FOR_SWIFT
@@ -175,7 +175,7 @@ bool SPPose3DAlmostEqualToPose(SPPose3D p1,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPPose3DIsIdentity(SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -197,7 +197,7 @@ SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMakeLookAt(SPPoint3D position,
                            SPPoint3D target,
                            SPVector3D up)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -224,7 +224,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMakeLookAt(SPPoint3D target,
                            SPVector3D up)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -247,7 +247,7 @@ SPPose3D SPPose3DMakeLookAt(SPPoint3D target,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMakeLookAt(SPVector3D forward, SPVector3D up)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -273,7 +273,7 @@ SPPose3D SPPose3DMakeLookAt(SPVector3D forward, SPVector3D up) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMakeWithProjectiveTransform(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -304,7 +304,7 @@ SPPose3D SPPose3DMakeWithProjectiveTransform(SPProjectiveTransform3D transform) 
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMakeWith4x4Matrix(simd_double4x4 matrix)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -326,7 +326,7 @@ SPPose3D SPPose3DMakeWith4x4Matrix(simd_double4x4 matrix) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DGetInverse(SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -350,7 +350,7 @@ SPPose3D SPPose3DGetInverse(SPPose3D pose) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DConcatenation(SPPose3D lhs, SPPose3D rhs)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -373,7 +373,7 @@ SPPose3D SPPose3DConcatenation(SPPose3D lhs, SPPose3D rhs) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DRotateByQuaternion(SPPose3D pose, simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -397,7 +397,7 @@ SPPose3D SPPose3DRotateByQuaternion(SPPose3D pose, simd_quatd quaternion) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DRotate(SPPose3D pose, SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -418,7 +418,7 @@ SPPose3D SPPose3DRotate(SPPose3D pose, SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DTranslate(SPPose3D pose, SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -462,7 +462,7 @@ SPPose3D SPPose3DTranslate(SPPose3D pose, SPSize3D offset) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DMakeWithAffineTransform(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -497,7 +497,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPose3D SPPose3DFlip(SPPose3D pose,
                       SPAxis flipAxis)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

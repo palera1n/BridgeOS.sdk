@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
  * NSMigrationStage forms the basis for migrating between version of a model in staged migration. Each model version
  * in your app will be described with an NSMigrationStage.
  */
-API_AVAILABLE(macosx(14.0),ios(17.0),tvos(17.0),watchos(10.0))
+API_AVAILABLE(macosx(14.0),ios(17.0), bridgeos(8.0),tvos(17.0),watchos(10.0))
 @interface NSMigrationStage : NSObject
 
 /*

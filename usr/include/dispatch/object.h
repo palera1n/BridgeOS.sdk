@@ -489,7 +489,7 @@ dispatch_resume(dispatch_object_t object);
  * Passing a value greater than zero or less than QOS_MIN_RELATIVE_PRIORITY
  * is undefined.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_NOTHROW
 DISPATCH_SWIFT_UNAVAILABLE("Unavailable in Swift")
 void

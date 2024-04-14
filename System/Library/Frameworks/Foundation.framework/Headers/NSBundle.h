@@ -90,7 +90,7 @@ NS_SWIFT_SENDABLE
 /* Methods for retrieving localized strings. */
 - (NSString *)localizedStringForKey:(NSString *)key value:(nullable NSString *)value table:(nullable NSString *)tableName NS_FORMAT_ARGUMENT(1);
 #if !0
-- (NSAttributedString *)localizedAttributedStringForKey:(NSString *)key value:(nullable NSString *)value table:(nullable NSString *)tableName NS_FORMAT_ARGUMENT(1) NS_REFINED_FOR_SWIFT API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+- (NSAttributedString *)localizedAttributedStringForKey:(NSString *)key value:(nullable NSString *)value table:(nullable NSString *)tableName NS_FORMAT_ARGUMENT(1) NS_REFINED_FOR_SWIFT API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 #endif 
 
 /* Methods for obtaining various information about a bundle. */
@@ -116,7 +116,7 @@ enum {
     NSBundleExecutableArchitecturePPC       = 0x00000012,
     NSBundleExecutableArchitectureX86_64    = 0x01000007,
     NSBundleExecutableArchitecturePPC64     = 0x01000012,
-    NSBundleExecutableArchitectureARM64 API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0)) = 0x0100000c
+    NSBundleExecutableArchitectureARM64 API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) = 0x0100000c
 };
 
 @property (nullable, readonly, copy) NSArray<NSNumber *> *executableArchitectures API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));

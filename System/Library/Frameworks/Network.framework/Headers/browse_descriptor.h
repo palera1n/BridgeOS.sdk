@@ -49,7 +49,7 @@ NW_OBJECT_DECL(nw_browse_descriptor);
  * @result
  *		An instantiated browse descriptor object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_browse_descriptor_t
 nw_browse_descriptor_create_bonjour_service(const char *type,
 											const char * _Nullable domain);
@@ -66,7 +66,7 @@ nw_browse_descriptor_create_bonjour_service(const char *type,
  * @result
  *		The service type.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 const char *
 nw_browse_descriptor_get_bonjour_service_type(nw_browse_descriptor_t descriptor);
 
@@ -83,7 +83,7 @@ nw_browse_descriptor_get_bonjour_service_type(nw_browse_descriptor_t descriptor)
  * @result
  *		The service domain.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 const char * _Nullable
 nw_browse_descriptor_get_bonjour_service_domain(nw_browse_descriptor_t descriptor);
 
@@ -104,7 +104,7 @@ nw_browse_descriptor_get_bonjour_service_domain(nw_browse_descriptor_t descripto
  *		the browser will query for TXT records. If false, the browser will not
  *		query for TXT records.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_browse_descriptor_set_include_txt_record(nw_browse_descriptor_t descriptor, bool include_txt_record);
 
@@ -120,7 +120,7 @@ nw_browse_descriptor_set_include_txt_record(nw_browse_descriptor_t descriptor, b
  * @result
  *		Whether the browser is allowed to query for TXT records.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_browse_descriptor_get_include_txt_record(nw_browse_descriptor_t descriptor);
 
@@ -136,7 +136,7 @@ nw_browse_descriptor_get_include_txt_record(nw_browse_descriptor_t descriptor);
  * @result
  *		An instantiated browse descriptor object.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 NW_RETURNS_RETAINED nw_browse_descriptor_t
 nw_browse_descriptor_create_application_service(const char *application_service_name);
 
@@ -152,7 +152,7 @@ nw_browse_descriptor_create_application_service(const char *application_service_
  * @result
  *		The service name.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 const char * _Nullable
 nw_browse_descriptor_get_application_service_name(nw_browse_descriptor_t descriptor);
 

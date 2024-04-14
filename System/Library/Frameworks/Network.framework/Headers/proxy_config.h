@@ -70,7 +70,7 @@ NW_OBJECT_DECL(nw_relay_hop);
  * @result
  *		Returns an allocated `nw_relay_hop_t` object on success.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 NW_RETURNS_RETAINED nw_relay_hop_t
 nw_relay_hop_create(nw_endpoint_t _Nullable http3_relay_endpoint,
 					nw_endpoint_t _Nullable http2_relay_endpoint,
@@ -92,7 +92,7 @@ nw_relay_hop_create(nw_endpoint_t _Nullable http3_relay_endpoint,
  * @param field_value
  *		The HTTP header field value.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_relay_hop_add_additional_http_header_field(nw_relay_hop_t relay_hop,
 											  const char *field_name,
@@ -113,7 +113,7 @@ nw_relay_hop_add_additional_http_header_field(nw_relay_hop_t relay_hop,
  * @result
  *		Returns an allocated `nw_proxy_config_t` object on success.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 NW_RETURNS_RETAINED nw_proxy_config_t
 nw_proxy_config_create_relay(nw_relay_hop_t first_hop,
 							 nw_relay_hop_t _Nullable second_hop);
@@ -144,7 +144,7 @@ nw_proxy_config_create_relay(nw_relay_hop_t first_hop,
  * @result
  *		Returns an allocated `nw_proxy_config_t` object on success.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 NW_RETURNS_RETAINED nw_proxy_config_t
 nw_proxy_config_create_oblivious_http(nw_relay_hop_t relay,
 									  const char *relay_resource_path,
@@ -170,7 +170,7 @@ nw_proxy_config_create_oblivious_http(nw_relay_hop_t relay,
  * @result
  *		Returns an allocated `nw_proxy_config_t` object on success.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 NW_RETURNS_RETAINED nw_proxy_config_t
 nw_proxy_config_create_http_connect(nw_endpoint_t proxy_endpoint,
 									nw_protocol_options_t _Nullable proxy_tls_options);
@@ -189,7 +189,7 @@ nw_proxy_config_create_http_connect(nw_endpoint_t proxy_endpoint,
  * @result
  *		Returns an allocated `nw_proxy_config_t` object on success.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 NW_RETURNS_RETAINED nw_proxy_config_t
 nw_proxy_config_create_socksv5(nw_endpoint_t proxy_endpoint);
 
@@ -210,7 +210,7 @@ nw_proxy_config_create_socksv5(nw_endpoint_t proxy_endpoint);
  * @param password
  *		A proxy authentication password.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_set_username_and_password(nw_proxy_config_t proxy_config,
 										  const char *username,
@@ -229,7 +229,7 @@ nw_proxy_config_set_username_and_password(nw_proxy_config_t proxy_config,
  * @param failover_allowed
  *		A Boolean indicating if failover is allowed.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_set_failover_allowed(nw_proxy_config_t proxy_config,
 									 bool failover_allowed);
@@ -246,7 +246,7 @@ nw_proxy_config_set_failover_allowed(nw_proxy_config_t proxy_config,
  * @result
  *		A Boolean indicating if failover is allowed.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 bool
 nw_proxy_config_get_failover_allowed(nw_proxy_config_t proxy_config);
 
@@ -262,7 +262,7 @@ nw_proxy_config_get_failover_allowed(nw_proxy_config_t proxy_config);
  * @param match_domain
  *		The domain suffix to match hostnames against, as a string.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_add_match_domain(nw_proxy_config_t config,
 								 const char *match_domain);
@@ -276,7 +276,7 @@ nw_proxy_config_add_match_domain(nw_proxy_config_t config,
  * @param config
  *		The proxy configuration object.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_clear_match_domains(nw_proxy_config_t config);
 
@@ -292,7 +292,7 @@ nw_proxy_config_clear_match_domains(nw_proxy_config_t config);
  * @param excluded_domain
  *		The domain suffix to match hostnames against, as a string.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_add_excluded_domain(nw_proxy_config_t config,
 									const char *excluded_domain);
@@ -306,7 +306,7 @@ nw_proxy_config_add_excluded_domain(nw_proxy_config_t config,
  * @param config
  *		The proxy configuration object.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_clear_excluded_domains(nw_proxy_config_t config);
 
@@ -326,7 +326,7 @@ typedef void (^nw_proxy_domain_enumerator_t)(const char *);
  * @param enumerator
  *		A block that will get invoked for every domain that was added to the proxy configuration.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_enumerate_match_domains(nw_proxy_config_t config,
 										NW_NOESCAPE nw_proxy_domain_enumerator_t enumerator);
@@ -343,7 +343,7 @@ nw_proxy_config_enumerate_match_domains(nw_proxy_config_t config,
  * @param enumerator
  *		A block that will get invoked for every domain that was added to the proxy configuration.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_proxy_config_enumerate_excluded_domains(nw_proxy_config_t config,
 										   NW_NOESCAPE nw_proxy_domain_enumerator_t enumerator);

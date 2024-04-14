@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
         An OSStatus result code. If an error is returned, the input data should be assumed to be
         invalid.
  */
-typedef OSStatus (^AVAudioSinkNodeReceiverBlock)(const AudioTimeStamp *timestamp, AVAudioFrameCount frameCount, const AudioBufferList *inputData) API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0)) ;
+typedef OSStatus (^AVAudioSinkNodeReceiverBlock)(const AudioTimeStamp *timestamp, AVAudioFrameCount frameCount, const AudioBufferList *inputData) API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0)) ;
 
 /*! @class AVAudioSinkNode
     @abstract AVAudioSinkNode wraps a client provided block to receive input audio on the audio IO thread.
@@ -49,7 +49,7 @@ typedef OSStatus (^AVAudioSinkNodeReceiverBlock)(const AudioTimeStamp *timestamp
 
         AVAudioSinkNode does not have an output bus and therefore it does not support tapping.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0)) 
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0)) 
 @interface AVAudioSinkNode : AVAudioNode
 
 - (instancetype)init NS_UNAVAILABLE;

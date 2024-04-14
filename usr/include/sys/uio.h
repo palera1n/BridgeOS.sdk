@@ -100,8 +100,8 @@ ssize_t writev(int, const struct iovec *, int) __DARWIN_ALIAS_C(writev);
 
 #if (!defined(_POSIX_C_SOURCE) && !defined(_XOPEN_SOURCE)) || defined(_DARWIN_C_SOURCE)
 
-ssize_t preadv(int, const struct iovec *, int, off_t) __DARWIN_NOCANCEL(preadv) __API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
-ssize_t pwritev(int, const struct iovec *, int, off_t) __DARWIN_NOCANCEL(pwritev) __API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+ssize_t preadv(int, const struct iovec *, int, off_t) __DARWIN_NOCANCEL(preadv) __API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
+ssize_t pwritev(int, const struct iovec *, int, off_t) __DARWIN_NOCANCEL(pwritev) __API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #endif /* #if (!defined(_POSIX_C_SOURCE) && !defined(_XOPEN_SOURCE)) || defined(_DARWIN_C_SOURCE) */
 

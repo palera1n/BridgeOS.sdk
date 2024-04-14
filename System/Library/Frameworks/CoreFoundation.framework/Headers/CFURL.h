@@ -764,23 +764,23 @@ const CFStringRef kCFURLFileIdentifierKey API_AVAILABLE(macos(13.3), ios(16.4), 
     /* The file system's internal inode identifier for the item. This value is not stable for all file systems or across all mounts, so it should be used sparingly and not persisted. It is useful, for example, to match URLs from the URL enumerator with paths from FSEvents. (Read-only, value type CFNumber containing a long long which should be cast to a UInt64). */
 
 CF_EXPORT
-const CFStringRef kCFURLFileContentIdentifierKey API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+const CFStringRef kCFURLFileContentIdentifierKey API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
     /* A 64-bit value assigned by APFS that identifies a file's content data stream. Only cloned files and their originals can have the same identifier. (CFNumber) */
 
 CF_EXPORT
-const CFStringRef kCFURLMayShareFileContentKey API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+const CFStringRef kCFURLMayShareFileContentKey API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
     /* True for cloned files and their originals that may share all, some, or no data blocks. (CFBoolean) */
 
 CF_EXPORT
-const CFStringRef kCFURLMayHaveExtendedAttributesKey API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+const CFStringRef kCFURLMayHaveExtendedAttributesKey API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
     /* True if the file has extended attributes. False guarantees there are none. (CFBoolean) */
 
 CF_EXPORT
-const CFStringRef kCFURLIsPurgeableKey API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+const CFStringRef kCFURLIsPurgeableKey API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
     /* True if the file can be deleted by the file system when asked to free space. (CFBoolean) */
 
 CF_EXPORT
-const CFStringRef kCFURLIsSparseKey API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+const CFStringRef kCFURLIsSparseKey API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
     /* True if the file has sparse regions. (CFBoolean) */
 
 CF_EXPORT
@@ -949,12 +949,12 @@ CF_EXPORT
 const CFStringRef kCFURLFileProtectionCompleteUntilFirstUserAuthentication API_AVAILABLE(ios(9.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos); // The file is stored in an encrypted format on disk and cannot be accessed until after the device has booted. After the user unlocks the device for the first time, your app can access the file and continue to access it even if the user subsequently locks the device.
 
 CF_EXPORT
-const CFStringRef kCFURLFileProtectionCompleteWhenUserInactive API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos); // The file is stored in an encrypted format on disk and cannot be read from or written to while the device is locked or booting. Transient data files with this protection type should be excluded from backups using kCFURLIsExcludedFromBackupKey.
+const CFStringRef kCFURLFileProtectionCompleteWhenUserInactive API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos); // The file is stored in an encrypted format on disk and cannot be read from or written to while the device is locked or booting. Transient data files with this protection type should be excluded from backups using kCFURLIsExcludedFromBackupKey.
 
 /* Directory Properties */
 
 CF_EXPORT
-const CFStringRef kCFURLDirectoryEntryCountKey API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0)); // Returns the count of file system objects contained in the directory. This is a count of objects actually stored in the file system, so excludes virtual items like "." and "..". The property is useful for quickly identifying an empty directory for backup and syncing. If the URL is not a directory or the file system cannot cheaply compute the value, `nil` is returned. (Read-only, value type CFNumber)
+const CFStringRef kCFURLDirectoryEntryCountKey API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)); // Returns the count of file system objects contained in the directory. This is a count of objects actually stored in the file system, so excludes virtual items like "." and "..". The property is useful for quickly identifying an empty directory for backup and syncing. If the URL is not a directory or the file system cannot cheaply compute the value, `nil` is returned. (Read-only, value type CFNumber)
 
 /* Volume Properties */
 
@@ -1123,15 +1123,15 @@ const CFStringRef kCFURLVolumeSupportsExclusiveRenamingKey API_AVAILABLE(macosx(
     /* true if the volume supports renamex_np(2)'s RENAME_EXCL option (Read-only, value type CFBoolean) */
 
 CF_EXPORT
-const CFStringRef kCFURLVolumeSupportsImmutableFilesKey API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+const CFStringRef kCFURLVolumeSupportsImmutableFilesKey API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
     /* true if the volume supports making files immutable with the kCFURLIsUserImmutableKey or kCFURLIsSystemImmutableKey properties (Read-only, value type CFBoolean) */
 
 CF_EXPORT
-const CFStringRef kCFURLVolumeSupportsAccessPermissionsKey API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+const CFStringRef kCFURLVolumeSupportsAccessPermissionsKey API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
     /* true if the volume supports setting POSIX access permissions with the kCFURLFileSecurityKey property (Read-only, value type CFBoolean) */
 
 CF_EXPORT
-const CFStringRef kCFURLVolumeSupportsFileProtectionKey API_AVAILABLE(macosx(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+const CFStringRef kCFURLVolumeSupportsFileProtectionKey API_AVAILABLE(macosx(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
     /* true if the volume supports data protection for files (see kCFURLFileProtectionKey). (Read-only, value type CFBoolean) */
 
 CF_EXPORT

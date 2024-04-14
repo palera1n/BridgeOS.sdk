@@ -1539,36 +1539,36 @@ CM_EXPORT const CFStringRef kCMSampleBufferAttachmentKey_ResumeOutput  // CFNumb
 
 */
 CM_EXPORT const CFStringRef kCMSampleAttachmentKey_HEVCTemporalLevelInfo  // CFDictionary(kCMHEVCTemporalLevelInfoKey_*), optional.  Corresponds to 'tscl' sample group.
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMHEVCTemporalLevelInfoKey_TemporalLevel					// CFNumber(Int)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMHEVCTemporalLevelInfoKey_ProfileSpace					// CFNumber(Int)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMHEVCTemporalLevelInfoKey_TierFlag						// CFNumber(Int)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMHEVCTemporalLevelInfoKey_ProfileIndex					// CFNumber(Int)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMHEVCTemporalLevelInfoKey_ProfileCompatibilityFlags		// CFData(4 bytes)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMHEVCTemporalLevelInfoKey_ConstraintIndicatorFlags		// CFData(6 bytes)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMHEVCTemporalLevelInfoKey_LevelIndex						// CFNumber(Int)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMSampleAttachmentKey_HEVCTemporalSubLayerAccess			// CFBoolean, optional.  Corresponds to 'tsas' sample group.
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMSampleAttachmentKey_HEVCStepwiseTemporalSubLayerAccess  // CFBoolean, optional.  Corresponds to 'stsa' sample group.
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMSampleAttachmentKey_HEVCSyncSampleNALUnitType			// CFNumber(Int), optional.  Corresponds to 'sync' sample group.
-	API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+	API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 	
 // The kCMSampleAttachmentKey_AudioIndependentSampleDecoderRefreshCount sample attachment
 // is only present if the audio sample is an IndependentFrame (IF, value is non-zero) or ImmediatePlayoutFrame (IPF, value is zero).
 CM_EXPORT const CFStringRef kCMSampleAttachmentKey_AudioIndependentSampleDecoderRefreshCount	// CFNumber(Int), optional.
-	API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+	API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 	
 /*!
 	@constant	kCMSampleBufferAttachmentKey_TransitionID
@@ -1856,7 +1856,7 @@ CM_EXPORT const CFStringRef kCMSampleBufferLensStabilizationInfo_Off  // CFStrin
 			ox and oy are the coordinates of the principal point. The origin is the upper left of the frame.
  */
 CM_EXPORT const CFStringRef kCMSampleBufferAttachmentKey_CameraIntrinsicMatrix  // CFData (matrix_float3x3)
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 
 /*!
 	@constant	kCMSampleBufferAttachmentKey_ForceKeyFrame
@@ -1877,7 +1877,7 @@ CM_EXPORT const CFStringRef kCMSampleBufferAttachmentKey_ForceKeyFrame
 		The attachment is CFData containing one or more "BytesOfClearData"/"BytesOfProtectedData" pairs as appears in the 'senc' box (see ISO/IEC 23001-7 section 7.2.2). The "BytesOfClearData” and the "BytesOfProtectedData” fields are 32-bit integers. Both are native endian in the CFData. This attachment is not present if the CMSampleBuffer contains unprotected content.
  */
 CM_EXPORT const CFStringRef kCMSampleAttachmentKey_CryptorSubsampleAuxiliaryData // CFData
-						API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+						API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
 	@constant   kCMSampleAttachmentKey_HDR10PlusPerFrameData
@@ -1886,7 +1886,7 @@ CM_EXPORT const CFStringRef kCMSampleAttachmentKey_CryptorSubsampleAuxiliaryData
 		The attachment is CFData containing HDR10+ metadata within an User Data Registered ITU-T T-35 SEI message (see ISO/IEC 23008-2-2020 section D.3.6) as little endian in the CFData. This attachment will override any HDR10+ metadata stored within the compressed data. The data shall start with the field itu_t_t35_country_code with the value 0xb5.
  */
 CM_EXPORT const CFStringRef kCMSampleAttachmentKey_HDR10PlusPerFrameData // CFData
-						API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0));
+						API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0));
 
 
 CM_ASSUME_NONNULL_END

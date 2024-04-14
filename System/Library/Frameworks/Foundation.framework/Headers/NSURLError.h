@@ -78,7 +78,7 @@ NS_ENUM(NSInteger)
     @const NSURLErrorNetworkUnavailableReasonKey
     @abstract The NSErrorUserInfoKey used to store and retrieve the NSNumber object corresponding to the reason why the network is unavailable when the task failed due to unsatisfiable network constraints.  See the NSURLErrorNetworkUnavailableReason enum for details.
 */
-FOUNDATION_EXPORT NSErrorUserInfoKey const NSURLErrorNetworkUnavailableReasonKey API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+FOUNDATION_EXPORT NSErrorUserInfoKey const NSURLErrorNetworkUnavailableReasonKey API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
     @enum Codes associated with NSURLErrorNetworkUnavailableReasonKey
@@ -91,7 +91,7 @@ typedef NS_ENUM(NSInteger, NSURLErrorNetworkUnavailableReason)
     NSURLErrorNetworkUnavailableReasonCellular =    0,
     NSURLErrorNetworkUnavailableReasonExpensive =   1,
     NSURLErrorNetworkUnavailableReasonConstrained = 2,
-} API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+} API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
     @enum NSURL-related Error Codes

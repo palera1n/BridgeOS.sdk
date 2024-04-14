@@ -1314,26 +1314,26 @@ extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA512
 API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(3.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureDigestPSSSHA1
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureDigestPSSSHA224
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureDigestPSSSHA256
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureDigestPSSSHA384
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureDigestPSSSHA512
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureMessagePSSSHA1
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureMessagePSSSHA224
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureMessagePSSSHA256
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureMessagePSSSHA384
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmRSASignatureMessagePSSSHA512
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureDigestX962
 API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(3.0));
@@ -1360,28 +1360,28 @@ extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureMessageX962SHA512
 API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(3.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureDigestRFC4754
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA1
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA224
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA256
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA384
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureDigestRFC4754SHA512
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA1
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA224
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA256
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA384
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureMessageRFC4754SHA512
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDSASignatureRFC4754
 API_DEPRECATED_WITH_REPLACEMENT("kSecKeyAlgorithmECDSASignatureDigestRFC4754", macos(10.12, 14.0), ios(10.0, 17.0), tvos(10.0, 17.0), watchos(3.0, 10.0));
@@ -1435,22 +1435,22 @@ extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionCofactorX963SHA512AE
 API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(3.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA224AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA256AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA384AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA512AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA224AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA256AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA384AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const SecKeyAlgorithm kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA512AESGCM
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 
 extern const SecKeyAlgorithm kSecKeyAlgorithmECDHKeyExchangeStandard
 API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(3.0));

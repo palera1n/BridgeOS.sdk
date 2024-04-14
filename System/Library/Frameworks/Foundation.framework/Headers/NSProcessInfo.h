@@ -141,11 +141,11 @@ typedef NS_OPTIONS(uint64_t, NSActivityOptions) {
     NSActivityAutomaticTerminationDisabled = (1ULL << 15),
     
     // Emits an os_signpost begin and end during the activity lifetime, intended to be used to track animation activity
-    NSActivityAnimationTrackingEnabled API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0)) =
+    NSActivityAnimationTrackingEnabled API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0)) =
     (1ULL << 45),
     
     // Emits an os_signpost begin and end during the activity lifetime, intended to be used to track general activity
-    NSActivityTrackingEnabled API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0)) = (1ULL << 46),
+    NSActivityTrackingEnabled API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0)) = (1ULL << 46),
     
     // ----
     // Sets of options.
@@ -159,7 +159,7 @@ typedef NS_OPTIONS(uint64_t, NSActivityOptions) {
     
     // Used for activities that require the highest amount of timer and I/O precision available. Very few applications should need to use this constant.
     NSActivityLatencyCritical = 0xFF00000000ULL,
-    NSActivityUserInteractive API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0)) =
+    NSActivityUserInteractive API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0)) =
     (NSActivityUserInitiated | NSActivityLatencyCritical),
 } API_AVAILABLE(macos(10.9), ios(7.0), watchos(2.0), tvos(9.0));
 
@@ -206,12 +206,12 @@ typedef NS_ENUM(NSInteger, NSProcessInfoThermalState) {
     
     // System performance is significantly impacted and the system needs to cool down. Recommendation: reduce application's usage of CPU, GPU, and I/O to the minimum level needed to respond to user actions. Consider stopping use of camera and other peripherals if your application is using them.
     NSProcessInfoThermalStateCritical
-} API_AVAILABLE(macosx(10.10.3), ios(11.0), watchos(4.0), tvos(11.0));
+} API_AVAILABLE(macosx(10.10.3), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 @interface NSProcessInfo (NSProcessInfoThermalState)
 
 // Retrieve the current thermal state of the system. On systems where thermal state is unknown or unsupported, the value returned from the thermalState property is always NSProcessInfoThermalStateNominal.
-@property (readonly) NSProcessInfoThermalState thermalState API_AVAILABLE(macosx(10.10.3), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly) NSProcessInfoThermalState thermalState API_AVAILABLE(macosx(10.10.3), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 @end
 
@@ -229,7 +229,7 @@ typedef NS_ENUM(NSInteger, NSProcessInfoThermalState) {
  
  This notification is posted on the global dispatch queue. Register for it using the default notification center. The object associated with the notification is NSProcessInfo.processInfo.
 */
-FOUNDATION_EXTERN NSNotificationName const NSProcessInfoThermalStateDidChangeNotification API_AVAILABLE(macosx(10.10.3), ios(11.0), watchos(4.0), tvos(11.0));
+FOUNDATION_EXTERN NSNotificationName const NSProcessInfoThermalStateDidChangeNotification API_AVAILABLE(macosx(10.10.3), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*
  NSProcessInfoPowerStateDidChangeNotification is posted once any power usage mode of the system has changed. Once the notification is posted, use the isLowPowerModeEnabled property to retrieve the current state of the low power mode setting of the system.
@@ -242,8 +242,8 @@ FOUNDATION_EXTERN NSNotificationName const NSProcessInfoPowerStateDidChangeNotif
 
 @interface NSProcessInfo (NSProcessInfoPlatform)
 
-@property (readonly, getter=isMacCatalystApp) BOOL macCatalystApp API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
-@property (readonly, getter=isiOSAppOnMac) BOOL iOSAppOnMac API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+@property (readonly, getter=isMacCatalystApp) BOOL macCatalystApp API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
+@property (readonly, getter=isiOSAppOnMac) BOOL iOSAppOnMac API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 @end
 

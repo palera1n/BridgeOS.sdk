@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, NSDecodingFailurePolicy) {
 - (void)encodeValueOfObjCType:(const char *)type at:(const void *)addr;
 - (void)encodeDataObject:(NSData *)data;
 - (nullable NSData *)decodeDataObject;
-- (void)decodeValueOfObjCType:(const char *)type at:(void *)data size:(NSUInteger)size API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (void)decodeValueOfObjCType:(const char *)type at:(void *)data size:(NSUInteger)size API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 - (NSInteger)versionForClassName:(NSString *)className;
 @end
 
@@ -94,7 +94,7 @@ typedef NS_ENUM(NSInteger, NSDecodingFailurePolicy) {
 
  Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.
  */
-- (nullable NSArray *)decodeArrayOfObjectsOfClass:(Class)cls forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
+- (nullable NSArray *)decodeArrayOfObjectsOfClass:(Class)cls forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
 
 /**
   Decodes the \c NSDictionary object for the given \c key, which should be an \c NSDictionary<keyCls,objectCls> , with keys of type given in \c keyCls and objects of the given non-collection class \c objectCls (no nested dictionaries or other dictionaries contained in the dictionary, etc) from the coder.
@@ -103,7 +103,7 @@ typedef NS_ENUM(NSInteger, NSDecodingFailurePolicy) {
 
  Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.
  */
-- (nullable NSDictionary *)decodeDictionaryWithKeysOfClass:(Class)keyCls objectsOfClass:(Class)objectCls forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
+- (nullable NSDictionary *)decodeDictionaryWithKeysOfClass:(Class)keyCls objectsOfClass:(Class)objectCls forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
 
 // The class of the object may be any class in the provided NSSet, or a subclass of any class in the set. Otherwise, the behavior is the same as -decodeObjectOfClass:forKey:.
 - (nullable id)decodeObjectOfClasses:(nullable NSSet<Class> *)classes forKey:(NSString *)key API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0)) NS_REFINED_FOR_SWIFT;
@@ -116,7 +116,7 @@ typedef NS_ENUM(NSInteger, NSDecodingFailurePolicy) {
 
  Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.
  */
-- (nullable NSArray *)decodeArrayOfObjectsOfClasses:(NSSet<Class> *)classes forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
+- (nullable NSArray *)decodeArrayOfObjectsOfClasses:(NSSet<Class> *)classes forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
 
 /**
  Decodes the \c NSDictionary object for the given \c key, which should be an \c NSDictionary, with keys of the types given in \c keyClasses and objects of the given non-collection classes in \c objectClasses (no nested dictionaries or other dictionaries contained in the dictionary, etc) from the given coder.
@@ -125,7 +125,7 @@ typedef NS_ENUM(NSInteger, NSDecodingFailurePolicy) {
 
  Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.
  */
-- (nullable NSDictionary *)decodeDictionaryWithKeysOfClasses:(NSSet<Class> *)keyClasses objectsOfClasses:(NSSet<Class> *)objectClasses forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
+- (nullable NSDictionary *)decodeDictionaryWithKeysOfClasses:(NSSet<Class> *)keyClasses objectsOfClasses:(NSSet<Class> *)objectClasses forKey:(NSString *)key API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) NS_REFINED_FOR_SWIFT;
 
 // Calls -decodeObjectOfClasses:forKey: with a set allowing only property list types.
 - (nullable id)decodePropertyListForKey:(NSString *)key API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0));

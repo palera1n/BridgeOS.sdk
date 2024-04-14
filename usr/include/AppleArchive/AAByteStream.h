@@ -29,7 +29,7 @@ APPLE_ARCHIVE_API ssize_t AAByteStreamWrite(
   AAByteStream s,
   const void * buf,
   size_t nbyte)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Random-access write
@@ -46,7 +46,7 @@ APPLE_ARCHIVE_API ssize_t AAByteStreamPWrite(
   const void * buf,
   size_t nbyte,
   off_t offset)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Sequential read
@@ -61,7 +61,7 @@ APPLE_ARCHIVE_API ssize_t AAByteStreamRead(
   AAByteStream s,
   void * buf,
   size_t nbyte)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Random-access read
@@ -78,7 +78,7 @@ APPLE_ARCHIVE_API ssize_t AAByteStreamPRead(
   void * buf,
   size_t nbyte,
   off_t offset)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Seek
@@ -96,7 +96,7 @@ APPLE_ARCHIVE_API off_t AAByteStreamSeek(
   AAByteStream s,
   off_t offset,
   int whence)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Cancel, the stream still needs to be closed
@@ -107,7 +107,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API void AAByteStreamCancel(
   AAByteStream s)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Close stream
@@ -120,7 +120,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API int AAByteStreamClose(
   AAByteStream _Nullable s)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Stream objects
 
@@ -138,7 +138,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API AAByteStream _Nullable AAFileStreamOpenWithFD(
   int fd,
   int automatic_close)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Open a new file descriptor and create file stream
@@ -158,7 +158,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AAFileStreamOpenWithPath(
   const char * path,
   int open_flags,
   mode_t open_mode)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a block compression (pbz*) sequential output stream
@@ -181,7 +181,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AACompressionOutputStreamOpen(
   size_t block_size,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a block compression (pbz*) sequential output stream appending data to an
@@ -203,7 +203,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AACompressionOutputStreamOpenExisting(
   AAByteStream compressed_stream,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a decompression sequential input stream
@@ -227,7 +227,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AADecompressionInputStreamOpen(
   AAByteStream compressed_stream,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a decompression random access input stream
@@ -254,7 +254,7 @@ APPLE_ARCHIVE_API AAByteStream _Nullable AADecompressionRandomAccessInputStreamO
   size_t alloc_limit,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Open a new temporary file descriptor and create a file stream
@@ -266,7 +266,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return a new stream instance on success, and NULL on failure
 */
 APPLE_ARCHIVE_API AAByteStream _Nullable AATempFileStreamOpen(void)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a shared buffer and associated pair of stream streams
@@ -288,7 +288,7 @@ APPLE_ARCHIVE_API int AASharedBufferPipeOpen(
   AAByteStream _Nonnull * _Nullable ostream,
   AAByteStream _Nonnull * _Nullable istream,
   size_t buffer_capacity)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Process an byte stream
 
@@ -305,7 +305,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API off_t AAByteStreamProcess(
   AAByteStream istream,
   AAByteStream ostream)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Process a random access stream
@@ -330,7 +330,7 @@ APPLE_ARCHIVE_API off_t AARandomAccessByteStreamProcess(
   size_t block_size,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 #ifdef __cplusplus
 }

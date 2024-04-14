@@ -59,7 +59,7 @@ typedef void (^nw_establishment_report_access_block_t)(_Nullable nw_establishmen
  *		A block to invoke with the establishment report, which may be NULL if the
  *		connection not ready.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_connection_access_establishment_report(nw_connection_t connection,
 										  dispatch_queue_t queue,
@@ -82,7 +82,7 @@ nw_connection_access_establishment_report(nw_connection_t connection,
  * @result
  *		Returns the number of milliseconds the connection took to establish.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_establishment_report_get_duration_milliseconds(nw_establishment_report_t report);
 
@@ -102,7 +102,7 @@ nw_establishment_report_get_duration_milliseconds(nw_establishment_report_t repo
  *		Returns the number of milliseconds from connection start to the beginning
  *		of the successful connection attempt.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_establishment_report_get_attempt_started_after_milliseconds(nw_establishment_report_t report);
 
@@ -121,7 +121,7 @@ nw_establishment_report_get_attempt_started_after_milliseconds(nw_establishment_
  * @result
  *		Returns the number of connection attempts made before the successful attempt.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint32_t
 nw_establishment_report_get_previous_attempt_count(nw_establishment_report_t report);
 
@@ -137,7 +137,7 @@ nw_establishment_report_get_previous_attempt_count(nw_establishment_report_t rep
  * @result
  *		Returns true if the connection used a proxy, false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_establishment_report_get_used_proxy(nw_establishment_report_t report);
 
@@ -156,7 +156,7 @@ nw_establishment_report_get_used_proxy(nw_establishment_report_t report);
  *		Returns true if a proxy configuration applied to the connection,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_establishment_report_get_proxy_configured(nw_establishment_report_t report);
 
@@ -175,7 +175,7 @@ nw_establishment_report_get_proxy_configured(nw_establishment_report_t report);
  *		Callers are responsible for deallocating using nw_release(obj) or [obj release].
  *		These objects support ARC.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED _Nullable nw_endpoint_t
 nw_establishment_report_copy_proxy_endpoint(nw_establishment_report_t report);
 
@@ -219,7 +219,7 @@ typedef enum {
  * @result
  *		The source of the resolution (query or cache).
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 nw_report_resolution_source_t
 nw_resolution_report_get_source(nw_resolution_report_t resolution_report);
 
@@ -235,7 +235,7 @@ nw_resolution_report_get_source(nw_resolution_report_t resolution_report);
  * @result
  *		The number of milliseconds spent on this resolution step.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 uint64_t
 nw_resolution_report_get_milliseconds(nw_resolution_report_t resolution_report);
 
@@ -251,7 +251,7 @@ nw_resolution_report_get_milliseconds(nw_resolution_report_t resolution_report);
  * @result
  *		The number of resolved endpoints discovered by the resolution step.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 uint32_t
 nw_resolution_report_get_endpoint_count(nw_resolution_report_t resolution_report);
 
@@ -267,7 +267,7 @@ nw_resolution_report_get_endpoint_count(nw_resolution_report_t resolution_report
  * @result
  *		The resolved endpoint that led to a successful connection.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_resolution_report_copy_successful_endpoint(nw_resolution_report_t resolution_report);
 
@@ -283,7 +283,7 @@ nw_resolution_report_copy_successful_endpoint(nw_resolution_report_t resolution_
  * @result
  *		The first resolved endpoint attempted.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_resolution_report_copy_preferred_endpoint(nw_resolution_report_t resolution_report);
 
@@ -317,7 +317,7 @@ typedef enum {
  * @result
  *		The protocol used for endpoint resolution.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 nw_report_resolution_protocol_t
 nw_resolution_report_get_protocol(nw_resolution_report_t resolution_report);
 
@@ -354,7 +354,7 @@ typedef bool (^nw_report_resolution_enumerator_t)(nw_report_resolution_source_t 
  *		Returning true from the block indicates that the enumeration should continue.
  *		Returning false indicates that the enumeration should stop.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_establishment_report_enumerate_resolutions(nw_establishment_report_t report,
 											  NW_NOESCAPE nw_report_resolution_enumerator_t enumerate_block);
@@ -382,7 +382,7 @@ typedef bool (^nw_report_resolution_report_enumerator_t)(nw_resolution_report_t 
  *		Returning true from the block indicates that the enumeration should continue.
  *		Returning false indicates that the enumeration should stop.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_establishment_report_enumerate_resolution_reports(nw_establishment_report_t report,
 													 NW_NOESCAPE nw_report_resolution_report_enumerator_t enumerate_block);
@@ -413,7 +413,7 @@ typedef bool (^nw_report_protocol_enumerator_t)(nw_protocol_definition_t protoco
  *		Returning true from the block indicates that the enumeration should continue.
  *		Returning false indicates that the enumeration should stop.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_establishment_report_enumerate_protocols(nw_establishment_report_t report,
 											NW_NOESCAPE nw_report_protocol_enumerator_t enumerate_block);
@@ -461,7 +461,7 @@ NW_OBJECT_DECL(nw_data_transfer_report);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_data_transfer_report_t
 nw_connection_create_new_data_transfer_report(nw_connection_t connection);
 
@@ -491,7 +491,7 @@ typedef enum {
  * @result
  *		Returns the current state of the data transfer report.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 nw_data_transfer_report_state_t
 nw_data_transfer_report_get_state(nw_data_transfer_report_t report);
 
@@ -520,7 +520,7 @@ typedef void (^nw_data_transfer_report_collect_block_t)(nw_data_transfer_report_
  * @param collect_block
  *		A block to invoke once the report has been collected.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_data_transfer_report_collect(nw_data_transfer_report_t report,
 								dispatch_queue_t queue,
@@ -534,7 +534,7 @@ nw_data_transfer_report_collect(nw_data_transfer_report_t report,
  *		values across paths where applicable. For values that cannot
  *		sum, the value of the primary path is used.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 extern const uint32_t _nw_data_transfer_report_all_paths;
 #define NW_ALL_PATHS (_nw_data_transfer_report_all_paths)
 
@@ -558,7 +558,7 @@ extern const uint32_t _nw_data_transfer_report_all_paths;
  *		Returns the duration of the data transport report in milliseconds, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_duration_milliseconds(nw_data_transfer_report_t report);
 
@@ -579,7 +579,7 @@ nw_data_transfer_report_get_duration_milliseconds(nw_data_transfer_report_t repo
  *		limits the value of the "path_index" parameter used in other report
  *		functions. Returns 0 if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint32_t
 nw_data_transfer_report_get_path_count(nw_data_transfer_report_t report);
 
@@ -602,7 +602,7 @@ nw_data_transfer_report_get_path_count(nw_data_transfer_report_t report);
  *		Returns the number of IP packets received, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_received_ip_packet_count(nw_data_transfer_report_t report,
 													 uint32_t path_index);
@@ -626,7 +626,7 @@ nw_data_transfer_report_get_received_ip_packet_count(nw_data_transfer_report_t r
  *		Returns the number of IP packets sent, or 0 if the report is not
  *		in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_sent_ip_packet_count(nw_data_transfer_report_t report,
 												 uint32_t path_index);
@@ -650,7 +650,7 @@ nw_data_transfer_report_get_sent_ip_packet_count(nw_data_transfer_report_t repor
  *		Returns the number of transport protocol bytes received, or 0 if the
  *		report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_received_transport_byte_count(nw_data_transfer_report_t report,
 														  uint32_t path_index);
@@ -674,7 +674,7 @@ nw_data_transfer_report_get_received_transport_byte_count(nw_data_transfer_repor
  *		Returns the number of duplicate transport protocol bytes received, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_received_transport_duplicate_byte_count(nw_data_transfer_report_t report,
 																	uint32_t path_index);
@@ -698,7 +698,7 @@ nw_data_transfer_report_get_received_transport_duplicate_byte_count(nw_data_tran
  *		Returns the number of out-of-order transport protocol bytes received, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_received_transport_out_of_order_byte_count(nw_data_transfer_report_t report,
 																	   uint32_t path_index);
@@ -722,7 +722,7 @@ nw_data_transfer_report_get_received_transport_out_of_order_byte_count(nw_data_t
  *		Returns the number of transport protocol bytes sent, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_sent_transport_byte_count(nw_data_transfer_report_t report,
 													  uint32_t path_index);
@@ -746,7 +746,7 @@ nw_data_transfer_report_get_sent_transport_byte_count(nw_data_transfer_report_t 
  *		Returns the number of retransmitted transport protocol bytes sent, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_sent_transport_retransmitted_byte_count(nw_data_transfer_report_t report,
 																	uint32_t path_index);
@@ -771,7 +771,7 @@ nw_data_transfer_report_get_sent_transport_retransmitted_byte_count(nw_data_tran
  *		Returns the smoothed RTT as measured by the transport protocol, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_transport_smoothed_rtt_milliseconds(nw_data_transfer_report_t report,
 																uint32_t path_index);
@@ -796,7 +796,7 @@ nw_data_transfer_report_get_transport_smoothed_rtt_milliseconds(nw_data_transfer
  *		Returns the minimum RTT as measured by the transport protocol, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_transport_minimum_rtt_milliseconds(nw_data_transfer_report_t report,
 															   uint32_t path_index);
@@ -821,7 +821,7 @@ nw_data_transfer_report_get_transport_minimum_rtt_milliseconds(nw_data_transfer_
  *		Returns the RTT variance as measured by the transport protocol, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_transport_rtt_variance(nw_data_transfer_report_t report,
 												   uint32_t path_index);
@@ -845,7 +845,7 @@ nw_data_transfer_report_get_transport_rtt_variance(nw_data_transfer_report_t rep
  *		Returns the number of application bytes received, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_received_application_byte_count(nw_data_transfer_report_t report,
 															uint32_t path_index);
@@ -869,7 +869,7 @@ nw_data_transfer_report_get_received_application_byte_count(nw_data_transfer_rep
  *		Returns the number of application bytes sent, or 0
  *		if the report is not in the "collected" state.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 uint64_t
 nw_data_transfer_report_get_sent_application_byte_count(nw_data_transfer_report_t report,
 														uint32_t path_index);
@@ -895,7 +895,7 @@ nw_data_transfer_report_get_sent_application_byte_count(nw_data_transfer_report_
  *		These objects support ARC.
  *		Returns NULL on failure. Fails if the report is not yet collected.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_interface_t
 nw_data_transfer_report_copy_path_interface(nw_data_transfer_report_t report,
 											uint32_t path_index);
@@ -920,7 +920,7 @@ nw_data_transfer_report_copy_path_interface(nw_data_transfer_report_t report,
  *		Returns nw_interface_radio_type_unknown on failure.
  *		Fails if the report is not yet collected.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 nw_interface_radio_type_t
 nw_data_transfer_report_get_path_radio_type(nw_data_transfer_report_t report,
 											uint32_t path_index);

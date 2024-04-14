@@ -70,7 +70,7 @@ typedef enum {
  * @result
  *		Returns the type of the network endpoint.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_endpoint_type_t
 nw_endpoint_get_type(nw_endpoint_t endpoint);
 
@@ -99,7 +99,7 @@ nw_endpoint_get_type(nw_endpoint_t endpoint);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_endpoint_create_host(const char *hostname, const char *port);
 
@@ -117,7 +117,7 @@ nw_endpoint_create_host(const char *hostname, const char *port);
  *		Returns the hostname string for the endpoint, or NULL
  *		if the endpoint is not of type nw_endpoint_type_host.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char *
 nw_endpoint_get_hostname(nw_endpoint_t endpoint);
 
@@ -136,7 +136,7 @@ nw_endpoint_get_hostname(nw_endpoint_t endpoint);
  *		if the endpoint is not of type nw_endpoint_type_host or
  *		nw_endpoint_type_address. This string must be freed with free().
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 char *
 nw_endpoint_copy_port_string(nw_endpoint_t endpoint);
 
@@ -156,7 +156,7 @@ nw_endpoint_copy_port_string(nw_endpoint_t endpoint);
  *		of type nw_endpoint_type_host or nw_endpoint_type_address.
  *		The port will be returned in Host Byte Order.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint16_t
 nw_endpoint_get_port(nw_endpoint_t endpoint);
 
@@ -178,7 +178,7 @@ nw_endpoint_get_port(nw_endpoint_t endpoint);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_endpoint_create_address(const struct sockaddr *address);
 
@@ -197,7 +197,7 @@ nw_endpoint_create_address(const struct sockaddr *address);
  *		if the endpoint is not of type nw_endpoint_type_address.
  *		This string must be freed with free().
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 char *
 nw_endpoint_copy_address_string(nw_endpoint_t endpoint);
 
@@ -215,7 +215,7 @@ nw_endpoint_copy_address_string(nw_endpoint_t endpoint);
  *		Returns the sockaddr struct for the endpoint, or NULL
  *		if the endpoint is not of type nw_endpoint_type_address.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const struct sockaddr *
 nw_endpoint_get_address(nw_endpoint_t endpoint);
 
@@ -243,7 +243,7 @@ nw_endpoint_get_address(nw_endpoint_t endpoint);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_endpoint_create_bonjour_service(const char *name, const char *type, const char *domain);
 
@@ -261,7 +261,7 @@ nw_endpoint_create_bonjour_service(const char *name, const char *type, const cha
  *		Returns the Bonjour Service name string for the endpoint, or NULL
  *		if the endpoint is not of type nw_endpoint_type_bonjour_service.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char *
 nw_endpoint_get_bonjour_service_name(nw_endpoint_t endpoint);
 
@@ -279,7 +279,7 @@ nw_endpoint_get_bonjour_service_name(nw_endpoint_t endpoint);
  *		Returns the Bonjour Service type string for the endpoint, or NULL
  *		if the endpoint is not of type nw_endpoint_type_bonjour_service.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char *
 nw_endpoint_get_bonjour_service_type(nw_endpoint_t endpoint);
 
@@ -297,7 +297,7 @@ nw_endpoint_get_bonjour_service_type(nw_endpoint_t endpoint);
  *		Returns the Bonjour Service domain string for the endpoint, or NULL
  *		if the endpoint is not of type nw_endpoint_type_bonjour_service.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char *
 nw_endpoint_get_bonjour_service_domain(nw_endpoint_t endpoint);
 
@@ -319,7 +319,7 @@ nw_endpoint_get_bonjour_service_domain(nw_endpoint_t endpoint);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters, or due to URL parsing failure.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_endpoint_create_url(const char *url);
 
@@ -337,7 +337,7 @@ nw_endpoint_create_url(const char *url);
  *		The URL string, or NULL if the endpoint is not of type
  *		nw_endpoint_type_url.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 const char *
 nw_endpoint_get_url(nw_endpoint_t endpoint);
 
@@ -356,7 +356,7 @@ nw_endpoint_get_url(nw_endpoint_t endpoint);
  *		Returns a retained nw_txt_record_t object if a TXT record
  *		is associated with this endpoint, or NULL otherwise.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 NW_RETURNS_RETAINED _Nullable nw_txt_record_t
 nw_endpoint_copy_txt_record(nw_endpoint_t endpoint);
 
@@ -376,7 +376,7 @@ nw_endpoint_copy_txt_record(nw_endpoint_t endpoint);
  *		Returns a pointer to a buffer of bytes containing a signature,
  *		or NULL if the endpoint is not signed.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 const uint8_t * _Nullable
 nw_endpoint_get_signature(nw_endpoint_t endpoint,
 						  size_t *out_signature_length);

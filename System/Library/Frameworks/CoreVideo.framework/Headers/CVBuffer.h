@@ -157,7 +157,7 @@ CV_EXPORT void  CVBufferPropagateAttachments( CVBufferRef CV_NONNULL sourceBuffe
     @param      buffer  Target CVBuffer object.
     @result     A CFDictionary with all buffer attachments identified by their keys. If no attachment is present or invalid attachment mode,   returns NULL
 */
-CV_EXPORT CFDictionaryRef CF_RETURNS_RETAINED CV_NULLABLE CVBufferCopyAttachments( CVBufferRef CV_NONNULL buffer, CVAttachmentMode attachmentMode ) API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+CV_EXPORT CFDictionaryRef CF_RETURNS_RETAINED CV_NULLABLE CVBufferCopyAttachments( CVBufferRef CV_NONNULL buffer, CVAttachmentMode attachmentMode ) API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
     @function   CVBufferCopyAttachment
@@ -168,7 +168,7 @@ CV_EXPORT CFDictionaryRef CF_RETURNS_RETAINED CV_NULLABLE CVBufferCopyAttachment
     @param      attachmentMode.  Returns the mode of the attachment, if desired.  May be NULL.
     @result     If found the attachment object, return the value; otherwize, return NULL.
 */
-CV_EXPORT CFTypeRef CV_NULLABLE CF_RETURNS_RETAINED CVBufferCopyAttachment( CVBufferRef CV_NONNULL buffer, CFStringRef CV_NONNULL key, CVAttachmentMode * CV_NULLABLE attachmentMode ) API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+CV_EXPORT CFTypeRef CV_NULLABLE CF_RETURNS_RETAINED CVBufferCopyAttachment( CVBufferRef CV_NONNULL buffer, CFStringRef CV_NONNULL key, CVAttachmentMode * CV_NULLABLE attachmentMode ) API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
     @function   CVBufferHasAttachment
@@ -177,7 +177,7 @@ CV_EXPORT CFTypeRef CV_NULLABLE CF_RETURNS_RETAINED CVBufferCopyAttachment( CVBu
     @param      key    Key in form of a CFString identifying the desired attachment.
     @result     True if an attachment with this key is present, otherwise false.
 */
-CV_EXPORT Boolean CVBufferHasAttachment( CVBufferRef CV_NONNULL buffer, CFStringRef CV_NONNULL key ) API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+CV_EXPORT Boolean CVBufferHasAttachment( CVBufferRef CV_NONNULL buffer, CFStringRef CV_NONNULL key ) API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 #if defined(__cplusplus)
 }

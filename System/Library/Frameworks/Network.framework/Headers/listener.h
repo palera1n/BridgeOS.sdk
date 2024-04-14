@@ -83,7 +83,7 @@ typedef enum {
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_listener_t
 nw_listener_create_with_port(const char *port, nw_parameters_t parameters);
 
@@ -104,7 +104,7 @@ nw_listener_create_with_port(const char *port, nw_parameters_t parameters);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_listener_t
 nw_listener_create(nw_parameters_t parameters);
 
@@ -131,7 +131,7 @@ nw_listener_create(nw_parameters_t parameters);
  *		Returns an allocated nw_listener_t object on success. Use nw_release() to deallocate.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_listener_t
 nw_listener_create_with_connection(nw_connection_t connection,
 								   nw_parameters_t parameters);
@@ -149,7 +149,7 @@ nw_listener_create_with_connection(nw_connection_t connection,
  * @param queue
  *		The client's dispatch queue.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_set_queue(nw_listener_t listener,
 					  dispatch_queue_t queue);
@@ -173,7 +173,7 @@ typedef void (^nw_listener_state_changed_handler_t)(nw_listener_state_t state, _
  *		The state changed handler to call when the listener state changes.
  *		Pass NULL to remove the event handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_set_state_changed_handler(nw_listener_t listener,
 									  _Nullable nw_listener_state_changed_handler_t handler);
@@ -204,7 +204,7 @@ typedef void (^nw_listener_new_connection_handler_t)(nw_connection_t connection)
  *		The event handler to call when the listener receives a new connection.
  *		Pass NULL to remove the new connection handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_set_new_connection_handler(nw_listener_t listener,
 									   _Nullable nw_listener_new_connection_handler_t handler);
@@ -239,7 +239,7 @@ typedef void (^nw_listener_new_connection_group_handler_t)(nw_connection_group_t
  *		The event handler to call when the listener receives a new connection group.
  *		Pass NULL to remove the new connection group handler.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 void
 nw_listener_set_new_connection_group_handler(nw_listener_t listener,
 											 _Nullable nw_listener_new_connection_group_handler_t handler);
@@ -273,7 +273,7 @@ nw_listener_set_new_connection_group_handler(nw_listener_t listener,
  * @result
  *		Returns current new connection limit
  */
-API_AVAILABLE(macos(10.15), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.15), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint32_t
 nw_listener_get_new_connection_limit(nw_listener_t listener);
 
@@ -297,7 +297,7 @@ nw_listener_get_new_connection_limit(nw_listener_t listener);
  *		The new connection limit. Pass NW_LISTENER_INFINITE_CONNECTION_LIMIT
  *      to disable new connection limiting.
  */
-API_AVAILABLE(macos(10.15), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.15), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_set_new_connection_limit(nw_listener_t listener,
 									 uint32_t new_connection_limit);
@@ -315,7 +315,7 @@ nw_listener_set_new_connection_limit(nw_listener_t listener,
  * @param advertise_descriptor
  *		The advertise_descriptor or NULL to prevent or remove registration of a service.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_set_advertise_descriptor(nw_listener_t listener,
 									 _Nullable nw_advertise_descriptor_t advertise_descriptor);
@@ -353,7 +353,7 @@ typedef void (^nw_listener_advertised_endpoint_changed_handler_t)(nw_endpoint_t 
  *		The event handler to call when the listener adds or removes an advertised endpoint.
  *		Pass NULL to remove the handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_set_advertised_endpoint_changed_handler(nw_listener_t listener,
 													_Nullable nw_listener_advertised_endpoint_changed_handler_t handler);
@@ -374,7 +374,7 @@ nw_listener_set_advertised_endpoint_changed_handler(nw_listener_t listener,
  * @result
  *		Returns a port in host byte order.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint16_t
 nw_listener_get_port(nw_listener_t listener);
 
@@ -388,7 +388,7 @@ nw_listener_get_port(nw_listener_t listener);
  * @param listener
  *		The listener object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_start(nw_listener_t listener);
 
@@ -404,7 +404,7 @@ nw_listener_start(nw_listener_t listener);
  * @param listener
  *		The listener object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_listener_cancel(nw_listener_t listener);
 

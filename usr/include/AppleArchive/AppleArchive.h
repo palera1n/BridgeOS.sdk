@@ -64,22 +64,22 @@ extern "C" {
 #endif
 
 APPLE_ARCHIVE_INLINE void AAByteStreamAbort(AAByteStream s)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 __attribute__((availability(macos,deprecated=11.0, replacement="AAByteStreamCancel")))
 { AAByteStreamCancel(s); }
 
 APPLE_ARCHIVE_INLINE void AACustomByteStreamSetAbortProc(AAByteStream s, AAByteStreamCancelProc proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 __attribute__((availability(macos,deprecated=11.0, replacement="AACustomByteStreamSetCancelProc")))
 { AACustomByteStreamSetCancelProc(s, proc); }
 
 APPLE_ARCHIVE_INLINE void AAArchiveStreamAbort(AAArchiveStream s)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 __attribute__((availability(macos,deprecated=11.0, replacement="AAArchiveStreamCancel")))
 { AAArchiveStreamCancel(s); }
 
 APPLE_ARCHIVE_INLINE void AACustomArchiveStreamSetAbortProc(AAArchiveStream s, AAArchiveStreamCancelProc proc)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 __attribute__((availability(macos,deprecated=11.0, replacement="AACustomArchiveStreamSetCancelProc")))
 { AACustomArchiveStreamSetCancelProc(s, proc); }
 

@@ -57,7 +57,7 @@ extern "C" {
  *		If the archName is unknown, returns false.
  */
 extern bool macho_cpu_type_for_arch_name(const char* _Nonnull archName, cpu_type_t* _Nonnull type, cpu_subtype_t* _Nonnull subtype)
-__API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(8.0));
 
 
 /*!
@@ -78,7 +78,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
  *		The string returned is static and does not need to be deallocated.
  */
 extern const char* _Nullable macho_arch_name_for_cpu_type(cpu_type_t type, cpu_subtype_t subtype)
-__API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(8.0));
 
 
 /*!
@@ -98,7 +98,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
  *		The string returned is static and does not need to be deallocated.
  */
 extern const char* _Nullable macho_arch_name_for_mach_header(const struct mach_header* _Nullable mh)
-__API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(8.0));
 
 #ifdef __BLOCKS__
   #if __has_attribute(noescape)
@@ -134,7 +134,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
  *          EBADMACHO - path is a mach-o file, but it is malformed
  */
 extern int macho_for_each_slice(const char* _Nonnull path, void (^ _Nullable callback)(const struct mach_header* _Nonnull slice, uint64_t sliceFileOffset, size_t size, bool* _Nonnull stop) __MACHO_NOESCAPE)
-__API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(8.0));
 
 
 /*!
@@ -162,7 +162,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
  *          EBADMACHO - fd content is a mach-o file, but it is malformed
  */
 extern int macho_for_each_slice_in_fd(int fd, void (^ _Nullable callback)(const struct mach_header* _Nonnull slice, uint64_t sliceFileOffset, size_t size, bool* _Nonnull stop)__MACHO_NOESCAPE)
-__API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(8.0));
 
 
 /*!
@@ -195,7 +195,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
  *          EBADMACHO - path is a mach-o file, but it is malformed
  */
 extern int macho_best_slice(const char* _Nonnull path, void (^ _Nullable bestSlice)(const struct mach_header* _Nonnull slice, uint64_t sliceFileOffset, size_t sliceSize)__MACHO_NOESCAPE)
-__API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(8.0));
 
 
 /*!
@@ -225,7 +225,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
  *          EBADARCH - fd content is a mach-o or fat, but none of the slices are loadable
  */
 extern int macho_best_slice_in_fd(int fd, void (^ _Nullable bestSlice)(const struct mach_header* _Nonnull slice, uint64_t sliceFileOffset, size_t sliceSize)__MACHO_NOESCAPE)
-__API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(8.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(8.0));
 
 #endif // __BLOCKS__
 

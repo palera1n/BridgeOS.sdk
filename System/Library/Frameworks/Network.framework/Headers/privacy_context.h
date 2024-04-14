@@ -67,7 +67,7 @@ NW_OBJECT_DECL(nw_privacy_context);
  * @result
  *		Returns an allocated nw_privacy_context_t object on success.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED nw_privacy_context_t
 nw_privacy_context_create(const char *description);
 
@@ -86,7 +86,7 @@ nw_privacy_context_create(const char *description);
  * 		explicitly configure name resolution requirements.
  */
 #define NW_DEFAULT_PRIVACY_CONTEXT (_nw_privacy_context_default_context)
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_PRIVACY_CONTEXT_TYPE_DECL(default_context);
 
 /*!
@@ -100,7 +100,7 @@ NW_PRIVACY_CONTEXT_TYPE_DECL(default_context);
  * @param privacy_context
  * 		A privacy context to flush.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_privacy_context_flush_cache(nw_privacy_context_t privacy_context);
 
@@ -114,7 +114,7 @@ nw_privacy_context_flush_cache(nw_privacy_context_t privacy_context);
  * @param privacy_context
  * 		A privacy context on which to disable logging.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_privacy_context_disable_logging(nw_privacy_context_t privacy_context);
 
@@ -143,7 +143,7 @@ nw_privacy_context_disable_logging(nw_privacy_context_t privacy_context);
  * 		NULL and require_encrypted_name_resolution is set to true, all cleartext
  * 		name resolution will be blocked.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_privacy_context_require_encrypted_name_resolution(nw_privacy_context_t privacy_context,
 													 bool require_encrypted_name_resolution,
@@ -163,7 +163,7 @@ nw_privacy_context_require_encrypted_name_resolution(nw_privacy_context_t privac
  * @param proxy_config
  * 		A proxy configuration object to apply to all connections that use this context.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_privacy_context_add_proxy(nw_privacy_context_t privacy_context,
 							 nw_proxy_config_t proxy_config);
@@ -177,7 +177,7 @@ nw_privacy_context_add_proxy(nw_privacy_context_t privacy_context,
  * @param privacy_context
  * 		A privacy context to modify. This can include the default privacy context.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 void
 nw_privacy_context_clear_proxies(nw_privacy_context_t privacy_context);
 

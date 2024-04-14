@@ -47,7 +47,7 @@ typedef NS_ENUM(OSStatus, AVAudioEngineManualRenderingError) {
 	AVAudioEngineManualRenderingErrorInvalidMode = -80800,
 	AVAudioEngineManualRenderingErrorInitialized = -80801,
 	AVAudioEngineManualRenderingErrorNotRunning  = -80802
-} API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+} API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @enum AVAudioEngineManualRenderingStatus
     @abstract 
@@ -78,7 +78,7 @@ typedef NS_ENUM(NSInteger, AVAudioEngineManualRenderingStatus) {
 	AVAudioEngineManualRenderingStatusSuccess = 0,
 	AVAudioEngineManualRenderingStatusInsufficientDataFromInputNode = 1,
 	AVAudioEngineManualRenderingStatusCannotDoInCurrentContext = 2
-} API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+} API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @enum AVAudioEngineManualRenderingMode
     @abstract 
@@ -98,7 +98,7 @@ typedef NS_ENUM(NSInteger, AVAudioEngineManualRenderingStatus) {
 typedef NS_ENUM(NSInteger, AVAudioEngineManualRenderingMode) {
 	AVAudioEngineManualRenderingModeOffline = 0,
 	AVAudioEngineManualRenderingModeRealtime = 1
-} API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+} API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!	@typedef AVAudioEngineManualRenderingBlock
 	@abstract 
@@ -135,7 +135,7 @@ typedef NS_ENUM(NSInteger, AVAudioEngineManualRenderingMode) {
 	In such a case, the client could implement their own synchronization between their realtime
 	and non-realtime threads and retry calling `AVAudioEngineManualRenderingBlock`.
 */
-typedef AVAudioEngineManualRenderingStatus (^AVAudioEngineManualRenderingBlock)(AVAudioFrameCount numberOfFrames, AudioBufferList *outBuffer, OSStatus * __nullable outError) API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+typedef AVAudioEngineManualRenderingStatus (^AVAudioEngineManualRenderingBlock)(AVAudioFrameCount numberOfFrames, AudioBufferList *outBuffer, OSStatus * __nullable outError) API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!
 	@class AVAudioEngine
@@ -518,13 +518,13 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	the value is changed when the engine is in manual rendering mode, it will take effect
 	whenever the engine is switched to render to/from the audio device.
 */
-@property (nonatomic, getter=isAutoShutdownEnabled) BOOL autoShutdownEnabled API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0)) API_UNAVAILABLE(watchos);
+@property (nonatomic, getter=isAutoShutdownEnabled) BOOL autoShutdownEnabled API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0)) API_UNAVAILABLE(watchos);
 
 /*! @property attachedNodes
 	@abstract
 		Set of all nodes attached to the engine.
  */
-@property (readonly, copy) NSSet<AVAudioNode *> *attachedNodes API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly, copy) NSSet<AVAudioNode *> *attachedNodes API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 #pragma mark -
 #pragma mark Manual Rendering Mode
@@ -570,7 +570,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	Reasons for potential failure when switching to manual rendering mode include:
 	- Engine is not in a stopped state.
 */
-- (BOOL)enableManualRenderingMode:(AVAudioEngineManualRenderingMode)mode format:(AVAudioFormat *)pcmFormat maximumFrameCount:(AVAudioFrameCount)maximumFrameCount error:(NSError **)outError API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (BOOL)enableManualRenderingMode:(AVAudioEngineManualRenderingMode)mode format:(AVAudioFormat *)pcmFormat maximumFrameCount:(AVAudioFrameCount)maximumFrameCount error:(NSError **)outError API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!	@method disableManualRenderingMode
 	@abstract
@@ -586,7 +586,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	Calling this method when the engine is already rendering to/from an audio device has no 
 	effect.
 */
-- (void)disableManualRenderingMode API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (void)disableManualRenderingMode API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!	@method renderOffline:toBuffer:error:
 	@abstract
@@ -620,7 +620,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	must not be used, an error is returned otherwise. Use the block based render call
 	(`manualRenderingBlock`) in that mode instead.
 */
-- (AVAudioEngineManualRenderingStatus)renderOffline:(AVAudioFrameCount)numberOfFrames toBuffer:(AVAudioPCMBuffer *)buffer error:(NSError **)outError API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0)) __attribute__((swift_error(nonnull_error)));
+- (AVAudioEngineManualRenderingStatus)renderOffline:(AVAudioFrameCount)numberOfFrames toBuffer:(AVAudioPCMBuffer *)buffer error:(NSError **)outError API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) __attribute__((swift_error(nonnull_error)));
 
 /*!	@property manualRenderingBlock
 	@abstract
@@ -639,14 +639,14 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	call or	`renderOffline:toBuffer:error:` ObjC method can be used.
 	All the rules outlined in `renderOffline:toBuffer:error:` are applicable here as well.
 */
-@property (readonly, nonatomic) AVAudioEngineManualRenderingBlock manualRenderingBlock API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly, nonatomic) AVAudioEngineManualRenderingBlock manualRenderingBlock API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @property isInManualRenderingMode
 	@abstract
 		Whether or not the engine is operating in manual rendering mode, i.e. not connected
 		to an audio device and rendering in response to the requests from the client
 */
-@property (readonly, nonatomic) BOOL isInManualRenderingMode API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly, nonatomic) BOOL isInManualRenderingMode API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @property manualRenderingMode
 	@abstract
@@ -655,7 +655,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	This property is meaningful only when the engine is operating in manual rendering mode,
 	i.e. when `isInManualRenderingMode` returns true.
 */
-@property (readonly, nonatomic) AVAudioEngineManualRenderingMode manualRenderingMode API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly, nonatomic) AVAudioEngineManualRenderingMode manualRenderingMode API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @property manualRenderingFormat
 	@abstract
@@ -664,7 +664,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	Querying this property when the engine is not in manual rendering mode will return an
 	invalid format, with zero sample rate and channel count.
 */
-@property (readonly, nonatomic) AVAudioFormat *manualRenderingFormat API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly, nonatomic) AVAudioFormat *manualRenderingFormat API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @property manualRenderingMaximumFrameCount
 	@abstract
@@ -673,7 +673,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 
 	Querying this property when the engine is not in manual rendering mode will return zero.
 */
-@property (readonly, nonatomic) AVAudioFrameCount manualRenderingMaximumFrameCount API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly, nonatomic) AVAudioFrameCount manualRenderingMaximumFrameCount API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @property manualRenderingSampleTime
 	@abstract
@@ -683,7 +683,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	of the render format's sample rate. Resetting the engine (see `reset`) will reset the
 	timeline back to zero.
 */
-@property (readonly, nonatomic) AVAudioFramePosition manualRenderingSampleTime API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (readonly, nonatomic) AVAudioFramePosition manualRenderingSampleTime API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 #if AVAUDIOENGINE_HAVE_AUAUDIOUNIT
 /*! @method connectMIDI:to:format:block:
@@ -748,7 +748,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
     Any client installed block on the source node's audio unit `AUMIDIOutputEventListBlock`
     will be overwritten when making the MIDI connection.
  */
-- (void)connectMIDI:(AVAudioNode *)sourceNode to:(AVAudioNode *)destinationNode format:(AVAudioFormat * __nullable)format eventListBlock:(AUMIDIEventListBlock __nullable)tapBlock API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0));
+- (void)connectMIDI:(AVAudioNode *)sourceNode to:(AVAudioNode *)destinationNode format:(AVAudioFormat * __nullable)format eventListBlock:(AUMIDIEventListBlock __nullable)tapBlock API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0));
 
 /*! @method connectMIDI:toNodes:format:block:
     @abstract
@@ -820,7 +820,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
     Any client installed block on the source node's audio unit `AUMIDIOutputEventListBlock`
     will be overwritten when making the MIDI connection.
  */
-- (void)connectMIDI:(AVAudioNode *)sourceNode toNodes:(NSArray<AVAudioNode *> *)destinationNodes format:(AVAudioFormat * __nullable)format eventListBlock:(AUMIDIEventListBlock __nullable)tapBlock API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0));
+- (void)connectMIDI:(AVAudioNode *)sourceNode toNodes:(NSArray<AVAudioNode *> *)destinationNodes format:(AVAudioFormat * __nullable)format eventListBlock:(AUMIDIEventListBlock __nullable)tapBlock API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0));
 
 /*! @method disconnectMIDI:from:
     @abstract
@@ -833,7 +833,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	If a tap block is installed on the source node, it will be removed when the last
 	connection from the source node is removed.
  */
-- (void)disconnectMIDI:(AVAudioNode *)sourceNode from:(AVAudioNode *)destinationNode API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0));
+- (void)disconnectMIDI:(AVAudioNode *)sourceNode from:(AVAudioNode *)destinationNode API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0));
 
 /*! @method disconnectMIDI:fromNodes:
     @abstract
@@ -846,7 +846,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	If a tap block is installed on the source node, it will be removed when the last
 	connection from the source node is removed.
  */
-- (void)disconnectMIDI:(AVAudioNode *)sourceNode fromNodes:(NSArray<AVAudioNode *> *)destinationNodes API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0));
+- (void)disconnectMIDI:(AVAudioNode *)sourceNode fromNodes:(NSArray<AVAudioNode *> *)destinationNodes API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0));
 
 /*! @method disconnectMIDIInput:
     @abstract
@@ -854,7 +854,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
     @param node
         The node whose MIDI input is to be disconnected.
 */
-- (void)disconnectMIDIInput:(AVAudioNode *)node API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0));
+- (void)disconnectMIDIInput:(AVAudioNode *)node API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0));
 
 /*! @method disconnectMIDIOutput:
     @abstract
@@ -862,7 +862,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
     @param node
         The node whose MIDI outputs are to be disconnected.
 */
-- (void)disconnectMIDIOutput:(AVAudioNode *)node API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0));
+- (void)disconnectMIDIOutput:(AVAudioNode *)node API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0));
 
 #endif // AVAUDIOENGINE_HAVE_AUAUDIOUNIT
 

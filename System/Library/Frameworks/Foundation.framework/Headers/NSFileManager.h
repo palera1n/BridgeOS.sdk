@@ -52,11 +52,11 @@ typedef NS_OPTIONS(NSUInteger, NSDirectoryEnumerationOptions) {
 
     /* NSDirectoryEnumerationIncludesDirectoriesPostOrder causes the NSDirectoryEnumerator to enumerate each directory a second time after all of its contained files have been enumerated. Use NSDirectoryEnumerator.isEnumeratingDirectoryPostOrder to differentiate a post-order enumerated directory from a pre-order one.
      */
-    NSDirectoryEnumerationIncludesDirectoriesPostOrder API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) = 1UL << 3,
+    NSDirectoryEnumerationIncludesDirectoriesPostOrder API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) = 1UL << 3,
     
     /* NSDirectoryEnumerationProducesRelativePathURLs causes the NSDirectoryEnumerator to always produce file path URLs relative to the directoryURL. This can reduce the size of each URL object returned during enumeration.
      */
-    NSDirectoryEnumerationProducesRelativePathURLs API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) = 1UL << 4,
+    NSDirectoryEnumerationProducesRelativePathURLs API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) = 1UL << 4,
 } API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 
 typedef NS_OPTIONS(NSUInteger, NSFileManagerItemReplacementOptions) {
@@ -423,7 +423,7 @@ extern NSNotificationName const NSUbiquityIdentityDidChangeNotification API_AVAI
 
 /* For NSDirectoryEnumerators created with -enumeratorAtURL:includingPropertiesForKeys:options:errorHandler: and the NSDirectoryEnumerationIncludesDirectoriesPostOrder option, this property is YES when the current object is a directory that is being enumerated after all of its contents have been enumerated.
  */
-@property (readonly) BOOL isEnumeratingDirectoryPostOrder API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) BOOL isEnumeratingDirectoryPostOrder API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 - (void)skipDescendents;
 
@@ -482,7 +482,7 @@ FOUNDATION_EXPORT NSFileProtectionType const NSFileProtectionNone API_AVAILABLE(
 FOUNDATION_EXPORT NSFileProtectionType const NSFileProtectionComplete API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 FOUNDATION_EXPORT NSFileProtectionType const NSFileProtectionCompleteUnlessOpen API_AVAILABLE(macos(10.6), ios(5.0), watchos(2.0), tvos(9.0));
 FOUNDATION_EXPORT NSFileProtectionType const NSFileProtectionCompleteUntilFirstUserAuthentication API_AVAILABLE(macos(10.6), ios(5.0), watchos(2.0), tvos(9.0));
-FOUNDATION_EXPORT NSFileProtectionType const NSFileProtectionCompleteWhenUserInactive API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
+FOUNDATION_EXPORT NSFileProtectionType const NSFileProtectionCompleteWhenUserInactive API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
 
 FOUNDATION_EXPORT NSFileAttributeKey const NSFileSystemSize;
 FOUNDATION_EXPORT NSFileAttributeKey const NSFileSystemFreeSize;

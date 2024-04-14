@@ -230,8 +230,8 @@
 #   define AXR_AVAILABILITY_v3
 #   define AXR_ENUM_AVAILABILITY_v3
 #else
-#   define AXR_AVAILABILITY_v1          __API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
-#   define AXR_ENUM_AVAILABILITY_v1     __API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+#   define AXR_AVAILABILITY_v1          __API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
+#   define AXR_ENUM_AVAILABILITY_v1     __API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 #   define AXR_AVAILABILITY_v2          __API_AVAILABLE(macos(12.3),  ios(15.3), tvos(15.3), watchos(8.3))
 #   define AXR_ENUM_AVAILABILITY_v2     __API_AVAILABLE(macos(12.3),  ios(15.3), tvos(15.3), watchos(8.3))
 #   define AXR_AVAILABILITY_v3          __API_AVAILABLE(macos(13.0),  ios(16.1), tvos(16.1), watchos(9.1))

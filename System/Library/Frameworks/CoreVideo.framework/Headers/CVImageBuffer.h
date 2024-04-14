@@ -121,23 +121,23 @@ CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferChromaSubsampling_411 __OSX
 // Can be set to kCFBooleanTrue as a hint that the alpha channel is fully opaque.  Not used if the pixel format type has no alpha channel.
 CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAlphaChannelIsOpaque __OSX_AVAILABLE_STARTING(__MAC_10_10,__IPHONE_8_0);
 
-CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAlphaChannelModeKey API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos);
-CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAlphaChannelMode_StraightAlpha API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos);
-CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAlphaChannelMode_PremultipliedAlpha API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos);	
+CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAlphaChannelModeKey API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos);
+CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAlphaChannelMode_StraightAlpha API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos);
+CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAlphaChannelMode_PremultipliedAlpha API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos);	
 
 // Returns the standard integer code point corresponding to a given CoreVideo YCbCrMatrix constant string (in the kCVImageBufferYCbCrMatrix_... family).  Returns 2 (the code point for "unknown") if the string is NULL or not recognized.
-CV_EXPORT int CVYCbCrMatrixGetIntegerCodePointForString( CV_NULLABLE CFStringRef yCbCrMatrixString ) API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+CV_EXPORT int CVYCbCrMatrixGetIntegerCodePointForString( CV_NULLABLE CFStringRef yCbCrMatrixString ) API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 // Returns the standard integer code point corresponding to a given CoreVideo ColorPrimaries constant string (in the kCVImageBufferColorPrimaries_... family).  Returns 2 (the code point for "unknown") if the string is NULL or not recognized.
-CV_EXPORT int CVColorPrimariesGetIntegerCodePointForString( CV_NULLABLE CFStringRef colorPrimariesString ) API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+CV_EXPORT int CVColorPrimariesGetIntegerCodePointForString( CV_NULLABLE CFStringRef colorPrimariesString ) API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 // Returns the standard integer code point corresponding to a given CoreVideo TransferFunction constant string (in the kCVImageBufferTransferFunction_... family).  Returns 2 (the code point for "unknown") if the string is NULL or not recognized.
-CV_EXPORT int CVTransferFunctionGetIntegerCodePointForString( CV_NULLABLE CFStringRef transferFunctionString ) API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+CV_EXPORT int CVTransferFunctionGetIntegerCodePointForString( CV_NULLABLE CFStringRef transferFunctionString ) API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 
 // Returns the CoreVideo YCbCrMatrix constant string (in the kCVImageBufferYCbCrMatrix_... family) corresponding to a given standard integer code point.  Returns NULL if the code point is not recognized, or if it is 2 (the code point for "unknown").
-CV_EXPORT CV_NULLABLE CFStringRef CVYCbCrMatrixGetStringForIntegerCodePoint( int yCbCrMatrixCodePoint ) API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+CV_EXPORT CV_NULLABLE CFStringRef CVYCbCrMatrixGetStringForIntegerCodePoint( int yCbCrMatrixCodePoint ) API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 // Returns the CoreVideo ColorPrimaries constant string (in the kCVImageBufferColorPrimaries_... family) corresponding to a given standard integer code point.  Returns NULL if the code point is not recognized, or if it is 2 (the code point for "unknown").
-CV_EXPORT CV_NULLABLE CFStringRef CVColorPrimariesGetStringForIntegerCodePoint( int colorPrimariesCodePoint ) API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+CV_EXPORT CV_NULLABLE CFStringRef CVColorPrimariesGetStringForIntegerCodePoint( int colorPrimariesCodePoint ) API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 // Returns the CoreVideo TransferFunction constant string (in the kCVImageBufferTransferFunction_... family) corresponding to a given standard integer code point.  Returns NULL if the code point is not recognized, or if it is 2 (the code point for "unknown").
-CV_EXPORT CV_NULLABLE CFStringRef CVTransferFunctionGetStringForIntegerCodePoint( int transferFunctionCodePoint ) API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+CV_EXPORT CV_NULLABLE CFStringRef CVTransferFunctionGetStringForIntegerCodePoint( int transferFunctionCodePoint ) API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 
 #pragma mark CVImageBufferRef
 
@@ -225,7 +225,7 @@ CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferMasteringDisplayColorVolume
 CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferContentLightLevelInfoKey __OSX_AVAILABLE_STARTING(__MAC_10_13,__IPHONE_11_0);
 
 // CFData (8 bytes) containing big-endian data matching payload of Ambient Viewing Environment SEI message
-CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAmbientViewingEnvironmentKey API_AVAILABLE(macosx(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAmbientViewingEnvironmentKey API_AVAILABLE(macosx(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
 	@constant    kCVImageBufferRegionOfInterestKey
@@ -234,7 +234,7 @@ CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferAmbientViewingEnvironmentKe
 	@discussion
 		
 */
-CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferRegionOfInterestKey           API_AVAILABLE(macosx(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+CV_EXPORT const CFStringRef CV_NONNULL kCVImageBufferRegionOfInterestKey           API_AVAILABLE(macosx(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
   @constant    kCVImageBufferLogTransferFunctionKey

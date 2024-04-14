@@ -126,7 +126,7 @@ CM_EXPORT const CFStringRef kCMTextMarkupAttribute_FontFamilyName API_AVAILABLE(
                 The CFArray value can hold multiple font names as a fallback where the author prefers specific fonts. If the renderer does not support the first font entry, it tries the following.
                 For example, the array includes InexistantFont and Times New Roman font names, it is expected the renderer to select the "Times New Roman" font for drawing caption.
 */
-CM_EXPORT const CFStringRef kCMTextMarkupAttribute_FontFamilyNameList API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0));
+CM_EXPORT const CFStringRef kCMTextMarkupAttribute_FontFamilyNameList API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0));
 
 /*!
     @const      kCMTextMarkupAttribute_GenericFontFamilyName

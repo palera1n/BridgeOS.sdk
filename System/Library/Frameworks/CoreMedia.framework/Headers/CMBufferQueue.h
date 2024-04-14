@@ -438,7 +438,7 @@ CM_EXPORT CMBufferRef CM_NULLABLE CMBufferQueueGetHead(
 CM_EXPORT CM_RETURNS_RETAINED CMBufferRef CM_NULLABLE CMBufferQueueCopyHead(
 	CMBufferQueueRef CM_NONNULL queue)		/*! @param queue
 												The CMBufferQueue from which to retrieve a buffer. */
-							API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+							API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 /*!
 	@function	CMBufferQueueIsEmpty

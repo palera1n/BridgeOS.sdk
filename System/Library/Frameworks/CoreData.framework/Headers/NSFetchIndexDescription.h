@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0))
+API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0))
 @interface NSFetchIndexDescription : NSObject <NSCoding,NSCopying> {
 }
 

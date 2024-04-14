@@ -32,7 +32,7 @@ NW_ASSUME_NONNULL_BEGIN
  * @result
  *		Returns a retained protocol definition object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_definition_t
 nw_protocol_copy_udp_definition(void);
 
@@ -49,7 +49,7 @@ nw_protocol_copy_udp_definition(void);
  * @result
  *		Returns a retained protocol options object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_options_t
 nw_udp_create_options(void);
 
@@ -67,7 +67,7 @@ nw_udp_create_options(void);
  *		A boolean that indicates if UDP is allowed to skip computing
  *		its checksum.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_udp_options_set_prefer_no_checksum(nw_protocol_options_t options,
 									  bool prefer_no_checksum);
@@ -85,7 +85,7 @@ nw_udp_options_set_prefer_no_checksum(nw_protocol_options_t options,
  * @result
  *		Returns a retained protocol metadata object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_metadata_t
 nw_udp_create_metadata(void);
 
@@ -101,7 +101,7 @@ nw_udp_create_metadata(void);
  *		Returns true if the metadata is for the default system UDP,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_protocol_metadata_is_udp(nw_protocol_metadata_t metadata);
 

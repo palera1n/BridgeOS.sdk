@@ -15,7 +15,7 @@
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleMakeWithDegrees(double degrees)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an angle with the value specified in radians.
@@ -26,7 +26,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleMakeWithRadians(double radians)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the angle in degrees.
@@ -37,13 +37,13 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPAngleGetDegrees(SPAngle angle)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns @p true if both rotation angles are equal.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPAngleEqualToAngle(SPAngle angle1, SPAngle angle2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Header inline implementations
 
@@ -82,7 +82,7 @@ bool SPAngleEqualToAngle(SPAngle angle1, SPAngle angle2) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleAcos(double x)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -103,7 +103,7 @@ SPAngle SPAngleAcos(double x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleAsin(double x)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -120,7 +120,7 @@ SPAngle SPAngleAsin(double x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleAtan(double x)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -141,7 +141,7 @@ SPAngle SPAngleAtan(double x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleAcosh(double x)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -162,7 +162,7 @@ SPAngle SPAngleAcosh(double x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleAsinh(double x)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -183,7 +183,7 @@ SPAngle SPAngleAsinh(double x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleAtanh(double x)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -205,7 +205,7 @@ SPAngle SPAngleAtanh(double x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleAtan2(double y, double x)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -222,7 +222,7 @@ SPAngle SPAngleAtan2(double y, double x) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPAngleCos(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -243,7 +243,7 @@ double SPAngleCos(SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPAngleSin(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -264,7 +264,7 @@ double SPAngleSin(SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPAngleTan(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -285,7 +285,7 @@ double SPAngleTan(SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPAngleCosh(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -306,7 +306,7 @@ double SPAngleCosh(SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPAngleSinh(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -327,7 +327,7 @@ double SPAngleSinh(SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPAngleTanh(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -350,7 +350,7 @@ double SPAngleTanh(SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleNormalize(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -378,7 +378,7 @@ SPAngle SPAngleNormalize(SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPAngleNegate(SPAngle angle)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

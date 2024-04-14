@@ -72,7 +72,7 @@ NS_ERROR_ENUM(NSCocoaErrorDomain) {
     NSXPCConnectionInterrupted API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0)) = 4097,
     NSXPCConnectionInvalid API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0)) = 4099,
     NSXPCConnectionReplyInvalid API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0)) = 4101,
-    NSXPCConnectionCodeSigningRequirementFailure API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0)) = 4102,
+    NSXPCConnectionCodeSigningRequirementFailure API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0)) = 4102,
     
     NSXPCConnectionErrorMinimum API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0)) = 4096,
     NSXPCConnectionErrorMaximum API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0)) = 4224,
@@ -94,7 +94,7 @@ NS_ERROR_ENUM(NSCocoaErrorDomain) {
     
     NSCoderReadCorruptError API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0)) = 4864, // Error parsing data during decode
     NSCoderValueNotFoundError API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0)) = 4865, // Data requested was not found
-    NSCoderInvalidValueError API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0)) = 4866, // Data was not valid to encode
+    NSCoderInvalidValueError API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) = 4866, // Data was not valid to encode
     NSCoderErrorMinimum API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0)) = 4864,
     NSCoderErrorMaximum API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0)) = 4991,
     
@@ -115,11 +115,11 @@ NS_ERROR_ENUM(NSCocoaErrorDomain) {
     NSCloudSharingErrorMinimum API_AVAILABLE(macosx(10.12), ios(10.0)) API_UNAVAILABLE(watchos, tvos) = 5120,
     NSCloudSharingErrorMaximum API_AVAILABLE(macosx(10.12), ios(10.0)) API_UNAVAILABLE(watchos, tvos) = 5375,
     
-    NSCompressionFailedError API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) = 5376,
-    NSDecompressionFailedError API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) = 5377,
+    NSCompressionFailedError API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) = 5376,
+    NSDecompressionFailedError API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) = 5377,
     
-    NSCompressionErrorMinimum API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) = 5376,
-    NSCompressionErrorMaximum API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) = 5503,
+    NSCompressionErrorMinimum API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) = 5376,
+    NSCompressionErrorMaximum API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) = 5503,
 
 };
 

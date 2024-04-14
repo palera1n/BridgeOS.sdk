@@ -72,11 +72,11 @@ typedef void (^nw_parameters_configure_protocol_block_t)(nw_protocol_options_t o
 	extern const nw_parameters_configure_protocol_block_t _nw_parameters_configure_protocol_##name
 
 #define NW_PARAMETERS_DEFAULT_CONFIGURATION (_nw_parameters_configure_protocol_default_configuration)
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_PARAMETERS_CONFIGURE_PROTOCOL_TYPE_DECL(default_configuration);
 
 #define NW_PARAMETERS_DISABLE_PROTOCOL (_nw_parameters_configure_protocol_disable)
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_PARAMETERS_CONFIGURE_PROTOCOL_TYPE_DECL(disable);
 
 /*!
@@ -105,7 +105,7 @@ NW_PARAMETERS_CONFIGURE_PROTOCOL_TYPE_DECL(disable);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_parameters_create_secure_tcp(nw_parameters_configure_protocol_block_t configure_tls,
 								nw_parameters_configure_protocol_block_t configure_tcp);
@@ -136,7 +136,7 @@ nw_parameters_create_secure_tcp(nw_parameters_configure_protocol_block_t configu
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_parameters_create_secure_udp(nw_parameters_configure_protocol_block_t configure_dtls,
 								nw_parameters_configure_protocol_block_t configure_udp);
@@ -192,7 +192,7 @@ nw_parameters_create_custom_ip(uint8_t custom_ip_protocol_number,
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_parameters_create_quic(nw_parameters_configure_protocol_block_t configure_quic);
 
@@ -209,7 +209,7 @@ nw_parameters_create_quic(nw_parameters_configure_protocol_block_t configure_qui
  *		Callers are responsible for deallocating using nw_release(obj) or [obj release].
  *		These objects support ARC.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_parameters_create_application_service(void);
 
@@ -228,7 +228,7 @@ nw_parameters_create_application_service(void);
  *		Callers are responsible for deallocating using nw_release(obj) or [obj release].
  *		These objects support ARC.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_parameters_create(void);
 
@@ -247,7 +247,7 @@ nw_parameters_create(void);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_parameters_copy(nw_parameters_t parameters);
 
@@ -268,7 +268,7 @@ nw_parameters_copy(nw_parameters_t parameters);
  *		The privacy context to associate with connections and listeners that use
  *		these parameters.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_parameters_set_privacy_context(nw_parameters_t parameters,
 								  nw_privacy_context_t privacy_context);
@@ -300,7 +300,7 @@ typedef NW_ENUM(uint8_t, nw_parameters_attribution_t) {
  * @param attribution
  *		The entity to attribute the network operations to.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 void
 nw_parameters_set_attribution(nw_parameters_t parameters, nw_parameters_attribution_t attribution);
 
@@ -316,7 +316,7 @@ nw_parameters_set_attribution(nw_parameters_t parameters, nw_parameters_attribut
  * @result
  *		Returns the attribution property of the parameters.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 nw_parameters_attribution_t
 nw_parameters_get_attribution(nw_parameters_t parameters);
 
@@ -336,7 +336,7 @@ nw_parameters_get_attribution(nw_parameters_t parameters);
  *		The interface to require for connections or listeners, or NULL to
  *		allow any interface.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_require_interface(nw_parameters_t parameters,
 								_Nullable nw_interface_t interface);
@@ -354,7 +354,7 @@ nw_parameters_require_interface(nw_parameters_t parameters,
  *		Returns the interface that is required by the parameters, or
  *		NULL if no interface is required.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_interface_t
 nw_parameters_copy_required_interface(nw_parameters_t parameters);
 
@@ -371,7 +371,7 @@ nw_parameters_copy_required_interface(nw_parameters_t parameters);
  * @param interface
  *		The interface to prohibit for connections or listeners.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_prohibit_interface(nw_parameters_t parameters,
 								 nw_interface_t interface);
@@ -385,7 +385,7 @@ nw_parameters_prohibit_interface(nw_parameters_t parameters,
  * @param parameters
  *		The parameters object to modify
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_clear_prohibited_interfaces(nw_parameters_t parameters);
 
@@ -407,7 +407,7 @@ typedef bool (^nw_parameters_iterate_interfaces_block_t)(nw_interface_t interfac
  *		true from the block will continue to iterate, and returning false will stop
  *		iterating.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_iterate_prohibited_interfaces(nw_parameters_t parameters,
 											NW_NOESCAPE nw_parameters_iterate_interfaces_block_t iterate_block);
@@ -427,7 +427,7 @@ nw_parameters_iterate_prohibited_interfaces(nw_parameters_t parameters,
  * @param interface_type
  *		The interface type to require for connections or listeners.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_required_interface_type(nw_parameters_t parameters,
 									 nw_interface_type_t interface_type);
@@ -445,7 +445,7 @@ nw_parameters_set_required_interface_type(nw_parameters_t parameters,
  *		Returns the interface type that is required by the parameters, or
  *		nw_interface_type_other_t if no interface type is required.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_interface_type_t
 nw_parameters_get_required_interface_type(nw_parameters_t parameters);
 
@@ -462,7 +462,7 @@ nw_parameters_get_required_interface_type(nw_parameters_t parameters);
  * @param interface_type
  *		The interface type to prohibit for connections or listeners.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_prohibit_interface_type(nw_parameters_t parameters,
 									  nw_interface_type_t interface_type);
@@ -476,7 +476,7 @@ nw_parameters_prohibit_interface_type(nw_parameters_t parameters,
  * @param parameters
  *		The parameters object to modify
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_clear_prohibited_interface_types(nw_parameters_t parameters);
 
@@ -498,7 +498,7 @@ typedef bool (^nw_parameters_iterate_interface_types_block_t)(nw_interface_type_
  *		true from the block will continue to iterate, and returning false will stop
  *		iterating.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_iterate_prohibited_interface_types(nw_parameters_t parameters,
 												 NW_NOESCAPE nw_parameters_iterate_interface_types_block_t iterate_block);
@@ -519,7 +519,7 @@ nw_parameters_iterate_prohibited_interface_types(nw_parameters_t parameters,
  *		If true, prohibit the use of any expensive interfaces. If false,
  *		allow expensive interfaces. Defaults to false.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_prohibit_expensive(nw_parameters_t parameters,
 									 bool prohibit_expensive);
@@ -537,7 +537,7 @@ nw_parameters_set_prohibit_expensive(nw_parameters_t parameters,
  *		Returns true if expensive interfaces are prohibited, or
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_parameters_get_prohibit_expensive(nw_parameters_t parameters);
 
@@ -555,7 +555,7 @@ nw_parameters_get_prohibit_expensive(nw_parameters_t parameters);
  *		If true, prohibit the use of any constrained interfaces. If false,
  *		allow constrained interfaces. Defaults to false.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_parameters_set_prohibit_constrained(nw_parameters_t parameters,
 									   bool prohibit_constrained);
@@ -573,7 +573,7 @@ nw_parameters_set_prohibit_constrained(nw_parameters_t parameters,
  *		Returns true if constrained interfaces are prohibited, or
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_parameters_get_prohibit_constrained(nw_parameters_t parameters);
 
@@ -591,7 +591,7 @@ nw_parameters_get_prohibit_constrained(nw_parameters_t parameters);
  *		If true, allow the reuse of local addresses. If false,
  *		disallow the reuse of local addresses. Defaults to false.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_reuse_local_address(nw_parameters_t parameters,
 									  bool reuse_local_address);
@@ -609,7 +609,7 @@ nw_parameters_set_reuse_local_address(nw_parameters_t parameters,
  *		Returns true if local address reuse is allowed, or
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_parameters_get_reuse_local_address(nw_parameters_t parameters);
 
@@ -629,7 +629,7 @@ nw_parameters_get_reuse_local_address(nw_parameters_t parameters);
  *		The endpoint to set as the local endpoint. Pass NULL to
  *		clear the local endpoint.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_local_endpoint(nw_parameters_t parameters,
 								 _Nullable nw_endpoint_t local_endpoint);
@@ -647,7 +647,7 @@ nw_parameters_set_local_endpoint(nw_parameters_t parameters,
  *		Returns the endpoint that is set in the parameters, or
  *		NULL if no local endpoint is set.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_endpoint_t
 nw_parameters_copy_local_endpoint(nw_parameters_t parameters);
 
@@ -668,7 +668,7 @@ nw_parameters_copy_local_endpoint(nw_parameters_t parameters);
  *		If true, allow advertising, resolving, and connecting over
  *		peer-to-peer interfaces. Defaults to false.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_include_peer_to_peer(nw_parameters_t parameters,
 									   bool include_peer_to_peer);
@@ -687,7 +687,7 @@ nw_parameters_set_include_peer_to_peer(nw_parameters_t parameters,
  *		Returns true if peer-to-peer interfaces are allowed,
  *		or false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_parameters_get_include_peer_to_peer(nw_parameters_t parameters);
 
@@ -719,7 +719,7 @@ nw_parameters_get_include_peer_to_peer(nw_parameters_t parameters);
  *		MUST be sent by the caller on the connection. If false,
  *		disallow the fast open at the top level protocol. Defaults to false.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_fast_open_enabled(nw_parameters_t parameters,
 									bool fast_open_enabled);
@@ -738,7 +738,7 @@ nw_parameters_set_fast_open_enabled(nw_parameters_t parameters,
  *		Returns true if fast open is allowed for the top level protocol, or
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_parameters_get_fast_open_enabled(nw_parameters_t parameters);
 
@@ -775,7 +775,7 @@ typedef enum {
  * @param service_class
  *		The service class value to use for connections. Defaults to nw_service_class_best_effort.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_service_class(nw_parameters_t parameters,
 								nw_service_class_t service_class);
@@ -792,7 +792,7 @@ nw_parameters_set_service_class(nw_parameters_t parameters,
  * @result
  *		Returns the effective service class configured on the parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_service_class_t
 nw_parameters_get_service_class(nw_parameters_t parameters);
 
@@ -825,7 +825,7 @@ typedef enum {
  * @param multipath_service
  *		The multipath service value to use for connections. Defaults to nw_multipath_service_disabled.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_multipath_service(nw_parameters_t parameters,
 									nw_multipath_service_t multipath_service);
@@ -842,7 +842,7 @@ nw_parameters_set_multipath_service(nw_parameters_t parameters,
  * @result
  *		Returns the multipath service configured on the parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_multipath_service_t
 nw_parameters_get_multipath_service(nw_parameters_t parameters);
 
@@ -864,7 +864,7 @@ nw_parameters_get_multipath_service(nw_parameters_t parameters);
  * @result
  *		Returns an nw_protocol_stack_t object that can be inspected and modified.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_stack_t
 nw_parameters_copy_default_protocol_stack(nw_parameters_t parameters);
 
@@ -881,7 +881,7 @@ nw_parameters_copy_default_protocol_stack(nw_parameters_t parameters);
  *		The protocol options to add to the stack, which contain the definition of the
  *		protocol to add.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_protocol_stack_prepend_application_protocol(nw_protocol_stack_t stack,
 											   nw_protocol_options_t protocol);
@@ -895,7 +895,7 @@ nw_protocol_stack_prepend_application_protocol(nw_protocol_stack_t stack,
  * @param stack
  *		The protocol stack to modify
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_protocol_stack_clear_application_protocols(nw_protocol_stack_t stack);
 
@@ -915,7 +915,7 @@ typedef void (^nw_protocol_stack_iterate_protocols_block_t)(nw_protocol_options_
  * @param iterate_block
  *		A block that will return the protocols attached to the stack.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_protocol_stack_iterate_application_protocols(nw_protocol_stack_t stack,
 												NW_NOESCAPE nw_protocol_stack_iterate_protocols_block_t iterate_block);
@@ -935,7 +935,7 @@ nw_protocol_stack_iterate_application_protocols(nw_protocol_stack_t stack,
  *		Returns the transport protocol currently set in the protocol stack,
  *		or NULL if no transport protocol is set.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_protocol_options_t
 nw_protocol_stack_copy_transport_protocol(nw_protocol_stack_t stack);
 
@@ -952,7 +952,7 @@ nw_protocol_stack_copy_transport_protocol(nw_protocol_stack_t stack);
  *		The protocol options to set into the stack, which contain the definition of the
  *		protocol.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_protocol_stack_set_transport_protocol(nw_protocol_stack_t stack,
 										 nw_protocol_options_t protocol);
@@ -971,7 +971,7 @@ nw_protocol_stack_set_transport_protocol(nw_protocol_stack_t stack,
  *		or NULL if no internet protocol is set. Note that this will generally
  *		be NULL, unless a specific IP family is being selected.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_protocol_options_t
 nw_protocol_stack_copy_internet_protocol(nw_protocol_stack_t stack);
 
@@ -990,7 +990,7 @@ nw_protocol_stack_copy_internet_protocol(nw_protocol_stack_t stack);
  * @param local_only
  *		True to limit connections to the local link only.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_local_only(nw_parameters_t parameters,
 							 bool local_only);
@@ -1008,7 +1008,7 @@ nw_parameters_set_local_only(nw_parameters_t parameters,
  * @result
  *		Returns true if the parameters limit inbound connections to the local link.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_parameters_get_local_only(nw_parameters_t parameters);
 
@@ -1027,7 +1027,7 @@ nw_parameters_get_local_only(nw_parameters_t parameters);
  * @param prefer_no_proxy
  *		True to cause connections to be attempted without proxies.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_prefer_no_proxy(nw_parameters_t parameters, bool prefer_no_proxy);
 
@@ -1045,7 +1045,7 @@ nw_parameters_set_prefer_no_proxy(nw_parameters_t parameters, bool prefer_no_pro
  *		Returns true if the parameters cause connections to be attempted without proxies, only using proxies if
  *		connections cannot otherwise be completed.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_parameters_get_prefer_no_proxy(nw_parameters_t parameters);
 
@@ -1085,7 +1085,7 @@ typedef enum {
  * @param expired_dns_behavior
  *		Allow, prohibit, or use system default behavior for expired DNS answers.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_parameters_set_expired_dns_behavior(nw_parameters_t parameters,
 									   nw_parameters_expired_dns_behavior_t expired_dns_behavior);
@@ -1105,7 +1105,7 @@ nw_parameters_set_expired_dns_behavior(nw_parameters_t parameters,
  * @result
  *		Returns the current effective expired DNS answer behavior.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_parameters_expired_dns_behavior_t
 nw_parameters_get_expired_dns_behavior(nw_parameters_t parameters);
 
@@ -1141,7 +1141,7 @@ nw_parameters_get_expired_dns_behavior(nw_parameters_t parameters);
  *		is set on the parameters, the behavior specified by that configuration
  *		will be followed.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 void
 nw_parameters_set_requires_dnssec_validation(nw_parameters_t parameters, bool requires_dnssec_validation);
 
@@ -1157,7 +1157,7 @@ nw_parameters_set_requires_dnssec_validation(nw_parameters_t parameters, bool re
  * @result
  *		Returns true if DNSSEC validation is required, false otherwise.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 bool
 nw_parameters_requires_dnssec_validation(nw_parameters_t parameters);
 

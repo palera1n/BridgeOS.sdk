@@ -15,9 +15,9 @@ typedef NS_OPTIONS(NSUInteger, NSJSONReadingOptions) {
     NSJSONReadingFragmentsAllowed = (1UL << 2),
 
 #if !0
-    NSJSONReadingJSON5Allowed API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) = (1UL << 3),
+    NSJSONReadingJSON5Allowed API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) = (1UL << 3),
 #endif
-    NSJSONReadingTopLevelDictionaryAssumed API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) = (1UL << 4),
+    NSJSONReadingTopLevelDictionaryAssumed API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) = (1UL << 4),
 
     NSJSONReadingAllowFragments API_DEPRECATED_WITH_REPLACEMENT("NSJSONReadingFragmentsAllowed", macos(10.7, API_TO_BE_DEPRECATED), ios(5.0, API_TO_BE_DEPRECATED), watchos(2.0, API_TO_BE_DEPRECATED), tvos(9.0, API_TO_BE_DEPRECATED)) = NSJSONReadingFragmentsAllowed,
 } API_AVAILABLE(macos(10.7), ios(5.0), watchos(2.0), tvos(9.0));
@@ -27,9 +27,9 @@ typedef NS_OPTIONS(NSUInteger, NSJSONWritingOptions) {
 
     /* Sorts dictionary keys for output using [NSLocale systemLocale]. Keys are compared using NSNumericSearch. The specific sorting method used is subject to change.
      */
-    NSJSONWritingSortedKeys API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0)) = (1UL << 1),
+    NSJSONWritingSortedKeys API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) = (1UL << 1),
     NSJSONWritingFragmentsAllowed = (1UL << 2),
-    NSJSONWritingWithoutEscapingSlashes API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) = (1UL << 3),
+    NSJSONWritingWithoutEscapingSlashes API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) = (1UL << 3),
 } API_AVAILABLE(macos(10.7), ios(5.0), watchos(2.0), tvos(9.0));
 
 /* A class for converting JSON to Foundation objects and converting Foundation objects to JSON.

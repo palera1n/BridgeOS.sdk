@@ -18,7 +18,7 @@
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DMake(double x, double y, double z)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Creates a point with coordinates specified as a 3-element SIMD vector.
@@ -29,7 +29,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DMakeWithVector(simd_double3 xyz)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Creates a point with coordinates specified as a Spatial vector.
@@ -40,7 +40,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DMakeWithVector(SPVector3D xyz)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 
 /*!
@@ -52,7 +52,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DMakeWithSize(SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's rotated by the specified quaternion around the origin.
@@ -65,7 +65,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DRotateByQuaternion(SPPoint3D point, simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's rotated by the specified rotation around the origin.
@@ -79,7 +79,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DRotate(SPPoint3D point, SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's rotated by a rotation around a specified pivot.
@@ -92,7 +92,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DRotateAroundPoint(SPPoint3D point, SPRotation3D rotation, SPPoint3D pivot)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's rotated by a quaternion around a specified pivot.
@@ -105,7 +105,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DRotateByQuaternionAroundPoint(SPPoint3D point, simd_quatd quaternion, SPPoint3D pivot)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point with an origin that is offset from that of the source point.
@@ -133,7 +133,7 @@ __API_DEPRECATED("Use `SPVector3D` variant.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DTranslate(SPPoint3D point, SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the position of the entity's origin.
@@ -160,7 +160,7 @@ __API_DEPRECATED("This function is deprecated.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 double SPPoint3DDistanceToPoint(SPPoint3D point, SPPoint3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the rotation around @p (0,0,0)  from the normalized first point to the normalized second point.
@@ -187,7 +187,7 @@ __API_DEPRECATED("Use `SPVector3DRotationToVector`.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 simd_double3 SPPoint3DGetVector(SPPoint3D point)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's transformed by the specified affine transform.
@@ -200,7 +200,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DApplyAffineTransform(SPPoint3D point,
                                         SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's transformed by the specified projective transform.
@@ -213,7 +213,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DApplyProjectiveTransform(SPPoint3D point,
                                             SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's transformed by the inverse of the specified affine transform.
@@ -226,7 +226,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DUnapplyAffineTransform(SPPoint3D point,
                                           SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that's transformed by the inverse of the specified projective transform.
@@ -239,13 +239,13 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DUnapplyProjectiveTransform(SPPoint3D point,
                                               SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns @p true if both points are equal.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPPoint3DEqualToPoint(SPPoint3D point1, SPPoint3D point2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Header inline implementations
 
@@ -413,7 +413,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DApplyPose(SPPoint3D point,
                              SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -440,7 +440,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DUnapplyPose(SPPoint3D point,
                                SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

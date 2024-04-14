@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 @interface NSURLSessionConfiguration (Network)
 
 /*!

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  * an NSPersistentContainer. A NSStagedMigrationManager should be added to store options using
  * NSPersistentStoreStagedMigrationManagerOptionKey.
  */
-API_AVAILABLE(macosx(14.0),ios(17.0),tvos(17.0),watchos(10.0))
+API_AVAILABLE(macosx(14.0),ios(17.0), bridgeos(8.0),tvos(17.0),watchos(10.0))
 @interface NSStagedMigrationManager : NSObject
 
 /*

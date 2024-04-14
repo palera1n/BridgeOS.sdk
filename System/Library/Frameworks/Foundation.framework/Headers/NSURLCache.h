@@ -174,7 +174,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
     @param directoryURL the path to a directory on disk where the cache data is stored. Or nil for default directory.
     @result an initialized NSURLCache, with the given capacity, optionally backed by disk.
  */
-- (instancetype)initWithMemoryCapacity:(NSUInteger)memoryCapacity diskCapacity:(NSUInteger)diskCapacity directoryURL:(nullable NSURL *)directoryURL API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (instancetype)initWithMemoryCapacity:(NSUInteger)memoryCapacity diskCapacity:(NSUInteger)diskCapacity directoryURL:(nullable NSURL *)directoryURL API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*! 
     @method cachedResponseForRequest:

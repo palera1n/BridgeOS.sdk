@@ -61,7 +61,7 @@ OS_WORKGROUP_SUBCLASS_DECL(os_workgroup_parallel, os_workgroup, WorkGroupParalle
  * The requested set of workgroup attributes. NULL is to be specified for the
  * default set of attributes.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_WORKGROUP_EXPORT OS_WORKGROUP_RETURNS_RETAINED
 OS_SWIFT_NAME(WorkGroupParallel.init(__name:attr:))
 os_workgroup_parallel_t _Nullable

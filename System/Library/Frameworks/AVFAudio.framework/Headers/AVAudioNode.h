@@ -158,7 +158,7 @@ AVAudioFormat *format = [input outputFormatForBus: 0];
 		directly on the audio unit. These include changing initialization state, stream formats, 
 		channel layouts or connections to other audio units.
 */
-@property (nonatomic, readonly) AUAudioUnit *AUAudioUnit API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nonatomic, readonly) AUAudioUnit *AUAudioUnit API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 #endif // AVAUDIONODE_HAVE_AUAUDIOUNIT
 
 /*!	@property latency
@@ -169,7 +169,7 @@ AVAudioFormat *format = [input outputFormatForBus: 0];
 		(e.g. filters, FFT's, etc.), not delay or reverberation which is being applied as an effect. 
 		A value of zero indicates either no latency or an unknown latency.
 */
-@property (nonatomic, readonly) NSTimeInterval latency API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nonatomic, readonly) NSTimeInterval latency API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!	@property outputPresentationLatency
 	@abstract The maximum render pipeline latency downstream of the node, in seconds.
@@ -193,7 +193,7 @@ AVAudioFormat *format = [input outputFormatForBus: 0];
 		connections made/altered downstream of this node etc.). So it is recommended not to cache
 		this value and fetch it whenever it's needed.
 */
-@property (nonatomic, readonly) NSTimeInterval outputPresentationLatency API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nonatomic, readonly) NSTimeInterval outputPresentationLatency API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 @end
 

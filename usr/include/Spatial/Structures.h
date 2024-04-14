@@ -12,7 +12,7 @@ typedef struct {
     double radians;
 } SPAngle
 SPATIAL_SWIFT_NAME(Angle2D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Axis Structure
 
@@ -36,7 +36,7 @@ union {
 } SPRotationAxis3D
 __attribute__((__aligned__(16)))
 SPATIAL_SWIFT_NAME(RotationAxis3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Rotation Structure
 
@@ -51,7 +51,7 @@ union {
 } SPRotation3D
 __attribute__((__aligned__(16)))
 SPATIAL_SWIFT_NAME(Rotation3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Point Structure
 
@@ -72,7 +72,7 @@ union {
 } SPPoint3D
 __attribute__((__aligned__(16)))
 SPATIAL_SWIFT_NAME(Point3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Vector Structure
 
@@ -93,7 +93,7 @@ union {
 } SPVector3D
 __attribute__((__aligned__(16)))
 SPATIAL_SWIFT_NAME(Vector3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Size Structure
 
@@ -114,7 +114,7 @@ union {
 } SPSize3D
 __attribute__((__aligned__(16)))
 SPATIAL_SWIFT_NAME(Size3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Rectangle Structure
 
@@ -127,7 +127,7 @@ typedef struct {
    SPSize3D size;
 } SPRect3D
 SPATIAL_SWIFT_NAME(Rect3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Ray Structure
 
@@ -140,7 +140,7 @@ typedef struct {
     SPVector3D direction;
 } SPRay3D
 SPATIAL_SWIFT_NAME(Ray3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Pose Structure
 
@@ -153,7 +153,7 @@ typedef struct {
     SPRotation3D rotation;
 } SPPose3D
 SPATIAL_SWIFT_NAME(Pose3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Affine Transform Structure
 
@@ -166,7 +166,7 @@ typedef struct {
     simd_double4x3 matrix;
 } SPAffineTransform3D
 SPATIAL_SWIFT_NAME(AffineTransform3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - 3D Projective Transform Structure
 
@@ -175,7 +175,7 @@ typedef struct {
     simd_double4x4 matrix;
 } SPProjectiveTransform3D
 SPATIAL_SWIFT_NAME(ProjectiveTransform3D)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Shear enumeration
 
@@ -183,13 +183,13 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 typedef enum : uint32_t {
     
     /// The operation is along the x-axis.
-    SPAxisX SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0)) = 0x0001,
+    SPAxisX SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0)) = 0x0001,
     
     /// The operation is along the y-axis.
-    SPAxisY SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0)) = 0x0002,
+    SPAxisY SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0)) = 0x0002,
     
     /// The operation is along the z-axis.
-    SPAxisZ SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0)) = 0x0004
+    SPAxisZ SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0)) = 0x0004
  
 }
 SPAxis
@@ -199,12 +199,12 @@ SPATIAL_SWIFT_NAME(Axis3D);
 // MARK: - Special Values
 
 /// The angle with the value zero.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Angle2D.zero)
 static const SPAngle SPAngleZero  = { 0 };
 
 /// The axis whose x, y, and z values are all zero.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(RotationAxis3D.zero)
 static const SPRotationAxis3D SPRotationAxis3DZero = { 0 };
 
@@ -218,19 +218,19 @@ SPATIAL_SWIFT_NAME(Rotation3D.zero)
 static const SPRotation3D SPRotation3DZero = (SPRotation3D){ .vector = {0, 0, 0, 1 }};
 
 /// The identity rotation.
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 SPATIAL_SWIFT_NAME(Rotation3D.identity)
 static const SPRotation3D SPRotation3DIdentity = (SPRotation3D){ .vector = {0, 0, 0, 1 }};
 
 /// A rotation that represents an invalid rotation.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_REFINED_FOR_SWIFT
 static const SPRotation3D SPRotation3DInvalid = {
     { .vector = {INFINITY, INFINITY, INFINITY, INFINITY }}
 };
 
 /// A pose that represents an invalid pose.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_REFINED_FOR_SWIFT
 static const SPPose3D SPPose3DInvalid = {
     .position = {INFINITY, INFINITY, INFINITY},
@@ -238,49 +238,49 @@ static const SPPose3D SPPose3DInvalid = {
 };
 
 /// The point with the value zero.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Point3D.zero)
 static const SPPoint3D SPPoint3DZero = { 0, 0, 0 };
 
 /// The point with location @p (infinity,infinity,infinity) .
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Point3D.infinity)
 static const SPPoint3D SPPoint3DInfinity = { INFINITY, INFINITY, INFINITY };
 
 /// The vector with the value zero.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Vector3D.zero)
 static const SPVector3D SPVector3DZero = { 0, 0, 0 };
 
 /// The vector with values @p (infinity,infinity,infinity) .
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Vector3D.infinity)
 static const SPVector3D SPVectorInfinity = { INFINITY, INFINITY, INFINITY };
 
 /// The size with the value zero.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Size3D.zero)
 static const SPSize3D SPSize3DZero = { 0 };
 
 /// The size with dimensions @p (infinity,infinity,infinity) .
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Size3D.infinity)
 static const SPSize3D SPSize3DInfinity = { INFINITY, INFINITY, INFINITY };
 
 /// A size that represents an invalid size.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_REFINED_FOR_SWIFT
 static const SPSize3D SPSize3DInvalid = {
     INFINITY, INFINITY, INFINITY
 };
 
 /// The rect with the value zero.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Rect3D.zero)
 static const SPRect3D SPRect3DZero = { 0 };
 
 /// The rect with dimensions @p (infinity,infinity,infinity) .
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(Rect3D.infinity)
 static const SPRect3D SPRect3DInfinity = {
     .origin = { INFINITY, INFINITY, INFINITY },
@@ -288,7 +288,7 @@ static const SPRect3D SPRect3DInfinity = {
 };
 
 /// The null rectangle, representing an invalid value.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_REFINED_FOR_SWIFT
 static const SPRect3D SPRect3DNull = {
     .origin = { INFINITY, INFINITY, INFINITY },
@@ -296,7 +296,7 @@ static const SPRect3D SPRect3DNull = {
 };
 
 /// The identity transform.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(AffineTransform3D.identity)
 static const SPAffineTransform3D SPAffineTransform3DIdentity = {
     .matrix = {
@@ -308,7 +308,7 @@ static const SPAffineTransform3D SPAffineTransform3DIdentity = {
 };
 
 /// An affine transform that represents an invalid transform.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_REFINED_FOR_SWIFT
 static const SPAffineTransform3D SPAffineTransform3DInvalid = {
     (simd_double3) {INFINITY, INFINITY, INFINITY},
@@ -318,7 +318,7 @@ static const SPAffineTransform3D SPAffineTransform3DInvalid = {
 };
 
 /// The identity transform.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_SWIFT_NAME(ProjectiveTransform3D.identity)
 static const SPProjectiveTransform3D SPProjectiveTransform3DIdentity = {
     .matrix = {
@@ -330,7 +330,7 @@ static const SPProjectiveTransform3D SPProjectiveTransform3DIdentity = {
 };
 
 /// A projective transform that represents an invalid transform.
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 SPATIAL_REFINED_FOR_SWIFT
 static const SPProjectiveTransform3D SPProjectiveTransform3DInvalid = {
     (simd_double4) {INFINITY, INFINITY, INFINITY, INFINITY},
@@ -350,7 +350,7 @@ static const SPProjectiveTransform3D SPProjectiveTransform3DInvalid = {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRotationAxis3DIsZero(SPRotationAxis3D axis)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:RotationAxis3D.isZero(self:))
 SPATIAL_OVERLOADABLE
@@ -368,7 +368,7 @@ bool SPRotationAxis3DIsZero(SPRotationAxis3D axis) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPPoint3DIsZero(SPPoint3D point)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Point3D.isZero(self:))
 SPATIAL_OVERLOADABLE
@@ -386,7 +386,7 @@ bool SPPoint3DIsZero(SPPoint3D point) {
 SPATIAL_INLINE
 bool SPPoint3DIsFinite(SPPoint3D point)
 SPATIAL_OVERLOADABLE
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Point3D.isFinite(self:))
 SPATIAL_OVERLOADABLE
@@ -405,7 +405,7 @@ bool SPPoint3DIsFinite(SPPoint3D point) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPPoint3DIsNaN(SPPoint3D point)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Point3D.isNaN(self:))
 SPATIAL_OVERLOADABLE
@@ -425,7 +425,7 @@ bool SPPoint3DIsNaN(SPPoint3D point) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPVector3DIsZero(SPVector3D vector)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Vector3D.isZero(self:))
 SPATIAL_OVERLOADABLE
@@ -443,7 +443,7 @@ bool SPVector3DIsZero(SPVector3D vector) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPVector3DIsFinite(SPVector3D vector)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Vector3D.isFinite(self:))
 SPATIAL_OVERLOADABLE
@@ -462,7 +462,7 @@ bool SPVector3DIsFinite(SPVector3D vector) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPVector3DIsNaN(SPVector3D vector)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Vector3D.isNaN(self:))
 SPATIAL_OVERLOADABLE
@@ -482,7 +482,7 @@ bool SPVector3DIsNaN(SPVector3D vector) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DIsZero(SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether all of the dimensions of the size are finite.
@@ -493,7 +493,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DIsFinite(SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the size contains any NaN values.
@@ -504,7 +504,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DIsNaN(SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Size3D.isZero(self:))
 SPATIAL_OVERLOADABLE
@@ -536,7 +536,7 @@ bool SPSize3DIsNaN(SPSize3D size) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DIsValid(SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -554,7 +554,7 @@ bool SPSize3DIsValid(SPSize3D size) {
 */
 SPATIAL_INLINE
 bool SPRotation3DIsValid(SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 bool SPRotation3DIsValid(SPRotation3D rotation) {
@@ -570,7 +570,7 @@ bool SPRotation3DIsValid(SPRotation3D rotation) {
 */
 SPATIAL_INLINE
 bool SPPose3DIsValid(SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 bool SPPose3DIsValid(SPPose3D pose) {
@@ -585,7 +585,7 @@ bool SPPose3DIsValid(SPPose3D pose) {
 */
 SPATIAL_INLINE
 bool SPRect3DIsNull(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 bool SPRect3DIsNull(SPRect3D rect) {
@@ -600,7 +600,7 @@ bool SPRect3DIsNull(SPRect3D rect) {
 */
 SPATIAL_INLINE
 bool SPRect3DIsZero(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Rect3D.isZero(self:))
 bool SPRect3DIsZero(SPRect3D rect) {
@@ -615,7 +615,7 @@ bool SPRect3DIsZero(SPRect3D rect) {
 */
 SPATIAL_INLINE
 bool SPRect3DIsFinite(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Rect3D.isFinite(self:))
 bool SPRect3DIsFinite(SPRect3D rect) {
@@ -630,7 +630,7 @@ bool SPRect3DIsFinite(SPRect3D rect) {
 */
 SPATIAL_INLINE
 bool SPRect3DIsNaN(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(getter:Rect3D.isNaN(self:))
 bool SPRect3DIsNaN(SPRect3D rect) {

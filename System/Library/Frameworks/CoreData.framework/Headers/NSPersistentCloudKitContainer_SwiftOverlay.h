@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class CKRecord;
 @class CKRecordID;
 
-API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0))
+API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0))
 @interface NSPersistentCloudKitContainer (SwiftOverlay)
 
 - (nullable CKRecord *)recordForManagedObjectID:(NSManagedObjectID *)managedObjectID;

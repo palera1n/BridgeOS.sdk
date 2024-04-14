@@ -52,7 +52,7 @@ NW_OBJECT_DECL(nw_protocol_definition);
  * @result
  *		Returns true if the definitions represent the same protocol, false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_protocol_definition_is_equal(nw_protocol_definition_t definition1, nw_protocol_definition_t definition2);
 
@@ -83,7 +83,7 @@ NW_OBJECT_DECL(nw_protocol_options);
  * @result
  *		Returns a reference-counted protocol definition object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_definition_t
 nw_protocol_options_copy_definition(nw_protocol_options_t options);
 
@@ -115,7 +115,7 @@ NW_OBJECT_DECL(nw_protocol_metadata);
  * @result
  *		Returns a reference-counted protocol definition object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_definition_t
 nw_protocol_metadata_copy_definition(nw_protocol_metadata_t metadata);
 

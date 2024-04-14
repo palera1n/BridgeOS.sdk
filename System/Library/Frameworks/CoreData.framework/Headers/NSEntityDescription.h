@@ -68,7 +68,7 @@ API_AVAILABLE(macosx(10.4),ios(3.0))
 /* Returns/sets the set of indexes for the entity. Returns/takes an array of NSFetchIndexDescription instances. This value does not form part of the entity's version hash, and may be ignored by stores which do not natively support indexing.
     IMPORTANT: Indexes should be the last things set in a model. Changing an entity hierarchy in any way that could affect the validity of indexes (adding or removing super/subentities, adding or removing properties anywhere in the hierarchy) will cause all exisiting indexes for entities in that hierarchy to be dropped.
  */
-@property (copy) NSArray <NSFetchIndexDescription *>*indexes API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+@property (copy) NSArray <NSFetchIndexDescription *>*indexes API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
 /* Returns/sets uniqueness constraints for the entity. A uniqueness constraint is a set of one or more attributes whose value must be unique over the set of instances of that entity.
 
@@ -87,7 +87,7 @@ API_AVAILABLE(macosx(10.4),ios(3.0))
 @property (strong) NSArray<NSArray<id> *> *compoundIndexes API_DEPRECATED( "Use NSEntityDescription.indexes instead", macosx(10.5,10.13),ios(3.0,11.0),tvos(9.0, 11.0),watchos(2.0, 4.0));
 
 /* Expression used to compute the CoreSpotlight display name for instance of this entity. */
-@property (nonatomic, retain) NSExpression *coreSpotlightDisplayNameExpression API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+@property (nonatomic, retain) NSExpression *coreSpotlightDisplayNameExpression API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
 @end
 

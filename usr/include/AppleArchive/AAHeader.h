@@ -22,7 +22,7 @@ extern "C" {
   @return a new non zero instance on success, and NULL on failure
 */
 APPLE_ARCHIVE_API AAHeader _Nullable AAHeaderCreate(void)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Destroy a Header
@@ -30,7 +30,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @param header is the header to destroy, do nothing if NULL
 */
 APPLE_ARCHIVE_API void AAHeaderDestroy(AAHeader _Nullable header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a Header and initialize with encoded data
@@ -43,7 +43,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API AAHeader _Nullable AAHeaderCreateWithEncodedData(
   size_t data_size,
   const uint8_t * data)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*
   @abstract Clone a Header
@@ -54,7 +54,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
  */
 APPLE_ARCHIVE_API AAHeader _Nullable AAHeaderClone(
   AAHeader header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Assign header values
@@ -69,7 +69,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API int AAHeaderAssign(
   AAHeader header,
   AAHeader from_header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create header with fields \p key_set from filesystem object DIR+"/"+PATH
@@ -99,7 +99,7 @@ APPLE_ARCHIVE_API AAHeader _Nullable AAHeaderCreateWithPath(
   const char * dir,
   const char * path,
   AAFlagSet flags)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Manipulating fields
 
@@ -111,7 +111,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
  @return the number of fields >= 0
 */
 APPLE_ARCHIVE_API uint32_t AAHeaderGetFieldCount(AAHeader header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get one index for \p key in \p header
@@ -125,7 +125,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return index >= 0 if KEY is in \p header, and -1 if not (this is not an error)
 */
 APPLE_ARCHIVE_API int AAHeaderGetKeyIndex(AAHeader header, AAFieldKey key)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get type for field \p i in \p header
@@ -136,7 +136,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return one of AA_FIELD_TYPE_... >= 0 on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderGetFieldType(AAHeader header, uint32_t i)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get key for field \p i in \p header
@@ -147,7 +147,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return a valid field on success, and a field with ikey = 0 on failure
 */
 APPLE_ARCHIVE_API AAFieldKey AAHeaderGetFieldKey(AAHeader header, uint32_t i)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get payload size, total size of all BLOB fields (64-bit)
@@ -157,7 +157,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return payload size >= 0
 */
 APPLE_ARCHIVE_API uint64_t AAHeaderGetPayloadSize(AAHeader header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Remove field \p from \p header
@@ -168,7 +168,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderRemoveField(AAHeader header, uint32_t i)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Remove all fields from \p header
@@ -178,7 +178,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderClear(AAHeader header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Set/Append header field
 
@@ -192,7 +192,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderSetFieldFlag(AAHeader header, uint32_t i, AAFieldKey key)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Set UInt field \p i in \p header
@@ -205,7 +205,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderSetFieldUInt(AAHeader header, uint32_t i, AAFieldKey key, uint64_t value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Set String field \p i in \p header
@@ -219,7 +219,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderSetFieldString(AAHeader header, uint32_t i, AAFieldKey key, const char * value, size_t length)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Set Hash field \p i in \p header
@@ -233,7 +233,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderSetFieldHash(AAHeader header, uint32_t i, AAFieldKey key, AAHashFunction hash_function, const uint8_t * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Set Timespec field \p i in \p header
@@ -246,7 +246,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderSetFieldTimespec(AAHeader header, uint32_t i, AAFieldKey key, const struct timespec * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Set Blob field \p i in \p header
@@ -259,7 +259,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderSetFieldBlob(AAHeader header, uint32_t i, AAFieldKey key, uint64_t size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Append field (inline helpers)
 
@@ -270,7 +270,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return the index >= 0 of the new field on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AAHeaderAppendFieldFlag(AAHeader header, AAFieldKey key)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AAHeaderSetFieldFlag(header, UINT32_MAX, key); }
 
 /*!
@@ -281,7 +281,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return the index >= 0 of the new field on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AAHeaderAppendFieldUInt(AAHeader header, AAFieldKey key, uint64_t value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AAHeaderSetFieldUInt(header, UINT32_MAX, key, value); }
 
 /*!
@@ -293,7 +293,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return the index >= 0 of the new field on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AAHeaderAppendFieldString(AAHeader header, AAFieldKey key, const char * value, size_t length)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AAHeaderSetFieldString(header, UINT32_MAX, key, value, length); }
 
 /*!
@@ -304,7 +304,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return the index >= 0 of the new field on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_INLINE int AAHeaderAppendFieldCString(AAHeader header, AAFieldKey key, const char * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AAHeaderSetFieldString(header, UINT32_MAX, key, value, strlen(value)); }
 
 /*!
@@ -316,7 +316,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return the index >= 0 of the new field on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AAHeaderAppendFieldHash(AAHeader header, AAFieldKey key, AAHashFunction hash_function, const uint8_t * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AAHeaderSetFieldHash(header, UINT32_MAX, key, hash_function, value); }
 
 /*!
@@ -327,7 +327,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return the index >= 0 of the new field on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AAHeaderAppendFieldTimespec(AAHeader header, AAFieldKey key, const struct timespec * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AAHeaderSetFieldTimespec(header, UINT32_MAX, key, value); }
 
 /*!
@@ -338,7 +338,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return the index >= 0 of the new field on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AAHeaderAppendFieldBlob(AAHeader header, AAFieldKey key, uint64_t size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AAHeaderSetFieldBlob(header, UINT32_MAX, key, size); }
 
 #pragma mark - Get field value
@@ -353,7 +353,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderGetFieldUInt(AAHeader header, uint32_t i, uint64_t * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get value for String field \p i in \p header
@@ -372,7 +372,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure (includes insufficient capacity)
 */
 APPLE_ARCHIVE_API int AAHeaderGetFieldString(AAHeader header, uint32_t i, size_t capacity, char * _Nullable value, size_t * _Nullable length)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get value for Hash field \p i in \p header
@@ -387,7 +387,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure (includes insufficient capacity)
 */
 APPLE_ARCHIVE_API int AAHeaderGetFieldHash(AAHeader header, uint32_t i, size_t capacity, AAHashFunction * _Nullable hash_function, uint8_t * _Nullable value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get value for Timespec field \p i in \p header
@@ -399,7 +399,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderGetFieldTimespec(AAHeader header, uint32_t i, struct timespec * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get value for Blob field \p i in \p header
@@ -412,7 +412,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 and set return value on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAHeaderGetFieldBlob(AAHeader header, uint32_t i, uint64_t * size, uint64_t * offset)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Get field value with key (inline helpers)
 
@@ -425,7 +425,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 1 if key exists and GetFieldUInt succeeded, 0 if key doesn't exist, and a negative error code on failure
 */
 APPLE_ARCHIVE_INLINE int AAHeaderGetFieldUIntWithKey(AAHeader header, AAFieldKey key, uint64_t * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   int i = AAHeaderGetKeyIndex(header, key);
   if (i < 0) return 0; // key not found
@@ -445,7 +445,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 1 if key exists and GetFieldString succeeded, 0 if key doesn't exist, and a negative error code on failure
 */
 APPLE_ARCHIVE_INLINE int AAHeaderGetFieldStringWithKey(AAHeader header, AAFieldKey key, size_t capacity, char * _Nullable value, size_t * _Nullable length)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   int i = AAHeaderGetKeyIndex(header, key);
   if (i < 0) return 0; // key not found
@@ -465,7 +465,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 1 if key exists and GetFieldHash succeeded, 0 if key doesn't exist, and a negative error code on failure
 */
 APPLE_ARCHIVE_INLINE int AAHeaderGetFieldHashWithKey(AAHeader header, AAFieldKey key, size_t capacity, AAHashFunction * _Nullable hash_function, uint8_t * _Nullable value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   int i = AAHeaderGetKeyIndex(header, key);
   if (i < 0) return 0; // key not found
@@ -483,7 +483,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 1 if key exists and GetFieldTimespec succeeded, 0 if key doesn't exist, and a negative error code on failure
 */
 APPLE_ARCHIVE_INLINE int AAHeaderGetFieldTimespecWithKey(AAHeader header, AAFieldKey key, struct timespec * value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   int i = AAHeaderGetKeyIndex(header, key);
   if (i < 0) return 0; // key not found
@@ -502,7 +502,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 1 if key exists and GetFieldBlob succeeded, 0 if key doesn't exist, and a negative error code on failure
 */
 APPLE_ARCHIVE_INLINE int AAHeaderGetFieldBlobWithKey(AAHeader header, AAFieldKey key, uint64_t * size, uint64_t * offset)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   int i = AAHeaderGetKeyIndex(header, key);
   if (i < 0) return 0; // key not found
@@ -518,7 +518,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return header blob size >= 0
 */
 APPLE_ARCHIVE_API size_t AAHeaderGetEncodedSize(AAHeader header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get header blob data, encoding the header. This pointer becomes invalid when HEADER is modified, or destroyed.
@@ -526,7 +526,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return a pointer to the read only header blob data on success, and 0 on failure
 */
 APPLE_ARCHIVE_API const uint8_t * _Nullable AAHeaderGetEncodedData(AAHeader header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #ifdef __cplusplus
 }

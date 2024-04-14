@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class NSPersistentCloudKitContainerEvent;
 
-API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0))
+API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0))
 @interface NSPersistentCloudKitContainerEventRequest : NSPersistentStoreRequest
 @property NSPersistentCloudKitContainerEventResultType resultType;
 

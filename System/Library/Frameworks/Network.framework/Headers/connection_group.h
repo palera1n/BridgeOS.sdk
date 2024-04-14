@@ -97,7 +97,7 @@ typedef enum {
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED nw_connection_group_t
 nw_connection_group_create(nw_group_descriptor_t group_descriptor,
 						   nw_parameters_t parameters);
@@ -114,7 +114,7 @@ nw_connection_group_create(nw_group_descriptor_t group_descriptor,
  * @result
  *		Returns the descriptor with which the connection group was created.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED
 nw_group_descriptor_t
 nw_connection_group_copy_descriptor(nw_connection_group_t group);
@@ -131,7 +131,7 @@ nw_connection_group_copy_descriptor(nw_connection_group_t group);
  * @result
  *		Returns an nw_parameters_t object.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_connection_group_copy_parameters(nw_connection_group_t group);
 
@@ -148,7 +148,7 @@ nw_connection_group_copy_parameters(nw_connection_group_t group);
  * @param queue
  *		The client's callback queue.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_connection_group_set_queue(nw_connection_group_t group,
 							  dispatch_queue_t queue);
@@ -185,7 +185,7 @@ typedef void (^nw_connection_group_state_changed_handler_t)(nw_connection_group_
  *		The state changed handler to call when the connection group state changes.
  *		Pass NULL to remove the event handler.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_connection_group_set_state_changed_handler(nw_connection_group_t group,
 											  _Nullable nw_connection_group_state_changed_handler_t state_changed_handler);
@@ -245,7 +245,7 @@ typedef void (^nw_connection_group_receive_handler_t)(_Nullable dispatch_data_t 
  *		The handler to call upon arrival of a new inbound message.
  *		Pass NULL to remove the handler.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_connection_group_set_receive_handler(nw_connection_group_t group,
 										uint32_t maximum_message_size,
@@ -265,7 +265,7 @@ nw_connection_group_set_receive_handler(nw_connection_group_t group,
  * @param group
  *		The connection group object.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_connection_group_start(nw_connection_group_t group);
 
@@ -282,7 +282,7 @@ nw_connection_group_start(nw_connection_group_t group);
  * @param group
  *		The connection group object.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_connection_group_cancel(nw_connection_group_t group);
 
@@ -302,7 +302,7 @@ nw_connection_group_cancel(nw_connection_group_t group);
  *		Returns the remote endpoint, or nil if the context is not a valid
  *		inbound message received from this connection group.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED _Nullable nw_endpoint_t
 nw_connection_group_copy_remote_endpoint_for_message(nw_connection_group_t group,
 													 nw_content_context_t context);
@@ -323,7 +323,7 @@ nw_connection_group_copy_remote_endpoint_for_message(nw_connection_group_t group
  *		Returns the local endpoint, or nil if the context is not a valid
  *		inbound message received from this connection group.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED _Nullable nw_endpoint_t
 nw_connection_group_copy_local_endpoint_for_message(nw_connection_group_t group,
 													nw_content_context_t context);
@@ -344,7 +344,7 @@ nw_connection_group_copy_local_endpoint_for_message(nw_connection_group_t group,
  *		Returns the path associated with the provided message, or nil if the context
  *		is not a valid inbound message received from this connection group.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED _Nullable nw_path_t
 nw_connection_group_copy_path_for_message(nw_connection_group_t group,
 										  nw_content_context_t context);
@@ -364,7 +364,7 @@ nw_connection_group_copy_path_for_message(nw_connection_group_t group,
  * @result
  *		Returns a retained protocol metadata object, or NULL if not found.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 _Nullable nw_protocol_metadata_t
 nw_connection_group_copy_protocol_metadata_for_message(nw_connection_group_t group,
 													   nw_content_context_t context,
@@ -396,7 +396,7 @@ nw_connection_group_copy_protocol_metadata_for_message(nw_connection_group_t gro
  *		fails. Extraction will fail if the provided message is not an inbound message from
  *		this connection group.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_RETURNS_RETAINED _Nullable nw_connection_t
 nw_connection_group_extract_connection_for_message(nw_connection_group_t group,
 												   nw_content_context_t context);
@@ -429,7 +429,7 @@ nw_connection_group_extract_connection_for_message(nw_connection_group_t group,
  *		context represents a metadata only message that contains no body data.
  *
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_connection_group_reply(nw_connection_group_t group,
 						  nw_content_context_t inbound_message,
@@ -461,7 +461,7 @@ nw_connection_group_reply(nw_connection_group_t group,
  * @result
  *      Returns the connection from the connection group.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 NW_RETURNS_RETAINED _Nullable nw_connection_t
 nw_connection_group_extract_connection(nw_connection_group_t group,
 									   _Nullable nw_endpoint_t endpoint,
@@ -486,7 +486,7 @@ nw_connection_group_extract_connection(nw_connection_group_t group,
  *		Returns true if the reinsertion was successful. Reinsertion will fail if the provided connection was
  *		not extracted from this connection group.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 bool
 nw_connection_group_reinsert_extracted_connection(nw_connection_group_t group,
 												  nw_connection_t connection);
@@ -550,7 +550,7 @@ typedef void (^nw_connection_group_send_completion_t)(_Nullable nw_error_t error
  *		This callback does indicate that the data has either been sent or it has been
  *		enqueued to be sent.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 NW_SWIFT_DISABLE_ASYNC
 void
 nw_connection_group_send_message(nw_connection_group_t group,
@@ -594,7 +594,7 @@ typedef void (^nw_connection_group_new_connection_handler_t)(nw_connection_t con
  *		The new connection handler to call upon receipt of a new inbound connection.
  *		Pass NULL to remove the handler.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 void
 nw_connection_group_set_new_connection_handler(nw_connection_group_t group,
 											   _Nullable nw_connection_group_new_connection_handler_t new_connection_handler);
@@ -615,7 +615,7 @@ nw_connection_group_set_new_connection_handler(nw_connection_group_t group,
  *		Returns a retained protocol metadata object, or NULL if the connection
  *		group has not been established yet or is cancelled.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 _Nullable nw_protocol_metadata_t
 nw_connection_group_copy_protocol_metadata(nw_connection_group_t group,
 										   nw_protocol_definition_t definition);

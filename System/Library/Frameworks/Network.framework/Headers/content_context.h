@@ -63,7 +63,7 @@ NW_OBJECT_DECL(nw_content_context);
  * @param context_identifier A string description of the context
  * @result Returns a new context context object
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_content_context_t
 nw_content_context_create(const char *context_identifier);
 
@@ -72,7 +72,7 @@ nw_content_context_create(const char *context_identifier);
  * @discussion Access the identifier description.
  * @result Returns the context's identifier string.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char *
 nw_content_context_get_identifier(nw_content_context_t context);
 
@@ -85,7 +85,7 @@ nw_content_context_get_identifier(nw_content_context_t context);
  * @param context The context object
  * @result Returns true if the context is the final context for a connection.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_content_context_get_is_final(nw_content_context_t context);
 
@@ -99,7 +99,7 @@ nw_content_context_get_is_final(nw_content_context_t context);
  * @param context The context object
  * @param is_final If set to true, mark the context as the final context to send on a connection.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_content_context_set_is_final(nw_content_context_t context,
 								bool is_final);
@@ -111,7 +111,7 @@ nw_content_context_set_is_final(nw_content_context_t context,
  * @param context The context object
  * @result Returns content expiration, or 0 if not set.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint64_t
 nw_content_context_get_expiration_milliseconds(nw_content_context_t context);
 
@@ -124,7 +124,7 @@ nw_content_context_get_expiration_milliseconds(nw_content_context_t context);
  * @param context The context object
  * @param expiration_milliseconds The number of milliseconds after which content will expire
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_content_context_set_expiration_milliseconds(nw_content_context_t context,
 											   uint64_t expiration_milliseconds);
@@ -137,7 +137,7 @@ nw_content_context_set_expiration_milliseconds(nw_content_context_t context,
  * @result Returns the relative priority, between 0.0 (lowest priority)
  *		to 1.0 (highest priority). The default value is 0.5.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 double
 nw_content_context_get_relative_priority(nw_content_context_t context);
 
@@ -152,7 +152,7 @@ nw_content_context_get_relative_priority(nw_content_context_t context);
  * @param relative_priority The relative priority of the content, between
  *		0.0 (lowest priority) to 1.0 (highest priority).
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_content_context_set_relative_priority(nw_content_context_t context,
 										 double relative_priority);
@@ -167,7 +167,7 @@ nw_content_context_set_relative_priority(nw_content_context_t context,
  * @param antecedent_context A context associated with content that should precede
  *		this content.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_content_context_set_antecedent(nw_content_context_t context,
 								  _Nullable nw_content_context_t antecedent_context);
@@ -179,7 +179,7 @@ nw_content_context_set_antecedent(nw_content_context_t context,
  * @param context The context object
  * @result Returns a context object set as the antecedent, or NULL.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_content_context_t
 nw_content_context_copy_antecedent(nw_content_context_t context);
 
@@ -191,7 +191,7 @@ nw_content_context_copy_antecedent(nw_content_context_t context);
  * @param context The context context parent object
  * @param protocol_metadata The per-protocol metadata context object to set
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_content_context_set_metadata_for_protocol(nw_content_context_t context,
 											 nw_protocol_metadata_t protocol_metadata);
@@ -203,7 +203,7 @@ nw_content_context_set_metadata_for_protocol(nw_content_context_t context,
  * @param protocol The definition identifier of the protocol to retrieve metadata for
  * @result Returns the metadata registered for the protocol, or NULL if there is none
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 _Nullable NW_RETURNS_RETAINED nw_protocol_metadata_t
 nw_content_context_copy_protocol_metadata(nw_content_context_t context,
 										  nw_protocol_definition_t protocol);
@@ -215,7 +215,7 @@ nw_content_context_copy_protocol_metadata(nw_content_context_t context,
  * @param context The context context parent object
  * @param foreach_block A block in which protocol definition and metadata will be sent
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_content_context_foreach_protocol_metadata(nw_content_context_t context,
 											 void (^foreach_block)(nw_protocol_definition_t definition,

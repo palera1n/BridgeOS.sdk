@@ -72,7 +72,7 @@ typedef enum {
  * @result
  *		Returns the status of the path, or nw_path_status_invalid if the object is NULL.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_path_status_t
 nw_path_get_status(nw_path_t path);
 
@@ -91,7 +91,7 @@ typedef enum {
 	/*! @const nw_path_unsatisfied_reason_local_network_denied The user has disabled local network access */
 	nw_path_unsatisfied_reason_local_network_denied = 3,
 	/*! @const nw_path_unsatisfied_reason_vpn_inactive A required VPN is not active */
-	nw_path_unsatisfied_reason_vpn_inactive API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0)) = 4,
+	nw_path_unsatisfied_reason_vpn_inactive API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) = 4,
 } nw_path_unsatisfied_reason_t;
 
 /*!
@@ -131,7 +131,7 @@ typedef bool (^nw_path_enumerate_interfaces_block_t)(nw_interface_t interface);
  *		true from the block will continue to enumerate, and returning false will stop
  *		enumerating.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_path_enumerate_interfaces(nw_path_t path,
 							 NW_NOESCAPE nw_path_enumerate_interfaces_block_t enumerate_block);
@@ -155,7 +155,7 @@ nw_path_enumerate_interfaces(nw_path_t path,
  *		Returns true if the paths are equivalent, or false if there is any difference
  *		between the paths.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_path_is_equal(nw_path_t path, nw_path_t other_path);
 
@@ -173,7 +173,7 @@ nw_path_is_equal(nw_path_t path, nw_path_t other_path);
  *		Returns true if the path uses any network interface that is considered expensive,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_path_is_expensive(nw_path_t path);
 
@@ -191,7 +191,7 @@ nw_path_is_expensive(nw_path_t path);
  *		Returns true if the path uses any network interface that is considered constrained,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_path_is_constrained(nw_path_t path);
 
@@ -208,7 +208,7 @@ nw_path_is_constrained(nw_path_t path);
  *		Returns true if the path uses a network interface that supports IPv4,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_path_has_ipv4(nw_path_t path);
 
@@ -225,7 +225,7 @@ nw_path_has_ipv4(nw_path_t path);
  *		Returns true if the path uses a network interface that supports IPv6,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_path_has_ipv6(nw_path_t path);
 
@@ -242,7 +242,7 @@ nw_path_has_ipv6(nw_path_t path);
  *		Returns true if the path has a DNS server configuration set,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_path_has_dns(nw_path_t path);
 
@@ -259,7 +259,7 @@ nw_path_has_dns(nw_path_t path);
  *		Returns true if the path uses any network interface with the specified type,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_path_uses_interface_type(nw_path_t path,
 							nw_interface_type_t interface_type);
@@ -279,7 +279,7 @@ nw_path_uses_interface_type(nw_path_t path,
  *		Returns an endpoint that is assigned as the local endpoint for this path,
  *		or NULL if the path does not have a fixed local endpoint.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_endpoint_t
 nw_path_copy_effective_local_endpoint(nw_path_t path);
 
@@ -298,7 +298,7 @@ nw_path_copy_effective_local_endpoint(nw_path_t path);
  *		Returns an endpoint that is assigned as the remote endpoint for this path,
  *		or NULL if the path does not have a fixed remote endpoint.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_endpoint_t
 nw_path_copy_effective_remote_endpoint(nw_path_t path);
 
@@ -320,7 +320,7 @@ typedef bool (^nw_path_enumerate_gateways_block_t)(nw_endpoint_t gateway);
  *		true from the block will continue to enumerate, and returning false will stop
  *		enumerating.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_path_enumerate_gateways(nw_path_t path,
 						   NW_NOESCAPE nw_path_enumerate_gateways_block_t enumerate_block);

@@ -92,7 +92,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 
 /*  Where units have variable length (number of days in a month, number of hours in a day, etc...), NSDateComponentsFormatter will calculate as though counting from the date specified by the referenceDate in the appropriate calendar. Defaults to [NSDate dateWithTimeIntervalSinceReferenceDate:0] at the time of the -stringForObjectValue: call if not set. Set to nil to get the default behavior.
  */
-@property (nullable, copy) NSDate *referenceDate API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nullable, copy) NSDate *referenceDate API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /* Choose whether non-integer units should be used to handle display of values that can't be exactly represented with the allowed units. For example, if minutes aren't allowed, then "1h 30m" could be formatted as "1.5h". Default is NO.
  */

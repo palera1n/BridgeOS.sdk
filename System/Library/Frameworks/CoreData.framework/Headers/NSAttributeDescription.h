@@ -27,11 +27,11 @@ typedef NS_ENUM(NSUInteger, NSAttributeType) {
     NSBooleanAttributeType = 800,
     NSDateAttributeType = 900,
     NSBinaryDataAttributeType = 1000,
-    NSUUIDAttributeType API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0)) = 1100,
-    NSURIAttributeType API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0)) = 1200,
+    NSUUIDAttributeType API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0)) = 1100,
+    NSURIAttributeType API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0)) = 1200,
     NSTransformableAttributeType API_AVAILABLE(macosx(10.5), ios(3.0)) = 1800, // If your attribute is of NSTransformableAttributeType, the attributeValueClassName must be set or attribute value class must implement NSCopying.
     NSObjectIDAttributeType API_AVAILABLE(macosx(10.6), ios(3.0)) = 2000,
-    NSCompositeAttributeType API_AVAILABLE(macosx(14.0), ios(17.0), tvos(17.0), watchos(10.0)) = 2100
+    NSCompositeAttributeType API_AVAILABLE(macosx(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0)) = 2100
  };
 
 // Attributes represent individual values like strings, numbers, dates, etc.
@@ -55,7 +55,7 @@ API_AVAILABLE(macosx(10.4),ios(3.0))
 @property () BOOL allowsExternalBinaryDataStorage API_AVAILABLE(macosx(10.7),ios(5.0));
 
 /* Indicates if the value of the attribute should be captured on delete when Persistent History is enabled */
-@property () BOOL preservesValueInHistoryOnDeletion API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0));
+@property () BOOL preservesValueInHistoryOnDeletion API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0));
 
 /*
  * This property can be set to enable encryption-at-rest on data stored in CloudKit servers.
@@ -66,7 +66,7 @@ API_AVAILABLE(macosx(10.4),ios(3.0))
  *
  * Note: This property does not affect the data in the persistent store. Local file encryption should continue to be managed by using NSFileProtection and other standard platform security mechanisms.
  */
-@property () BOOL allowsCloudEncryption API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+@property () BOOL allowsCloudEncryption API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 @end
 

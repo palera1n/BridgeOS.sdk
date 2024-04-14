@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  * the NSManagedObjectModel's versionChecksum property. Alternatively it can be retrieved from the Xcode build
  * log or a versioned model's VersionInfo.plist.
  */
-API_AVAILABLE(macosx(14.0),ios(17.0),tvos(17.0),watchos(10.0))
+API_AVAILABLE(macosx(14.0),ios(17.0), bridgeos(8.0),tvos(17.0),watchos(10.0))
 @interface NSManagedObjectModelReference : NSObject
 
 @property (readonly, strong) NSManagedObjectModel *resolvedModel;

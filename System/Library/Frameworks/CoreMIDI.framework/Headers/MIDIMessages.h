@@ -536,7 +536,7 @@ typedef void (*MIDIEventVisitor)(void* context, MIDITimeStamp timeStamp, MIDIUni
 */
 extern void MIDIEventListForEachEvent(
 	const MIDIEventList* evtlist, MIDIEventVisitor visitor, void* visitorContext)
-									API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+									API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 
 #ifdef __cplusplus

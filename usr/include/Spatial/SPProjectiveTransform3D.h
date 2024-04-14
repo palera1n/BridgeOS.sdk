@@ -13,25 +13,25 @@
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMakeWith4x4Matrix(simd_double4x4 matrix)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns a new transform from the specified affine transform.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMakeWithAffine(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns a new scale transform.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMakeScale(SPSize3D scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns a new rotation transform.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMakeRotation(SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns a new translate transform.
 SPATIAL_INLINE
@@ -48,7 +48,7 @@ __API_DEPRECATED("Use `SPVector3D` variant.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMakeTranslation(SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform with right-hand side perspective.
@@ -86,7 +86,7 @@ SPProjectiveTransform3D SPProjectiveTransform3DMakeWithRightHandPerspective(doub
                                                                             double aspectRatio,
                                                                             double nearZ,
                                                                             double farZ)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform with right-hand side perspective.
@@ -128,7 +128,7 @@ SPProjectiveTransform3D SPProjectiveTransform3DMakeWithRightHandPerspective(doub
                                                                             double nearZ,
                                                                             double farZ,
                                                                             bool reverseZ)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform from tangents for each side of its frustum.
@@ -151,7 +151,7 @@ SPProjectiveTransform3D SPProjectiveTransform3DMakeFromTangents(double leftTange
                                                                 double nearZ,
                                                                 double farZ,
                                                                 bool reverseZ)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new scale, rotate, translate affine transform.
@@ -185,7 +185,7 @@ SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMake(SPSize3D scale,
                                                     SPRotation3D rotation,
                                                     SPVector3D translation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new shear affine transform..
@@ -206,7 +206,7 @@ SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMakeShear(SPAxis shearAxis,
                                                          double shearFactor0,
                                                          double shearFactor1)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Querying transform properties
 
@@ -219,7 +219,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsAffine(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether a projective transform is a valid transform.
@@ -230,7 +230,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsValid(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform only contains a translation.
@@ -241,7 +241,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsTranslation(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform is the identity transform.
@@ -252,7 +252,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsIdentity(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform is a 3D projection.
@@ -263,7 +263,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIs3DProjection(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform is affine and scales equally over all dimensions.
@@ -274,7 +274,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsUniform(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns true if the transform is affine and scales equally over the specified dimensions.
@@ -292,7 +292,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsUniformOverDimensions(SPProjectiveTransform3D transform,
                                                      SPAxis dimensionFlags)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform is affine and rectilinear.
@@ -303,7 +303,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsRectilinear(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform's underlying matrix has an inverse.
@@ -314,7 +314,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPProjectiveTransform3DIsInvertible(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Deriving new transforms
 
@@ -327,14 +327,14 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DInverted(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns a projective transformation matrix constructed by concatenating two existing Projective transforms.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DConcatenation(SPProjectiveTransform3D t1,
                                                              SPProjectiveTransform3D t2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: Extracting component transforms
 
@@ -348,7 +348,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPProjectiveTransform3DGetScale(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform's rotation.
@@ -361,7 +361,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPProjectiveTransform3DGetRotation(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform's translation.
@@ -372,7 +372,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPProjectiveTransform3DGetTranslation(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform's translation.
@@ -413,7 +413,7 @@ __API_DEPRECATED("Use `SPProjectiveTransform3DSetTranslation`.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 void SPProjectiveTransform3DSetTranslation(SPProjectiveTransform3D *transform, SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Transform equality
 
@@ -430,7 +430,7 @@ bool SPProjectiveTransform3DAlmostEqualToTransform(SPProjectiveTransform3D t1,
                                                     SPProjectiveTransform3D t2)
 SPATIAL_OVERLOADABLE
 SPATIAL_REFINED_FOR_SWIFT
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the two transform's matrices are equal within the specified absolute tolerance.
@@ -445,7 +445,7 @@ bool SPProjectiveTransform3DAlmostEqualToTransform(SPProjectiveTransform3D t1,
                                                     double tolerance)
 SPATIAL_OVERLOADABLE
 SPATIAL_REFINED_FOR_SWIFT
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Applying transform
 
@@ -462,7 +462,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DScaleBy(SPProjectiveTransform3D transform,
                                                        double x, double y, double z)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform that's constructed by concatenating an existing projective transform and a scale specified by a @p Size3D structure.
@@ -474,7 +474,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DScaleBySize(SPProjectiveTransform3D transform, SPSize3D scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform that's constructed by concatenating an existing projective transform and a uniform scale.
@@ -486,7 +486,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DScaleUniform(SPProjectiveTransform3D transform, double scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform that's constructed by concatenating an existing projective transform and a rotation.
@@ -499,7 +499,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DRotate(SPProjectiveTransform3D transform,
                                                       SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform that's constructed by concatenating an existing projective transform and a rotation specified by a quaternion.
@@ -512,7 +512,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DRotateByQuaternion(SPProjectiveTransform3D transform,
                                                                   simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform that's constructed by concatenating an existing projective transform and a translation.
@@ -542,7 +542,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DTranslate(SPProjectiveTransform3D transform,
                                                          SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new shear transform.
@@ -562,7 +562,7 @@ SPProjectiveTransform3D SPProjectiveTransform3DShear(SPProjectiveTransform3D tra
                                                      SPAxis shearAxis,
                                                      double shearFactor0,
                                                      double shearFactor1)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a projective transform that's flipped along the specified axis.
@@ -578,7 +578,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DFlip(SPProjectiveTransform3D transform,
                                                     SPAxis flipAxis)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: Header inline implementations
 
@@ -1182,7 +1182,7 @@ SPProjectiveTransform3D SPProjectiveTransform3DFlip(SPProjectiveTransform3D tran
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPProjectiveTransform3D SPProjectiveTransform3DMakeWithPose(SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

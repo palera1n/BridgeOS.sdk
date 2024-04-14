@@ -122,7 +122,7 @@ API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0))
 /// @example
 /// NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 /// queue.progress.totalUnitCount = 10;
-@property (readonly, strong) NSProgress *progress API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+@property (readonly, strong) NSProgress *progress API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 - (void)addOperation:(NSOperation *)op;
 
@@ -134,7 +134,7 @@ API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0))
 /// @discussion         The `addBarrierBlock:` method executes the block when the NSOperationQueue has finished all enqueued operations and
 /// prevents any subsequent operations to be executed until the barrier has been completed. This acts similarly to the
 /// `dispatch_barrier_async` function.
-- (void)addBarrierBlock:(void (NS_SWIFT_SENDABLE ^)(void))barrier API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+- (void)addBarrierBlock:(void (NS_SWIFT_SENDABLE ^)(void))barrier API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 @property NSInteger maxConcurrentOperationCount;
 

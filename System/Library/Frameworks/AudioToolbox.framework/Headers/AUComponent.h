@@ -200,7 +200,7 @@ CF_ENUM(UInt32) {
 	kAudioUnitType_Generator				= 'augn',
 	kAudioUnitType_OfflineEffect			= 'auol',
 	kAudioUnitType_MIDIProcessor			= 'aumi',
-	kAudioUnitType_SpeechSynthesizer API_AVAILABLE(ios(16.0), macos(13.0), watchos(9.0), tvos(16.0))  = 'ausp'
+	kAudioUnitType_SpeechSynthesizer API_AVAILABLE(ios(16.0), bridgeos(7.0), macos(13.0), watchos(9.0), tvos(16.0))  = 'ausp'
 };
 
 #if AU_SUPPORT_INTERAPP_AUDIO
@@ -1683,7 +1683,7 @@ AudioComponentGetLastActiveTime(AudioComponent comp)
 */
 extern UIImage * __nullable
 AudioComponentCopyIcon(AudioComponent comp) __attribute((ns_returns_retained))
-												API_AVAILABLE(ios(14.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
+												API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0)) API_UNAVAILABLE(macos);
 #else
 @class NSImage;
 /*!

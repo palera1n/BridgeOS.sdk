@@ -62,14 +62,14 @@ typedef struct {
   @return a non-zero instance on success, and 0 on failure
 */
 APPLE_ARCHIVE_API _Nullable AAEntryACLBlob AAEntryACLBlobCreate(void)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Destroy ACL
 */
 APPLE_ARCHIVE_API void AAEntryACLBlobDestroy(
   AAEntryACLBlob _Nullable acl)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create from encoded data representing an ACL field
@@ -82,7 +82,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API AAEntryACLBlob _Nullable AAEntryACLBlobCreateWithEncodedData(
   const uint8_t * data,
   size_t data_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstact Create ACL blob from filesystem object DIR+"/"+PATH
@@ -97,7 +97,7 @@ APPLE_ARCHIVE_API AAEntryACLBlob _Nullable AAEntryACLBlobCreateWithPath(
   const char * dir,
   const char * path,
   AAFlagSet flags)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Apply ACL contents to filesystem object DIR+"/"+PATH
@@ -118,7 +118,7 @@ APPLE_ARCHIVE_API int AAEntryACLBlobApplyToPath(
   const char * dir,
   const char * path,
   AAFlagSet flags)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get number of entries in ACL
@@ -127,7 +127,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API uint32_t AAEntryACLBlobGetEntryCount(
   AAEntryACLBlob acl)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get ACL entry contents
@@ -155,7 +155,7 @@ APPLE_ARCHIVE_API int AAEntryACLBlobGetEntry(
   size_t qualifier_capacity,
   uint8_t * _Nullable qualifier_value,
   size_t * _Nullable qualifier_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Append an ACL entry
@@ -176,7 +176,7 @@ APPLE_ARCHIVE_API int AAEntryACLBlobAppendEntry(
   const AAAccessControlEntry * ace,
   const uint8_t * qualifier_value,
   size_t qualifier_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Update an ACL entry
@@ -199,7 +199,7 @@ APPLE_ARCHIVE_API int AAEntryACLBlobSetEntry(
   const AAAccessControlEntry * ace,
   const uint8_t * qualifier_value,
   size_t qualifier_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Remove all ACL entries
@@ -210,7 +210,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API int AAEntryACLBlobClear(
   AAEntryACLBlob acl)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Remove one ACL entry
@@ -223,7 +223,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API int AAEntryACLBlobRemoveEntry(
   AAEntryACLBlob acl,
   uint32_t i)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get size of the data blob encoding the ACL field
@@ -233,7 +233,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return blob size >= 0
 */
 APPLE_ARCHIVE_API size_t AAEntryACLBlobGetEncodedSize(AAEntryACLBlob acl)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get data blob encoding the ACL field
@@ -246,7 +246,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return a pointer to the ACL blob data on success, and 0 on failure
 */
 APPLE_ARCHIVE_API const uint8_t * _Nullable AAEntryACLBlobGetEncodedData(AAEntryACLBlob acl)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #ifdef __cplusplus
 }

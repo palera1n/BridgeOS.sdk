@@ -34,7 +34,7 @@ typedef NS_OPTIONS(NSUInteger, NSISO8601DateFormatOptions) {
     NSISO8601DateFormatWithDashSeparatorInDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithDashSeparatorInDate,  // Add separator for date ("-")
     NSISO8601DateFormatWithColonSeparatorInTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithColonSeparatorInTime,  // Add separator for time (":")
     NSISO8601DateFormatWithColonSeparatorInTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithColonSeparatorInTimeZone,  // Add ":" separator in timezone (e.g. +08:00)
-    NSISO8601DateFormatWithFractionalSeconds API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0)) = kCFISO8601DateFormatWithFractionalSeconds,  // Add 3 significant digits of fractional seconds (".SSS")
+    NSISO8601DateFormatWithFractionalSeconds API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) = kCFISO8601DateFormatWithFractionalSeconds,  // Add 3 significant digits of fractional seconds (".SSS")
 
     NSISO8601DateFormatWithFullDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithFullDate,
     NSISO8601DateFormatWithFullTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithFullTime,

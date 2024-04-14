@@ -19,12 +19,12 @@ typedef NS_ENUM(NSInteger, NSPersistentCloudKitContainerEventType) {
     NSPersistentCloudKitContainerEventTypeSetup,
     NSPersistentCloudKitContainerEventTypeImport,
     NSPersistentCloudKitContainerEventTypeExport
-} API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainer.EventType);
+} API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainer.EventType);
 
-COREDATA_EXTERN NSNotificationName const NSPersistentCloudKitContainerEventChangedNotification API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainer.eventChangedNotification);
-COREDATA_EXTERN NSString * const NSPersistentCloudKitContainerEventUserInfoKey API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainer.eventNotificationUserInfoKey);
+COREDATA_EXTERN NSNotificationName const NSPersistentCloudKitContainerEventChangedNotification API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainer.eventChangedNotification);
+COREDATA_EXTERN NSString * const NSPersistentCloudKitContainerEventUserInfoKey API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainer.eventNotificationUserInfoKey);
 
-API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0))
+API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0))
 NS_SWIFT_NAME(NSPersistentCloudKitContainer.Event)
 @interface NSPersistentCloudKitContainerEvent : NSObject<NSCopying>
 @property(nonatomic, strong, readonly) NSUUID *identifier;

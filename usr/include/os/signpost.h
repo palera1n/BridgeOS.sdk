@@ -138,7 +138,7 @@ typedef uint64_t os_signpost_id_t;
  * are turned off. Returns OS_SIGNPOST_ID_INVALID if the log handle is
  * system-scoped.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 OS_EXPORT OS_NOTHROW
 os_signpost_id_t
 os_signpost_id_make_with_pointer(os_log_t log, const void *_Nullable ptr);
@@ -173,7 +173,7 @@ os_signpost_id_make_with_pointer(os_log_t log, const void *_Nullable ptr);
  * Returns a valid os_signpost_id_t. Returns OS_SIGNPOST_ID_NULL if signposts
  * are disabled.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 OS_EXPORT OS_NOTHROW OS_WARN_RESULT
 os_signpost_id_t
 os_signpost_id_generate(os_log_t log);
@@ -198,7 +198,7 @@ os_signpost_id_generate(os_log_t log);
  * @result
  * Returns ‘true’ if signpost log messages are enabled.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 OS_EXPORT OS_NOTHROW OS_PURE OS_WARN_RESULT
 bool
 os_signpost_enabled(os_log_t log);
@@ -372,7 +372,7 @@ OS_ENUM(os_signpost_type, uint8_t,
                 fmt " " _OS_SIGNPOST_ANIMATION_INTERVAL_TAG, \
                 ##__VA_ARGS__)
 
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 OS_EXPORT OS_NOTHROW OS_NOT_TAIL_CALLED
 void
 _os_signpost_emit_with_name_impl(void *dso, os_log_t log,

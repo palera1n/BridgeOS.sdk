@@ -108,7 +108,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 		The AudioBufferList passed to the deallocator is identical to the one which was passed to the initializer,
 		in terms of the buffer count, and each buffer's mData and mDataByteSize members.
 */
-- (nullable instancetype)initWithPCMFormat:(AVAudioFormat *)format bufferListNoCopy:(const AudioBufferList*)bufferList deallocator:(nullable void (^)(const AudioBufferList*))deallocator NS_DESIGNATED_INITIALIZER API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+- (nullable instancetype)initWithPCMFormat:(AVAudioFormat *)format bufferListNoCopy:(const AudioBufferList*)bufferList deallocator:(nullable void (^)(const AudioBufferList*))deallocator NS_DESIGNATED_INITIALIZER API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /*! @property frameCapacity
 	@abstract
@@ -236,7 +236,7 @@ API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0))
 	@property byteCapacity
 	@abstract The buffer's capacity in bytes
 */
-@property (nonatomic, readonly) uint32_t byteCapacity API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nonatomic, readonly) uint32_t byteCapacity API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!
 	@property byteLength
@@ -244,7 +244,7 @@ API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0))
 	@discussion
 		Can be changed as part of an operation that modifies the contents.
 */
-@property (nonatomic) uint32_t byteLength API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nonatomic) uint32_t byteLength API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @property packetDescriptions
 	@abstract Access the buffer's array of packet descriptions, if any.

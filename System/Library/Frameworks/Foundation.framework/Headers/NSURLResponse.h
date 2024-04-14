@@ -169,7 +169,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
     @result the value associated with the given header field, or nil if
     there is no value associated with the given header field.
  */
-- (nullable NSString *)valueForHTTPHeaderField:(NSString *)field API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (nullable NSString *)valueForHTTPHeaderField:(NSString *)field API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*! 
     @method localizedStringForStatusCode:

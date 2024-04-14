@@ -19,9 +19,9 @@ typedef NS_OPTIONS(NSUInteger, NSOrderedCollectionDifferenceCalculationOptions) 
     /// Assume objects that were uniquely removed and inserted were moved.
     /// This is useful when diffing based on identity instead of equality.
     NSOrderedCollectionDifferenceCalculationInferMoves = (1 << 2UL)
-} API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+} API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
-API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 @interface NSOrderedCollectionDifference<ObjectType> : NSObject <NSFastEnumeration>
 #ifndef __OBJC2__
 {
@@ -59,8 +59,8 @@ API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
                         removeIndexes:(NSIndexSet *)removes
                        removedObjects:(nullable NSArray<ObjectType> *)removedObjects;
 
-@property (strong, readonly) NSArray<NSOrderedCollectionChange<ObjectType> *> *insertions API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0));
-@property (strong, readonly) NSArray<NSOrderedCollectionChange<ObjectType> *> *removals API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (strong, readonly) NSArray<NSOrderedCollectionChange<ObjectType> *> *insertions API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
+@property (strong, readonly) NSArray<NSOrderedCollectionChange<ObjectType> *> *removals API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 @property (assign, readonly) BOOL hasChanges;
 
@@ -73,7 +73,7 @@ API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
 // [[a arrayByApplyingDifference:diff] arrayByApplyingDifference:diff.inverseDifference]
 //
 // To revert a chronological sequence of diffs, apply their inverses in reverse order.
-- (instancetype)inverseDifference API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (instancetype)inverseDifference API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 @end
 

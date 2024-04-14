@@ -1201,7 +1201,7 @@ xpc_array_create(
  * @see
  * xpc_array_create
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 XPC_EXPORT XPC_MALLOC XPC_RETURNS_RETAINED XPC_WARN_RESULT
 xpc_object_t
 xpc_array_create_empty(void);
@@ -1949,7 +1949,7 @@ xpc_dictionary_create(
  * @see
  * xpc_dictionary_create
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 XPC_EXPORT XPC_MALLOC XPC_RETURNS_RETAINED XPC_WARN_RESULT
 xpc_object_t
 xpc_dictionary_create_empty(void);

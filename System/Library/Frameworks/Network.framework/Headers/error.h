@@ -62,7 +62,7 @@ typedef enum {
  * @returns
  *		The error domain.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_error_domain_t
 nw_error_get_error_domain(nw_error_t error);
 
@@ -78,7 +78,7 @@ nw_error_get_error_domain(nw_error_t error);
  * @returns
  *		The error code.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 int
 nw_error_get_error_code(nw_error_t error);
 
@@ -86,21 +86,21 @@ nw_error_get_error_code(nw_error_t error);
  * @const kNWErrorDomainPOSIX
  * @abstract CFErrorRef domain corresponding to nw_error_domain_posix.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 extern const CFStringRef kNWErrorDomainPOSIX; // Values will be POSIX errors
 
 /*!
  * @const kNWErrorDomainDNS
  * @abstract CFErrorRef domain corresponding to nw_error_domain_posix.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 extern const CFStringRef kNWErrorDomainDNS; // Values will be DNSServiceErrorType errors
 
 /*!
  * @const kNWErrorDomainTLS
  * @abstract CFErrorRef domain corresponding to nw_error_domain_tls.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 extern const CFStringRef kNWErrorDomainTLS; // Values will be errSSL* errors
 
 /*!
@@ -115,7 +115,7 @@ extern const CFStringRef kNWErrorDomainTLS; // Values will be errSSL* errors
  * @returns
  *		The CFErrorRef. The caller is responsible for calling CFRelease on the returned value.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 CFErrorRef
 nw_error_copy_cf_error(nw_error_t error);
 

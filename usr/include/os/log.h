@@ -37,7 +37,7 @@ typedef struct os_log_s *os_log_t;
  */
 #if OS_LOG_TARGET_HAS_10_13_FEATURES
 #define OS_LOG_DISABLED OS_OBJECT_GLOBAL_OBJECT(os_log_t, _os_log_disabled)
-API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0))
+API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0))
 OS_EXPORT
 struct os_log_s _os_log_disabled;
 #else
@@ -443,7 +443,7 @@ _os_log_impl(void *dso, os_log_t log, os_log_type_t type,
  * @abstract
  * Internal function that is taken for any debug log emitted in the system.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0))
 OS_EXPORT OS_NOTHROW OS_NOT_TAIL_CALLED OS_COLD
 void
 _os_log_debug_impl(void *dso, os_log_t log, os_log_type_t type,
@@ -455,7 +455,7 @@ _os_log_debug_impl(void *dso, os_log_t log, os_log_type_t type,
  * @abstract
  * Internal function that is taken for any error emitted in the system.
  */
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0))
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0))
 OS_EXPORT OS_NOTHROW OS_NOT_TAIL_CALLED OS_COLD
 void
 _os_log_error_impl(void *dso, os_log_t log, os_log_type_t type,
@@ -467,7 +467,7 @@ _os_log_error_impl(void *dso, os_log_t log, os_log_type_t type,
  * @abstract
  * Internal function that is taken for any fault emitted in the system.
  */
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0))
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0))
 OS_EXPORT OS_NOTHROW OS_NOT_TAIL_CALLED OS_COLD
 void
 _os_log_fault_impl(void *dso, os_log_t log, os_log_type_t type,

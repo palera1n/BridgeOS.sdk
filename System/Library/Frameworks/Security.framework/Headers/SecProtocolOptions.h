@@ -81,7 +81,7 @@ SEC_ASSUME_NONNULL_BEGIN
  *
  * @return True if equal, and false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 sec_protocol_options_are_equal(sec_protocol_options_t optionsA, sec_protocol_options_t optionsB);
 
@@ -97,7 +97,7 @@ sec_protocol_options_are_equal(sec_protocol_options_t optionsA, sec_protocol_opt
  * @param identity
  *      A `sec_identity_t` instance carrying the private key and certificate.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_local_identity(sec_protocol_options_t options, sec_identity_t identity);
 
@@ -113,7 +113,7 @@ sec_protocol_options_set_local_identity(sec_protocol_options_t options, sec_iden
  * @param ciphersuite
  *      A `tls_ciphersuite_t` value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 sec_protocol_options_append_tls_ciphersuite(sec_protocol_options_t options, tls_ciphersuite_t ciphersuite);
 
@@ -145,7 +145,7 @@ sec_protocol_options_add_tls_ciphersuite(sec_protocol_options_t options, SSLCiph
  * @param group
  *      A tls_ciphersuite_group_t value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 sec_protocol_options_append_tls_ciphersuite_group(sec_protocol_options_t options, tls_ciphersuite_group_t group);
 
@@ -194,7 +194,7 @@ sec_protocol_options_set_tls_min_version(sec_protocol_options_t options, SSLProt
  * @param version
  *      A tls_protocol_version_t enum value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 sec_protocol_options_set_min_tls_protocol_version(sec_protocol_options_t options, tls_protocol_version_t version);
 
@@ -206,7 +206,7 @@ sec_protocol_options_set_min_tls_protocol_version(sec_protocol_options_t options
  *
  * @return The default minimum TLS version.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 tls_protocol_version_t
 sec_protocol_options_get_default_min_tls_protocol_version(void);
 
@@ -218,7 +218,7 @@ sec_protocol_options_get_default_min_tls_protocol_version(void);
  *
  * @return The default minimum DTLS version.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 tls_protocol_version_t
 sec_protocol_options_get_default_min_dtls_protocol_version(void);
 
@@ -251,7 +251,7 @@ sec_protocol_options_set_tls_max_version(sec_protocol_options_t options, SSLProt
  * @param version
  *      A tls_protocol_version_t enum value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 sec_protocol_options_set_max_tls_protocol_version(sec_protocol_options_t options, tls_protocol_version_t version);
 
@@ -263,7 +263,7 @@ sec_protocol_options_set_max_tls_protocol_version(sec_protocol_options_t options
  *
  * @return The default maximum TLS version.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 tls_protocol_version_t
 sec_protocol_options_get_default_max_tls_protocol_version(void);
 
@@ -275,7 +275,7 @@ sec_protocol_options_get_default_max_tls_protocol_version(void);
  *
  * @return The default maximum DTLS version.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 tls_protocol_version_t
 sec_protocol_options_get_default_max_dtls_protocol_version(void);
 
@@ -316,7 +316,7 @@ sec_protocol_options_get_quic_use_legacy_codepoint(sec_protocol_options_t option
  * @param application_protocol
  *      A NULL-terminated string defining the application protocol.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_add_tls_application_protocol(sec_protocol_options_t options, const char *application_protocol);
 
@@ -333,7 +333,7 @@ sec_protocol_options_add_tls_application_protocol(sec_protocol_options_t options
  * @param server_name
  *      A NULL-terminated string carrying the server name.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_server_name(sec_protocol_options_t options, const char *server_name);
 
@@ -368,7 +368,7 @@ sec_protocol_options_set_tls_diffie_hellman_parameters(sec_protocol_options_t op
  * @param psk_identity
  *      A dispatch_data_t containing a PSK identity blob.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_add_pre_shared_key(sec_protocol_options_t options, dispatch_data_t psk, dispatch_data_t psk_identity);
 
@@ -385,7 +385,7 @@ sec_protocol_options_add_pre_shared_key(sec_protocol_options_t options, dispatch
  * @param psk_identity_hint
  *      A dispatch_data_t containing a PSK identity hint.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 sec_protocol_options_set_tls_pre_shared_key_identity_hint(sec_protocol_options_t options, dispatch_data_t psk_identity_hint);
 
@@ -434,7 +434,7 @@ typedef void (^sec_protocol_pre_shared_key_selection_t)(sec_protocol_metadata_t 
  * @params psk_selection_queue
  *      A `dispatch_queue_t` on which the PSK selection block should be called.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 sec_protocol_options_set_pre_shared_key_selection_block(sec_protocol_options_t options, sec_protocol_pre_shared_key_selection_t psk_selection_block, dispatch_queue_t psk_selection_queue);
 
@@ -452,7 +452,7 @@ sec_protocol_options_set_pre_shared_key_selection_block(sec_protocol_options_t o
  * @param tickets_enabled
  *      Flag to enable or disable TLS session ticket support.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_tickets_enabled(sec_protocol_options_t options, bool tickets_enabled);
 
@@ -474,7 +474,7 @@ sec_protocol_options_set_tls_tickets_enabled(sec_protocol_options_t options, boo
  * @param is_fallback_attempt
  *      Set a flag indicating that this is a TLS fallback attempt.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_is_fallback_attempt(sec_protocol_options_t options, bool is_fallback_attempt);
 
@@ -490,7 +490,7 @@ sec_protocol_options_set_tls_is_fallback_attempt(sec_protocol_options_t options,
  * @param resumption_enabled
  *      Flag to enable or disable TLS session resumption.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_resumption_enabled(sec_protocol_options_t options, bool resumption_enabled);
 
@@ -506,7 +506,7 @@ sec_protocol_options_set_tls_resumption_enabled(sec_protocol_options_t options, 
  * @param false_start_enabled
  *      Flag to enable or disable TLS False Start.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_false_start_enabled(sec_protocol_options_t options, bool false_start_enabled);
 
@@ -522,7 +522,7 @@ sec_protocol_options_set_tls_false_start_enabled(sec_protocol_options_t options,
  * @param ocsp_enabled
  *      Flag to enable or disable OCSP support.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_ocsp_enabled(sec_protocol_options_t options, bool ocsp_enabled);
 
@@ -538,7 +538,7 @@ sec_protocol_options_set_tls_ocsp_enabled(sec_protocol_options_t options, bool o
  * @param sct_enabled
  *      Flag to enable or disable SCT support.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_sct_enabled(sec_protocol_options_t options, bool sct_enabled);
 
@@ -554,7 +554,7 @@ sec_protocol_options_set_tls_sct_enabled(sec_protocol_options_t options, bool sc
  * @param renegotiation_enabled
  *      Flag to enable or disable TLS (1.2 and prior) session renegotiation.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_tls_renegotiation_enabled(sec_protocol_options_t options, bool renegotiation_enabled);
 
@@ -570,7 +570,7 @@ sec_protocol_options_set_tls_renegotiation_enabled(sec_protocol_options_t option
  * @param peer_authentication_required
  *      Flag to enable or disable mandatory peer authentication.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_peer_authentication_required(sec_protocol_options_t options, bool peer_authentication_required);
 
@@ -724,7 +724,7 @@ typedef void (^sec_protocol_verify_t)(sec_protocol_metadata_t metadata, sec_trus
  * @params key_update_queue
  *      A `dispatch_queue_t` on which the key update block should be called.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_key_update_block(sec_protocol_options_t options, sec_protocol_key_update_t key_update_block, dispatch_queue_t key_update_queue);
 
@@ -743,7 +743,7 @@ sec_protocol_options_set_key_update_block(sec_protocol_options_t options, sec_pr
  * @params challenge_queue
  *      A `dispatch_queue_t` on which the challenge block should be called.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_challenge_block(sec_protocol_options_t options, sec_protocol_challenge_t challenge_block, dispatch_queue_t challenge_queue);
 
@@ -762,7 +762,7 @@ sec_protocol_options_set_challenge_block(sec_protocol_options_t options, sec_pro
  * @params verify_block_queue
  *      A `dispatch_queue_t` on which the verify block should be called.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 sec_protocol_options_set_verify_block(sec_protocol_options_t options, sec_protocol_verify_t verify_block, dispatch_queue_t verify_block_queue);
 

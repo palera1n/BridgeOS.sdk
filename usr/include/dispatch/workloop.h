@@ -60,7 +60,7 @@ __BEGIN_DECLS
  * objects. Functions from the dispatch_sync() family on queues targeting
  * a workloop are still permitted but discouraged for performance reasons.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_DECL_SERIAL_EXECUTOR_SWIFT(dispatch_workloop, DispatchWorkloop);
 
 /*!
@@ -75,7 +75,7 @@ DISPATCH_DECL_SERIAL_EXECUTOR_SWIFT(dispatch_workloop, DispatchWorkloop);
  * @result
  * The newly created dispatch workloop.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_MALLOC DISPATCH_RETURNS_RETAINED DISPATCH_WARN_RESULT
 DISPATCH_NOTHROW
 DISPATCH_REFINED_FOR_SWIFT
@@ -102,7 +102,7 @@ dispatch_workloop_create(const char *DISPATCH_UNSAFE_INDEXABLE _Nullable label);
  * @result
  * The newly created dispatch workloop.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_MALLOC DISPATCH_RETURNS_RETAINED DISPATCH_WARN_RESULT
 DISPATCH_NOTHROW
 DISPATCH_REFINED_FOR_SWIFT DISPATCH_SWIFT_NAME(DispatchWorkloop.init(__label:))
@@ -129,7 +129,7 @@ dispatch_workloop_create_inactive(const char *DISPATCH_UNSAFE_INDEXABLE _Nullabl
  * @param frequency
  * The requested autorelease frequency.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_NONNULL_ALL DISPATCH_NOTHROW
 DISPATCH_REFINED_FOR_SWIFT
 void
@@ -161,7 +161,7 @@ dispatch_workloop_set_autorelease_frequency(dispatch_workloop_t workloop,
   * The workgroup specified is retained and the previously associated workgroup
   * (if any) is released.
   */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 DISPATCH_EXPORT DISPATCH_NONNULL_ALL DISPATCH_NOTHROW
 DISPATCH_REFINED_FOR_SWIFT
 void

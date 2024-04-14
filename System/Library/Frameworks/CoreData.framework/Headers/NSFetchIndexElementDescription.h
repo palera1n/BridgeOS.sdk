@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, NSFetchIndexElementType) {
     NSFetchIndexElementTypeBinary,
     NSFetchIndexElementTypeRTree,
-} API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+} API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
-API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0))
+API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0))
 @interface NSFetchIndexElementDescription : NSObject <NSCoding,NSCopying> {
 }
 

@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, NEDNSProtocol) {
 	NEDNSProtocolTLS = 2,
 	/*! @const NEDNSProtocolHTTPS Use DNS-over-HTTPS */
 	NEDNSProtocolHTTPS = 3,
-} API_AVAILABLE(macos(11.0), ios(14.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @interface NEDNSSettings
@@ -40,7 +40,7 @@ API_AVAILABLE(macos(10.11), ios(9.0), tvos(17.0)) API_UNAVAILABLE(watchos)
  * @property dnsProtocol
  * @discussion The DNS protocol used by the settings.
  */
-@property (readonly) NEDNSProtocol dnsProtocol API_AVAILABLE(macos(11.0), ios(14.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property (readonly) NEDNSProtocol dnsProtocol API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @method initWithServers:
@@ -80,37 +80,37 @@ API_AVAILABLE(macos(10.11), ios(9.0), tvos(17.0)) API_UNAVAILABLE(watchos)
 @property BOOL matchDomainsNoSearch API_AVAILABLE(macos(10.11), ios(9.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 @end
 
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(17.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(17.0)) API_UNAVAILABLE(watchos)
 @interface NEDNSOverTLSSettings : NEDNSSettings
 
 /*!
  * @property serverName
  * @discussion The name of the server to use for TLS certificate validation.
  */
-@property (copy, nullable) NSString *serverName API_AVAILABLE(macos(11.0), ios(14.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property (copy, nullable) NSString *serverName API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @property identityReference
  * @discussion The optional certificate identity keychain reference to use as a TLS client certificate.
  */
-@property (copy, nullable) NSData *identityReference API_AVAILABLE(macos(13.0), ios(16.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property (copy, nullable) NSData *identityReference API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 @end
 
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(17.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(17.0)) API_UNAVAILABLE(watchos)
 @interface NEDNSOverHTTPSSettings : NEDNSSettings
 
 /*!
  * @property serverURL
  * @discussion The URL to which to make DNS-over-HTTPS requests. The format should be an HTTPS URL with the path indicating the location of the DNS-over-HTTPS server, such as: "https://dnsserver.example.net/dns-query".
  */
-@property (copy, nullable) NSURL *serverURL API_AVAILABLE(macos(11.0), ios(14.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property (copy, nullable) NSURL *serverURL API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @property identityReference
  * @discussion The optional certificate identity keychain reference to use as a TLS client certificate.
  */
-@property (copy, nullable) NSData *identityReference API_AVAILABLE(macos(13.0), ios(16.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property (copy, nullable) NSData *identityReference API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 @end
 

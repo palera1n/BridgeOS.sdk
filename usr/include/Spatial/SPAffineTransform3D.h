@@ -17,7 +17,7 @@
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeWith4x3Matrix(simd_double4x3 matrix)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new affine transform structure from the specified 4 x 4 matrix.
@@ -29,7 +29,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeWith4x4Matrix(simd_double4x4 matrix)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new affine transform structure from the specified projective transform.
@@ -42,7 +42,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeWithProjective(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new affine transform structure from the first three rows of the specified projective transform.
@@ -55,7 +55,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeWithTruncatedProjective(SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 /*!
  @abstract Returns a new scale affine transform.
@@ -66,7 +66,7 @@ __API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeScale(SPSize3D scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new rotation affine transform.
@@ -77,7 +77,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeRotation(SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new translation affine transform.
@@ -103,7 +103,7 @@ __API_DEPRECATED("Use `SPVector3D` variant.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeTranslation(SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new scale, rotate, translate affine transform.
@@ -137,7 +137,7 @@ SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMake(SPSize3D scale,
                                             SPRotation3D rotation,
                                             SPVector3D translation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new shear affine transform.
@@ -158,7 +158,7 @@ SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeShear(SPAxis shearAxis,
                                                  double shearFactor0,
                                                  double shearFactor1)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Querying transform properties
 
@@ -171,7 +171,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 simd_double3x3 SPAffineTransform3DGet3x3Matrix(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a 4 x 4 matrix constructed from the affine transform's underlying matrix.
@@ -183,7 +183,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 simd_double4x4 SPAffineTransform3DGet4x4Matrix(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform's underlying matrix has an inverse.
@@ -193,7 +193,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 */
 SPATIAL_INLINE bool SPAffineTransform3DIsInvertible(SPAffineTransform3D transform)
 SPATIAL_OVERLOADABLE
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether an affine transform is a valid transform.
@@ -204,7 +204,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPAffineTransform3DIsValid(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform only contains a translation.
@@ -215,7 +215,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPAffineTransform3DIsTranslation(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform is the identity transform.
@@ -226,7 +226,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPAffineTransform3DIsIdentity(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform scales equally over all dimensions.
@@ -237,7 +237,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPAffineTransform3DIsUniform(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns true if the transform scales equally over the specified dimensions.
@@ -255,7 +255,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPAffineTransform3DIsUniformOverDimensions(SPAffineTransform3D transform,
                                                 SPAxis dimensionFlags)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the transform is rectilinear.
@@ -266,7 +266,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPAffineTransform3DIsRectilinear(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Deriving new transforms
 
@@ -281,7 +281,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DInverted(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transformation matrix that's constructed by concatenating two existing affine transforms.
@@ -294,7 +294,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DConcatenation(SPAffineTransform3D t1,
                                                      SPAffineTransform3D t2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: Extracting component transforms
 
@@ -307,7 +307,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPAffineTransform3DGetScale(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform's rotation.
@@ -321,7 +321,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPAffineTransform3DGetRotation(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform's translation.
@@ -332,7 +332,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPVector3D SPAffineTransform3DGetTranslation(SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform's translation.
@@ -373,7 +373,7 @@ __API_DEPRECATED("Use `SPAffineTransform3DSetTranslation`.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 void SPAffineTransform3DSetTranslation(SPAffineTransform3D *transform, SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Transform equality
 
@@ -390,7 +390,7 @@ bool SPAffineTransform3DAlmostEqualToTransform(SPAffineTransform3D t1,
                                                 SPAffineTransform3D t2)
 SPATIAL_OVERLOADABLE
 SPATIAL_REFINED_FOR_SWIFT
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the two transform's matrices are equal within the specified absolute tolerance.
@@ -405,7 +405,7 @@ bool SPAffineTransform3DAlmostEqualToTransform(SPAffineTransform3D t1,
                                                 double tolerance)
 SPATIAL_OVERLOADABLE
 SPATIAL_REFINED_FOR_SWIFT
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Applying transform
 
@@ -422,7 +422,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DScaleBy(SPAffineTransform3D transform,
                                                double x, double y, double z)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform that's constructed by concatenating an existing affine transform and a scale specified by an @p SPSize3D structure.
@@ -435,7 +435,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DScaleBySize(SPAffineTransform3D transform,
                                                    SPSize3D scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform that's constructed by concatenating an existing affine transform and a uniform scale.
@@ -448,7 +448,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DScaleUniform(SPAffineTransform3D transform,
                                                     double scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform that's constructed by concatenating an existing affine transform and a rotation.
@@ -461,7 +461,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DRotate(SPAffineTransform3D transform,
                                               SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform that's constructed by concatenating an existing affine transform and a rotation specified by a quaternion.
@@ -474,7 +474,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DRotateByQuaternion(SPAffineTransform3D transform,
                                                           simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform that's constructed by concatenating an existing affine transform and a translation.
@@ -504,7 +504,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DTranslate(SPAffineTransform3D transform,
                                                  SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform that's flipped along the specified axis.
@@ -519,7 +519,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DFlip(SPAffineTransform3D transform,
                                             SPAxis flipAxis)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns an affine transform that's sheared over an axis by shear factors for the other two axes.
@@ -544,7 +544,7 @@ SPAffineTransform3D SPAffineTransform3DShear(SPAffineTransform3D transform,
                                              SPAxis shearAxis,
                                              double shearFactor0,
                                              double shearFactor1)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: Header inline implementations
 
@@ -1147,7 +1147,7 @@ SPAffineTransform3D SPAffineTransform3DShear(SPAffineTransform3D transform,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAffineTransform3D SPAffineTransform3DMakeWithPose(SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

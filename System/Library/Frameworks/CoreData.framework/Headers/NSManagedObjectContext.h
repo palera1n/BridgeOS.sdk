@@ -234,7 +234,7 @@ API_AVAILABLE(macosx(10.4),ios(3.0))
 
 /* Set the author for the context, this will be used as an identifier in the Persistent History Transactions (NSPersistentHistoryTransaction)
  */
-@property (nullable, copy) NSString *transactionAuthor API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+@property (nullable, copy) NSString *transactionAuthor API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
 @end
 

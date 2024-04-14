@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, NSNetServicesError) {
  *
  * NSBonjourServices and NSLocalNetworkUsageDescription are required in Info.plist
  */
-    NSNetServicesMissingRequiredConfigurationError API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0)) API_UNAVAILABLE(watchos) = -72008L,
+    NSNetServicesMissingRequiredConfigurationError API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0)) API_UNAVAILABLE(watchos) = -72008L,
 } API_AVAILABLE(macos(10.2), ios(2.0), tvos(9.0)) API_UNAVAILABLE(watchos);
 
 

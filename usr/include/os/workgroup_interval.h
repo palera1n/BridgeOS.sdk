@@ -89,7 +89,7 @@ typedef struct os_workgroup_interval_data_opaque_s *os_workgroup_interval_data_t
  * @param data
  * This field is currently unused and should be NULL
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT OS_WORKGROUP_WARN_RESULT
 int
 os_workgroup_interval_start(os_workgroup_interval_t wg, uint64_t start, uint64_t
@@ -118,7 +118,7 @@ os_workgroup_interval_start(os_workgroup_interval_t wg, uint64_t start, uint64_t
  * @param data
  * This field is currently unused and should be NULL
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT OS_WORKGROUP_WARN_RESULT
 int
 os_workgroup_interval_update(os_workgroup_interval_t wg, uint64_t deadline,
@@ -142,7 +142,7 @@ os_workgroup_interval_update(os_workgroup_interval_t wg, uint64_t deadline,
  * @param data
  * This field is currently unused and should be NULL
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT OS_WORKGROUP_WARN_RESULT
 int
 os_workgroup_interval_finish(os_workgroup_interval_t wg,

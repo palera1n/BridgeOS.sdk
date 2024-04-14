@@ -95,7 +95,7 @@ typedef enum {
  *		[obj release]. These objects support ARC.
  *		Returns NULL on failure. Fails if txt_bytes is NULL or if txt_len is 0.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_txt_record_t
 nw_txt_record_create_with_bytes(const uint8_t * txt_bytes, size_t txt_len);
 
@@ -110,7 +110,7 @@ nw_txt_record_create_with_bytes(const uint8_t * txt_bytes, size_t txt_len);
  *		Callers are responsible for deallocating using nw_release(obj) or
  *		[obj release]. These objects support ARC.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_txt_record_t
 nw_txt_record_create_dictionary(void);
 
@@ -128,7 +128,7 @@ nw_txt_record_create_dictionary(void);
  *		Callers are responsible for deallocating using nw_release(obj) or
  *		[obj release]. These objects support ARC.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED _Nullable nw_txt_record_t
 nw_txt_record_copy(nw_txt_record_t _Nullable txt_record);
 
@@ -149,7 +149,7 @@ nw_txt_record_copy(nw_txt_record_t _Nullable txt_record);
  *		The key may be invalid, may not exist, have no associated value, have an
  *		empty associated value, or have a non-empty associated value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 nw_txt_record_find_key_t
 nw_txt_record_find_key(nw_txt_record_t txt_record, const char *key);
 
@@ -204,7 +204,7 @@ typedef bool (^nw_txt_record_access_key_t) (const char *key,
  *      The return value of the access_value block. This is an arbitrary return
  *		value defined by the user.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_txt_record_access_key(nw_txt_record_t txt_record, const char *key,
 						 nw_txt_record_access_key_t access_value);
@@ -239,7 +239,7 @@ nw_txt_record_access_key(nw_txt_record_t txt_record, const char *key,
  *		UINT8_MAX.
  *
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_txt_record_set_key(nw_txt_record_t txt_record, const char *key,
 					  const uint8_t * _Nullable value, size_t value_len);
@@ -262,7 +262,7 @@ nw_txt_record_set_key(nw_txt_record_t txt_record, const char *key,
  *		TXT dictionary. A key is invalid if it is an empty string, contains
  *		non-ASCII characters, or has length greater than UINT8_MAX.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_txt_record_remove_key(nw_txt_record_t txt_record,
 						 const char *key);
@@ -279,7 +279,7 @@ nw_txt_record_remove_key(nw_txt_record_t txt_record,
  * @result
  *		The number of keys in the TXT record object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 size_t
 nw_txt_record_get_key_count(nw_txt_record_t _Nullable txt_record);
 
@@ -324,7 +324,7 @@ typedef bool (^nw_txt_record_access_bytes_t) (const uint8_t *raw_txt_record,
  *		For example, the user may want to return a boolean indicating if the
  *		operation succeeds.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_txt_record_access_bytes(nw_txt_record_t txt_record,
 						   nw_txt_record_access_bytes_t access_bytes);
@@ -377,7 +377,7 @@ typedef bool (^nw_txt_record_applier_t) (const char *key,
  *		completed successfully. Iteration will only fail if the applier block
  *		returns false.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_txt_record_apply(nw_txt_record_t txt_record,
 					nw_txt_record_applier_t applier);
@@ -402,7 +402,7 @@ nw_txt_record_apply(nw_txt_record_t txt_record,
  *		"abc=1" are identical key-value pairs. The ordering of the key-value
  *		pairs does not matter.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_txt_record_is_equal(nw_txt_record_t _Nullable left,
 					   nw_txt_record_t _Nullable right);
@@ -421,7 +421,7 @@ nw_txt_record_is_equal(nw_txt_record_t _Nullable left,
  * 		If true, the TXT record is a dictionary. If false, the TXT record is a
  *		buffer.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_txt_record_is_dictionary(nw_txt_record_t txt_record);
 

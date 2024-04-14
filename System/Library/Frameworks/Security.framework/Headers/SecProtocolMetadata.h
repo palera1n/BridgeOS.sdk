@@ -74,7 +74,7 @@ SEC_ASSUME_NONNULL_BEGIN
  *
  * @return A NULL-terminated string carrying the negotiated protocol.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char * _Nullable
 sec_protocol_metadata_get_negotiated_protocol(sec_protocol_metadata_t metadata);
 
@@ -89,7 +89,7 @@ sec_protocol_metadata_get_negotiated_protocol(sec_protocol_metadata_t metadata);
  *
  * @return A `dispatch_data_t` containing the peer's raw public key.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SEC_RETURNS_RETAINED _Nullable dispatch_data_t
 sec_protocol_metadata_copy_peer_public_key(sec_protocol_metadata_t metadata);
 
@@ -104,7 +104,7 @@ sec_protocol_metadata_copy_peer_public_key(sec_protocol_metadata_t metadata);
  *
  * @return A `tls_protocol_version_t` value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 tls_protocol_version_t
 sec_protocol_metadata_get_negotiated_tls_protocol_version(sec_protocol_metadata_t metadata);
 
@@ -135,7 +135,7 @@ sec_protocol_metadata_get_negotiated_protocol_version(sec_protocol_metadata_t me
  *
  * @return A `tls_ciphersuite_t`.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 tls_ciphersuite_t
 sec_protocol_metadata_get_negotiated_tls_ciphersuite(sec_protocol_metadata_t metadata);
 
@@ -166,7 +166,7 @@ sec_protocol_metadata_get_negotiated_ciphersuite(sec_protocol_metadata_t metadat
  *
  * @return A bool indicating if early data was accepted.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 sec_protocol_metadata_get_early_data_accepted(sec_protocol_metadata_t metadata);
 
@@ -185,7 +185,7 @@ sec_protocol_metadata_get_early_data_accepted(sec_protocol_metadata_t metadata);
  *
  * @return Returns true if the peer certificates were accessible, false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 sec_protocol_metadata_access_peer_certificate_chain(sec_protocol_metadata_t metadata,
                                                     void (^handler)(sec_certificate_t certificate));
@@ -204,7 +204,7 @@ sec_protocol_metadata_access_peer_certificate_chain(sec_protocol_metadata_t meta
  *
  * @return Returns true if the OSCP response was accessible, false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 sec_protocol_metadata_access_ocsp_response(sec_protocol_metadata_t metadata,
                                            void (^handler)(dispatch_data_t ocsp_data));
@@ -224,7 +224,7 @@ sec_protocol_metadata_access_ocsp_response(sec_protocol_metadata_t metadata,
  *
  * @return Returns true if the supported signature list was accessible, false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 sec_protocol_metadata_access_supported_signature_algorithms(sec_protocol_metadata_t metadata,
                                                             void (^handler)(uint16_t signature_algorithm));
@@ -243,7 +243,7 @@ sec_protocol_metadata_access_supported_signature_algorithms(sec_protocol_metadat
  *
  * @return Returns true if the distinguished names were accessible, false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 sec_protocol_metadata_access_distinguished_names(sec_protocol_metadata_t metadata,
                                                  void (^handler)(dispatch_data_t distinguished_name));
@@ -262,7 +262,7 @@ sec_protocol_metadata_access_distinguished_names(sec_protocol_metadata_t metadat
  *
  * @return Returns true if the PSKs were accessible, false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 sec_protocol_metadata_access_pre_shared_keys(sec_protocol_metadata_t metadata, void (^handler)(dispatch_data_t psk, dispatch_data_t psk_identity));
 
@@ -282,7 +282,7 @@ sec_protocol_metadata_access_pre_shared_keys(sec_protocol_metadata_t metadata, v
  * @return Returns A NULL-terminated string carrying the server name, or NULL
  *      if none was provided.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char * _Nullable
 sec_protocol_metadata_get_server_name(sec_protocol_metadata_t metadata);
 
@@ -301,7 +301,7 @@ sec_protocol_metadata_get_server_name(sec_protocol_metadata_t metadata);
  *
  * @return Returns true if both metadata values refer to the same peer, and false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 sec_protocol_metadata_peers_are_equal(sec_protocol_metadata_t metadataA, sec_protocol_metadata_t metadataB);
 
@@ -323,7 +323,7 @@ sec_protocol_metadata_peers_are_equal(sec_protocol_metadata_t metadataA, sec_pro
  *
  * @return Returns true if both metadata values have the same challenge parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 sec_protocol_metadata_challenge_parameters_are_equal(sec_protocol_metadata_t metadataA, sec_protocol_metadata_t metadataB);
 
@@ -347,7 +347,7 @@ sec_protocol_metadata_challenge_parameters_are_equal(sec_protocol_metadata_t met
  *
  * @return Returns a dispatch_data_t object carrying the exported secret.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SEC_RETURNS_RETAINED _Nullable dispatch_data_t
 sec_protocol_metadata_create_secret(sec_protocol_metadata_t metadata, size_t label_len,
                                     const char *label, size_t exporter_length);
@@ -378,7 +378,7 @@ sec_protocol_metadata_create_secret(sec_protocol_metadata_t metadata, size_t lab
  *
  * @return Returns a dispatch_data_t object carrying the exported secret.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SEC_RETURNS_RETAINED _Nullable dispatch_data_t
 sec_protocol_metadata_create_secret_with_context(sec_protocol_metadata_t metadata, size_t label_len,
                                                  const char *label, size_t context_len,

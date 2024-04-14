@@ -27,7 +27,7 @@ extern NSString *const AVLinearPCMIsNonInterleaved                  API_AVAILABL
 #define AVLinearPCMIsNonInterleavedKey AVLinearPCMIsNonInterleaved
 
 /* audio file type key */
-extern NSString *const AVAudioFileTypeKey                           API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0)); /* value is an integer (audio file type) from AudioFile.h */
+extern NSString *const AVAudioFileTypeKey                           API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)); /* value is an integer (audio file type) from AudioFile.h */
 
 /* encoder property keys */
 extern NSString *const AVEncoderAudioQualityKey					    API_AVAILABLE(macos(10.7), ios(3.0), watchos(3.0), tvos(9.0)); /* value is an integer from enum AVAudioQuality */

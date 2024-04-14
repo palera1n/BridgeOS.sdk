@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  * NSPersistentHistoryTokenKey: The NSPersistentHistoryToken of the store that
  *  contains the NSCoreDataCoreSpotlightDelegate that updated its index.
  */
-COREDATA_EXTERN NSNotificationName const NSCoreDataCoreSpotlightDelegateIndexDidUpdateNotification API_AVAILABLE(macosx(11.0),ios(14.0),tvos(NA),watchos(NA));
+COREDATA_EXTERN NSNotificationName const NSCoreDataCoreSpotlightDelegateIndexDidUpdateNotification API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(NA),watchos(NA));
 
 /* NSCoreDataSpotlightDelegate implements the CSSearchableIndexDelegate API, but can't
  publicly declare it due to linkage requirements.
@@ -47,7 +47,7 @@ API_AVAILABLE(macosx(10.13),ios(11.0)) API_UNAVAILABLE(tvos,watchos)
 /*
  * Returns if indexing is enabled or not.
  */
-@property (getter=isIndexingEnabled, readonly) BOOL indexingEnabled API_AVAILABLE(macosx(12.0),ios(15.0),tvos(NA),watchos(NA));
+@property (getter=isIndexingEnabled, readonly) BOOL indexingEnabled API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(NA),watchos(NA));
 
 /* CoreSpotlight domain identifer; default is the store's identifier */
 - (NSString *)domainIdentifier;
@@ -66,7 +66,7 @@ API_AVAILABLE(macosx(10.13),ios(11.0)) API_UNAVAILABLE(tvos,watchos)
  *  - the store has persistent history tracking enabled.
  */
 - (instancetype)initForStoreWithDescription:(NSPersistentStoreDescription *)description
-                                coordinator:(NSPersistentStoreCoordinator *)psc NS_DESIGNATED_INITIALIZER API_AVAILABLE(macosx(10.15),ios(13.0),tvos(NA),watchos(NA));
+                                coordinator:(NSPersistentStoreCoordinator *)psc NS_DESIGNATED_INITIALIZER API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(NA),watchos(NA));
 
 - (instancetype)initForStoreWithDescription:(NSPersistentStoreDescription *)description
                                       model:(NSManagedObjectModel *)model API_DEPRECATED_WITH_REPLACEMENT("initForStoreWithDescription:coordinator:", macosx(10.13,12.0),ios(11.0,15.0));
@@ -74,18 +74,18 @@ API_AVAILABLE(macosx(10.13),ios(11.0)) API_UNAVAILABLE(tvos,watchos)
 /*
  * Starts Spotlight indexing.
  */
-- (void)startSpotlightIndexing API_AVAILABLE(macosx(10.15),ios(13.0),tvos(NA),watchos(NA));
+- (void)startSpotlightIndexing API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(NA),watchos(NA));
 
 /*
  * Stops Spotlight indexing.
  */
-- (void)stopSpotlightIndexing API_AVAILABLE(macosx(10.15),ios(13.0),tvos(NA),watchos(NA));
+- (void)stopSpotlightIndexing API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(NA),watchos(NA));
 
 /*
  * Deletes all searchable items for the configured Spotlight index. Calling this method may return
  * errors from lower layer dependencies, such as Core Data and Core Spotlight.
  */
-- (void)deleteSpotlightIndexWithCompletionHandler:(void (^)(NSError * _Nullable error))completionHandler API_AVAILABLE(macosx(11.0),ios(14.0),tvos(NA),watchos(NA));
+- (void)deleteSpotlightIndexWithCompletionHandler:(void (^)(NSError * _Nullable error))completionHandler API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(NA),watchos(NA));
 
 /* Create the searchable attributes for the managed object. Override to return nil if you do not want the object included in the index.
  */

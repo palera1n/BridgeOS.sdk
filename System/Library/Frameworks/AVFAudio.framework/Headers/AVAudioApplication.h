@@ -40,15 +40,15 @@ typedef NS_ENUM(NSInteger, AVAudioApplicationRecordPermission) {
 		state change. When the record session subsequently goes active, the `inputMuted` state will be applied, and this notification will be dispatched
 		with the latest input muted state.
 */
-OS_EXPORT NSNotificationName const AVAudioApplicationInputMuteStateChangeNotification API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0)) NS_SWIFT_NAME(AVAudioApplication.inputMuteStateChangeNotification);
+OS_EXPORT NSNotificationName const AVAudioApplicationInputMuteStateChangeNotification API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0), macos(14.0)) NS_SWIFT_NAME(AVAudioApplication.inputMuteStateChangeNotification);
 
 /// Keys for AVAudioApplicationInputMuteStateChangeNotification
 /// Value is NSNumber type with boolean value 0 for unmuted or value 1 for muted (samples zeroed out)
-OS_EXPORT NSString *const AVAudioApplicationMuteStateKey API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0)) NS_SWIFT_NAME(AVAudioApplication.muteStateKey);
+OS_EXPORT NSString *const AVAudioApplicationMuteStateKey API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0), macos(14.0)) NS_SWIFT_NAME(AVAudioApplication.muteStateKey);
 
 
 /// Class containing methods that relate to an application bundle's audio (i.e. a collection of one or more AVAudioSession instances)
-API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0)) 
+API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0), macos(14.0)) 
 @interface AVAudioApplication : NSObject
 
 /// Returns the singleton instance
@@ -60,9 +60,9 @@ API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0))
 /// @brief Set the muted/unmuted state of the application's audio input. When set true, inputs
 /// (microphone etc.) of all audio clients relating to this application will have their samples zeroed out.
 /// @note - this is per-application input muting and doesn't affect the hardware mute state.
-- (BOOL)setInputMuted:(BOOL)muted error:(NSError**)outError API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0));
+- (BOOL)setInputMuted:(BOOL)muted error:(NSError**)outError API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0), macos(14.0));
 /// Get the input muted state - return value is boolean 0 for unmuted or value 1 for muted (input samples zeroed out)
-@property(readonly, nonatomic, getter=isInputMuted) BOOL inputMuted API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0));
+@property(readonly, nonatomic, getter=isInputMuted) BOOL inputMuted API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0), macos(14.0));
 
 
 /*!
@@ -85,7 +85,7 @@ API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0))
 
 /// Returns an enum indicating whether the user has granted or denied permission to record, or has
 /// not been asked
-@property (readonly) AVAudioApplicationRecordPermission recordPermission API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0));
+@property (readonly) AVAudioApplicationRecordPermission recordPermission API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0), macos(14.0));
 
 /*!
 	@brief Checks to see if calling process has permission to record audio.
@@ -95,7 +95,7 @@ API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0))
 	the block once the UI has been dismissed.  'granted' indicates whether permission has been
 	granted. Note that the block may be called in a different thread context.
 */
-+ (void)requestRecordPermissionWithCompletionHandler:(void (^)(BOOL granted))response API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0), macos(14.0));
++ (void)requestRecordPermissionWithCompletionHandler:(void (^)(BOOL granted))response API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0), macos(14.0));
 
 @end
 

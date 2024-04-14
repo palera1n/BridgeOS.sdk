@@ -154,7 +154,7 @@ CFDataRef SecCertificateCopyNormalizedSubjectSequence(SecCertificateRef certific
  */
 __nullable CF_RETURNS_RETAINED
 SecKeyRef SecCertificateCopyKey(SecCertificateRef certificate)
-    API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0));
+    API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0));
 
 #if TARGET_OS_OSX && TARGET_CPU_ARM64
 #define SEC_SUFFIX_LEGACYMAC(symbol) __asm("_" __STRING(symbol) "$LEGACYMAC")
@@ -198,7 +198,7 @@ OSStatus SecCertificateCopyPublicKey(SecCertificateRef certificate, SecKeyRef * 
  */
 __nullable
 CFDataRef SecCertificateCopySerialNumberData(SecCertificateRef certificate, CFErrorRef *error)
-    API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+    API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 #if TARGET_OS_IPHONE
 /*!

@@ -118,7 +118,7 @@ DISPATCH_DECL_SUBCLASS(dispatch_queue_global, dispatch_queue);
  *
  * See dispatch_queue_serial_t and dispatch_workloop_t.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0))
 DISPATCH_DECL_SUBCLASS_SWIFT(dispatch_queue_serial_executor, dispatch_queue, _DispatchSerialExecutorQueue);
 
 /*!
@@ -145,7 +145,7 @@ DISPATCH_DECL_SUBCLASS_SWIFT(dispatch_queue_serial_executor, dispatch_queue, _Di
  * Serial queues are created by passing a dispatch queue attribute derived from
  * DISPATCH_QUEUE_SERIAL to dispatch_queue_create_with_target().
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_DECL_SERIAL_EXECUTOR_SWIFT(dispatch_queue_serial, DispatchSerialQueue);
 
 /*!
@@ -198,7 +198,7 @@ DISPATCH_DECL_SUBCLASS(dispatch_queue_main, dispatch_queue_serial);
  * avoidance when lower priority regular workitems (readers) are being invoked
  * and are preventing a higher priority barrier (writer) from being invoked.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_DECL_SUBCLASS_SWIFT(dispatch_queue_concurrent, dispatch_queue, DispatchConcurrentQueue);
 
 __BEGIN_DECLS
@@ -404,7 +404,7 @@ dispatch_sync_f(dispatch_queue_t queue,
  * The result of passing NULL in this parameter is undefined.
  */
 #ifdef __BLOCKS__
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_NONNULL_ALL DISPATCH_NOTHROW
 DISPATCH_SWIFT_NAME(DispatchQueue.asyncAndWait(self:execute:))
 void
@@ -434,7 +434,7 @@ dispatch_async_and_wait(dispatch_queue_t queue,
  * dispatch_async_and_wait_f().
  * The result of passing NULL in this parameter is undefined.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_NONNULL1 DISPATCH_NONNULL3 DISPATCH_NOTHROW
 DISPATCH_SWIFT_UNAVAILABLE("Use DispatchQueue.asyncAndWait(self:execute:)")
 void
@@ -1478,7 +1478,7 @@ dispatch_barrier_sync_f(dispatch_queue_t queue,
  * The result of passing NULL in this parameter is undefined.
  */
 #ifdef __BLOCKS__
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_NONNULL_ALL DISPATCH_NOTHROW
 DISPATCH_SWIFT_UNAVAILABLE("Unavailable in Swift")
 void
@@ -1512,7 +1512,7 @@ dispatch_barrier_async_and_wait(dispatch_queue_t queue,
  * dispatch_barrier_async_and_wait_f().
  * The result of passing NULL in this parameter is undefined.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 DISPATCH_EXPORT DISPATCH_NONNULL1 DISPATCH_NONNULL3 DISPATCH_NOTHROW
 DISPATCH_SWIFT_UNAVAILABLE("Unavailable in Swift")
 void

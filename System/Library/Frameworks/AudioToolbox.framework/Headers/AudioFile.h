@@ -965,7 +965,7 @@ extern OSStatus
 AudioFileGetUserDataSize64 (	AudioFileID			inAudioFile,
 								UInt32				inUserDataID,
 								UInt32				inIndex,
-								UInt64				*outUserDataSize)		API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+								UInt64				*outUserDataSize)		API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 /*!
     @function	AudioFileGetUserData
@@ -1001,7 +1001,7 @@ AudioFileGetUserDataAtOffset (	AudioFileID			inAudioFile,
 								UInt32				inIndex,
 								SInt64				inOffset,
 								UInt32				*ioUserDataSize,
-								void				*outUserData)			API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+								void				*outUserData)			API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 /*!
     @function	AudioFileSetUserData

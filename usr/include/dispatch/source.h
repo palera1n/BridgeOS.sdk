@@ -107,7 +107,7 @@ DISPATCH_SOURCE_TYPE_DECL_SWIFT(data_or, DispatchSourceUserDataOr);
  * The mask is unused (pass zero for now).
  */
 #define DISPATCH_SOURCE_TYPE_DATA_REPLACE (&_dispatch_source_type_data_replace)
-API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0))
+API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0))
 DISPATCH_SOURCE_TYPE_DECL_SWIFT(data_replace, DispatchSourceUserDataReplace);
 
 /*!

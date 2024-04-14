@@ -175,7 +175,7 @@ CM_EXPORT const CFStringRef kCMMetadataIdentifier_QuickTimeMetadataVideoOrientat
 		Expected data type is kCMMetadataBaseDataType_PerspectiveTransformF64.
 */
 CM_EXPORT const CFStringRef kCMMetadataIdentifier_QuickTimeMetadataLivePhotoStillImageTransform
-								API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+								API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 /*!
 	@const kCMMetadataIdentifier_QuickTimeMetadataLivePhotoStillImageTransformReferenceDimensions
@@ -418,7 +418,7 @@ CM_EXPORT const CFStringRef kCMMetadataBaseDataType_PolylineF32
 CM_EXPORT const CFStringRef kCMMetadataBaseDataType_JSON
 								API_AVAILABLE(macos(10.11), ios(9.0), tvos(9.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMMetadataBaseDataType_PerspectiveTransformF64
-								API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+								API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 /*!
 	@const kCMMetadataDataType_Location_ISO6709

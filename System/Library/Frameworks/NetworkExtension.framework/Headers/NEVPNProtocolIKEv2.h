@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, NEVPNIKEv2EncryptionAlgorithm) {
 	/*! @const NEVPNIKEv2EncryptionAlgorithmAES256GCM Advanced Encryption Standard 256 bit (AES256GCM) */
 	NEVPNIKEv2EncryptionAlgorithmAES256GCM API_AVAILABLE(macos(10.11), ios(8.3), tvos(17.0)) API_UNAVAILABLE(watchos) = 6,
 	/*! @const NEVPNIKEv2EncryptionAlgorithmChaCha20Poly1305 ChaCha20 and Poly1305 (ChaCha20Poly1305) */
-	NEVPNIKEv2EncryptionAlgorithmChaCha20Poly1305 API_AVAILABLE(macos(10.15), ios(13.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 7,
+	NEVPNIKEv2EncryptionAlgorithmChaCha20Poly1305 API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 7,
 } API_AVAILABLE(macos(10.11), ios(8.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
@@ -94,9 +94,9 @@ typedef NS_ENUM(NSInteger, NEVPNIKEv2DiffieHellmanGroup) {
 	/*! @const NEVPNIKEv2DiffieHellmanGroup21 Diffie Hellman group 21 (521-bit random ECP) */
 	NEVPNIKEv2DiffieHellmanGroup21 = 21,
 	/*! @const NEVPNIKEv2DiffieHellmanGroup31 Diffie Hellman group 31 (Curve25519) */
-	NEVPNIKEv2DiffieHellmanGroup31 API_AVAILABLE(macos(10.15), ios(13.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 31,
+	NEVPNIKEv2DiffieHellmanGroup31 API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 31,
 	/*! @const NEVPNIKEv2DiffieHellmanGroup32 Diffie Hellman group 32 (Curve448) */
-	NEVPNIKEv2DiffieHellmanGroup32 API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 32,
+	NEVPNIKEv2DiffieHellmanGroup32 API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 32,
 } API_AVAILABLE(macos(10.11), ios(8.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
@@ -115,7 +115,7 @@ typedef NS_ENUM(NSInteger, NEVPNIKEv2CertificateType) {
 	/*! @const NEVPNIKEv2CertificateTypeEd25519 EdDSA with Edwards Curve25519 */
 	NEVPNIKEv2CertificateTypeEd25519 API_AVAILABLE(macos(10.15), ios(13.0)) API_UNAVAILABLE(watchos, tvos) = 5,
 	/*! @const NEVPNIKEv2CertificateTypeRSAPSS RSA-PSS */
-	NEVPNIKEv2CertificateTypeRSAPSS API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 6,
+	NEVPNIKEv2CertificateTypeRSAPSS API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos) = 6,
 } API_AVAILABLE(macos(10.11), ios(8.3), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
@@ -131,7 +131,7 @@ typedef NS_ENUM(NSInteger, NEVPNIKEv2TLSVersion) {
 	NEVPNIKEv2TLSVersion1_1 = 2,
 	/*! @const NEVPNIKEv2TLSVersion1_0 TLS 1.2 */
 	NEVPNIKEv2TLSVersion1_2 = 3,
-} API_AVAILABLE(macos(10.13), ios(11.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @class NEVPNIKEv2SecurityAssociationParameters
@@ -256,13 +256,13 @@ API_AVAILABLE(macos(10.11), ios(8.0), tvos(17.0)) API_UNAVAILABLE(watchos)
  * @property minimumTLSVersion
  * @discussion Sets a minimum TLS version to allow for EAP-TLS authentication. Default is NEVPNIKEv2TLSVersionDefault.
  */
-@property NEVPNIKEv2TLSVersion minimumTLSVersion API_AVAILABLE(macos(10.13), ios(11.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property NEVPNIKEv2TLSVersion minimumTLSVersion API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @property maximumTLSVersion
  * @discussion Sets a maximum TLS version to allow for EAP-TLS authentication. Default is NEVPNIKEv2TLSVersionDefault.
  */
-@property NEVPNIKEv2TLSVersion maximumTLSVersion API_AVAILABLE(macos(10.13), ios(11.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property NEVPNIKEv2TLSVersion maximumTLSVersion API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @property enableFallback
@@ -277,7 +277,7 @@ API_AVAILABLE(macos(10.11), ios(8.0), tvos(17.0)) API_UNAVAILABLE(watchos)
  * @property mtu
  * @discussion Maximum Transmission Unit (MTU) size in bytes to assign to the tunnel interface.
  */
-@property NSUInteger mtu API_AVAILABLE(macos(11.0), ios(14.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+@property NSUInteger mtu API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 @end
 

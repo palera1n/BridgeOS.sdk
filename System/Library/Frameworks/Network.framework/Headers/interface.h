@@ -70,7 +70,7 @@ typedef enum {
  * @result
  *		Returns the type of the interface.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_interface_type_t
 nw_interface_get_type(nw_interface_t interface);
 
@@ -122,7 +122,7 @@ typedef enum {
  *		Returns the name of the interface as a NULL-terminated C string,
  *		or NULL if the interface is NULL.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 const char *
 nw_interface_get_name(nw_interface_t interface);
 
@@ -139,7 +139,7 @@ nw_interface_get_name(nw_interface_t interface);
  * @result
  *		Returns the index of the interface, or 0 if the interface is NULL.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint32_t
 nw_interface_get_index(nw_interface_t interface);
 

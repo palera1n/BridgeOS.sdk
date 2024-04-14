@@ -103,7 +103,7 @@ enum {
  * @result
  *		The associated endpoint.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_browse_result_copy_endpoint(nw_browse_result_t result);
 
@@ -126,7 +126,7 @@ nw_browse_result_copy_endpoint(nw_browse_result_t result);
  * @result
  *		A nw_browse_result_change_t describing all changes that occurred.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 nw_browse_result_change_t
 nw_browse_result_get_changes(_Nullable nw_browse_result_t old_result,
 							 _Nullable nw_browse_result_t new_result);
@@ -143,7 +143,7 @@ nw_browse_result_get_changes(_Nullable nw_browse_result_t old_result,
  * @result
  *		The number of interfaces available.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 size_t
 nw_browse_result_get_interfaces_count(nw_browse_result_t result);
 
@@ -160,7 +160,7 @@ nw_browse_result_get_interfaces_count(nw_browse_result_t result);
  *		A copy of the TXT record object, or NULL if the browse result does not
  *		have an associated TXT record.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED _Nullable nw_txt_record_t
 nw_browse_result_copy_txt_record_object(nw_browse_result_t result);
 
@@ -192,7 +192,7 @@ typedef bool (^nw_browse_result_enumerate_interface_t)(nw_interface_t interface)
  * @param enumerator
  *		The enumerator block.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_browse_result_enumerate_interfaces(nw_browse_result_t result,
 									  NW_NOESCAPE nw_browse_result_enumerate_interface_t enumerator);

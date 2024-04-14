@@ -57,7 +57,7 @@ NS_SWIFT_SENDABLE // Immutable with no mutable subclasses
 @property (class, readonly, copy) NSDate *distantFuture;
 @property (class, readonly, copy) NSDate *distantPast;
 
-@property (class, readonly, copy) NSDate *now API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (class, readonly, copy) NSDate *now API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 - (instancetype)initWithTimeIntervalSinceNow:(NSTimeInterval)secs;
 - (instancetype)initWithTimeIntervalSince1970:(NSTimeInterval)secs;

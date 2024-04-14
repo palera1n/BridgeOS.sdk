@@ -28,7 +28,7 @@ extern "C" {
   @return a non-zero instance on success, and 0 on failure
 */
 APPLE_ARCHIVE_API AAEntryXATBlob _Nullable AAEntryXATBlobCreate(void)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Destroy XAT
@@ -37,7 +37,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API void AAEntryXATBlobDestroy(
   AAEntryXATBlob _Nullable xat)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create from encoded data representing an XAT field
@@ -50,7 +50,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API AAEntryXATBlob _Nullable AAEntryXATBlobCreateWithEncodedData(
   const uint8_t * _Nullable data,
   size_t data_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstact Create XAT blob from filesystem object DIR+"/"+PATH
@@ -65,7 +65,7 @@ APPLE_ARCHIVE_API AAEntryXATBlob _Nullable AAEntryXATBlobCreateWithPath(
   const char * dir,
   const char * path,
   AAFlagSet flags)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Apply XAT contents to filesystem object DIR+"/"+PATH
@@ -86,7 +86,7 @@ APPLE_ARCHIVE_API int AAEntryXATBlobApplyToPath(
   const char * dir,
   const char * path,
   AAFlagSet flags)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get number of entries in XAT
@@ -97,7 +97,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API uint32_t AAEntryXATBlobGetEntryCount(
   AAEntryXATBlob xat)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get a XAT entry
@@ -130,7 +130,7 @@ APPLE_ARCHIVE_API int AAEntryXATBlobGetEntry(
   size_t data_capacity,
   uint8_t * _Nullable data,
   size_t * _Nullable data_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Append a XAT entry
@@ -150,7 +150,7 @@ APPLE_ARCHIVE_API int AAEntryXATBlobAppendEntry(
   const char * key,
   const uint8_t * _Nullable data,
   size_t data_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Update a XAT entry
@@ -172,7 +172,7 @@ APPLE_ARCHIVE_API int AAEntryXATBlobSetEntry(
   const char * key,
   const uint8_t * _Nullable data,
   size_t data_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Remove all XAT entries
@@ -183,7 +183,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API int AAEntryXATBlobClear(
   AAEntryXATBlob xat)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Remove an entry from XAT
@@ -196,7 +196,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API int AAEntryXATBlobRemoveEntry(
   AAEntryXATBlob xat,
   uint32_t i)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get blob size, size of the data blob encoding the XAT field
@@ -206,7 +206,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return blob size >= 0 on success, and a negative error code on failure
 */
 APPLE_ARCHIVE_API size_t AAEntryXATBlobGetEncodedSize(AAEntryXATBlob xat)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get blob data, encoding the header
@@ -219,7 +219,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return a pointer to the XAT blob data on success, and 0 on failure
 */
 APPLE_ARCHIVE_API const uint8_t * _Nullable AAEntryXATBlobGetEncodedData(AAEntryXATBlob xat)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #ifdef __cplusplus
 }

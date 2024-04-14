@@ -51,7 +51,7 @@ typedef struct fd_set {
 	__int32_t       fds_bits[__DARWIN_howmany(__DARWIN_FD_SETSIZE, __DARWIN_NFDBITS)];
 } fd_set;
 
-int __darwin_check_fd_set_overflow(int, const void *, int) __API_AVAILABLE(macosx(11.0), ios(14.0), tvos(14.0), watchos(7.0));
+int __darwin_check_fd_set_overflow(int, const void *, int) __API_AVAILABLE(macosx(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0));
 __END_DECLS
 
 __header_always_inline int

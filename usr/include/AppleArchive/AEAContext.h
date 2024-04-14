@@ -30,7 +30,7 @@ extern "C" {
   @return a new context instance on success, NULL on failure
 */
 APPLE_ARCHIVE_API AEAContext _Nullable AEAContextCreateWithProfile(AEAProfile profile)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Create an encryption context from an existing encrypted stream
@@ -50,7 +50,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return a new context instance on success, NULL on failure
 */
 APPLE_ARCHIVE_API AEAContext _Nullable AEAContextCreateWithEncryptedStream(AAByteStream encrypted_stream)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Destroy an encryption context
@@ -58,7 +58,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @param context object to destroy, do nothing if NULL
 */
 APPLE_ARCHIVE_API void AEAContextDestroy(AEAContext _Nullable context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Get context uint field
@@ -71,7 +71,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API uint64_t AEAContextGetFieldUInt(
   AEAContext context,
   AEAContextField field)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Get context blob field
@@ -92,7 +92,7 @@ APPLE_ARCHIVE_API int AEAContextGetFieldBlob(
   size_t buf_capacity,
   uint8_t * _Nullable buf,
   size_t * _Nullable buf_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Set context uint field
@@ -107,7 +107,7 @@ APPLE_ARCHIVE_API int AEAContextSetFieldUInt(
   AEAContext context,
   AEAContextField field,
   uint64_t value)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Set context blob field
@@ -126,7 +126,7 @@ APPLE_ARCHIVE_API int AEAContextSetFieldBlob(
   AEAContextFieldRepresentation representation,
   const uint8_t * _Nullable buf,
   size_t buf_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Generate random context blob field
@@ -143,7 +143,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API int AEAContextGenerateFieldBlob(
   AEAContext context,
   AEAContextField field)
-APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 #pragma mark - Inline helpers
 
@@ -153,7 +153,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
   @return context profile
  */
 APPLE_ARCHIVE_INLINE uint32_t AEAContextGetProfile(AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return (uint32_t)AEAContextGetFieldUInt(context, AEA_CONTEXT_FIELD_PROFILE); }
 
 /**
@@ -162,7 +162,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return profile ciphersuite
  */
 APPLE_ARCHIVE_INLINE uint32_t AEAProfileGetCiphersuite(uint32_t profile)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   switch (profile) {
   case AEA_PROFILE__HKDF_SHA256_HMAC__NONE__ECDSA_P256             : return AEA_CONTEXT_CIPHERSUITE_HKDF_SHA256_HMAC;
@@ -181,7 +181,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return profile signature mode
  */
 APPLE_ARCHIVE_INLINE uint32_t AEAProfileGetSignatureMode(uint32_t profile)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   switch (profile) {
   case AEA_PROFILE__HKDF_SHA256_HMAC__NONE__ECDSA_P256             : return AEA_CONTEXT_SIGNATURE_ECDSA_P256;
@@ -200,7 +200,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return profile encryption mode
  */
 APPLE_ARCHIVE_INLINE uint32_t AEAProfileGetEncryptionMode(uint32_t profile)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   switch (profile) {
   case AEA_PROFILE__HKDF_SHA256_HMAC__NONE__ECDSA_P256             : return AEA_CONTEXT_ENCRYPTION_NONE;
@@ -222,7 +222,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return context padding mode
  */
 APPLE_ARCHIVE_INLINE uint64_t AEAContextGetPaddingSize(AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return (uint64_t)AEAContextGetFieldUInt(context, AEA_CONTEXT_FIELD_PADDING_SIZE); }
 
 /**
@@ -231,7 +231,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return context checksum mode
  */
 APPLE_ARCHIVE_INLINE uint32_t AEAContextGetChecksumMode(AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return (uint32_t)AEAContextGetFieldUInt(context, AEA_CONTEXT_FIELD_CHECKSUM_MODE); }
 
 /**
@@ -240,7 +240,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return context compression algorithm
 */
 APPLE_ARCHIVE_INLINE AACompressionAlgorithm AEAContextGetCompressionAlgorithm(AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return (AACompressionAlgorithm)AEAContextGetFieldUInt(context, AEA_CONTEXT_FIELD_COMPRESSION_ALGORITHM); }
 
 /**
@@ -249,7 +249,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return context compression block size
 */
 APPLE_ARCHIVE_INLINE size_t AEAContextGetCompressionBlockSize(AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return (size_t)AEAContextGetFieldUInt(context, AEA_CONTEXT_FIELD_COMPRESSION_BLOCK_SIZE); }
 
 /**
@@ -258,7 +258,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return Uncompressed size of data stored in archive (as stored in root header)
 */
 APPLE_ARCHIVE_INLINE uint64_t AEAContextGetRawSize(AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AEAContextGetFieldUInt(context, AEA_CONTEXT_FIELD_RAW_SIZE); }
 
 /**
@@ -267,7 +267,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return Archive container size (as stored in root header)
 */
 APPLE_ARCHIVE_INLINE uint64_t AEAContextGetContainerSize(AEAContext context)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AEAContextGetFieldUInt(context, AEA_CONTEXT_FIELD_CONTAINER_SIZE); }
 
 /**
@@ -283,7 +283,7 @@ APPLE_ARCHIVE_INLINE int AEAContextGetAuthData(
   size_t auth_data_capacity,
   uint8_t * _Nullable auth_data,
   size_t * _Nullable auth_data_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextGetFieldBlob(
     context,
@@ -310,7 +310,7 @@ APPLE_ARCHIVE_INLINE int AEAContextGetSignatureEncryptionKey(
   size_t key_capacity,
   uint8_t * _Nullable key,
   size_t * _Nullable key_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextGetFieldBlob(
     context,
@@ -380,7 +380,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.3), ios(14.5), watchos(7.4), tvos(14.5))
   @return 0 on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AEAContextSetCompressionAlgorithm(AEAContext context, AACompressionAlgorithm compression_algorithm)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AEAContextSetFieldUInt(context, AEA_CONTEXT_FIELD_COMPRESSION_ALGORITHM, (uint32_t)compression_algorithm); }
 
 /**
@@ -390,7 +390,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 0 on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AEAContextSetCompressionBlockSize(AEAContext context, size_t compression_block_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   if (compression_block_size > UINT32_MAX) compression_block_size = UINT32_MAX;
   return AEAContextSetFieldUInt(context, AEA_CONTEXT_FIELD_COMPRESSION_BLOCK_SIZE, (uint64_t)compression_block_size);
@@ -403,7 +403,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 0 on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AEAContextSetChecksumMode(AEAContext context, uint32_t checksum_mode)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 { return AEAContextSetFieldUInt(context, AEA_CONTEXT_FIELD_CHECKSUM_MODE, (uint64_t)checksum_mode); }
 
 /**
@@ -418,7 +418,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
   @return 0 on success, and a negative error code on failure
  */
 APPLE_ARCHIVE_INLINE int AEAContextSetPaddingSize(AEAContext context, uint64_t padding_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldUInt(context, AEA_CONTEXT_FIELD_PADDING_SIZE, padding_size);
 }
@@ -438,7 +438,7 @@ APPLE_ARCHIVE_INLINE int AEAContextSetAuthData(
   AEAContext context,
   const uint8_t * auth_data,
   size_t auth_data_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldBlob(
     context,
@@ -487,7 +487,7 @@ APPLE_ARCHIVE_INLINE int AEAContextSetSignatureEncryptionKey(
   AEAContext context,
   const uint8_t * key,
   size_t key_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldBlob(
     context,
@@ -514,7 +514,7 @@ APPLE_ARCHIVE_INLINE int AEAContextSetSymmetricKey(
   AEAContext context,
   const uint8_t * key,
   size_t key_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldBlob(
     context,
@@ -568,7 +568,7 @@ APPLE_ARCHIVE_INLINE int AEAContextSetSigningPublicKey(
   AEAContext context,
   const uint8_t * key,
   size_t key_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldBlob(
     context,
@@ -595,7 +595,7 @@ APPLE_ARCHIVE_INLINE int AEAContextSetSigningPrivateKey(
   AEAContext context,
   const uint8_t * key,
   size_t key_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldBlob(
     context,
@@ -621,7 +621,7 @@ APPLE_ARCHIVE_INLINE int AEAContextSetRecipientPublicKey(
   AEAContext context,
   const uint8_t * key,
   size_t key_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldBlob(
     context,
@@ -647,7 +647,7 @@ APPLE_ARCHIVE_INLINE int AEAContextSetRecipientPrivateKey(
   AEAContext context,
   const uint8_t * key,
   size_t key_size)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 {
   return AEAContextSetFieldBlob(
     context,

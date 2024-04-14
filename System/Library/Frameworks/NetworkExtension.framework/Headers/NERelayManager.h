@@ -40,13 +40,13 @@ typedef NS_ENUM(NSInteger, NERelayManagerError) {
 	NERelayManagerErrorConfigurationStale = 3,
 	/*! @const NERelayManagerErrorConfigurationCannotBeRemoved The relay manager cannot be removed. */
 	NERelayManagerErrorConfigurationCannotBeRemoved = 4,
-} API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*! @const NERelayErrorDomain The NERelay error domain */
-NERELAY_EXPORT NSString * const NERelayErrorDomain API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+NERELAY_EXPORT NSString * const NERelayErrorDomain API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*! @const NERelayConfigurationDidChangeNotification Name of the NSNotification that is posted when the relay configuration changes. */
-NERELAY_EXPORT NSString * const NERelayConfigurationDidChangeNotification API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+NERELAY_EXPORT NSString * const NERelayConfigurationDidChangeNotification API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
  * @interface NERelayManager
@@ -56,7 +56,7 @@ NERELAY_EXPORT NSString * const NERelayConfigurationDidChangeNotification API_AV
  *
  * Instances of this class are thread safe.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos)
 @interface NERelayManager : NSObject
 
 /*!

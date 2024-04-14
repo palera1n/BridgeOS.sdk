@@ -13,7 +13,7 @@
 
 NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0))
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0))
 NS_REFINED_FOR_SWIFT
 @interface NSTermOfAddress : NSObject <NSCopying, NSSecureCoding>
 

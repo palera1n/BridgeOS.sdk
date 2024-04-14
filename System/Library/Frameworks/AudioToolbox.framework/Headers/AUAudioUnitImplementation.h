@@ -230,7 +230,7 @@ typedef AUAudioUnitStatus (^AUInternalRenderBlock)(
 	of the OS. See <AudioToolbox/AudioWorkInterval.h> for more information.
 */
 @property (nonatomic, readonly) AURenderContextObserver renderContextObserver
-	API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+	API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 	__SWIFT_UNAVAILABLE_MSG("Swift is not supported for use with audio realtime threads");
 
 /*! @property	MIDIOutputBufferSizeHint
@@ -254,7 +254,7 @@ typedef AUAudioUnitStatus (^AUInternalRenderBlock)(
  
         Bridged to kAudioUnitProperty_MIDIOutputBufferSizeHint.
 */
-@property (NS_NONATOMIC_IOSONLY) NSInteger MIDIOutputBufferSizeHint API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (NS_NONATOMIC_IOSONLY) NSInteger MIDIOutputBufferSizeHint API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!	@method	shouldChangeToFormat:forBus:
     @param format
@@ -442,7 +442,7 @@ API_AVAILABLE(macos(10.11), ios(9.0), watchos(2.0), tvos(9.0))
 		Implementors can sublcass AUAudioUnitV2Bridge and call the v2 API methods
 		AudioUnitGetProperty / AudioUnitSetProperty with the v2 AudioUnit.
 */
-@property (nonatomic, readonly) AudioUnit audioUnit API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+@property (nonatomic, readonly) AudioUnit audioUnit API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 @end
 

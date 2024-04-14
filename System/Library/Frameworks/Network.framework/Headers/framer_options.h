@@ -74,7 +74,7 @@ typedef nw_protocol_metadata_t nw_framer_message_t;
  * @result
  *		Returns a retained protocol metadata object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_framer_message_t
 nw_framer_protocol_create_message(nw_protocol_definition_t definition);
 
@@ -93,7 +93,7 @@ nw_framer_protocol_create_message(nw_protocol_definition_t definition);
  *		Returns true if the metadata is associated with a framer
  *		protocol definition, false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_protocol_metadata_is_framer_message(nw_protocol_metadata_t metadata);
 
@@ -112,7 +112,7 @@ nw_protocol_metadata_is_framer_message(nw_protocol_metadata_t metadata);
  * @result
  *		Returns a retained framer message object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_framer_message_t
 nw_framer_message_create(nw_framer_t framer);
 
@@ -149,7 +149,7 @@ typedef void (^nw_framer_message_dispose_value_t)(void *value);
  * @param dispose_value
  *		A block to invoke to dispose the stored value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_message_set_value(nw_framer_message_t message,
 							const char *key,
@@ -176,7 +176,7 @@ nw_framer_message_set_value(nw_framer_message_t message,
  *		Returns the boolean value returned by the access_value block,
  *		or else false if the parameters were invalid.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_framer_message_access_value(nw_framer_message_t message,
 							   const char *key,
@@ -202,7 +202,7 @@ nw_framer_message_access_value(nw_framer_message_t message,
  * @param value
  *		A reference counted object to store.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_message_set_object_value(nw_framer_message_t message,
 								   const char *key,
@@ -224,7 +224,7 @@ nw_framer_message_set_object_value(nw_framer_message_t message,
  *		Returns a reference counted object with a +1 reference count,
  *		or NULL if no value was found for the specified key.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED _Nullable id
 nw_framer_message_copy_object_value(nw_framer_message_t message,
 									const char *key);
@@ -289,7 +289,7 @@ typedef nw_framer_start_result_t (^nw_framer_start_handler_t)(nw_framer_t framer
  *		Returns a retained protocol definition that can be used with protocol
  *		options and metadata.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_protocol_definition_t
 nw_framer_create_definition(const char *identifier,
 							uint32_t flags,
@@ -310,7 +310,7 @@ nw_framer_create_definition(const char *identifier,
  *		Returns a retained protocol options object to add into a protocol
  *		stack.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_protocol_options_t
 nw_framer_create_options(nw_protocol_definition_t framer_definition);
 
@@ -414,7 +414,7 @@ typedef size_t (^nw_framer_input_handler_t)(nw_framer_t framer);
  * @param input_handler
  *		The block to invoke whenever new input data is available.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_set_input_handler(nw_framer_t framer,
 							nw_framer_input_handler_t input_handler);
@@ -473,7 +473,7 @@ typedef void (^nw_framer_output_handler_t)(nw_framer_t framer,
  *		The block to invoke whenever a new output message is ready
  *		to be sent.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_set_output_handler(nw_framer_t framer,
 							 nw_framer_output_handler_t output_handler);
@@ -510,7 +510,7 @@ typedef void (^nw_framer_wakeup_handler_t)(nw_framer_t framer);
  *		The block to invoke whenever the timeout set by
  *		nw_framer_schedule_wakeup() is reached.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_set_wakeup_handler(nw_framer_t framer,
 							 nw_framer_wakeup_handler_t wakeup_handler);
@@ -552,7 +552,7 @@ typedef bool (^nw_framer_stop_handler_t)(nw_framer_t framer);
  * @param stop_handler
  *		The block to invoke when the connection is disconnected.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_set_stop_handler(nw_framer_t framer,
 						   nw_framer_stop_handler_t stop_handler);
@@ -590,7 +590,7 @@ typedef void (^nw_framer_cleanup_handler_t)(nw_framer_t framer);
  * @param cleanup_handler
  *		The block to invoke when the protocol stack is being deallocated.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_set_cleanup_handler(nw_framer_t framer,
 							  nw_framer_cleanup_handler_t cleanup_handler);
@@ -615,7 +615,7 @@ nw_framer_set_cleanup_handler(nw_framer_t framer,
  * @param framer
  *		The framer instance object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_mark_ready(nw_framer_t framer);
 
@@ -648,7 +648,7 @@ nw_framer_mark_ready(nw_framer_t framer);
  *		or false it it could not be added. This will fail if
  *		the framer is already marked ready.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_framer_prepend_application_protocol(nw_framer_t framer,
 									   nw_protocol_options_t protocol_options);
@@ -670,7 +670,7 @@ nw_framer_prepend_application_protocol(nw_framer_t framer,
  * @param error_code
  *		An error code to describe why the connection failed.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_mark_failed_with_error(nw_framer_t framer, int error_code);
 
@@ -760,7 +760,7 @@ typedef size_t (^nw_framer_parse_completion_t)(uint8_t * _Nullable buffer,
  *		Returns true if the parse succeeded, or false if not enough
  *		bytes were available.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_framer_parse_input(nw_framer_t framer,
 					  size_t minimum_incomplete_length,
@@ -798,7 +798,7 @@ nw_framer_parse_input(nw_framer_t framer,
  *		A boolean indicating whether or not this data represents
  *		the end of the message.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_deliver_input(nw_framer_t framer,
 						const uint8_t *input_buffer,
@@ -840,7 +840,7 @@ nw_framer_deliver_input(nw_framer_t framer,
  *		Returns true if the input was delivered immediately, or
  *		false if it will be delivered once more bytes become available.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_framer_deliver_input_no_copy(nw_framer_t framer,
 								size_t input_length,
@@ -862,7 +862,7 @@ nw_framer_deliver_input_no_copy(nw_framer_t framer,
  * @param framer
  *		The framer instance object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_pass_through_input(nw_framer_t framer);
 
@@ -909,7 +909,7 @@ nw_framer_pass_through_input(nw_framer_t framer);
  *		Returns true if the parse succeeded, or false if not enough
  *		bytes were available.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_framer_parse_output(nw_framer_t framer,
 					   size_t minimum_incomplete_length,
@@ -945,7 +945,7 @@ nw_framer_parse_output(nw_framer_t framer,
  * @param output_length
  *		The length of output_buffer.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_write_output(nw_framer_t framer,
 					   const uint8_t *output_buffer,
@@ -978,7 +978,7 @@ nw_framer_write_output(nw_framer_t framer,
  * @param output_data
  *		A dispatch_data_t to write.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_write_output_data(nw_framer_t framer,
 							dispatch_data_t output_data);
@@ -1011,7 +1011,7 @@ nw_framer_write_output_data(nw_framer_t framer,
  *		false if the call was made from an invalid context
  *		or with an invalid number of bytes.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_framer_write_output_no_copy(nw_framer_t framer,
 							   size_t output_length);
@@ -1031,7 +1031,7 @@ nw_framer_write_output_no_copy(nw_framer_t framer,
  * @param framer
  *		The framer instance object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_pass_through_output(nw_framer_t framer);
 
@@ -1059,7 +1059,7 @@ nw_framer_pass_through_output(nw_framer_t framer);
  *		NW_FRAMER_WAKEUP_TIME_FOREVER to push the wakeup timer
  *		out to "forever", effectively unscheduling the timer.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_schedule_wakeup(nw_framer_t framer,
 						  uint64_t milliseconds);
@@ -1088,7 +1088,7 @@ typedef void (^nw_framer_block_t)(void);
  *		A block to execute on the correct scheduling context for the
  *		framer instance.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_framer_async(nw_framer_t framer,
 				nw_framer_block_t async_block);
@@ -1115,7 +1115,7 @@ nw_framer_async(nw_framer_t framer,
  *		Returns a retained endpoint object representing
  *		the remote side of a connection.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_framer_copy_remote_endpoint(nw_framer_t framer);
 
@@ -1137,7 +1137,7 @@ nw_framer_copy_remote_endpoint(nw_framer_t framer);
  *		Returns a retained endpoint object representing
  *		the local side of a connection.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_framer_copy_local_endpoint(nw_framer_t framer);
 
@@ -1158,7 +1158,7 @@ nw_framer_copy_local_endpoint(nw_framer_t framer);
  * @return
  *		Returns a retained parameters object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_framer_copy_parameters(nw_framer_t framer);
 

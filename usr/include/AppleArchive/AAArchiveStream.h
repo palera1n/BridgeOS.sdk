@@ -41,7 +41,7 @@ extern "C" {
   @return 0 on success, a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAArchiveStreamWriteHeader(AAArchiveStream s, AAHeader header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abatract Write data for current blob
@@ -58,7 +58,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @return 0 on success, a negative error code on failure
 */
 APPLE_ARCHIVE_API int AAArchiveStreamWriteBlob(AAArchiveStream s, AAFieldKey key, const void * buf, size_t nbyte)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Read functions (input stream)
 
@@ -78,7 +78,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API int AAArchiveStreamReadHeader(
   AAArchiveStream s,
   AAHeader _Nullable * _Nonnull header)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Read archive entry blob data
@@ -99,7 +99,7 @@ APPLE_ARCHIVE_API int AAArchiveStreamReadBlob(
   AAFieldKey key,
   void * buf,
   size_t nbyte)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Common functions
 
@@ -111,7 +111,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @param s target stream
 */
 APPLE_ARCHIVE_API void AAArchiveStreamCancel(AAArchiveStream s)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Close an archive output stream
@@ -119,7 +119,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
   @param s target stream, do nothing if NULL
 */
 APPLE_ARCHIVE_API int AAArchiveStreamClose(AAArchiveStream _Nullable s)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - High level write
 
@@ -163,7 +163,7 @@ APPLE_ARCHIVE_API int AAArchiveStreamWritePathList(
   AAEntryMessageProc _Nullable msg_proc,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Output archive stream instances
 
@@ -200,7 +200,7 @@ APPLE_ARCHIVE_API AAArchiveStream _Nullable AAExtractArchiveOutputStreamOpen(
   AAEntryMessageProc _Nullable msg_proc,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a conversion archive output stream
@@ -232,7 +232,7 @@ APPLE_ARCHIVE_API AAArchiveStream _Nullable AAConvertArchiveOutputStreamOpen(
   AAEntryMessageProc _Nullable msg_proc,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /**
   @abstract Encode archive to a byte stream
@@ -255,7 +255,7 @@ APPLE_ARCHIVE_API AAArchiveStream _Nullable AAEncodeArchiveOutputStreamOpen(
   AAEntryMessageProc _Nullable msg_proc,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Input archive stream instances
 
@@ -280,7 +280,7 @@ APPLE_ARCHIVE_API AAArchiveStream _Nullable AADecodeArchiveInputStreamOpen(
   AAEntryMessageProc _Nullable msg_proc,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #pragma mark - Process an archive stream
 
@@ -305,7 +305,7 @@ APPLE_ARCHIVE_API ssize_t AAArchiveStreamProcess(
   AAEntryMessageProc _Nullable msg_proc,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #ifdef __cplusplus
 }

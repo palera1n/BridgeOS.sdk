@@ -213,10 +213,10 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
 @property (class, readonly, copy) NSUnitDuration *hours;
 @property (class, readonly, copy) NSUnitDuration *minutes;
 @property (class, readonly, copy) NSUnitDuration *seconds;
-@property (class, readonly, copy) NSUnitDuration *milliseconds API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
-@property (class, readonly, copy) NSUnitDuration *microseconds API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
-@property (class, readonly, copy) NSUnitDuration *nanoseconds API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
-@property (class, readonly, copy) NSUnitDuration *picoseconds API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+@property (class, readonly, copy) NSUnitDuration *milliseconds API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
+@property (class, readonly, copy) NSUnitDuration *microseconds API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
+@property (class, readonly, copy) NSUnitDuration *nanoseconds API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
+@property (class, readonly, copy) NSUnitDuration *picoseconds API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 @end
 
@@ -313,7 +313,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
 @property (class, readonly, copy) NSUnitFrequency *nanohertz;
 
 // 1 FPS ≡ 1 Hertz
-@property (class, readonly, copy) NSUnitFrequency *framesPerSecond API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+@property (class, readonly, copy) NSUnitFrequency *framesPerSecond API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 @end
 
@@ -337,7 +337,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
  The values of the below follow IEC 80000-13 definitions and conventions.
  */
 NS_SWIFT_SENDABLE
-API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0))
 NS_SWIFT_NAME(UnitInformationStorage)
 @interface NSUnitInformationStorage : NSDimension <NSSecureCoding>
 

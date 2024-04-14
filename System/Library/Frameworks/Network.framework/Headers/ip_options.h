@@ -33,7 +33,7 @@ NW_ASSUME_NONNULL_BEGIN
  * @result
  *		Returns a retained protocol definition object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_definition_t
 nw_protocol_copy_ip_definition(void);
 
@@ -67,7 +67,7 @@ typedef enum {
  * @param version
  *		A specific, restricted IP version.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_ip_options_set_version(nw_protocol_options_t options,
 						  nw_ip_version_t version);
@@ -84,7 +84,7 @@ nw_ip_options_set_version(nw_protocol_options_t options,
  * @param hop_limit
  *		The hop limit to set on outgoing IP packets.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_ip_options_set_hop_limit(nw_protocol_options_t options,
 							uint8_t hop_limit);
@@ -104,7 +104,7 @@ nw_ip_options_set_hop_limit(nw_protocol_options_t options,
  *		A boolean indicating that the IP should use
  *		its minimum MTU value.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_ip_options_set_use_minimum_mtu(nw_protocol_options_t options,
 								  bool use_minimum_mtu);
@@ -123,7 +123,7 @@ nw_ip_options_set_use_minimum_mtu(nw_protocol_options_t options,
  *		A boolean indicating that the IP should use
  *		disable fragmentation on outgoing packets.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_ip_options_set_disable_fragmentation(nw_protocol_options_t options,
 										bool disable_fragmentation);
@@ -142,7 +142,7 @@ nw_ip_options_set_disable_fragmentation(nw_protocol_options_t options,
  *		A boolean indicating that the IP packets
  *		should mark their receive time in IP metadata.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_ip_options_set_calculate_receive_time(nw_protocol_options_t options,
 										 bool calculate_receive_time);
@@ -174,7 +174,7 @@ typedef enum {
  * @param preference
  *		Preference for how to select local addresses.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ip_options_set_local_address_preference(nw_protocol_options_t options,
 										   nw_ip_local_address_preference_t preference);
@@ -196,7 +196,7 @@ nw_ip_options_set_local_address_preference(nw_protocol_options_t options,
  * @param disable_multicast_loopback
  *		If multicast loopback should be disabled.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_ip_options_set_disable_multicast_loopback(nw_protocol_options_t options,
 											 bool disable_multicast_loopback);
@@ -214,7 +214,7 @@ nw_ip_options_set_disable_multicast_loopback(nw_protocol_options_t options,
  * @result
  *		Returns a retained protocol metadata object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_metadata_t
 nw_ip_create_metadata(void);
 
@@ -230,7 +230,7 @@ nw_ip_create_metadata(void);
  *		Returns true if the metadata is for the default system IP,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_protocol_metadata_is_ip(nw_protocol_metadata_t metadata);
 
@@ -263,7 +263,7 @@ typedef enum {
  * @param ecn_flag
  *		The ECN flag to apply to packets.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_ip_metadata_set_ecn_flag(nw_protocol_metadata_t metadata,
 							nw_ip_ecn_flag_t ecn_flag);
@@ -281,7 +281,7 @@ nw_ip_metadata_set_ecn_flag(nw_protocol_metadata_t metadata,
  * @return
  *		Returns the ECN flag received from a packet.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_ip_ecn_flag_t
 nw_ip_metadata_get_ecn_flag(nw_protocol_metadata_t metadata);
 
@@ -300,7 +300,7 @@ nw_ip_metadata_get_ecn_flag(nw_protocol_metadata_t metadata);
  * @param service_class
  *		The service class to apply to packets.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_ip_metadata_set_service_class(nw_protocol_metadata_t metadata,
 								 nw_service_class_t service_class);
@@ -319,7 +319,7 @@ nw_ip_metadata_set_service_class(nw_protocol_metadata_t metadata,
  * @return
  *		Returns the service class set on a packet.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 nw_service_class_t
 nw_ip_metadata_get_service_class(nw_protocol_metadata_t metadata);
 
@@ -340,7 +340,7 @@ nw_ip_metadata_get_service_class(nw_protocol_metadata_t metadata);
  * @return
  *		Returns the time that the packet was received.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint64_t
 nw_ip_metadata_get_receive_time(nw_protocol_metadata_t metadata);
 

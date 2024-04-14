@@ -48,7 +48,7 @@ typedef NS_OPTIONS(NSUInteger, AVAudioPlayerNodeBufferOptions) {
 					processing latencies downstream of the player in the engine, as well as
 					(possibly significant) latency in the audio playback device.
 
- 	API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+ 	API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
  */
 typedef NS_ENUM(NSInteger, AVAudioPlayerNodeCompletionCallbackType) {
 	AVAudioPlayerNodeCompletionDataConsumed		= 0,
@@ -75,7 +75,7 @@ typedef NS_ENUM(NSInteger, AVAudioPlayerNodeCompletionCallbackType) {
 		some synchronisation between the calling threads internally. If you want to call player node API within this
 		completion handler block, calls should be synchronised to the same thread/queue.
 */
-typedef void (^AVAudioPlayerNodeCompletionHandler)(AVAudioPlayerNodeCompletionCallbackType callbackType) API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+typedef void (^AVAudioPlayerNodeCompletionHandler)(AVAudioPlayerNodeCompletionCallbackType callbackType) API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!
 	@class AVAudioPlayerNode
@@ -183,7 +183,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 	@discussion
 		Schedules the buffer to be played following any previously scheduled commands.
 */
-- (void)scheduleBuffer:(AVAudioPCMBuffer *)buffer completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (void)scheduleBuffer:(AVAudioPCMBuffer *)buffer completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @method scheduleBuffer:atTime:options:completionHandler:
 	@abstract Schedule playing samples from an AVAudioBuffer.
@@ -216,7 +216,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 		the player is stopped. may be nil.
 */
 - (void)scheduleBuffer:(AVAudioPCMBuffer *)buffer atTime:(AVAudioTime * __nullable)when options:(AVAudioPlayerNodeBufferOptions)options
-	 completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+	 completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @method scheduleFile:atTime:completionHandler:
 	@abstract Schedule playing of an entire audio file.
@@ -244,7 +244,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 		called after the file has been consumed by the player or has finished playing back or 
 		the player is stopped. may be nil.
 */
-- (void)scheduleFile:(AVAudioFile *)file atTime:(AVAudioTime * __nullable)when completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (void)scheduleFile:(AVAudioFile *)file atTime:(AVAudioTime * __nullable)when completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @method scheduleSegment:startingFrame:frameCount:atTime:completionHandler:
 	@abstract Schedule playing a segment of an audio file.
@@ -281,7 +281,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 		the player is stopped. may be nil.
 */
 - (void)scheduleSegment:(AVAudioFile *)file startingFrame:(AVAudioFramePosition)startFrame frameCount:(AVAudioFrameCount)numberFrames atTime:(AVAudioTime * __nullable)when
-	completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+	completionCallbackType:(AVAudioPlayerNodeCompletionCallbackType)callbackType completionHandler:(AVAudioPlayerNodeCompletionHandler __nullable)completionHandler API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!	@method stop
 	@abstract Clear all of the node's previously scheduled events and stop playback.

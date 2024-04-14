@@ -196,7 +196,7 @@ typedef NS_ENUM(NSUInteger, NSFetchedResultsChangeType) {
 /* Called when the contents of the fetched results controller change.
  * If this method is implemented, no other delegate methods will be invoked.
  */
-- (void)controller:(NSFetchedResultsController *)controller didChangeContentWithSnapshot:(NSDiffableDataSourceSnapshot<NSString *, NSManagedObjectID *> *)snapshot API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+- (void)controller:(NSFetchedResultsController *)controller didChangeContentWithSnapshot:(NSDiffableDataSourceSnapshot<NSString *, NSManagedObjectID *> *)snapshot API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 #pragma mark -
 #pragma mark ***** Difference Based Content Change Reporting *****
@@ -209,7 +209,7 @@ typedef NS_ENUM(NSUInteger, NSFetchedResultsChangeType) {
  * property is nil and `controller:didChangeContentWithSnapshot:` is not
  * implemented.
  */
-- (void)controller:(NSFetchedResultsController *)controller didChangeContentWithDifference:(NSOrderedCollectionDifference<NSManagedObjectID *> *)diff API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+- (void)controller:(NSFetchedResultsController *)controller didChangeContentWithDifference:(NSOrderedCollectionDifference<NSManagedObjectID *> *)diff API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 #pragma mark -
 #pragma mark ***** Legacy Content Change Reporting *****

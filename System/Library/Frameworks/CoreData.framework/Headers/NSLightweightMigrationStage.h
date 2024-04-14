@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  * migration eligible. These lightweight migration stages are used to supplement the total ordering of models described
  * to Core Data in your app. All lightweight model versions must be represented in one or more NSLightweightMigrationStages.
  */
-API_AVAILABLE(macosx(14.0),ios(17.0),tvos(17.0),watchos(10.0))
+API_AVAILABLE(macosx(14.0),ios(17.0), bridgeos(8.0),tvos(17.0),watchos(10.0))
 @interface NSLightweightMigrationStage : NSMigrationStage
 
 @property (readonly, strong) NSArray<NSString *> *versionChecksums;

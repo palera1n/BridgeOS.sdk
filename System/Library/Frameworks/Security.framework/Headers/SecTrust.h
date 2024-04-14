@@ -411,7 +411,7 @@ OSStatus SecTrustEvaluateAsync(SecTrustRef trust,
  */
 __attribute__((warn_unused_result)) bool
 SecTrustEvaluateWithError(SecTrustRef trust, CFErrorRef _Nullable * _Nullable CF_RETURNS_RETAINED error)
-    API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(5.0));
+    API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0));
 
 #ifdef __BLOCKS__
 /*!
@@ -445,7 +445,7 @@ typedef void (^SecTrustWithErrorCallback)(SecTrustRef trustRef, bool result, CFE
     error and all errors found with that certificate.
  */
 OSStatus SecTrustEvaluateAsyncWithError(SecTrustRef trust, dispatch_queue_t queue, SecTrustWithErrorCallback result)
-    API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 #endif /* __BLOCKS__ */
 
 /*!
@@ -489,7 +489,7 @@ SecKeyRef SecTrustCopyPublicKey(SecTrustRef trust)
  */
 __nullable
 SecKeyRef SecTrustCopyKey(SecTrustRef trust)
-    API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+    API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
     @function SecTrustGetCertificateCount
@@ -641,7 +641,7 @@ OSStatus SecTrustSetSignedCertificateTimestamps(SecTrustRef trust, CFArrayRef __
  */
 _Nullable CF_RETURNS_RETAINED
 CFArrayRef SecTrustCopyCertificateChain(SecTrustRef trust)
-    API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 CF_IMPLICIT_BRIDGING_DISABLED
 CF_ASSUME_NONNULL_END

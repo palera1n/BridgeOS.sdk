@@ -96,7 +96,7 @@ API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0))
 // Connections start in an inactive state. You must call `-activate` on a connection before it will send or receive any messages.
 // Calling `-activate` on an active connection has no effect.
 // For backward compatibility reasons, `-resume` on an inactive and otherwise not suspended NSXPCConnection has the same effect as calling `-activate`. For new code, using `-activate` is preferred.
-- (void)activate API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+- (void)activate API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 // Invalidate the connection. All outstanding error handling blocks and invalidation blocks will be called on the message handling queue. The connection must be invalidated before it is deallocated. After a connection is invalidated, no more messages may be sent or received.
 - (void)invalidate;
@@ -111,7 +111,7 @@ API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0))
 + (nullable NSXPCConnection *)currentConnection API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0)) NS_SWIFT_UNAVAILABLE_FROM_ASYNC("currentConnection cannot be used from async contexts.");
 
 // Add a barrier block to be executed on the connection. This barrier block will run after any outstanding sends have completed. Note: This does not guarantee that messages will be received by the remote process by the time the block is invoked. If you need to ensure receipt of a message by the remote process, waiting for a reply to come back is the best option.
-- (void)scheduleSendBarrierBlock:(void (^)(void))block API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (void)scheduleSendBarrierBlock:(void (^)(void))block API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /// Sets the code signing requirement for this connection. If the requirement is malformed, an exception is thrown. If new messages do not match the requirement, the connection is invalidated. It is recommended to set this before calling `resume`, as it is an XPC error to call it more than once.
 /// See https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html for more information on the format.
@@ -150,7 +150,7 @@ API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0))
 // Listeners start in an inactive state. You must call `-activate` on a listener before it will send or receive any messages.
 // Calling `-activate` on an active listener has no effect.
 // For backward compatibility reasons, `-resume` on an inactive and otherwise not suspended NSXPCListener has the same effect as calling `-activate`. For new code, using `-activate` is preferred.
-- (void)activate API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+- (void)activate API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 // Invalidate the listener. No more connections will be created. Once a listener is invalidated it may not be resumed or suspended.
 - (void)invalidate;
@@ -191,8 +191,8 @@ API_AVAILABLE(macos(10.8), ios(6.0), watchos(2.0), tvos(9.0))
 - (nullable NSXPCInterface *)interfaceForSelector:(SEL)sel argumentIndex:(NSUInteger)arg ofReply:(BOOL)ofReply;
 
 #if __has_include(<xpc/xpc.h>)
-- (void)setXPCType:(xpc_type_t)type forSelector:(SEL)sel argumentIndex:(NSUInteger)arg ofReply:(BOOL)ofReply API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
-- (nullable xpc_type_t)XPCTypeForSelector:(SEL)sel argumentIndex:(NSUInteger)arg ofReply:(BOOL)ofReply API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (void)setXPCType:(xpc_type_t)type forSelector:(SEL)sel argumentIndex:(NSUInteger)arg ofReply:(BOOL)ofReply API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
+- (nullable xpc_type_t)XPCTypeForSelector:(SEL)sel argumentIndex:(NSUInteger)arg ofReply:(BOOL)ofReply API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 #endif
 
 @end

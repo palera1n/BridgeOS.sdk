@@ -57,7 +57,7 @@ NW_OBJECT_DECL(nw_advertise_descriptor);
  * @result
  *		An instantiated browse descriptor object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_advertise_descriptor_t _Nullable
 nw_advertise_descriptor_create_bonjour_service(const char * _Nullable name, const char * type, const char * _Nullable domain);
 
@@ -80,7 +80,7 @@ nw_advertise_descriptor_create_bonjour_service(const char * _Nullable name, cons
  *		is intended to be small - 200 bytes or less. Using TXT records larger than
  *		1300 bytes is not recommended at this time.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_advertise_descriptor_set_txt_record(nw_advertise_descriptor_t advertise_descriptor,
 									   const void * _Nullable txt_record,
@@ -99,7 +99,7 @@ nw_advertise_descriptor_set_txt_record(nw_advertise_descriptor_t advertise_descr
  * @param no_auto_rename
  *		A boolean indicating if auto-rename should be disabled.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_advertise_descriptor_set_no_auto_rename(nw_advertise_descriptor_t advertise_descriptor,
 										   bool no_auto_rename);
@@ -116,7 +116,7 @@ nw_advertise_descriptor_set_no_auto_rename(nw_advertise_descriptor_t advertise_d
  *
  * @result A boolean indicating if auto-rename is disabled.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_advertise_descriptor_get_no_auto_rename(nw_advertise_descriptor_t advertise_descriptor);
 
@@ -133,7 +133,7 @@ nw_advertise_descriptor_get_no_auto_rename(nw_advertise_descriptor_t advertise_d
  *		The TXT record object. If txt_record is NULL, the advertise_descriptor's
  *		current TXT record object will be removed.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_advertise_descriptor_set_txt_record_object(nw_advertise_descriptor_t advertise_descriptor,
 											  _Nullable nw_txt_record_t txt_record);
@@ -151,7 +151,7 @@ nw_advertise_descriptor_set_txt_record_object(nw_advertise_descriptor_t advertis
  *		A copy of the TXT record object, or NULL if the advertise descriptor
  *		does not have an associated TXT record.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED _Nullable nw_txt_record_t
 nw_advertise_descriptor_copy_txt_record_object(nw_advertise_descriptor_t advertise_descriptor);
 
@@ -167,7 +167,7 @@ nw_advertise_descriptor_copy_txt_record_object(nw_advertise_descriptor_t adverti
  * @result
  *		An instantiated advertise descriptor object.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 NW_RETURNS_RETAINED nw_advertise_descriptor_t
 nw_advertise_descriptor_create_application_service(const char *application_service_name);
 
@@ -183,7 +183,7 @@ nw_advertise_descriptor_create_application_service(const char *application_servi
  * @result
  *		The service name or NULL if the advertise descriptor is not of the correct type.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 const char * _Nullable
 nw_advertise_descriptor_get_application_service_name(nw_advertise_descriptor_t advertise_descriptor);
 

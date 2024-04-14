@@ -56,96 +56,96 @@ NS_INLINE AVBeatRange AVMakeBeatRange(AVMusicTimeStamp startBeat, AVMusicTimeSta
 	return r;
 }
 
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 typedef NSString *AVAudioSequencerInfoDictionaryKey NS_TYPED_ENUM;
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyAlbum
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyApproximateDurationInSeconds
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyArtist
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyChannelLayout
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyComments
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyComposer
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyCopyright
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyEncodingApplication
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyGenre
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyISRC
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyKeySignature
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyLyricist
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyNominalBitRate
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyRecordedDate
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeySourceBitDepth
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeySourceEncoder
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeySubTitle
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyTempo
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyTimeSignature
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyTitle
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyTrackNumber
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 AVAS_EXPORT
 AVAudioSequencerInfoDictionaryKey AVAudioSequencerInfoDictionaryKeyYear
-				API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+				API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 /*! @class AVAudioSequencer
 	@abstract A collection of MIDI events organized into AVMusicTracks, plus a player to play back the events.
@@ -236,18 +236,18 @@ API_AVAILABLE(macos(10.11), ios(9.0), tvos(9.0)) API_UNAVAILABLE(watchos)
 /*!	@method reverseEvents:
 	@abstract Reverse the order of all events in all AVMusicTracks, including the tempo track
 */
-- (void)reverseEvents API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+- (void)reverseEvents API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 /*!	@method createAndAppendTrack:
 	@abstract Create a new AVMusicTrack and append it to the AVMusicSequencer's list
 */
-- (AVMusicTrack *)createAndAppendTrack API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+- (AVMusicTrack *)createAndAppendTrack API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 /*!	@method removeTrack:
 	@abstract Remove the given AVMusicTrack from the AVMusicSequencer.
 	@discussion This does not destroy the AVMusicTrack because it may be re-used.
 */
-- (BOOL)removeTrack:(AVMusicTrack *)track API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+- (BOOL)removeTrack:(AVMusicTrack *)track API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 /*!	@typedef AVAudioSequencerUserCallback
 	@abstract
@@ -265,7 +265,7 @@ API_AVAILABLE(macos(10.11), ios(9.0), tvos(9.0)) API_UNAVAILABLE(watchos)
  
 		The returned 'userData' will be unique to each AVMusicUserEvent instance.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 typedef void (^AVAudioSequencerUserCallback)(AVMusicTrack *track, NSData *userData, AVMusicTimeStamp timeStamp);
 
 /*!	@method setUserCallback:
@@ -276,7 +276,7 @@ typedef void (^AVAudioSequencerUserCallback)(AVMusicTrack *track, NSData *userDa
  
 		Set the block to nil to disable it.
 */
-- (void)setUserCallback:(AVAudioSequencerUserCallback _Nullable)userCallback API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+- (void)setUserCallback:(AVAudioSequencerUserCallback _Nullable)userCallback API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 /* properties */
 
@@ -528,7 +528,7 @@ typedef NS_ENUM(NSInteger, AVMusicTrackLoopCount) {
 
 @class AVMusicEvent;
 
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMusicTrack(AVMusicTrackEditor)
 
 /*!	@property usesAutomatedParameters

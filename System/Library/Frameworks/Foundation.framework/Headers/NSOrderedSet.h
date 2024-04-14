@@ -107,7 +107,7 @@ API_AVAILABLE(macos(10.7), ios(5.0), watchos(2.0), tvos(9.0))
 
 @end
 
-API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NS_SWIFT_UNAVAILABLE("NSOrderedSet diffing methods are not available in Swift, use Collection.difference(from:) instead")
 @interface NSOrderedSet<ObjectType> (NSOrderedSetDiffing)
 
@@ -180,7 +180,7 @@ API_AVAILABLE(macos(10.7), ios(5.0), watchos(2.0), tvos(9.0))
 
 @end
 
-API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NS_SWIFT_UNAVAILABLE("NSMutableOrderedSet diffing methods are not available in Swift")
 @interface NSMutableOrderedSet<ObjectType> (NSMutableOrderedSetDiffing)
 

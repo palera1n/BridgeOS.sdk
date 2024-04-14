@@ -146,7 +146,7 @@ typedef CF_ENUM(int, CFNetServicesError) {
   /*
    * Missing required configuration for local network access.
    */
-  kCFNetServicesErrorMissingRequiredConfiguration API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0)) API_UNAVAILABLE(watchos) = -72008L,
+  kCFNetServicesErrorMissingRequiredConfiguration API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0)) API_UNAVAILABLE(watchos) = -72008L,
 };
 
 

@@ -993,7 +993,7 @@ xpc_connection_set_peer_lightweight_code_requirement(xpc_connection_t connection
  * @result
  * Null if the connection has not been invalidated, otherwise a description for why the connection was invalidated.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0))
 XPC_EXPORT XPC_NONNULL1 XPC_WARN_RESULT
 char * _Nullable
 xpc_connection_copy_invalidation_reason(xpc_connection_t connection);

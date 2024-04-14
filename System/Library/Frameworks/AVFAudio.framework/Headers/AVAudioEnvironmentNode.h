@@ -182,7 +182,7 @@ typedef NS_ENUM(NSInteger, AVAudioEnvironmentOutputType) {
     AVAudioEnvironmentOutputTypeHeadphones          = 1,
     AVAudioEnvironmentOutputTypeBuiltInSpeakers     = 2,
     AVAudioEnvironmentOutputTypeExternalSpeakers    = 3
-} API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos);
 
 
 /*!
@@ -223,7 +223,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), tvos(9.0)) API_UNAVAILABLE(watchos)
  
         Default:    AVAudio3DMixingOutputTypeAuto
  */
-@property (nonatomic) AVAudioEnvironmentOutputType outputType API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos) ;
+@property (nonatomic) AVAudioEnvironmentOutputType outputType API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos) ;
 
 /*! @property outputVolume
 	@abstract The mixer's output volume.

@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  NOTE: Prior to macOS 10.16, iOS 14.0, tvOS 14.0, and watchOS 7.0 a refresh of the object is required after a save to reflect recomputed values
  */
 
-API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0))
+API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0))
 @interface NSDerivedAttributeDescription : NSAttributeDescription
 
 /* Instance of NSExpression that will be used to generate the derived data.

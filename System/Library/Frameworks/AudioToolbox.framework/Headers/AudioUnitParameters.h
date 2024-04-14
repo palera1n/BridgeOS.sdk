@@ -186,29 +186,29 @@ CF_ENUM(AudioUnitParameterID) {
     k3DMixerParam_PlaybackRate	= 4,
     
     // bus enable : 0.0 or 1.0
-    k3DMixerParam_BusEnable API_AVAILABLE(macos(10.15), ios(13.0), tvos(9.0), watchos(6.0)) = 20,
+    k3DMixerParam_BusEnable API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(9.0), watchos(6.0)) = 20,
     
     // Input/Output, dB, -120->20, 0
-    k3DMixerParam_MinGainInDecibels API_AVAILABLE(macos(10.15), ios(13.0), tvos(9.0), watchos(6.0)) = 21,
+    k3DMixerParam_MinGainInDecibels API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(9.0), watchos(6.0)) = 21,
     
     // Input/Output, dB, -120->20, 0
-    k3DMixerParam_MaxGainInDecibels API_AVAILABLE(macos(10.15), ios(13.0), tvos(9.0), watchos(6.0)) = 22,
+    k3DMixerParam_MaxGainInDecibels API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(9.0), watchos(6.0)) = 22,
 
     // Input, Dry/Wet equal-power blend, %      0.0 -> 100.0
-    k3DMixerParam_DryWetReverbBlend API_AVAILABLE(macos(10.15), ios(13.0), tvos(9.0), watchos(6.0)) = 23,
+    k3DMixerParam_DryWetReverbBlend API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(9.0), watchos(6.0)) = 23,
     
     // Global, dB,        -40.0 -> +40.0
-    k3DMixerParam_GlobalReverbGainInDecibels API_AVAILABLE(macos(10.15), ios(13.0), tvos(9.0), watchos(6.0)) = 24,
+    k3DMixerParam_GlobalReverbGainInDecibels API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(9.0), watchos(6.0)) = 24,
     
     // Input, Lowpass filter attenuation at 5KHz :        decibels -100.0dB -> 0.0dB
     // smaller values make both direct and reverb sound more muffled; a value of 0.0 indicates no filtering
     // Occlusion is a filter applied to the sound prior to the reverb send
-    k3DMixerParam_OcclusionAttenuationInDecibels API_AVAILABLE(macos(10.15), ios(13.0), tvos(9.0), watchos(6.0)) = 25,
+    k3DMixerParam_OcclusionAttenuationInDecibels API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(9.0), watchos(6.0)) = 25,
     
     // Input, Lowpass filter attenuation at 5KHz :        decibels -100.0dB -> 0.0dB
     // smaller values make direct sound more muffled; a value of 0.0 indicates no filtering
     // Obstruction is a filter applied to the "direct" part of the sound (so is post reverb send)
-    k3DMixerParam_ObstructionAttenuationInDecibels API_AVAILABLE(macos(10.15), ios(13.0), tvos(9.0), watchos(6.0)) = 26,
+    k3DMixerParam_ObstructionAttenuationInDecibels API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(9.0), watchos(6.0)) = 26,
     
 #if TARGET_OS_IPHONE && !TARGET_OS_MACCATALYST
 		// iPhone specific 3D mixer parameters -- deprecated

@@ -133,7 +133,7 @@ os_workgroup_create_with_port(const char *OS_WORKGROUP_UNSAFE_INDEXABLE _Nullabl
  * @param wg
  * The existing workgroup to create a new workgroup object from.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT OS_WORKGROUP_RETURNS_RETAINED
 os_workgroup_t _Nullable
 os_workgroup_create_with_workgroup(const char * OS_WORKGROUP_UNSAFE_INDEXABLE _Nullable name, os_workgroup_t wg);
@@ -172,7 +172,7 @@ typedef struct os_workgroup_join_token_opaque_s *os_workgroup_join_token_t;
  *				workgroup does not nest with
  * EINVAL		The workgroup has been cancelled
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT OS_WORKGROUP_WARN_RESULT
 int
 os_workgroup_join(os_workgroup_t wg, os_workgroup_join_token_t token_out);
@@ -197,7 +197,7 @@ os_workgroup_join(os_workgroup_t wg, os_workgroup_join_token_t token_out);
  * This is the join token populated by the most recent call to
  * os_workgroup_join().
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT
 void
 os_workgroup_leave(os_workgroup_t wg, os_workgroup_join_token_t token);
@@ -236,7 +236,7 @@ typedef void (*os_workgroup_working_arena_destructor_t)(void * _Nullable);
  * @param destructor
  * A destructor to call on the previously assigned working arena, if any
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT OS_WORKGROUP_WARN_RESULT
 int
 os_workgroup_set_working_arena(os_workgroup_t wg, void * _Nullable arena,
@@ -266,7 +266,7 @@ os_workgroup_set_working_arena(os_workgroup_t wg, void * _Nullable arena,
  * A pointer to a os_workgroup_index which will be populated by the caller's
  * index in the workgroup.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT
 void * _Nullable
 os_workgroup_get_working_arena(os_workgroup_t wg,
@@ -294,7 +294,7 @@ os_workgroup_get_working_arena(os_workgroup_t wg,
  * @param wg
  * The workgroup that that the thread would like to cancel
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT
 void
 os_workgroup_cancel(os_workgroup_t wg);
@@ -306,7 +306,7 @@ os_workgroup_cancel(os_workgroup_t wg);
  * Returns true if the workgroup object has been cancelled. See also
  * os_workgroup_cancel
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT
 bool
 os_workgroup_testcancel(os_workgroup_t wg);
@@ -345,7 +345,7 @@ typedef struct os_workgroup_max_parallel_threads_attr_s *os_workgroup_mpt_attr_t
  * @param attr
  * This value is currently unused and should be NULL.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 OS_REFINED_FOR_SWIFT OS_WORKGROUP_EXPORT
 int
 os_workgroup_max_parallel_threads(os_workgroup_t wg, os_workgroup_mpt_attr_t

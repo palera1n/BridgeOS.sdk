@@ -103,7 +103,7 @@ typedef enum {
  * @result
  *		An instantiated browser object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_browser_t
 nw_browser_create(nw_browse_descriptor_t descriptor,
 				  _Nullable nw_parameters_t parameters);
@@ -121,7 +121,7 @@ nw_browser_create(nw_browse_descriptor_t descriptor,
  * @param queue
  *		The client's callback queue.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_browser_set_queue(nw_browser_t browser,
 					 dispatch_queue_t queue);
@@ -170,7 +170,7 @@ typedef void (^nw_browser_browse_results_changed_handler_t) (nw_browse_result_t 
  *		The callback handler that fires when the browser gets an update for a
  *		changed browse result.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_browser_set_browse_results_changed_handler(nw_browser_t browser,
 												_Nullable nw_browser_browse_results_changed_handler_t handler);
@@ -208,7 +208,7 @@ typedef void (^nw_browser_state_changed_handler_t)(nw_browser_state_t state,
  *		The state changed handler to call when the browser state changes.
  *		Pass NULL to remove the event handler.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_browser_set_state_changed_handler(nw_browser_t browser,
 									 _Nullable nw_browser_state_changed_handler_t state_changed_handler);
@@ -225,7 +225,7 @@ nw_browser_set_state_changed_handler(nw_browser_t browser,
  * @param browser
  *		The browser object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_browser_start(nw_browser_t browser);
 
@@ -242,7 +242,7 @@ nw_browser_start(nw_browser_t browser);
  * @param browser
  *		The browser object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_browser_cancel(nw_browser_t browser);
 
@@ -258,7 +258,7 @@ nw_browser_cancel(nw_browser_t browser);
  * @result
  *		Returns an nw_parameters_t object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_browser_copy_parameters(nw_browser_t browser);
 
@@ -274,7 +274,7 @@ nw_browser_copy_parameters(nw_browser_t browser);
  * @result
  *		Returns a copy of the browse_descriptor passed to nw_browser_create().
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_browse_descriptor_t
 nw_browser_copy_browse_descriptor(nw_browser_t browser);
 

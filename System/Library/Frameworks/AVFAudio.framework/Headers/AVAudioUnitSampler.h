@@ -88,7 +88,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), tvos(9.0)) API_UNAVAILABLE(watchos)
 		Range:     -90.0 -> +12 db
 		Default: 0 db
  */
-@property (nonatomic) float     overallGain API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0)) API_UNAVAILABLE(watchos) ;
+@property (nonatomic) float     overallGain API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0)) API_UNAVAILABLE(watchos) ;
 
 /*! @property masterGain
 	@abstract

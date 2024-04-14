@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 	@discussion
 		This class is provided to allow enumeration of the heterogenous events contained within an AVMusicTrack.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMusicEvent : NSObject
 @end
 
@@ -42,7 +42,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 		The AVAudioSequencer will automatically send a MIDI note-off after the note duration has passed.
 		To send an explicit note-off event, create an AVMIDINoteEvent with its velocity set to zero.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDINoteEvent : AVMusicEvent
 
 /*!	@method initWithChannel:key:velocity:duration
@@ -85,7 +85,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 	@abstract
 		The event base class for all MIDI messages which operate on a single MIDI channel.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDIChannelEvent : AVMusicEvent
 
 /*!	@property channel
@@ -146,7 +146,7 @@ typedef NS_ENUM(NSInteger, AVMIDIControlChangeMessageType)
 	@abstract
 		The event class representing MIDI control change messages.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDIControlChangeEvent : AVMIDIChannelEvent
 
 /*!	@method initWithChannel:messageType:value
@@ -177,7 +177,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 	@abstract
 		The event class representing MIDI "poly" or "key" pressure messages.
  */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDIPolyPressureEvent : AVMIDIChannelEvent
 
 /*!	@method initWithChannel:key:pressure
@@ -210,7 +210,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 	@discussion
 		The effect of these messages will depend on the containing AVMusicTrack's destinationAudioUnit.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDIProgramChangeEvent : AVMIDIChannelEvent
 
 /*!	@method initWithChannel:programNumber:
@@ -240,7 +240,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 		The effect of these messages will depend on the containing AVMusicTrack's destinationAudioUnit
 		and the capabilities of the destination's currently-loaded instrument.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDIChannelPressureEvent : AVMIDIChannelEvent
 
 /*!	@method initWithChannel:pressure:
@@ -267,7 +267,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 		The effect of these messages will depend on the AVMusicTrack's destinationAudioUnit
 		and the capabilities of the destination's currently-loaded instrument.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDIPitchBendEvent : AVMIDIChannelEvent
 
 /*!	@method initWithChannel:value:
@@ -293,7 +293,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 	@discussion
 		The size and contents of an AVMIDISysexEvent cannot be modified once created.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDISysexEvent : AVMusicEvent
 
 /*!	@method initWithData:
@@ -346,7 +346,7 @@ typedef NS_ENUM(NSInteger, AVMIDIMetaEventType)
  
 		The class does not verify that the content matches the MIDI specification.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMIDIMetaEvent : AVMusicEvent
 
 /*!	@method initWithType:data
@@ -375,7 +375,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 		an argument to that block.
 		The size and contents of an AVMusicUserEvent cannot be modified once created.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVMusicUserEvent : AVMusicEvent
 
 /*!	@method initWithData:
@@ -400,7 +400,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 		supported value at this time.
  */
 
-extern UInt32 const AVExtendedNoteOnEventDefaultInstrument API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos);
+extern UInt32 const AVExtendedNoteOnEventDefaultInstrument API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos);
 
 /*!	@class AVExtendedNoteOnEvent
 	@abstract
@@ -411,7 +411,7 @@ extern UInt32 const AVExtendedNoteOnEventDefaultInstrument API_AVAILABLE(macos(1
 		of the note's run-time properties which are modulated by those inputs.  In addition, it supports the possibility
 		of an audio unit with more than the standard 16 MIDI channels.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVExtendedNoteOnEvent : AVMusicEvent
 
 /*!	@method initWithMIDINote:velocity:groupID:duration
@@ -493,7 +493,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
  
 		If an AVParameterEvent is added to an empty, non-automation track, the track becomes an automation track.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVParameterEvent : AVMusicEvent
 
 /*!	@method initWithParameterID:scope:element:value
@@ -544,7 +544,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 		that has been configured as the destination for the AVMusicTrack containing this event.
 */
 
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVAUPresetEvent : AVMusicEvent
 
 /*!	@method initWithScope:element:dictionary
@@ -590,7 +590,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 		This event provides a way to specify a tempo change that is less cumbersome than using
 		tempo meta-events.
 */
-API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0)) API_UNAVAILABLE(watchos)
 @interface AVExtendedTempoEvent : AVMusicEvent
 
 /*!	@method initWithTempo:

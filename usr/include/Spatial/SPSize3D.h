@@ -22,7 +22,7 @@
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DMake(double width, double height, double depth)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Creates a size structure with dimensions specified as a 3-element SIMD vector.
@@ -33,7 +33,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DMakeWithVector(simd_double3 xyz)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Creates a size structure with dimensions specified as a Spatial vector.
@@ -44,7 +44,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DMakeWithVector(SPVector3D xyz)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Creates a size structure with dimensions specified as the coordinates of a  point structure.
@@ -55,7 +55,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DMakeWithPoint(SPPoint3D point)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Querying size properties
 
@@ -68,13 +68,13 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 simd_double3 SPSize3DGetVector(SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns @p true if both sizes are equal.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DEqualToSize(SPSize3D size1, SPSize3D size2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Transforming a size
 
@@ -90,7 +90,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DScaleBy(SPSize3D size, double x, double y, double z)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size with dimensions scaled by the specified size.
@@ -102,7 +102,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DScaleBySize(SPSize3D size, SPSize3D scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size with dimensions uniformly scaled by the specified value.
@@ -114,7 +114,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DScaleUniform(SPSize3D size, double scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size that's rotated by the specified rotation around the origin.
@@ -126,7 +126,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DRotate(SPSize3D size, SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size that's rotated by the specified quaternion around the origin.
@@ -138,7 +138,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DRotateByQuaternion(SPSize3D size, simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size that's transformed by the specified affine transform.
@@ -151,7 +151,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DApplyAffineTransform(SPSize3D size,
                                       SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size that's transformed by the specified projective transform.
@@ -164,7 +164,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DApplyProjectiveTransform(SPSize3D size,
                                           SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size that's transformed by the inverse of the specified affine transform.
@@ -177,7 +177,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DUnapplyAffineTransform(SPSize3D size,
                                         SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size that's transformed by the inverse of the specified projective transform.
@@ -190,7 +190,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DUnapplyProjectiveTransform(SPSize3D size,
                                             SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a size that's sheared over an axis by shear factors for the other two axes.
@@ -213,7 +213,7 @@ SPSize3D SPSize3DShear(SPSize3D size,
                        SPAxis shearAxis,
                        double shearFactor0,
                        double shearFactor1)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Deriving new sizes
 
@@ -227,7 +227,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DUnion(SPSize3D size, SPSize3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the intersection of the two sizes.
@@ -239,7 +239,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DIntersection(SPSize3D size, SPSize3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Volumetric operations
 
@@ -253,7 +253,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DContainsSize(SPSize3D size, SPSize3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the size contains the point.
@@ -265,7 +265,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DContainsPoint(SPSize3D size, SPPoint3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the size contains any of the specified points.
@@ -279,7 +279,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPSize3DContainsAnyPoint(SPSize3D size,
                                const SPPoint3D *points, int pointCount)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: Header inline implementations
 
@@ -488,7 +488,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DApplyPose(SPSize3D size,
                            SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -509,7 +509,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPSize3D SPSize3DUnapplyPose(SPSize3D size,
                              SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

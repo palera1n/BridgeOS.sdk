@@ -56,7 +56,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 
 /* The URL of the webpage that referred (linked to) webpageURL.
  */
-@property (nullable, copy) NSURL *referrerURL API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+@property (nullable, copy) NSURL *referrerURL API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /* If non-nil, then an absolute date after which this activity is no longer eligible to be indexed or handed off. */
 @property (nullable, copy) NSDate *expirationDate API_AVAILABLE(macos(10.11), ios(9.0), watchos(3.0), tvos(10.0));
@@ -75,7 +75,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 /*  A string that identifies the content of this NSUserActivity, for matching against existing documents when re-opening to see if they are the same.
     Setting this property is optional and does not automatically set .needsSave to YES.
  */
-@property (nullable, copy) NSString* targetContentIdentifier API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, copy) NSString* targetContentIdentifier API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* Marks the receiver as the activity currently in use by the user, for example, the activity associated with the active window. A newly created activity is eligible for continuation on another device after the first time it becomes current.
 */
@@ -101,12 +101,12 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
 /* Set to YES if this user activity should be eligible for indexing for any user of this application, on any device, or NO if the activity contains private or sensitive information or which would not be useful to other users if indexed.  The activity must also have requiredUserActivityKeys or a webpageURL */
 @property (getter=isEligibleForPublicIndexing) BOOL eligibleForPublicIndexing API_AVAILABLE(macos(10.11), ios(9.0), watchos(3.0), tvos(10.0));
 
-@property (getter=isEligibleForPrediction) BOOL eligibleForPrediction API_AVAILABLE( ios(12.0), watchos(5.0) ) API_UNAVAILABLE( macos, tvos );
+@property (getter=isEligibleForPrediction) BOOL eligibleForPrediction API_AVAILABLE( ios(12.0), bridgeos(3.0), watchos(5.0) ) API_UNAVAILABLE( macos, tvos );
 
-@property (copy, nullable) NSUserActivityPersistentIdentifier persistentIdentifier  API_AVAILABLE( macos(10.15), ios(12.0), watchos(5.0) ) API_UNAVAILABLE( tvos );
+@property (copy, nullable) NSUserActivityPersistentIdentifier persistentIdentifier  API_AVAILABLE( macos(10.15), ios(12.0), bridgeos(3.0), watchos(5.0) ) API_UNAVAILABLE( tvos );
 
-+(void) deleteSavedUserActivitiesWithPersistentIdentifiers:(NSArray<NSUserActivityPersistentIdentifier>*) persistentIdentifiers completionHandler:(void(NS_SWIFT_SENDABLE ^)(void))handler API_AVAILABLE( macos(10.15), ios(12.0), watchos(5.0) ) API_UNAVAILABLE( tvos );
-+(void) deleteAllSavedUserActivitiesWithCompletionHandler:(void(NS_SWIFT_SENDABLE ^)(void))handler API_AVAILABLE( macos(10.15), ios(12.0), watchos(5.0) ) API_UNAVAILABLE( tvos );
++(void) deleteSavedUserActivitiesWithPersistentIdentifiers:(NSArray<NSUserActivityPersistentIdentifier>*) persistentIdentifiers completionHandler:(void(NS_SWIFT_SENDABLE ^)(void))handler API_AVAILABLE( macos(10.15), ios(12.0), bridgeos(3.0), watchos(5.0) ) API_UNAVAILABLE( tvos );
++(void) deleteAllSavedUserActivitiesWithCompletionHandler:(void(NS_SWIFT_SENDABLE ^)(void))handler API_AVAILABLE( macos(10.15), ios(12.0), bridgeos(3.0), watchos(5.0) ) API_UNAVAILABLE( tvos );
 
 @end
 

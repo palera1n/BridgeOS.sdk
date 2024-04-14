@@ -21,7 +21,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DMakeAtOrigin(SPPoint3D origin,
                               SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Creates a rectangle at the specified center with the specified size.
 /*!
@@ -35,7 +35,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DMakeAtCenter(SPPoint3D center,
                               SPSize3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle at the specified origin using simd vectors.
@@ -48,7 +48,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DMakeAtOriginWithVector(simd_double3 origin,
                                         simd_double3 size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle at the specified origin using Spatial vectors.
@@ -61,7 +61,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DMakeAtOriginWithVector(SPVector3D origin,
                                         SPVector3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle at the specified center using simd vectors.
@@ -74,7 +74,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DMakeAtCenterWithVector(simd_double3 center,
                                         simd_double3 size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle at the specified center using Spatial vectors.
@@ -87,7 +87,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DMakeAtCenterWithVector(SPVector3D center,
                                         SPVector3D size)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Working with points
 
@@ -101,7 +101,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPPoint3DClampToRect(SPPoint3D point, SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the rectangle contains any of the specified points.
@@ -115,7 +115,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRect3DContainsAnyPoint(SPRect3D rect,
                                const SPPoint3D *points, int pointCount)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the rectangle contains the point.
@@ -127,7 +127,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRect3DContainsPoint(SPRect3D rect, SPPoint3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's the bounding box of the specified points.
@@ -139,7 +139,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DMakeBoundingFromPoints(SPPoint3D points[], int pointCount)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the corner points of the specified rectangle.
@@ -165,7 +165,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 void SPRect3DGetCornerPoints(SPRect3D rect, SPPoint3D points[])
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Querying rectangle properties
 
@@ -178,7 +178,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPRect3DGetCenter(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates if two or three of the dimensions are zero.
@@ -189,7 +189,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRect3DIsEmpty(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the distance between the origins of two rectangle.
@@ -245,7 +245,7 @@ __API_DEPRECATED("This function is deprecated.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPRect3DGetMinimum(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a point that represents the corner of the rectangle with largest x-, y-, and z-coordinates.
@@ -256,13 +256,13 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPPoint3D SPRect3DGetMaximum(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns @p true if both rectangles are equal.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRect3DEqualToRect(SPRect3D rect1, SPRect3D rect2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Deriving new rectangles
 
@@ -281,7 +281,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DIntegral(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a new rectangle with the size updated by the specified amount and the same center point.
@@ -300,7 +300,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DInset(SPRect3D rect, SPSize3D dXYZ)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the smallest rectangle that contains two rectangles.
@@ -312,7 +312,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DUnion(SPRect3D rect, SPRect3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the intersection of the two rectangles.
@@ -324,13 +324,13 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DIntersection(SPRect3D rect, SPRect3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns a rectangle with a positive width and height.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DStandardize(SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Transforming rectangles
 
@@ -346,7 +346,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DScaleBy(SPRect3D rect, double x, double y, double z)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle with dimensions scaled by the specified size.
@@ -358,7 +358,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DScaleBySize(SPRect3D rect, SPSize3D scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle with dimensions uniformly scaled by the specified value.
@@ -370,7 +370,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DScaleUniform(SPRect3D rect, double scale)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's rotated by the specified quaternion around the origin.
@@ -386,7 +386,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DRotateByQuaternion(SPRect3D rect, simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's rotated by the specified rotation around the origin.
@@ -403,7 +403,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DRotate(SPRect3D rect, SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's rotated by a rotation around a specified pivot.
@@ -416,7 +416,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DRotateAroundPoint(SPRect3D rect, SPRotation3D rotation, SPPoint3D pivot)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's rotated by a quaternion around a specified pivot.
@@ -429,7 +429,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DRotateByQuaternionAroundPoint(SPRect3D rect, simd_quatd quaternion, SPPoint3D pivot)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle with an origin that is offset from that of the source rectangle.
@@ -457,7 +457,7 @@ __API_DEPRECATED("Use `SPVector3D` variant.",
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DTranslate(SPRect3D rect, SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's transformed by the specified affine transform.
@@ -470,7 +470,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DApplyAffineTransform(SPRect3D rect, SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's transformed by the specified projective transform.
@@ -484,7 +484,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DApplyProjectiveTransform(SPRect3D rect,
                                           SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's transformed by the inverse of the specified affine transform.
@@ -498,7 +498,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DUnapplyAffineTransform(SPRect3D rect,
                                         SPAffineTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's transformed by the inverse of the specified projective transform.
@@ -512,7 +512,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DUnapplyProjectiveTransform(SPRect3D rect,
                                             SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rectangle that's sheared over an axis by shear factors for the other two axes.
@@ -537,7 +537,7 @@ SPRect3D SPRect3DShear(SPRect3D rect,
                        SPAxis shearAxis,
                        double shearFactor0,
                        double shearFactor1)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Volumetric operations
 
@@ -552,7 +552,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRect3DIntersectsRect(SPRect3D rect, SPRect3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a Boolean value that indicates whether the first rectangle contains the second rectangle.
@@ -564,7 +564,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRect3DContainsRect(SPRect3D rect, SPRect3D other)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Header inline implementations
 
@@ -1046,7 +1046,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DApplyPose(SPRect3D rect,
                            SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -1079,7 +1079,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRect3D SPRect3DUnapplyPose(SPRect3D rect,
                              SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

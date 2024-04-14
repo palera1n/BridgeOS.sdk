@@ -348,7 +348,7 @@ void	 qsort_r(void *__base, size_t __nel, size_t __width, void *,
 int	 radixsort(const unsigned char **__base, int __nel, const unsigned char *__table,
 	    unsigned __endbyte);
 int	rpmatch(const char *)
-	__API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+	__API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 int	 sradixsort(const unsigned char **__base, int __nel, const unsigned char *__table,
 	    unsigned __endbyte);
 void	 sranddev(void);
@@ -356,7 +356,7 @@ void	 srandomdev(void);
 void	*reallocf(void *__ptr, size_t __size) __alloc_size(2);
 long long
 	strtonum(const char *__numstr, long long __minval, long long __maxval, const char **__errstrp)
-	__API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0));
+	__API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0));
 #if !__DARWIN_NO_LONG_LONG
 long long
 	 strtoq(const char *__str, char **__endptr, int __base);

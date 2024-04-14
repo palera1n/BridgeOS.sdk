@@ -69,8 +69,8 @@
 
 #   define AT_AVAILABILITY_v1       __API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(5.0))
 #   define AT_ENUM_AVAILABILITY_v1  __API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(5.0))
-#   define AT_AVAILABILITY_v2       __API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0))
-#   define AT_ENUM_AVAILABILITY_v2  __API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0))
+#   define AT_AVAILABILITY_v2       __API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0))
+#   define AT_ENUM_AVAILABILITY_v2  __API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0))
 #   define AT_AVAILABILITY_v3       __API_AVAILABLE(macos(10.15.4), ios(13.2.2), tvos(13.2.2), watchos(6.2))
 #   define AT_ENUM_AVAILABILITY_v3  __API_AVAILABLE(macos(10.15.4), ios(13.2.2), tvos(13.2.2), watchos(6.2))
 #   define AT_AVAILABLE_STARTING_BUT_DEPRECATED(...)          __API_DEPRECATED_WITH_REPLACEMENT(__VA_ARGS__)

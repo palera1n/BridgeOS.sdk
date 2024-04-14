@@ -183,7 +183,7 @@ SEC_ASSUME_NONNULL_BEGIN
  *
  * @return a `sec_trust_t` instance.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SEC_RETURNS_RETAINED _Nullable sec_trust_t
 sec_trust_create(SecTrustRef trust);
 
@@ -198,7 +198,7 @@ sec_trust_create(SecTrustRef trust);
  *
  * @return The underlying `SecTrustRef` instance.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SecTrustRef
 sec_trust_copy_ref(sec_trust_t trust);
 
@@ -213,7 +213,7 @@ sec_trust_copy_ref(sec_trust_t trust);
  *
  * @return a `sec_identity_t` instance.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SEC_RETURNS_RETAINED _Nullable sec_identity_t
 sec_identity_create(SecIdentityRef identity);
 
@@ -232,7 +232,7 @@ sec_identity_create(SecIdentityRef identity);
  *
  * @return a `sec_identity_t` instance.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SEC_RETURNS_RETAINED _Nullable sec_identity_t
 sec_identity_create_with_certificates(SecIdentityRef identity, CFArrayRef certificates);
 
@@ -251,7 +251,7 @@ sec_identity_create_with_certificates(SecIdentityRef identity, CFArrayRef certif
  *
  * @return Returns true if the peer certificates were accessible, false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 sec_identity_access_certificates(sec_identity_t identity,
                                  void (^handler)(sec_certificate_t certificate));
@@ -268,7 +268,7 @@ sec_identity_access_certificates(sec_identity_t identity,
  *
  * @return The underlying `SecIdentityRef` instance.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 _Nullable SecIdentityRef
 sec_identity_copy_ref(sec_identity_t identity);
 
@@ -283,7 +283,7 @@ sec_identity_copy_ref(sec_identity_t identity);
  *
  * @return The underlying `CFArrayRef` container with `SecCertificateRef` instances.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 _Nullable CFArrayRef
 sec_identity_copy_certificates_ref(sec_identity_t identity);
 
@@ -298,7 +298,7 @@ sec_identity_copy_certificates_ref(sec_identity_t identity);
  *
  * @return a `sec_certificate_t` instance.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SEC_RETURNS_RETAINED _Nullable sec_certificate_t
 sec_certificate_create(SecCertificateRef certificate);
 
@@ -313,7 +313,7 @@ sec_certificate_create(SecCertificateRef certificate);
  *
  * @return The underlying `SecCertificateRef` instance.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SecCertificateRef
 sec_certificate_copy_ref(sec_certificate_t certificate);
 

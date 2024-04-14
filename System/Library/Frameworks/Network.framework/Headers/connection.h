@@ -86,7 +86,7 @@ typedef enum {
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_connection_t
 nw_connection_create(nw_endpoint_t endpoint,
 					 nw_parameters_t parameters);
@@ -104,7 +104,7 @@ nw_connection_create(nw_endpoint_t endpoint,
  *		Returns an nw_endpoint_t object on success.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_endpoint_t
 nw_connection_copy_endpoint(nw_connection_t connection);
 
@@ -121,7 +121,7 @@ nw_connection_copy_endpoint(nw_connection_t connection);
  *		Returns an nw_parameters_t object on success.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_parameters_t
 nw_connection_copy_parameters(nw_connection_t connection);
 
@@ -145,7 +145,7 @@ typedef void (^nw_connection_state_changed_handler_t)(nw_connection_state_t stat
  *		The state changed handler to call when the connection state changes.
  *		Pass NULL to remove the state changed handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_set_state_changed_handler(nw_connection_t connection,
 								_Nullable nw_connection_state_changed_handler_t handler);
@@ -168,7 +168,7 @@ typedef void (^nw_connection_boolean_event_handler_t)(bool value);
  *		be true when the connection is viable, and false otherwise.
  *		Pass NULL to remove the event handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_set_viability_changed_handler(nw_connection_t connection,
 											_Nullable nw_connection_boolean_event_handler_t handler);
@@ -189,7 +189,7 @@ nw_connection_set_viability_changed_handler(nw_connection_t connection,
  *		will be true when a better path is available, and false otherwise.
  *		Pass NULL to remove the event handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_set_better_path_available_handler(nw_connection_t connection,
 												_Nullable nw_connection_boolean_event_handler_t handler);
@@ -209,7 +209,7 @@ typedef void (^nw_connection_path_event_handler_t)(nw_path_t path);
  *		The event handler to call when the connection's path changes.
  *		Pass NULL to remove the event handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_set_path_changed_handler(nw_connection_t connection,
 									   _Nullable nw_connection_path_event_handler_t handler);
@@ -228,7 +228,7 @@ nw_connection_set_path_changed_handler(nw_connection_t connection,
  * @param queue
  *		The client's dispatch queue.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_set_queue(nw_connection_t connection,
 						dispatch_queue_t queue);
@@ -246,7 +246,7 @@ nw_connection_set_queue(nw_connection_t connection,
  * @param connection
  *		The connection object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_start(nw_connection_t connection);
 
@@ -264,7 +264,7 @@ nw_connection_start(nw_connection_t connection);
  * @param connection
  *		The connection object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_restart(nw_connection_t connection);
 
@@ -285,7 +285,7 @@ nw_connection_restart(nw_connection_t connection);
  * @param connection
  *		The connection object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_cancel(nw_connection_t connection);
 
@@ -301,7 +301,7 @@ nw_connection_cancel(nw_connection_t connection);
  * @param connection
  *		The connection object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_force_cancel(nw_connection_t connection);
 
@@ -319,7 +319,7 @@ nw_connection_force_cancel(nw_connection_t connection);
  * @param connection
  *		The connection object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_cancel_current_endpoint(nw_connection_t connection);
 
@@ -402,7 +402,7 @@ typedef void (^nw_connection_receive_completion_t)(_Nullable dispatch_data_t con
  * @param completion
  *		A callback to be called when content has been received.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_receive(nw_connection_t connection,
 					  uint32_t minimum_incomplete_length,
@@ -425,7 +425,7 @@ nw_connection_receive(nw_connection_t connection,
  *		A callback to be called when the message has been received, or an error
  *		has occurred.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_receive_message(nw_connection_t connection,
 							  nw_connection_receive_completion_t completion);
@@ -463,7 +463,7 @@ typedef void (^nw_connection_send_completion_t)(_Nullable nw_error_t error);
  *		an explicit callback should be used.
  */
 #define NW_CONNECTION_SEND_IDEMPOTENT_CONTENT (_nw_connection_send_idempotent_content)
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_CONNECTION_SEND_TYPE_DECL(idempotent_content);
 
 #define NW_CONTENT_CONTEXT_TYPE_DECL(name) \
@@ -481,7 +481,7 @@ NW_CONNECTION_SEND_TYPE_DECL(idempotent_content);
  *		This context does not support overriding any properties.
  */
 #define NW_CONNECTION_DEFAULT_MESSAGE_CONTEXT (_nw_content_context_default_message)
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_CONTENT_CONTEXT_TYPE_DECL(default_message);
 
 /*!
@@ -495,7 +495,7 @@ NW_CONTENT_CONTEXT_TYPE_DECL(default_message);
  *		This context does not support overriding any properties.
  */
 #define NW_CONNECTION_FINAL_MESSAGE_CONTEXT (_nw_content_context_final_send)
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_CONTENT_CONTEXT_TYPE_DECL(final_send);
 
 /*!
@@ -515,7 +515,7 @@ NW_CONTENT_CONTEXT_TYPE_DECL(final_send);
  *		This context does not support overriding any properties.
  */
 #define NW_CONNECTION_DEFAULT_STREAM_CONTEXT (_nw_content_context_default_stream)
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_CONTENT_CONTEXT_TYPE_DECL(default_stream);
 
 /*!
@@ -595,7 +595,7 @@ NW_CONTENT_CONTEXT_TYPE_DECL(default_stream);
  *		This callback does indicate that the data has either been sent or it has been
  *		enqueued to be sent.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_SWIFT_DISABLE_ASYNC
 void
 nw_connection_send(nw_connection_t connection,
@@ -621,7 +621,7 @@ nw_connection_send(nw_connection_t connection,
  *		multiple times within the block, and the connection will attempt to
  *		batch these operations when the block returns.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_connection_batch(nw_connection_t connection,
 					NW_NOESCAPE dispatch_block_t batch_block);
@@ -641,7 +641,7 @@ nw_connection_batch(nw_connection_t connection,
  *		Returns a human-readable string description of the connection.
  *		The caller must call free() on the string.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 char *
 nw_connection_copy_description(nw_connection_t connection);
 
@@ -659,7 +659,7 @@ nw_connection_copy_description(nw_connection_t connection);
  *		Returns a retained path object, or NULL if the connection
  *		has not been started or has been cancelled.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_path_t
 nw_connection_copy_current_path(nw_connection_t connection);
 
@@ -683,7 +683,7 @@ nw_connection_copy_current_path(nw_connection_t connection);
  *		Returns a retained protocol metadata object, or NULL if the connection
  *		has not been established yet or is cancelled.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED _Nullable nw_protocol_metadata_t
 nw_connection_copy_protocol_metadata(nw_connection_t connection,
 									 nw_protocol_definition_t definition);
@@ -703,7 +703,7 @@ nw_connection_copy_protocol_metadata(nw_connection_t connection,
  *		Returns a datagram size based on the current MTU and the
  *		overhead of the protocols being used.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint32_t
 nw_connection_get_maximum_datagram_size(nw_connection_t connection);
 

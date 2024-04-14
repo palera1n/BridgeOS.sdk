@@ -32,7 +32,7 @@ NW_ASSUME_NONNULL_BEGIN
  * @result
  *		Returns a retained protocol definition object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_definition_t
 nw_protocol_copy_tcp_definition(void);
 
@@ -49,7 +49,7 @@ nw_protocol_copy_tcp_definition(void);
  * @result
  *		Returns a retained protocol options object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_protocol_options_t
 nw_tcp_create_options(void);
 
@@ -67,7 +67,7 @@ nw_tcp_create_options(void);
  *		A boolean indicating that TCP should disable
  *		Nagle's algorithm.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_no_delay(nw_protocol_options_t options,
 							bool no_delay);
@@ -86,7 +86,7 @@ nw_tcp_options_set_no_delay(nw_protocol_options_t options,
  *		A boolean indicating that TCP should be set into
  *		no-push mode.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_no_push(nw_protocol_options_t options,
 						   bool no_push);
@@ -104,7 +104,7 @@ nw_tcp_options_set_no_push(nw_protocol_options_t options,
  *		A boolean indicating that TCP should be set into
  *		no-options mode.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_no_options(nw_protocol_options_t options,
 							  bool no_options);
@@ -121,7 +121,7 @@ nw_tcp_options_set_no_options(nw_protocol_options_t options,
  * @param enable_keepalive
  *		A boolean indicating that TCP should send keepalives.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_enable_keepalive(nw_protocol_options_t options,
 									bool enable_keepalive);
@@ -141,7 +141,7 @@ nw_tcp_options_set_enable_keepalive(nw_protocol_options_t options,
  *		The number of keepalive probes to send before terminating
  *		the connection.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_keepalive_count(nw_protocol_options_t options,
 								   uint32_t keepalive_count);
@@ -160,7 +160,7 @@ nw_tcp_options_set_keepalive_count(nw_protocol_options_t options,
  *		The number of seconds of idleness to wait before keepalive
  *		probes are sent by TCP.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_keepalive_idle_time(nw_protocol_options_t options,
 									   uint32_t keepalive_idle_time);
@@ -179,7 +179,7 @@ nw_tcp_options_set_keepalive_idle_time(nw_protocol_options_t options,
  *		The number of seconds of to wait before resending TCP
  *		keepalive probes.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_keepalive_interval(nw_protocol_options_t options,
 									  uint32_t keepalive_interval);
@@ -197,7 +197,7 @@ nw_tcp_options_set_keepalive_interval(nw_protocol_options_t options,
  * @param maximum_segment_size
  *		The maximum segment size in bytes.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_maximum_segment_size(nw_protocol_options_t options,
 										uint32_t maximum_segment_size);
@@ -215,7 +215,7 @@ nw_tcp_options_set_maximum_segment_size(nw_protocol_options_t options,
  * @param connection_timeout
  *		A timeout for TCP connection establishment, in seconds.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_connection_timeout(nw_protocol_options_t options,
 									  uint32_t connection_timeout);
@@ -233,7 +233,7 @@ nw_tcp_options_set_connection_timeout(nw_protocol_options_t options,
  * @param persist_timeout
  *		The TCP persist timeout, in seconds.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_persist_timeout(nw_protocol_options_t options,
 								   uint32_t persist_timeout);
@@ -251,7 +251,7 @@ nw_tcp_options_set_persist_timeout(nw_protocol_options_t options,
  * @param retransmit_connection_drop_time
  *		A timeout for TCP retransmission attempts, in seconds.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_retransmit_connection_drop_time(nw_protocol_options_t options,
 												   uint32_t retransmit_connection_drop_time);
@@ -270,7 +270,7 @@ nw_tcp_options_set_retransmit_connection_drop_time(nw_protocol_options_t options
  *		A boolean to cause TCP to drop its connection after
  *		not receiving an ACK after a FIN.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_retransmit_fin_drop(nw_protocol_options_t options,
 									   bool retransmit_fin_drop);
@@ -288,7 +288,7 @@ nw_tcp_options_set_retransmit_fin_drop(nw_protocol_options_t options,
  * @param disable_ack_stretching
  *		A boolean to cause TCP to disable ACK stretching.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_disable_ack_stretching(nw_protocol_options_t options,
 										  bool disable_ack_stretching);
@@ -313,7 +313,7 @@ nw_tcp_options_set_disable_ack_stretching(nw_protocol_options_t options,
  * @param enable_fast_open
  *		A boolean to enable TFO.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_enable_fast_open(nw_protocol_options_t options,
 									bool enable_fast_open);
@@ -331,7 +331,7 @@ nw_tcp_options_set_enable_fast_open(nw_protocol_options_t options,
  * @param disable_ecn
  *		A boolean to disable ECN support in TCP.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_tcp_options_set_disable_ecn(nw_protocol_options_t options,
 							   bool disable_ecn);
@@ -363,7 +363,7 @@ typedef enum {
  * @param multipath_force_version
  *		The MPTCP version.
  */
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 void
 nw_tcp_options_set_multipath_force_version(nw_protocol_options_t options,
 										   nw_multipath_version_t multipath_force_version);
@@ -382,7 +382,7 @@ nw_tcp_options_set_multipath_force_version(nw_protocol_options_t options,
  *		Returns true if the metadata is for the default system TCP,
  *		false otherwise.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 bool
 nw_protocol_metadata_is_tcp(nw_protocol_metadata_t metadata);
 
@@ -395,7 +395,7 @@ nw_protocol_metadata_is_tcp(nw_protocol_metadata_t metadata);
  * @result
  *		The number of bytes available in the receive buffer.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint32_t
 nw_tcp_get_available_receive_buffer(nw_protocol_metadata_t metadata);
 
@@ -408,7 +408,7 @@ nw_tcp_get_available_receive_buffer(nw_protocol_metadata_t metadata);
  * @result
  *		The number of bytes waiting to be acknowledged.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 uint32_t
 nw_tcp_get_available_send_buffer(nw_protocol_metadata_t metadata);
 

@@ -167,7 +167,7 @@ API_AVAILABLE(ios(6.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
     formats should also query AVAudioSession's maximumOutputNumberOfChannels property and make use of
     -setPreferredOutputNumberOfChannels:error: to set the preferred number of hardware channels.
 */
-@property (readonly, getter=isSpatialAudioEnabled) BOOL spatialAudioEnabled API_AVAILABLE(ios(15.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
+@property (readonly, getter=isSpatialAudioEnabled) BOOL spatialAudioEnabled API_AVAILABLE(ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
 
 @property (readonly, nonatomic, nullable) NSArray<AVAudioSessionChannelDescription *> *channels API_AVAILABLE(ios(6.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos);
 

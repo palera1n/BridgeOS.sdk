@@ -34,7 +34,7 @@ __API_DEPRECATED("Use `SPRotation3DMake(SPAngle angle, SPRotationAxis3D axis)`."
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DMake(SPAngle angle, SPRotationAxis3D axis)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract  Returns the rotation represented as a normalized quaternion.
@@ -45,7 +45,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 simd_quatd SPRotation3DGetQuaternion(SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rotation from the specified quaternion.
@@ -56,13 +56,13 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DMakeWithQuaternion(simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /// Returns @p true if both rotations are equal.
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRotation3DEqualToRotation(SPRotation3D rotation1, SPRotation3D rotation2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 // MARK: - Header inline implementations
 
@@ -123,7 +123,7 @@ bool SPRotation3DEqualToRotation(SPRotation3D rotation1, SPRotation3D rotation2)
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DMakeLookAt(SPPoint3D position, SPPoint3D target, SPVector3D up)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -150,7 +150,7 @@ SPRotation3D SPRotation3DMakeLookAt(SPPoint3D position, SPPoint3D target, SPVect
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DMakeLookAt(SPPoint3D target, SPVector3D up)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -172,7 +172,7 @@ SPRotation3D SPRotation3DMakeLookAt(SPPoint3D target, SPVector3D up) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DMakeLookAt(SPVector3D forward, SPVector3D up)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(Rotation3D.init(forward:up:))
 SPATIAL_OVERLOADABLE
@@ -225,7 +225,7 @@ typedef enum: uint32_t {
     Spatial applies these rotations extrinsically in the specified order: rotation around the world space x-axis,
     then rotation around the world space y-axis, then rotation around the world space z-axis.
     */
-   SPEulerXYZ SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0)) = 0x0001,
+   SPEulerXYZ SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) = 0x0001,
     
     /*!
      @abstract Roll-Pitch-Yaw
@@ -242,10 +242,10 @@ typedef enum: uint32_t {
      Spatial applies these rotations extrinsically in the specified order: rotation around the world space z-axis,
      then rotation around the world space x-axis, then rotation around the world space y-axis.
      */
-    SPEulerZXY SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0)) = 0x0002,
+    SPEulerZXY SPATIAL_REFINED_FOR_SWIFT __API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) = 0x0002,
 } SPEulerAngleOrder
 SPATIAL_REFINED_FOR_SWIFT
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract A structure that represents Euler angles, in radians, and ordering.
@@ -262,7 +262,7 @@ typedef struct {
     SPEulerAngleOrder order;
 } SPEulerAngles
 SPATIAL_SWIFT_NAME(EulerAngles)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns a rotation structure from the specified Euler angles.
@@ -273,7 +273,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DMakeWithEulerAngles(SPEulerAngles eulerAngles)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 /*!
  @abstract Returns the Euler angles, in radians, from the specified rotation structure.
@@ -285,7 +285,7 @@ __API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPEulerAngles SPRotation3DGetEulerAngles(SPRotation3D rotation, SPEulerAngleOrder order)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 
 SPATIAL_SWIFT_NAME(Rotation3D.init(eulerAngles:))
@@ -422,7 +422,7 @@ SPEulerAngles SPRotation3DGetEulerAngles(SPRotation3D rotation, SPEulerAngleOrde
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPAngle SPRotation3DGetAngle(SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -443,7 +443,7 @@ SPAngle SPRotation3DGetAngle(SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 void SPRotation3DSetAngle(SPRotation3D *rotation, SPAngle angle)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -465,7 +465,7 @@ void SPRotation3DSetAngle(SPRotation3D *rotation, SPAngle angle) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotationAxis3D SPRotation3DGetAxis(SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -491,7 +491,7 @@ SPRotationAxis3D SPRotation3DGetAxis(SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 void SPRotation3DSetAxis(SPRotation3D *rotation, SPRotationAxis3D axis)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -537,7 +537,7 @@ bool SPRotation3DIsZero(SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRotation3DIsIdentity(SPRotation3D rotation)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_SWIFT_NAME(getter:Rotation3D.isIdentity(self:))
 SPATIAL_OVERLOADABLE
@@ -559,7 +559,7 @@ bool SPRotation3DIsIdentity(SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DSlerp(SPRotation3D from, SPRotation3D to, double t)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -583,7 +583,7 @@ SPRotation3D SPRotation3DSlerp(SPRotation3D from, SPRotation3D to, double t) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DSlerpLongest(SPRotation3D from, SPRotation3D to, double t)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -602,7 +602,7 @@ SPRotation3D SPRotation3DSlerpLongest(SPRotation3D from, SPRotation3D to, double
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DInverse(SPRotation3D rotation)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_SWIFT_NAME(getter:Rotation3D.inverse(self:))
 SPATIAL_OVERLOADABLE
@@ -622,7 +622,7 @@ SPRotation3D SPRotation3DInverse(SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DTwist(SPRotation3D rotation, SPRotationAxis3D twistAxis)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_SWIFT_NAME(Rotation3D.twist(self:twistAxis:))
 SPATIAL_OVERLOADABLE
@@ -647,7 +647,7 @@ SPRotation3D SPRotation3DTwist(SPRotation3D rotation, SPRotationAxis3D twistAxis
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRotation3D SPRotation3DSwing(SPRotation3D rotation, SPRotationAxis3D twistAxis)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_SWIFT_NAME(Rotation3D.swing(self:twistAxis:))
 SPATIAL_OVERLOADABLE

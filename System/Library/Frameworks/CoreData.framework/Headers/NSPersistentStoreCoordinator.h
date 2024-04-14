@@ -121,7 +121,7 @@ COREDATA_EXTERN NSString * const NSCoreDataCoreSpotlightExporter API_AVAILABLE(m
  * appropriate time (when the model matches the stage model references). The stages array must contain a total ordering
  * of all models to be applied to the store using the aforementioned sub-classes.
  */
-COREDATA_EXTERN NSString * const NSPersistentStoreStagedMigrationManagerOptionKey API_AVAILABLE(macosx(14.0),ios(17.0),tvos(17.0),watchos(10.0));
+COREDATA_EXTERN NSString * const NSPersistentStoreStagedMigrationManagerOptionKey API_AVAILABLE(macosx(14.0),ios(17.0), bridgeos(8.0),tvos(17.0),watchos(10.0));
 
 /* Values to be passed with NSExternalRecordsFileFormatOption indicating the format used when writing external records. 
    The files are serialized dictionaries. 
@@ -166,14 +166,14 @@ COREDATA_EXTERN NSString * const NSPersistentStoreForceDestroyOption API_AVAILAB
 COREDATA_EXTERN NSString * const NSPersistentStoreFileProtectionKey API_AVAILABLE(ios(5.0)) API_UNAVAILABLE(macosx);
 
 /* Dictionary key for enabling persistent history - default is NO */
-COREDATA_EXTERN NSString * const NSPersistentHistoryTrackingKey API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+COREDATA_EXTERN NSString * const NSPersistentHistoryTrackingKey API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
 /*
  Allows developers to provide an additional set of classes (which must implement NSSecureCoding) that should be used while
  decoding a binary store.
  Using this option is preferable to using NSBinaryStoreInsecureDecodingCompatibilityOption.
  */
-COREDATA_EXTERN NSString * const NSBinaryStoreSecureDecodingClasses API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+COREDATA_EXTERN NSString * const NSBinaryStoreSecureDecodingClasses API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
 /*
  Indicate that the binary store should be decoded insecurely. This may be necessary if a store has metadata or transformable
@@ -181,21 +181,21 @@ COREDATA_EXTERN NSString * const NSBinaryStoreSecureDecodingClasses API_AVAILABL
  to specify the contained classes, allowing the binary store to to be securely decoded.
  Applications linked before the availability date will default to using this option.
  */
-COREDATA_EXTERN NSString * const NSBinaryStoreInsecureDecodingCompatibilityOption API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+COREDATA_EXTERN NSString * const NSBinaryStoreInsecureDecodingCompatibilityOption API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
 /* When NSPersistentStoreRemoteChangeNotificationPostOptionKey is set to YES, a NSPersistentStoreRemoteChangeNotification is posted for every
  write to the store, this includes writes that are done by other processes
  */
-COREDATA_EXTERN NSString * const NSPersistentStoreRemoteChangeNotificationPostOptionKey API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0));
+COREDATA_EXTERN NSString * const NSPersistentStoreRemoteChangeNotificationPostOptionKey API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0));
 
 /* NSPersistentStoreRemoteChangeNotification is posted for all cross process writes to the store
  The payload is the store UUID (NSStoreUUIDKey), store URL (NSPersistentStoreURLKey), and NSPersistentHistoryToken for the transaction (if NSPersistentHistoryTrackingKey was also set)
  */
-COREDATA_EXTERN NSString * const NSPersistentStoreRemoteChangeNotification API_AVAILABLE(macosx(10.14),ios(12.0),tvos(12.0),watchos(5.0));
+COREDATA_EXTERN NSString * const NSPersistentStoreRemoteChangeNotification API_AVAILABLE(macosx(10.14),ios(12.0), bridgeos(3.0),tvos(12.0),watchos(5.0));
 
 /* Keys found in the UserInfo for a NSPersistentStoreRemoteChangeNotification */
-COREDATA_EXTERN NSString * const NSPersistentStoreURLKey API_AVAILABLE(macosx(10.14),ios(12.0),tvos(12.0),watchos(5.0));
-COREDATA_EXTERN NSString * const NSPersistentHistoryTokenKey API_AVAILABLE(macosx(10.14),ios(12.0),tvos(12.0),watchos(5.0));
+COREDATA_EXTERN NSString * const NSPersistentStoreURLKey API_AVAILABLE(macosx(10.14),ios(12.0), bridgeos(3.0),tvos(12.0),watchos(5.0));
+COREDATA_EXTERN NSString * const NSPersistentHistoryTokenKey API_AVAILABLE(macosx(10.14),ios(12.0), bridgeos(3.0),tvos(12.0),watchos(5.0));
 
 /*
   
@@ -212,7 +212,7 @@ COREDATA_EXTERN NSString * const NSPersistentHistoryTokenKey API_AVAILABLE(macos
   table transformations can be processed by invoking finishDeferredLightweightMigration on the Persistent Store Coordinator.
  
  */
-COREDATA_EXTERN NSString * const NSPersistentStoreDeferredLightweightMigrationOptionKey API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0));
+COREDATA_EXTERN NSString * const NSPersistentStoreDeferredLightweightMigrationOptionKey API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0));
 
 API_AVAILABLE(macosx(10.4),ios(3.0)) NS_SWIFT_SENDABLE
 @interface NSPersistentStoreCoordinator : NSObject <NSLocking> {
@@ -309,13 +309,13 @@ API_AVAILABLE(macosx(10.4),ios(3.0)) NS_SWIFT_SENDABLE
 - (void)performBlockAndWait:(void (NS_NOESCAPE ^)(void))block  API_AVAILABLE(macosx(10.10),ios(8.0));
 
 /* Constructs a combined NSPersistentHistoryToken given an array of persistent stores. If stores is nil or an empty array, the NSPersistentHistoryToken will be constructed with all of the persistent stores in the coordinator. */
-- (nullable NSPersistentHistoryToken *)currentPersistentHistoryTokenFromStores:(nullable NSArray*)stores API_AVAILABLE(macosx(10.14),ios(12.0),tvos(12.0),watchos(5.0));
+- (nullable NSPersistentHistoryToken *)currentPersistentHistoryTokenFromStores:(nullable NSArray*)stores API_AVAILABLE(macosx(10.14),ios(12.0), bridgeos(3.0),tvos(12.0),watchos(5.0));
 
 // Finish deferred work from lightweight migration
-- (BOOL)finishDeferredLightweightMigration:(NSError **)error API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0));
+- (BOOL)finishDeferredLightweightMigration:(NSError **)error API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0));
 
 // Finish deferred work from lightweight migration for a single table
-- (BOOL)finishDeferredLightweightMigrationTask:(NSError **)error API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0));
+- (BOOL)finishDeferredLightweightMigrationTask:(NSError **)error API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0));
 
  /*
   *   DEPRECATED

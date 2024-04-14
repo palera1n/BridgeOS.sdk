@@ -15,14 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @class NSPersistentHistoryTransaction;
 @class NSPersistentHistoryToken;
 
-API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0))
+API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0))
 @interface NSPersistentHistoryChangeRequest : NSPersistentStoreRequest {
 }
 
 + (nonnull instancetype)fetchHistoryAfterDate:(NSDate *)date;
 + (nonnull instancetype)fetchHistoryAfterToken:(nullable NSPersistentHistoryToken *)token;
 + (nonnull instancetype)fetchHistoryAfterTransaction:(nullable NSPersistentHistoryTransaction *)transaction;
-+ (nonnull instancetype)fetchHistoryWithFetchRequest:(NSFetchRequest *)fetchRequest API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0));
++ (nonnull instancetype)fetchHistoryWithFetchRequest:(NSFetchRequest *)fetchRequest API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0));
 
 + (nonnull instancetype)deleteHistoryBeforeDate:(NSDate *)date;
 + (nonnull instancetype)deleteHistoryBeforeToken:(nullable NSPersistentHistoryToken *)token;
@@ -31,7 +31,7 @@ API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0))
 // The type of result that should be returned from this request. Defaults to NSPersistentHistoryResultTypeTransactionsAndChanges
 @property NSPersistentHistoryResultType resultType;
 @property (nullable,readonly,strong) NSPersistentHistoryToken *token;
-@property (nullable,nonatomic,strong) NSFetchRequest *fetchRequest API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0));
+@property (nullable,nonatomic,strong) NSFetchRequest *fetchRequest API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0));
 
 @end
 

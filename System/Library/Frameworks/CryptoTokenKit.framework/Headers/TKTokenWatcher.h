@@ -7,7 +7,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0))
 NS_SWIFT_NAME(TKTokenWatcher.TokenInfo)
 @interface TKTokenWatcherTokenInfo : NSObject
 
@@ -54,7 +54,7 @@ API_AVAILABLE(macos(10.13), ios(11.0));
 /// @param tokenID specified tokenID
 /// @return A TokenInfo object, or nil if tokenID does not exist
 - (nullable TKTokenWatcherTokenInfo *)tokenInfoForTokenID:(NSString *) tokenID
-API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 @end
 

@@ -751,13 +751,13 @@ CM_EXPORT const CFStringRef kCMFormatDescriptionTransferFunction_ITU_R_2020					
 CM_EXPORT const CFStringRef kCMFormatDescriptionTransferFunction_SMPTE_ST_428_1									// same as kCVImageBufferTransferFunction_SMPTE_ST_428_1
 							API_AVAILABLE(macos(10.12), ios(10.0), tvos(10.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionTransferFunction_SMPTE_ST_2084_PQ								// same as kCVImageBufferTransferFunction_SMPTE_ST_2084_PQ
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionTransferFunction_ITU_R_2100_HLG								// same as kCVImageBufferTransferFunction_ITU_R_2100_HLG
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionTransferFunction_Linear											// same as kCVImageBufferTransferFunction_Linear
-							API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(6.0));
+							API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionTransferFunction_sRGB										// same as kCVImageBufferTransferFunction_sRGB
-							API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+							API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_GammaLevel API_AVAILABLE(macos(10.11), ios(9.0), tvos(9.0), watchos(6.0));
 #define kCMFormatDescriptionExtension_GammaLevel				kCVImageBufferGammaLevelKey						// CFNumber describing the gamma level, used in absence of (or ignorance of) kCMFormatDescriptionExtension_TransferFunction
@@ -805,7 +805,7 @@ CM_EXPORT const CFStringRef kCMFormatDescriptionChromaLocation_DV420 API_AVAILAB
 /* MPEG-2-conformant formats */
 CM_EXPORT const CFStringRef kCMFormatDescriptionConformsToMPEG2VideoProfile			// CFNumber specifying a kCMMPEG2VideoProfile_*
 							API_AVAILABLE(macos(10.7), ios(4.0), tvos(9.0), watchos(6.0));
-CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_ProtectedContentOriginalFormat API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0)); // CNNumberRef as FourCharCode
+CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_ProtectedContentOriginalFormat API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0)); // CNNumberRef as FourCharCode
 
 #if COREMEDIA_USE_DERIVED_ENUMS_FOR_CONSTANTS
 enum : int32_t
@@ -872,32 +872,32 @@ CM_EXPORT const CFStringRef kCMFormatDescriptionVendor_Apple
 							API_AVAILABLE(macos(10.7), ios(4.0), tvos(9.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_MasteringDisplayColorVolume	// CFData(24 bytes); big-endian structure; same as kCVImageBufferMasteringDisplayColorVolumeKey; matches payload of ISO/IEC 23008-2:2015(E), D.2.28 Mastering display colour volume SEI message
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_ContentLightLevelInfo			// CFData(4 bytes); big-endian structure; same as kCVImageBufferContentLightLevelInfoKey
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_ContentColorVolume			// CFData; big-endian structure; same as kCVImageBufferContentColorVolumeKey (to be added); matches payload of ITU-T-H.265:11/2019, D.2.40 Content Colour Volume SEI message
-							API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+							API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_AlternativeTransferCharacteristics	// CFString (usually kCMFormatDescriptionTransferFunction_ITU_R_2100_HLG when used); corresponds to D.2.38 Alternative Transfer Characteristics SEI message
-							API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(6.0));
+							API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_AuxiliaryTypeInfo
-							API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0)); // CFString (Auxiliary type URN)
+							API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0)); // CFString (Auxiliary type URN)
 	
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_AlphaChannelMode	// one of:
-							API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+							API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionAlphaChannelMode_StraightAlpha
-							API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+							API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 CM_EXPORT const CFStringRef kCMFormatDescriptionAlphaChannelMode_PremultipliedAlpha
-							API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+							API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_ContainsAlphaChannel	// CFBoolean; used to signal the presence of alpha channel in the bitstream.
-							API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0));
+							API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0));
 
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_BitsPerComponent 	// CFNumber (such as 8, 10, 12, 16, etc). Bit-depth per component -- if there are components with different bit depths this should be the deepest. Do not rely on this extension always being present, as it often isn't.
-							API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+							API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 CM_EXPORT const CFStringRef kCMFormatDescriptionExtension_HorizontalFieldOfView	// CFNumber; horizontal field of view in thousandths of a degree (i.e., 123456 is 123.456 degrees).
-							API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+							API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
 	@constant    kCMFormatDescriptionExtension_LogTransferFunction
@@ -1071,7 +1071,7 @@ OSStatus CMVideoFormatDescriptionCreateFromHEVCParameterSets(
 																				CFDictionary, CFDate, CFBoolean, or CFNumber). Can be NULL. */
 	CM_RETURNS_RETAINED_PARAMETER CMFormatDescriptionRef CM_NULLABLE * CM_NONNULL formatDescriptionOut )	/*! @param formatDescriptionOut
 																				 Returned newly-created video CMFormatDescription */
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 					
 CF_IMPLICIT_BRIDGING_ENABLED
 
@@ -1121,7 +1121,7 @@ OSStatus CMVideoFormatDescriptionGetHEVCParameterSetAtIndex(
 																			 Number of parameter sets in the HEVC decoder configuration record contained in videoDesc. Pass NULL if you do not want this information. */
 		int * CM_NULLABLE NALUnitHeaderLengthOut )						/*! @param NALUnitHeaderLengthOut
 																			 Points to an int to receive the size, in bytes, of the NALUnitLength field in an HEVC video sample or HEVC parameter set sample. Pass NULL if you do not want this information. */
-							API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(6.0));
+							API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(6.0));
 
 #define CMVideoFormatDescriptionGetCodecType(desc)  CMFormatDescriptionGetMediaSubType(desc)
 
@@ -1230,7 +1230,7 @@ Boolean CMVideoFormatDescriptionMatchesImageBuffer(
 */
 CM_EXPORT OSStatus CMVideoFormatDescriptionCopyTagCollectionArray(
 	CMVideoFormatDescriptionRef CM_NONNULL formatDescription,
-	CM_RETURNS_RETAINED_PARAMETER CFArrayRef CM_NULLABLE *tagCollectionsOut) CF_REFINED_FOR_SWIFT API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+	CM_RETURNS_RETAINED_PARAMETER CFArrayRef CM_NULLABLE *tagCollectionsOut) CF_REFINED_FOR_SWIFT API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 #pragma mark CMTaggedBufferGroupFormatDescription
 
@@ -1253,7 +1253,7 @@ enum
 #endif
 {
 	kCMTaggedBufferGroupFormatType_TaggedBufferGroup        = 'tbgr',
-} CF_REFINED_FOR_SWIFT API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+} CF_REFINED_FOR_SWIFT API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 // See CMTaggedBufferGroup.h for CMTaggedBufferGroupFormatDescriptionCreateForTaggedBufferGroup and CMTaggedBufferGroupFormatDescriptionMatchesTaggedBufferGroup
 
@@ -1290,7 +1290,7 @@ enum
 	kCMMuxedStreamType_MPEG2Transport	= 'mp2t',
 	kCMMuxedStreamType_MPEG2Program		= 'mp2p',
 	kCMMuxedStreamType_DV				= 'dv  ',
-	kCMMuxedStreamType_EmbeddedDeviceScreenRecording API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0)) = 'isr '
+	kCMMuxedStreamType_EmbeddedDeviceScreenRecording API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0)) = 'isr '
 } API_AVAILABLE(macos(10.7), ios(4.0), tvos(9.0), watchos(6.0));
 
 #define CMMuxedFormatDescriptionGetStreamType(desc)  CMFormatDescriptionGetMediaSubType(desc)
@@ -1504,7 +1504,7 @@ CM_EXPORT const CFStringRef kCMTextFormatDescriptionExtension_TextJustification 
 CM_EXPORT const CFStringRef kCMTextFormatDescriptionExtension_DefaultFontName              // CFString
 								API_AVAILABLE(macos(10.7), ios(4.0), tvos(9.0), watchos(6.0));
 CM_EXPORT const CFStringRef CM_NONNULL kCMFormatDescriptionExtension_AmbientViewingEnvironment	// CFData(8 bytes); big-endian structure; same as kCVImageBufferAmbientViewingEnvironmentKey; matches payload of ISO/IEC 23008-2:2017, D.2.39 ambient viewing environment SEI message
-								API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0));
+								API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 
 CM_ASSUME_NONNULL_END

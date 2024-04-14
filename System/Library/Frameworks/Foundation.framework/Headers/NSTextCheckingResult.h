@@ -65,7 +65,7 @@ API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0))
 /* A result must have at least one range, but may optionally have more (for example, to represent regular expression capture groups).  The range at index 0 always matches the range property.  Additional ranges, if any, will have indexes from 1 to numberOfRanges-1. rangeWithName: can be used with named regular expression capture groups. */
 @property (readonly) NSUInteger numberOfRanges API_AVAILABLE(macos(10.7), ios(4.0), watchos(2.0), tvos(9.0));
 - (NSRange)rangeAtIndex:(NSUInteger)idx API_AVAILABLE(macos(10.7), ios(4.0), watchos(2.0), tvos(9.0));
-- (NSRange)rangeWithName:(NSString *)name API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (NSRange)rangeWithName:(NSString *)name API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 - (NSTextCheckingResult *)resultByAdjustingRangesWithOffset:(NSInteger)offset API_AVAILABLE(macos(10.7), ios(5.0), watchos(2.0), tvos(9.0));
 
 @property (nullable, readonly, copy) NSDictionary<NSTextCheckingKey, NSString *> *addressComponents;    // Deprecated in favor of components

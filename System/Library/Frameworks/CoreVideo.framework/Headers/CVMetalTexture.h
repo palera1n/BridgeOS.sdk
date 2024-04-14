@@ -80,13 +80,13 @@ CV_EXPORT void CVMetalTextureGetCleanTexCoords( CVMetalTextureRef CV_NONNULL ima
 /*!
     @discussion kCVMetalTextureUsage is a property that can be placed on a CVMetalTextureCache to instruct the MTLTextureUsage of the created MTLTexture. Values for this can can be read from MTLTexture.h
  */
-CV_EXPORT const CFStringRef CV_NONNULL kCVMetalTextureUsage API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0)) API_UNAVAILABLE(watchos);
+CV_EXPORT const CFStringRef CV_NONNULL kCVMetalTextureUsage API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0)) API_UNAVAILABLE(watchos);
 	
 	
 /*!
  @discussion kCVMetalTextureStorageMode is a property that can be placed on a CVMetalTextureCache to instruct the MTLTextureStorageMode of the created MTLTexture. Values for this can can be read from MTLTexture.h
  */
-CV_EXPORT const CFStringRef CV_NONNULL kCVMetalTextureStorageMode API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0)) API_UNAVAILABLE(watchos);
+CV_EXPORT const CFStringRef CV_NONNULL kCVMetalTextureStorageMode API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), tvos(13.0)) API_UNAVAILABLE(watchos);
 
 #endif // COREVIDEO_SUPPORTS_METAL
 	

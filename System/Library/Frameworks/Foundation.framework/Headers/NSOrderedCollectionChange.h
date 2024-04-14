@@ -9,9 +9,9 @@ NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 typedef NS_ENUM(NSInteger, NSCollectionChangeType) {
     NSCollectionChangeInsert,
     NSCollectionChangeRemove
-} API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+} API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
-API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 @interface NSOrderedCollectionChange<ObjectType> : NSObject
 #ifndef __OBJC2__
 {

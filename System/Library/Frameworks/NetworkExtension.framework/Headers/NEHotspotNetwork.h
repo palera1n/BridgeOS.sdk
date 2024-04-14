@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, NEHotspotNetworkSecurityType) {
 	NEHotspotNetworkSecurityTypeEnterprise = 3,
 	/*! @const NEHotspotNetworkSecurityTypeUnknown Unknown security type*/
 	NEHotspotNetworkSecurityTypeUnknown = 4
-} API_AVAILABLE(ios(15.0), watchos(8.0), macCatalyst(15.0)) API_UNAVAILABLE(macos, tvos);
+} API_AVAILABLE(ios(15.0), bridgeos(6.0), watchos(8.0), macCatalyst(15.0)) API_UNAVAILABLE(macos, tvos);
 
 
 /*!
@@ -62,7 +62,7 @@ API_AVAILABLE(ios(9.0), watchos(7.0), macCatalyst(14.0)) API_UNAVAILABLE(macos, 
  * @discussion The security type of the Wi-Fi network.
  */
 @property (readonly) NEHotspotNetworkSecurityType securityType
-API_AVAILABLE(ios(15.0), watchos(8.0), macCatalyst(15.0)) API_UNAVAILABLE(macos, tvos);
+API_AVAILABLE(ios(15.0), bridgeos(6.0), watchos(8.0), macCatalyst(15.0)) API_UNAVAILABLE(macos, tvos);
 
 /*!
  * @method fetchCurrentWithCompletionHandler:completionHandler:
@@ -80,7 +80,7 @@ API_AVAILABLE(ios(15.0), watchos(8.0), macCatalyst(15.0)) API_UNAVAILABLE(macos,
  *   SSID, BSSID and security type values, when the block is passed non-nil object.This block is executed on application's
  *   main queue.
  */
-+ (void)fetchCurrentWithCompletionHandler:(void (^)(NEHotspotNetwork * __nullable currentNetwork))completionHandler API_AVAILABLE(ios(14.0), watchos(7.0), macCatalyst(14.0)) API_UNAVAILABLE(macos, tvos);
++ (void)fetchCurrentWithCompletionHandler:(void (^)(NEHotspotNetwork * __nullable currentNetwork))completionHandler API_AVAILABLE(ios(14.0), bridgeos(5.0), watchos(7.0), macCatalyst(14.0)) API_UNAVAILABLE(macos, tvos);
 
 @end
 

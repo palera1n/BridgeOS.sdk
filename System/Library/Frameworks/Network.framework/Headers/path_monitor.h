@@ -50,7 +50,7 @@ NW_OBJECT_DECL(nw_path_monitor);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_path_monitor_t
 nw_path_monitor_create(void);
 
@@ -70,7 +70,7 @@ nw_path_monitor_create(void);
  *		These objects support ARC.
  *		Returns NULL on failure. Fails due to invalid parameters.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 NW_RETURNS_RETAINED nw_path_monitor_t
 nw_path_monitor_create_with_type(nw_interface_type_t required_interface_type);
 
@@ -104,7 +104,7 @@ nw_path_monitor_create_for_ethernet_channel(void);
  * @param interface_type
  *		The interface type to prohibit for the path monitor.
  */
-API_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 void
 nw_path_monitor_prohibit_interface_type(nw_path_monitor_t monitor,
 										nw_interface_type_t interface_type);
@@ -133,7 +133,7 @@ typedef void (^nw_path_monitor_cancel_handler_t)(void);
  * @param cancel_handler
  *		The block to call upon cancellation. Pass NULL to remove the cancel handler.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_path_monitor_set_cancel_handler(nw_path_monitor_t monitor,
 								   nw_path_monitor_cancel_handler_t cancel_handler);
@@ -158,7 +158,7 @@ typedef void (^nw_path_monitor_update_handler_t) (nw_path_t path);
  * @param update_handler
  *		The block to call when the path changes.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_path_monitor_set_update_handler(nw_path_monitor_t monitor,
 								   nw_path_monitor_update_handler_t update_handler);
@@ -177,7 +177,7 @@ nw_path_monitor_set_update_handler(nw_path_monitor_t monitor,
  * @param queue
  *		The dispatch queue on which to call the update and cancel handlers.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_path_monitor_set_queue(nw_path_monitor_t monitor,
 						  dispatch_queue_t queue);
@@ -190,7 +190,7 @@ nw_path_monitor_set_queue(nw_path_monitor_t monitor,
  * @param monitor
  *		The path monitor object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_path_monitor_start(nw_path_monitor_t monitor);
 
@@ -203,7 +203,7 @@ nw_path_monitor_start(nw_path_monitor_t monitor);
  * @param monitor
  *		The path monitor object.
  */
-API_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 void
 nw_path_monitor_cancel(nw_path_monitor_t monitor);
 

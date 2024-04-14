@@ -392,15 +392,15 @@ mode_t  umask(mode_t);
 int     fchmodat(int, const char *, mode_t, int) __OSX_AVAILABLE_STARTING(__MAC_10_10, __IPHONE_8_0);
 int     fstatat(int, const char *, struct stat *, int) __DARWIN_INODE64(fstatat) __OSX_AVAILABLE_STARTING(__MAC_10_10, __IPHONE_8_0);
 int     mkdirat(int, const char *, mode_t) __OSX_AVAILABLE_STARTING(__MAC_10_10, __IPHONE_8_0);
-int     mkfifoat(int, const char *, mode_t) __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0));
-int     mknodat(int, const char *, mode_t, dev_t) __API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0));
+int     mkfifoat(int, const char *, mode_t) __API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0));
+int     mknodat(int, const char *, mode_t, dev_t) __API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0));
 
 #define UTIME_NOW       -1
 #define UTIME_OMIT      -2
 
-int     futimens(int __fd, const struct timespec __times[2]) __API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+int     futimens(int __fd, const struct timespec __times[2]) __API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 int     utimensat(int __fd, const char *__path, const struct timespec __times[2],
-    int __flag) __API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+    int __flag) __API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 #endif
 __END_DECLS
 

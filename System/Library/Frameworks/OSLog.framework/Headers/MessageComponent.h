@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, OSLogMessageComponentArgumentCategory) {
     OSLogMessageComponentArgumentCategoryString,
     OSLogMessageComponentArgumentCategoryUInt64,
 }
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0))
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0))
 NS_SWIFT_NAME(OSLogMessageComponent.ArgumentCategory);
 
 /*!
@@ -39,7 +39,7 @@ NS_SWIFT_NAME(OSLogMessageComponent.ArgumentCategory);
  * component for each placeholder in the formatString plus one
  * component for any text after the last placeholder.
  */
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0))
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0))
 OS_EXPORT
 @interface OSLogMessageComponent : NSObject <NSSecureCoding>
 
@@ -52,7 +52,7 @@ OS_EXPORT
  * between the placeholder and the bounds of the string.
  */
 @property (nonatomic, readonly) NSString *formatSubstring
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property placeholder
@@ -61,7 +61,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * The placeholder text. Is empty for is the last component.
  */
 @property (nonatomic, readonly) NSString *placeholder
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property argumentCategory
@@ -71,7 +71,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * OSLogMessageComponentArgumentCategory.
  */
 @property (nonatomic, readonly) OSLogMessageComponentArgumentCategory argumentCategory
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property argumentDataValue
@@ -82,7 +82,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * redacted), or if this is the last component.
  */
 @property (nonatomic, readonly, nullable) NSData *argumentDataValue
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property argumentDoubleValue
@@ -93,7 +93,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * is the last component.
  */
 @property (nonatomic, readonly) double argumentDoubleValue
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property argumentInt64Value
@@ -103,7 +103,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * if it cannot be decoded or if this is the last component.
  */
 @property (nonatomic, readonly) int64_t argumentInt64Value
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property argumentNumberValue
@@ -114,7 +114,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * the last component.
  */
 @property (nonatomic, readonly, nullable) NSNumber *argumentNumberValue
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property argumentStringValue
@@ -125,7 +125,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * the last component.
  */
 @property (nonatomic, readonly, nullable) NSString *argumentStringValue
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 /*!
  * @property argumentUInt64Value
@@ -136,7 +136,7 @@ API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
  * last component.
  */
 @property (nonatomic, readonly) uint64_t argumentUInt64Value
-API_AVAILABLE(macos(10.15), ios(15.0), tvos(15.0), watchos(8.0));
+API_AVAILABLE(macos(10.15), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0));
 
 @end
 

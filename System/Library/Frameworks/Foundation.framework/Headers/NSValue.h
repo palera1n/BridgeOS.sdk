@@ -10,7 +10,7 @@ NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 
 @interface NSValue : NSObject <NSCopying, NSSecureCoding>
 
-- (void)getValue:(void *)value size:(NSUInteger)size API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (void)getValue:(void *)value size:(NSUInteger)size API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 @property (readonly) const char *objCType NS_RETURNS_INNER_POINTER;
 

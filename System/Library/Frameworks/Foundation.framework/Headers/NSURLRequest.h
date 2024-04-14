@@ -167,7 +167,7 @@ typedef NS_ENUM(NSUInteger, NSURLRequestAttribution)
 {
     NSURLRequestAttributionDeveloper = 0,
     NSURLRequestAttributionUser = 1,
-} API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+} API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /*!
     @class NSURLRequest
@@ -324,7 +324,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
  @result YES if the receiver is allowed to use an interface marked as expensive to
  satisfy the request, NO otherwise.
  */
-@property (readonly) BOOL allowsExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) BOOL allowsExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
  @abstract returns whether a connection created with this request is allowed to use
@@ -332,7 +332,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
  @result YES if the receiver is allowed to use an interface marked as constrained to
  satisfy the request, NO otherwise.
  */
-@property (readonly) BOOL allowsConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (readonly) BOOL allowsConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
  @abstract returns whether we assume that server supports HTTP/3. Enables QUIC
@@ -348,7 +348,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
  have not explicitly set an attribution.
  @result The NSURLRequestAttribution associated with this request.
  */
-@property (readonly) NSURLRequestAttribution attribution API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+@property (readonly) NSURLRequestAttribution attribution API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /*!
  @abstract sets whether a request is required to do DNSSEC validation during DNS lookup.
@@ -451,7 +451,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
  @discussion NO if the receiver should not be allowed to use an interface marked as expensive to
  satisfy the request, YES otherwise.
  */
-@property BOOL allowsExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property BOOL allowsExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
  @abstract sets whether a connection created with this request is allowed to use
@@ -459,7 +459,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
  @discussion NO if the receiver should not be allowed to use an interface marked as constrained to
  satisfy the request, YES otherwise.
  */
-@property BOOL allowsConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property BOOL allowsConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
  @abstract returns whether we assume that server supports HTTP/3. Enables QUIC
@@ -474,7 +474,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
  @discussion Set to NSURLRequestAttributionUser if the URL was specified by the
  user. Defaults to NSURLRequestAttributionDeveloper.
  */
-@property NSURLRequestAttribution attribution API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+@property NSURLRequestAttribution attribution API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /*!
  @abstract sets whether a request is required to do DNSSEC validation during DNS lookup.

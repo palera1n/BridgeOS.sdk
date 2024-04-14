@@ -201,7 +201,7 @@ typedef enum {
  * @result
  *		Returns a retained protocol definition object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_protocol_definition_t
 nw_protocol_copy_ws_definition(void);
 
@@ -218,7 +218,7 @@ nw_protocol_copy_ws_definition(void);
  * @result
  *		Returns a retained protocol options object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_protocol_options_t
 nw_ws_create_options(nw_ws_version_t version);
 
@@ -238,7 +238,7 @@ nw_ws_create_options(nw_ws_version_t version);
  * @param value
  *		The HTTP header value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_options_add_additional_header(nw_protocol_options_t options,
 									const char *name, const char *value);
@@ -256,7 +256,7 @@ nw_ws_options_add_additional_header(nw_protocol_options_t options,
  * @param subprotocol
  *		The subprotocol supported by the client.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_options_add_subprotocol(nw_protocol_options_t options,
 							  const char *subprotocol);
@@ -277,7 +277,7 @@ nw_ws_options_add_subprotocol(nw_protocol_options_t options,
  *		Whether the WebSocket connection should automatically reply to all
  *		incoming pings.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_options_set_auto_reply_ping(nw_protocol_options_t options,
 								  bool auto_reply_ping);
@@ -295,7 +295,7 @@ nw_ws_options_set_auto_reply_ping(nw_protocol_options_t options,
  * @param skip_handshake
  *		Whether the WebSocket connection should skip the opening handshake.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_options_set_skip_handshake(nw_protocol_options_t options, bool skip_handshake);
 
@@ -313,7 +313,7 @@ nw_ws_options_set_skip_handshake(nw_protocol_options_t options, bool skip_handsh
  *		The maximum message size in bytes. A maximum message size of 0 means
  *		there is no receive limit. The default maximum message size is 0.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_options_set_maximum_message_size(nw_protocol_options_t options,
 									   size_t maximum_message_size);
@@ -332,7 +332,7 @@ nw_ws_options_set_maximum_message_size(nw_protocol_options_t options,
  *		Returns true if the metadata is for the default system
  *		implementation of WebSocket, false otherwise.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_protocol_metadata_is_ws(nw_protocol_metadata_t metadata);
 
@@ -349,7 +349,7 @@ nw_protocol_metadata_is_ws(nw_protocol_metadata_t metadata);
  * @result
  *		Returns a retained metadata object representing the WebSocket frame.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_protocol_metadata_t
 nw_ws_create_metadata(nw_ws_opcode_t opcode);
 
@@ -365,7 +365,7 @@ nw_ws_create_metadata(nw_ws_opcode_t opcode);
  * @result
  *		The opcode on the WebSocket frame.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 nw_ws_opcode_t
 nw_ws_metadata_get_opcode(nw_protocol_metadata_t metadata);
 
@@ -382,7 +382,7 @@ nw_ws_metadata_get_opcode(nw_protocol_metadata_t metadata);
  * @param close_code
  *		The close code on the WebSocket frame.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_metadata_set_close_code(nw_protocol_metadata_t metadata, nw_ws_close_code_t close_code);
 
@@ -400,7 +400,7 @@ nw_ws_metadata_set_close_code(nw_protocol_metadata_t metadata, nw_ws_close_code_
  * @result
  *		The close code on the WebSocket frame.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 nw_ws_close_code_t
 nw_ws_metadata_get_close_code(nw_protocol_metadata_t metadata);
 
@@ -436,7 +436,7 @@ typedef void (^nw_ws_pong_handler_t)(nw_error_t _Nullable error);
  * @param pong_handler
  *		The handler that gets called when a pong reply is received.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_metadata_set_pong_handler(nw_protocol_metadata_t metadata,
 								dispatch_queue_t client_queue,
@@ -491,7 +491,7 @@ typedef bool (^nw_ws_subprotocol_enumerator_t)(const char *subprotocol);
  * @result
  *		Whether the enumeration completed.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_ws_request_enumerate_subprotocols(nw_ws_request_t request,
 									 NW_NOESCAPE nw_ws_subprotocol_enumerator_t enumerator);
@@ -527,7 +527,7 @@ typedef bool (^nw_ws_additional_header_enumerator_t)(const char *name,
  * @result
  *		Whether the enumeration completed.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_ws_request_enumerate_additional_headers(nw_ws_request_t request,
 										   NW_NOESCAPE nw_ws_additional_header_enumerator_t enumerator);
@@ -598,7 +598,7 @@ typedef enum {
  * @result
  *      An instantiated WebSocket server response object.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_ws_response_t
 nw_ws_response_create(nw_ws_response_status_t status,
 					  const char * _Nullable selected_subprotocol);
@@ -616,7 +616,7 @@ nw_ws_response_create(nw_ws_response_status_t status,
  * @result
  *		The status of the server's response.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 nw_ws_response_status_t
 nw_ws_response_get_status(nw_ws_response_t _Nullable response);
 
@@ -632,7 +632,7 @@ nw_ws_response_get_status(nw_ws_response_t _Nullable response);
  * @result
  *		The status of the server's response.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 const char * _Nullable
 nw_ws_response_get_selected_subprotocol(nw_ws_response_t response);
 
@@ -652,7 +652,7 @@ nw_ws_response_get_selected_subprotocol(nw_ws_response_t response);
  * @param value
  *		The HTTP value.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_response_add_additional_header(nw_ws_response_t response,
 									 const char *name, const char *value);
@@ -671,7 +671,7 @@ nw_ws_response_add_additional_header(nw_ws_response_t response,
  * @result
  *		The server response.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NW_RETURNS_RETAINED nw_ws_response_t
 nw_ws_metadata_copy_server_response(nw_protocol_metadata_t metadata);
 
@@ -692,7 +692,7 @@ nw_ws_metadata_copy_server_response(nw_protocol_metadata_t metadata);
  * @result
  *		Whether the enumeration completed.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 bool
 nw_ws_response_enumerate_additional_headers(nw_ws_response_t response,
 											NW_NOESCAPE nw_ws_additional_header_enumerator_t enumerator);
@@ -728,7 +728,7 @@ typedef _Nonnull nw_ws_response_t (^nw_ws_client_request_handler_t)(_Nonnull nw_
  * @param handler
  *		The callback handler.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 void
 nw_ws_options_set_client_request_handler(nw_protocol_options_t options,
 										 dispatch_queue_t client_queue,

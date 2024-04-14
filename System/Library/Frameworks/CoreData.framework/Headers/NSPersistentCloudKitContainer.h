@@ -43,7 +43,7 @@ typedef NS_OPTIONS(NSUInteger, NSPersistentCloudKitContainerSchemaInitialization
 @class CKRecordID;
 #endif
 
-API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0)) NS_SWIFT_SENDABLE
+API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0)) NS_SWIFT_SENDABLE
 @interface NSPersistentCloudKitContainer : NSPersistentContainer
 
 /*
@@ -86,8 +86,8 @@ API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0)) NS_SWIFT_SENDABLE
      - The object has yet to be uploaded to CloudKit (it will be assigned to the current user)
      - The object has already been uploaded to CloudKit and is owned (indicated by CKRecord.creatorUserRecordID) by the current user
  */
-- (BOOL)canUpdateRecordForManagedObjectWithID:(NSManagedObjectID *)objectID NS_SWIFT_NAME(canUpdateRecord(forManagedObjectWith:)) API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0));
-- (BOOL)canDeleteRecordForManagedObjectWithID:(NSManagedObjectID *)objectID NS_SWIFT_NAME(canDeleteRecord(forManagedObjectWith:)) API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0));
+- (BOOL)canUpdateRecordForManagedObjectWithID:(NSManagedObjectID *)objectID NS_SWIFT_NAME(canUpdateRecord(forManagedObjectWith:)) API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0));
+- (BOOL)canDeleteRecordForManagedObjectWithID:(NSManagedObjectID *)objectID NS_SWIFT_NAME(canDeleteRecord(forManagedObjectWith:)) API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0));
 
 /*
  canModifyManagedObjectsInStore indicates whether or not a given store is mutable when used with CloudKit.
@@ -98,7 +98,7 @@ API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0)) NS_SWIFT_SENDABLE
  - When using the Public database, devices without an iCloud account can read data but not write any.
  - When using the Private database, this method always returns YES, even if no iCloud account is present on the device.
  */
-- (BOOL)canModifyManagedObjectsInStore:(NSPersistentStore *)store API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0));
+- (BOOL)canModifyManagedObjectsInStore:(NSPersistentStore *)store API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0));
 
 @end
 

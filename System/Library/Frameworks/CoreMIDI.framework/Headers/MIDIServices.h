@@ -2563,7 +2563,7 @@ CF_INLINE MIDIEventPacket *MIDIEventPacketNext(const MIDIEventPacket *pkt)
 */
 extern MIDIEventPacket *
 MIDIEventListInit(	MIDIEventList *evtlist,
-					MIDIProtocolID protocol)			API_AVAILABLE(macos(11.0), ios(14.0), tvos(15.0), watchos(8.0));
+					MIDIProtocolID protocol)			API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(15.0), watchos(8.0));
 
 /*!
 	@function		MIDIEventListAdd
@@ -2601,7 +2601,7 @@ MIDIEventListAdd(	MIDIEventList *		evtlist,
 					MIDIEventPacket *	curPacket,
 					MIDITimeStamp		time,
 					ByteCount			wordCount,
-					const UInt32 *		words)			API_AVAILABLE(macos(11.0), ios(14.0), tvos(15.0), watchos(8.0));
+					const UInt32 *		words)			API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(15.0), watchos(8.0));
 
 //==================================================================================================
 #pragma mark Packet Lists (Deprecated in favor of Event Lists)

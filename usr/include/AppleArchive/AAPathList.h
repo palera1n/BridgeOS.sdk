@@ -41,7 +41,7 @@ APPLE_ARCHIVE_API AAPathList _Nullable AAPathListCreateWithDirectoryContents(
   AAEntryMessageProc _Nullable msg_proc,
   AAFlagSet flags,
   int n_threads)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Create a new path list with a single path
@@ -56,7 +56,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API AAPathList _Nullable AAPathListCreateWithPath(
   const char * dir,
   const char * path)
-APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /*!
   @abstract Destroy a path list
@@ -67,7 +67,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
 */
 APPLE_ARCHIVE_API void AAPathListDestroy(
   AAPathList _Nullable path_list)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Get node path
@@ -92,7 +92,7 @@ APPLE_ARCHIVE_API int AAPathListNodeGetPath(
   size_t path_capacity,
   char * _Nullable path,
   size_t * _Nullable path_length)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstract Iterator on non-excluded entries, first node
@@ -103,7 +103,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 */
 APPLE_ARCHIVE_API uint64_t AAPathListNodeFirst(
   AAPathList path_list)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 /*!
   @abstrsct Iterator on non-excluded entries, next node
@@ -116,7 +116,7 @@ APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
 APPLE_ARCHIVE_API uint64_t AAPathListNodeNext(
   AAPathList path_list,
   uint64_t node)
-APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0));
+APPLE_ARCHIVE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0));
 
 #ifdef __cplusplus
 }

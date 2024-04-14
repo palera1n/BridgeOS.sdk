@@ -50,7 +50,7 @@ API_AVAILABLE(macosx(10.12),ios(10.0),tvos(10.0),watchos(3.0))
  Use this property to apply customized instances of NSPersistentCloudKitContainerOptions to
  a store description you wish to use with CloudKit.
  */
-@property(strong, nullable) NSPersistentCloudKitContainerOptions *cloudKitContainerOptions API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0));
+@property(strong, nullable) NSPersistentCloudKitContainerOptions *cloudKitContainerOptions API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0));
 @end
 
 NS_ASSUME_NONNULL_END

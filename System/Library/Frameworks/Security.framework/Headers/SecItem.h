@@ -550,9 +550,9 @@ extern const CFStringRef kSecAttrSyncViewHint
 extern const CFStringRef kSecAttrTokenID
     API_AVAILABLE(macos(10.12), ios(9.0));
 extern const CFStringRef kSecAttrPersistantReference
-    API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+    API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 extern const CFStringRef kSecAttrPersistentReference
-    API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+    API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), tvos(11.0), watchos(4.0));
 
 /*!
     @enum kSecAttrAccessible Value Constants

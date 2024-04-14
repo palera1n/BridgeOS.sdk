@@ -101,19 +101,19 @@ FOUNDATION_EXPORT NSHTTPCookiePropertyKey const NSHTTPCookiePort API_AVAILABLE(m
  @const NSHTTPCookieSameSitePolicy
  @discussion Key for cookie same site
  */
-FOUNDATION_EXPORT NSHTTPCookiePropertyKey const NSHTTPCookieSameSitePolicy API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+FOUNDATION_EXPORT NSHTTPCookiePropertyKey const NSHTTPCookieSameSitePolicy API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
  @const NSHTTPCookieSameSiteLax
  @discussion String constant "lax" to be used as a value for the property key NSHTTPCookieSameSite
  */
-FOUNDATION_EXPORT NSHTTPCookieStringPolicy const NSHTTPCookieSameSiteLax API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+FOUNDATION_EXPORT NSHTTPCookieStringPolicy const NSHTTPCookieSameSiteLax API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*!
  @const NSHTTPCookieSameSiteStrict
  @discussion String constant "strict" to be used as a value for the property key NSHTTPCookieSameSite
  */
-FOUNDATION_EXPORT NSHTTPCookieStringPolicy const NSHTTPCookieSameSiteStrict API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+FOUNDATION_EXPORT NSHTTPCookieStringPolicy const NSHTTPCookieSameSiteStrict API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 @class NSHTTPCookieInternal;
 
@@ -432,7 +432,7 @@ API_AVAILABLE(macos(10.2), ios(2.0), watchos(2.0), tvos(9.0))
  @result strict or lax. The result could also be nil, in which case the
  cookie will be sent along with all cross-site requests.
  */
-@property (nullable, readonly, copy) NSHTTPCookieStringPolicy sameSitePolicy API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nullable, readonly, copy) NSHTTPCookieStringPolicy sameSitePolicy API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 @end
 

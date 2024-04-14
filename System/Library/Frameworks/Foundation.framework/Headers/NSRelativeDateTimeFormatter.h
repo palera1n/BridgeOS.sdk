@@ -12,18 +12,18 @@ NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 typedef NS_ENUM(NSInteger, NSRelativeDateTimeFormatterStyle) {
     NSRelativeDateTimeFormatterStyleNumeric = 0, // "1 day ago", "2 days ago", "1 week ago", "in 1 week"
     NSRelativeDateTimeFormatterStyleNamed, // “yesterday”, "2 days ago", "last week", "next week"; falls back to the numeric style if no name is available
-} API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+} API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 typedef NS_ENUM(NSInteger, NSRelativeDateTimeFormatterUnitsStyle) {
     NSRelativeDateTimeFormatterUnitsStyleFull = 0, // "2 months ago"
     NSRelativeDateTimeFormatterUnitsStyleSpellOut, // "two months ago"
     NSRelativeDateTimeFormatterUnitsStyleShort, // "2 mo. ago"
     NSRelativeDateTimeFormatterUnitsStyleAbbreviated, // "2 mo. ago"; might give different results in languages other than English
-} API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+} API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /* NSRelativeDateTimeFormatter provides locale-aware formatting of a relative date or time, such as "1 hour ago", "in 2 weeks", "yesterday", and "tomorrow." Note that the string produced by the formatter should only be used in a standalone manner as it may not be grammatically correct to embed the string in longer strings.
  */
-API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 @interface NSRelativeDateTimeFormatter : NSFormatter
 #if !__OBJC2__
 {

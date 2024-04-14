@@ -267,7 +267,7 @@ MusicDeviceSysEx(		MusicDeviceComponent	inUnit,
 extern OSStatus
 MusicDeviceMIDIEventList(   MusicDeviceComponent			inUnit,
 							UInt32							inOffsetSampleFrame,
-							const struct MIDIEventList *	evtList)				API_AVAILABLE(macos(12), ios(15.0), tvos(15.0));
+							const struct MIDIEventList *	evtList)				API_AVAILABLE(macos(12), ios(15.0), bridgeos(6.0), tvos(15.0));
 
 /*!
 	@function	MusicDeviceStartNote

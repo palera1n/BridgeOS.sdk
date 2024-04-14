@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
         An OSStatus result code. If an error is returned, the audio data should be assumed to be
         invalid.
  */
-typedef OSStatus (^AVAudioSourceNodeRenderBlock)(BOOL *isSilence, const AudioTimeStamp *timestamp, AVAudioFrameCount frameCount, AudioBufferList *outputData) API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0)) ;
+typedef OSStatus (^AVAudioSourceNodeRenderBlock)(BOOL *isSilence, const AudioTimeStamp *timestamp, AVAudioFrameCount frameCount, AudioBufferList *outputData) API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0)) ;
 
 /*!
     @class AVAudioSourceNode
@@ -49,7 +49,7 @@ typedef OSStatus (^AVAudioSourceNodeRenderBlock)(BOOL *isSilence, const AudioTim
         This is similar to setting the input callback on an Audio Unit with the
         kAudioUnitProperty_SetRenderCallback property.
  */
-API_AVAILABLE(macos(10.15), ios(13.0), tvos(13.0), watchos(6.0)) 
+API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), tvos(13.0), watchos(6.0)) 
 @interface AVAudioSourceNode : AVAudioNode <AVAudioMixing>
 
 - (instancetype)init NS_UNAVAILABLE;

@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)acceptShareInvitationsFromMetadata:(NSArray<CKShareMetadata *> *)metadata
                        intoPersistentStore:(NSPersistentStore *)persistentStore
-                                completion:(void(^_Nullable)(NSArray<CKShareMetadata *> * _Nullable acceptedShareMetadatas, NSError * _Nullable acceptOperationError))completion NS_SWIFT_NAME(acceptShareInvitations(from:into:completion:)) API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+                                completion:(void(^_Nullable)(NSArray<CKShareMetadata *> * _Nullable acceptedShareMetadatas, NSError * _Nullable acceptOperationError))completion NS_SWIFT_NAME(acceptShareInvitations(from:into:completion:)) API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 /*
  Purges a zone from the CKDatabase associated with the given persistent store (or all active CKDatabases in the persistent cloud container's stores).
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)purgeObjectsAndRecordsInZoneWithID:(CKRecordZoneID *)zoneID
                          inPersistentStore:(nullable NSPersistentStore *)persistentStore
-                                completion:(void(^_Nullable)(CKRecordZoneID * _Nullable purgedZoneID, NSError * _Nullable purgeError))completion API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+                                completion:(void(^_Nullable)(CKRecordZoneID * _Nullable purgedZoneID, NSError * _Nullable purgeError))completion API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 /*
  Saves the given CKShare object to the persistent cloud container's metadata in the provided persistent store.
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)persistUpdatedShare:(CKShare *)share
           inPersistentStore:(NSPersistentStore *)persistentStore
-                 completion:(void(^ _Nullable)(CKShare * _Nullable persistedShare, NSError * _Nullable persistedShareError))completion API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+                 completion:(void(^ _Nullable)(CKShare * _Nullable persistedShare, NSError * _Nullable persistedShareError))completion API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 /*
  Fetches a set of CKShareParticipant objects from the CKDatabase associated with the given persistent store.
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)fetchParticipantsMatchingLookupInfos:(NSArray<CKUserIdentityLookupInfo *> *)lookupInfos
                          intoPersistentStore:(NSPersistentStore *)persistentStore
-                                  completion:(void(^)(NSArray<CKShareParticipant *> * _Nullable fetchedParticipants, NSError * _Nullable fetchError))completion API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+                                  completion:(void(^)(NSArray<CKShareParticipant *> * _Nullable fetchedParticipants, NSError * _Nullable fetchError))completion API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 /*
  Returns the associated CKShare object for a given managed object. If the object's backing CKRecord resides in a CKRecordZone that
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
  it will not have an entry in the resulting dictionary.
  */
 - (nullable NSDictionary<NSManagedObjectID *, CKShare *> *)fetchSharesMatchingObjectIDs:(NSArray<NSManagedObjectID *> *)objectIDs
-                                                                                  error:(NSError **)error API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+                                                                                  error:(NSError **)error API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 /*
  Fetches all known CKShare records in the given persistent store (or all persistent stores in the persistent cloud container if none is set).
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
  This method does not to any network work to attempt to discover additional zones or shares in the CKDatabase that is associated with the persistent store.
  */
 - (nullable NSArray<CKShare *> *)fetchSharesInPersistentStore:(nullable NSPersistentStore *)persistentStore
-                                                        error:(NSError **)error API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+                                                        error:(NSError **)error API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 /*
  Use this method to share a set of managed objects to either a new CKShare or an existing one if specified as the 'share' parameter.
@@ -95,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)shareManagedObjects:(NSArray<NSManagedObject *> *)managedObjects
                     toShare:(nullable CKShare *)share
-                 completion:(void(^)(NSSet<NSManagedObjectID *> * _Nullable sharedObjectIDs, CKShare * _Nullable share, CKContainer * _Nullable cloudKitContainer, NSError * _Nullable sharingError))completion API_AVAILABLE(macosx(12.0),ios(15.0),tvos(15.0),watchos(8.0));
+                 completion:(void(^)(NSSet<NSManagedObjectID *> * _Nullable sharedObjectIDs, CKShare * _Nullable share, CKContainer * _Nullable cloudKitContainer, NSError * _Nullable sharingError))completion API_AVAILABLE(macosx(12.0),ios(15.0), bridgeos(6.0),tvos(15.0),watchos(8.0));
 
 @end
 

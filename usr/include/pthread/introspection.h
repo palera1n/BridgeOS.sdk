@@ -148,7 +148,7 @@ pthread_introspection_hook_install(pthread_introspection_hook_t hook);
  * the @c PTHREAD_INTROSPECTION_THREAD_DESTROY callback to perform manual
  * cleanup.
  */
-__API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+__API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 int
 pthread_introspection_setspecific_np(pthread_t thread,
 		pthread_key_t key, const void * _Nullable value);
@@ -167,7 +167,7 @@ pthread_introspection_setspecific_np(pthread_t thread,
  * If the thread was started then this will always return NULL even
  * when pthread_introspection_setspecific_np() was used.
  */
-__API_AVAILABLE(macos(11.0), ios(14.0), tvos(14.0), watchos(7.0))
+__API_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), tvos(14.0), watchos(7.0))
 void * _Nullable
 pthread_introspection_getspecific_np(pthread_t _Nonnull thread,
 		pthread_key_t key);

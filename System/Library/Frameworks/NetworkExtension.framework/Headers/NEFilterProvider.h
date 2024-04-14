@@ -127,7 +127,7 @@ API_AVAILABLE(macos(10.15), ios(9.0)) API_UNAVAILABLE(watchos, tvos)
  * flow will also cause the data provider's -[NEFilterProvider handleReport:] method to be called when the flow
  * is closed.
  */
-@property BOOL shouldReport API_AVAILABLE(ios(11.0), macos(10.15)) API_UNAVAILABLE(watchos, tvos);
+@property BOOL shouldReport API_AVAILABLE(ios(11.0), bridgeos(2.0), macos(10.15)) API_UNAVAILABLE(watchos, tvos);
 
 @end
 

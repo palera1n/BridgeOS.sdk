@@ -23,7 +23,7 @@ typedef NSString * NSAttributedStringKey NS_TYPED_EXTENSIBLE_ENUM;
 typedef NSString * NSAttributedStringFormattingContextKey NS_TYPED_EXTENSIBLE_ENUM;
 
 FOUNDATION_EXPORT NSAttributedStringFormattingContextKey const NSInflectionConceptsKey
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 API_AVAILABLE(macos(10.0), ios(3.2), watchos(2.0), tvos(9.0))
 @interface NSAttributedString : NSObject <NSCopying, NSMutableCopying, NSSecureCoding>
@@ -103,28 +103,28 @@ typedef NS_OPTIONS(NSUInteger, NSInlinePresentationIntent) {
     NSInlinePresentationIntentLineBreak                    = 1 << 7,
     NSInlinePresentationIntentInlineHTML                   = 1 << 8,
     NSInlinePresentationIntentBlockHTML                    = 1 << 9
-} API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(InlinePresentationIntent);
+} API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(InlinePresentationIntent);
 
 
 // a NSNumber wrapping a value of type NSInlinePresentationIntent
 FOUNDATION_EXTERN const NSAttributedStringKey NSInlinePresentationIntentAttributeName
- API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(inlinePresentationIntent);
+ API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(inlinePresentationIntent);
 
 // a NSString
 FOUNDATION_EXTERN const NSAttributedStringKey NSAlternateDescriptionAttributeName
- API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(alternateDescription);
+ API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(alternateDescription);
 
 // a NSURL
 FOUNDATION_EXTERN const NSAttributedStringKey NSImageURLAttributeName
- API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(imageURL);
+ API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(imageURL);
 
 // a NSString
 FOUNDATION_EXTERN const NSAttributedStringKey NSLanguageIdentifierAttributeName
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(languageIdentifier);
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_SWIFT_NAME(languageIdentifier);
 
 // a NSAttributedStringMarkdownSourcePosition
 FOUNDATION_EXPORT const NSAttributedStringKey NSMarkdownSourcePositionAttributeName
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0)) NS_SWIFT_NAME(markdownSourcePosition);
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0)) NS_SWIFT_NAME(markdownSourcePosition);
 
 
 typedef NS_ENUM(NSInteger, NSAttributedStringMarkdownParsingFailurePolicy) {
@@ -134,7 +134,7 @@ typedef NS_ENUM(NSInteger, NSAttributedStringMarkdownParsingFailurePolicy) {
     // If parsing fails, and if possible, return a partial string. It may contain unparsed markup.
     // Note that if it isn't possible, an error may be returned anyway.
     NSAttributedStringMarkdownParsingFailureReturnPartiallyParsedIfPossible = 1,
-} API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
+} API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
 
 typedef NS_ENUM(NSInteger, NSAttributedStringMarkdownInterpretedSyntax) {
     // Interpret the full Markdown syntax and produce all relevant attributes
@@ -145,10 +145,10 @@ typedef NS_ENUM(NSInteger, NSAttributedStringMarkdownInterpretedSyntax) {
     
     // Like …InlineOnly, but do not interpret multiple consecutive instances of whitespace as a single separator space. All whitespace characters will appear in the result as they are specified in the source.
     NSAttributedStringMarkdownInterpretedSyntaxInlineOnlyPreservingWhitespace = 2
-} API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
+} API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
 
 NS_REFINED_FOR_SWIFT
-API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
+API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0))
 @interface NSAttributedStringMarkdownSourcePosition : NSObject <NSCopying, NSSecureCoding>
 
 @property (readonly) NSInteger startLine;
@@ -163,7 +163,7 @@ API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0))
 @end
 
 NS_REFINED_FOR_SWIFT
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 @interface NSAttributedStringMarkdownParsingOptions : NSObject <NSCopying>
 
 - (instancetype)init;
@@ -183,7 +183,7 @@ API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
 // The default is nil, which applies no attributes.
 @property (nullable, copy) NSString *languageCode;
 
-@property BOOL appliesSourcePositionAttributes API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+@property BOOL appliesSourcePositionAttributes API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 @end
 
@@ -197,21 +197,21 @@ API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
      options:(nullable NSAttributedStringMarkdownParsingOptions *)options
      baseURL:(nullable NSURL *)baseURL
      error:(NSError **)error
-     API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+     API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
      NS_REFINED_FOR_SWIFT;
 
 - (nullable instancetype)initWithMarkdown:(NSData *)markdown
      options:(nullable NSAttributedStringMarkdownParsingOptions *)options
      baseURL:(nullable NSURL *)baseURL
      error:(NSError **)error
-     API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+     API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
      NS_REFINED_FOR_SWIFT;
 
 - (nullable instancetype)initWithMarkdownString:(NSString *)markdownString
      options:(nullable NSAttributedStringMarkdownParsingOptions *)options
      baseURL:(nullable NSURL *)baseURL
      error:(NSError **)error
-     API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+     API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
      NS_REFINED_FOR_SWIFT;
 
 @end
@@ -221,9 +221,9 @@ API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
 
 typedef NS_OPTIONS(NSUInteger, NSAttributedStringFormattingOptions) {
     NSAttributedStringFormattingInsertArgumentAttributesWithoutMerging
-      API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) = 1 << 0,
+      API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) = 1 << 0,
     NSAttributedStringFormattingApplyReplacementIndexAttribute
-      API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) = 1 << 1,
+      API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) = 1 << 1,
 } NS_REFINED_FOR_SWIFT;
 
 @interface NSAttributedString (NSAttributedStringFormatting)
@@ -233,7 +233,7 @@ typedef NS_OPTIONS(NSUInteger, NSAttributedStringFormattingOptions) {
                        options:(NSAttributedStringFormattingOptions)options
                         locale:(nullable NSLocale *)locale, ...
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /// Formats the string using the arguments list and the specified locale (or the canonical one, if nil).
 - (instancetype)initWithFormat:(NSAttributedString *)format
@@ -241,18 +241,18 @@ typedef NS_OPTIONS(NSUInteger, NSAttributedStringFormattingOptions) {
                         locale:(nullable NSLocale *)locale
                      arguments:(va_list)arguments
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /// Formats the string using the current locale and default options.
 + (instancetype)localizedAttributedStringWithFormat:(NSAttributedString *)format, ...
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /// Formats the string using the current locale and the specified options.
 + (instancetype)localizedAttributedStringWithFormat:(NSAttributedString *)format
                                             options:(NSAttributedStringFormattingOptions)options, ...
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 /// Formats the string using the specified locale (or the canonical one, if nil).
 - (instancetype)initWithFormat:(NSAttributedString *)format
@@ -260,7 +260,7 @@ typedef NS_OPTIONS(NSUInteger, NSAttributedStringFormattingOptions) {
                         locale:(nullable NSLocale *)locale
                        context:(NSDictionary<NSAttributedStringFormattingContextKey, id>*)context,...
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+    API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 /// Formats the string using the arguments list and the specified locale (or the canonical one, if nil).
 - (instancetype)initWithFormat:(NSAttributedString *)format
@@ -269,20 +269,20 @@ typedef NS_OPTIONS(NSUInteger, NSAttributedStringFormattingOptions) {
                        context:(NSDictionary<NSAttributedStringFormattingContextKey, id>*)context
                      arguments:(va_list)arguments
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+    API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 /// Formats the string using the current locale and default options.
 + (instancetype)localizedAttributedStringWithFormat:(NSAttributedString *)format
                                             context:(NSDictionary<NSAttributedStringFormattingContextKey, id>*)context, ...
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+    API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 /// Formats the string using the current locale and the specified options.
 + (instancetype)localizedAttributedStringWithFormat:(NSAttributedString *)format
                                             options:(NSAttributedStringFormattingOptions)options
                                             context:(NSDictionary<NSAttributedStringFormattingContextKey, id>*)context, ...
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+    API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 @end
 
@@ -292,13 +292,13 @@ typedef NS_OPTIONS(NSUInteger, NSAttributedStringFormattingOptions) {
 /// then appends the result to the receiver.
 - (void)appendLocalizedFormat:(NSAttributedString *)format, ...
     NS_REFINED_FOR_SWIFT
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 @end
 
 FOUNDATION_EXPORT NSAttributedStringKey const NSReplacementIndexAttributeName
     NS_SWIFT_NAME(replacementIndex)
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 
 // -----
@@ -309,36 +309,36 @@ FOUNDATION_EXPORT NSAttributedStringKey const NSReplacementIndexAttributeName
 /// that have no format specifiers, create a new string with those portions inflected
 /// by following the rule in the attribute.
 - (NSAttributedString *)attributedStringByInflectingString
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 @end
 
 FOUNDATION_EXPORT NSAttributedStringKey const NSMorphologyAttributeName
     NS_SWIFT_NAME(morphology)
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 FOUNDATION_EXPORT NSAttributedStringKey const NSInflectionRuleAttributeName
     NS_SWIFT_NAME(inflectionRule)
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 FOUNDATION_EXPORT NSAttributedStringKey const NSInflectionAgreementArgumentAttributeName
     NS_SWIFT_NAME(agreeWithArgument)
-    API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+    API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 FOUNDATION_EXPORT NSAttributedStringKey const NSInflectionAgreementConceptAttributeName
     NS_SWIFT_NAME(agreeWithConcept)
-    API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+    API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 FOUNDATION_EXPORT NSAttributedStringKey const NSInflectionReferentConceptAttributeName
     NS_SWIFT_NAME(referentConcept)
-    API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0), watchos(10.0));
+    API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0), watchos(10.0));
 
 FOUNDATION_EXPORT NSAttributedStringKey const NSInflectionAlternativeAttributeName
     NS_SWIFT_NAME(inflectionAlternative)
-    API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+    API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 FOUNDATION_EXTERN
-const NSAttributedStringKey NSPresentationIntentAttributeName API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+const NSAttributedStringKey NSPresentationIntentAttributeName API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 typedef NS_ENUM(NSInteger, NSPresentationIntentKind) {
     NSPresentationIntentKindParagraph,
@@ -353,16 +353,16 @@ typedef NS_ENUM(NSInteger, NSPresentationIntentKind) {
     NSPresentationIntentKindTableHeaderRow,
     NSPresentationIntentKindTableRow,
     NSPresentationIntentKindTableCell,
-} API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
+} API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
 
 typedef NS_ENUM(NSInteger, NSPresentationIntentTableColumnAlignment) {
     NSPresentationIntentTableColumnAlignmentLeft,
     NSPresentationIntentTableColumnAlignmentCenter,
     NSPresentationIntentTableColumnAlignmentRight,
-} API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
+} API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) NS_REFINED_FOR_SWIFT;
 
 NS_REFINED_FOR_SWIFT
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 @interface NSPresentationIntent: NSObject <NSCopying, NSSecureCoding>
 
 @property (readonly) NSPresentationIntentKind intentKind;

@@ -36,7 +36,7 @@ NS_SWIFT_SENDABLE // Immutable with no mutable subclasses
 - (nullable NSString *)localizedStringForLanguageCode:(NSString *)languageCode API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
 
 /// Returns the identifier for the language part of the locale. For example, returns "en-US" for "en_US@rg=gbzzzz"  locale.
-@property (readonly, copy) NSString *languageIdentifier API_AVAILABLE(macosx(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+@property (readonly, copy) NSString *languageIdentifier API_AVAILABLE(macosx(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 @property (nullable, readonly, copy) NSString *countryCode API_DEPRECATED_WITH_REPLACEMENT("regionCode", macos(10.12, API_TO_BE_DEPRECATED), ios(10.0, API_TO_BE_DEPRECATED), watchos(3.0, API_TO_BE_DEPRECATED), tvos(10.0, API_TO_BE_DEPRECATED));
 
@@ -45,7 +45,7 @@ NS_SWIFT_SENDABLE // Immutable with no mutable subclasses
 /// Returns the region code of the locale.
 /// If the `rg` subtag is present, the value of the subtag will be used. For example,  returns "GB" for "en_US@rg=gbzzzz" locale.
 /// If the `localeIdentifier` doesn’t contain a region, returns `nil`.
-@property (nullable, readonly, copy) NSString *regionCode API_AVAILABLE(macosx(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+@property (nullable, readonly, copy) NSString *regionCode API_AVAILABLE(macosx(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 @property (nullable, readonly, copy) NSString *scriptCode API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
 - (nullable NSString *)localizedStringForScriptCode:(NSString *)scriptCode API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));

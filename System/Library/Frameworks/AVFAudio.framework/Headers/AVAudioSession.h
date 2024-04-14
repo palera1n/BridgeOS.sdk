@@ -70,7 +70,7 @@ API_AVAILABLE(ios(3.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
 				  mode:(AVAudioSessionMode)mode
 	routeSharingPolicy:(AVAudioSessionRouteSharingPolicy)policy
 			   options:(AVAudioSessionCategoryOptions)options
-				 error:(NSError **)outError API_AVAILABLE(ios(11.0), tvos(11.0), watchos(5.0)) API_UNAVAILABLE(macos);
+				 error:(NSError **)outError API_AVAILABLE(ios(11.0), bridgeos(2.0), tvos(11.0), watchos(5.0)) API_UNAVAILABLE(macos);
 
 /// Get session category.
 /// Examples: AVAudioSessionCategoryRecord, AVAudioSessionCategoryPlayAndRecord, etc.
@@ -85,7 +85,7 @@ API_AVAILABLE(ios(3.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
 	See AVAudioSessionRouteSharingPolicy for a description of the available policies.
 	See setCategory:mode:routeSharingPolicy:options:error: for additional discussion.
 */
-@property (readonly) AVAudioSessionRouteSharingPolicy routeSharingPolicy API_AVAILABLE(ios(11.0), tvos(11.0), watchos(5.0)) API_UNAVAILABLE(macos);
+@property (readonly) AVAudioSessionRouteSharingPolicy routeSharingPolicy API_AVAILABLE(ios(11.0), bridgeos(2.0), tvos(11.0), watchos(5.0)) API_UNAVAILABLE(macos);
 
 /// Get the list of modes available on the device.  Certain modes may be unavailable on particular
 /// devices.  For example, AVAudioSessionModeVideoRecording will not be available on devices that
@@ -109,10 +109,10 @@ API_AVAILABLE(ios(3.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
 
 /// Set allowHapticsAndSystemSoundsDuringRecording to YES in order to allow system sounds and haptics to play while the session is actively using audio input.
 /// Default value is NO.
-- (BOOL)setAllowHapticsAndSystemSoundsDuringRecording:(BOOL)inValue error:(NSError **)outError API_AVAILABLE(ios(13.0), watchos(6.0), tvos(13.0)) API_UNAVAILABLE(macos);
+- (BOOL)setAllowHapticsAndSystemSoundsDuringRecording:(BOOL)inValue error:(NSError **)outError API_AVAILABLE(ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) API_UNAVAILABLE(macos);
 
 /// Whether system sounds and haptics can play while the session is actively using audio input.
-@property(readonly) BOOL allowHapticsAndSystemSoundsDuringRecording API_AVAILABLE(ios(13.0), watchos(6.0), tvos(13.0)) API_UNAVAILABLE(macos);
+@property(readonly) BOOL allowHapticsAndSystemSoundsDuringRecording API_AVAILABLE(ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) API_UNAVAILABLE(macos);
 
 /// Returns an enum indicating whether the user has granted or denied permission to record, or has
 /// not been asked
@@ -387,7 +387,7 @@ API_AVAILABLE(ios(3.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
 /// The prompt style is a hint to sessions using AVAudioSessionModeVoicePrompt to alter the type of
 /// prompts they issue in response to other audio activity on the system, such as Siri and phone
 /// calls. This property is key-value observable.
-@property(readonly) AVAudioSessionPromptStyle promptStyle API_AVAILABLE(ios(13.0), watchos(6.0), tvos(13.0)) API_UNAVAILABLE(macos);
+@property(readonly) AVAudioSessionPromptStyle promptStyle API_AVAILABLE(ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) API_UNAVAILABLE(macos);
 
 @end // AVAudioSession (Observation)
 
@@ -425,9 +425,9 @@ API_AVAILABLE(ios(3.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
 /// See https://developer.apple.com/documentation/mediaplayer/becoming_a_now_playable_app for more information
 /// about what it means to be a 'Now Playing' application. Typically 'Now Playing' applications will also use
 /// AVAudioSessionRouteSharingPolicyLongFormAudio or AVAudioSessionRouteSharingPolicyLongFormVideo.
-- (BOOL)setSupportsMultichannelContent:(BOOL)inValue error:(NSError **)outError API_AVAILABLE(ios(15.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
+- (BOOL)setSupportsMultichannelContent:(BOOL)inValue error:(NSError **)outError API_AVAILABLE(ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
 
-@property(readonly) BOOL supportsMultichannelContent API_AVAILABLE(ios(15.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
+@property(readonly) BOOL supportsMultichannelContent API_AVAILABLE(ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
 
 /*!
     @brief Use this method to opt in or opt out of interruption on route disconnect policy.
@@ -439,10 +439,10 @@ API_AVAILABLE(ios(3.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
     when a route change occurs because of a disconnect event. All other sessions will not be
     interrupted due to a disconnect event.
 */
-- (BOOL) setPrefersInterruptionOnRouteDisconnect:(BOOL)inValue error:(NSError **)outError API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
+- (BOOL) setPrefersInterruptionOnRouteDisconnect:(BOOL)inValue error:(NSError **)outError API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
 
 /// Indicates if session will be interrupted on route disconnect.
-@property(readonly) BOOL prefersInterruptionOnRouteDisconnect API_AVAILABLE(ios(17.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
+@property(readonly) BOOL prefersInterruptionOnRouteDisconnect API_AVAILABLE(ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0)) API_UNAVAILABLE(macos);
 
 @end // interface for AVAudioSession (RoutingConfiguration)
 
@@ -612,7 +612,7 @@ OS_EXPORT NSNotificationName const  AVAudioSessionSilenceSecondaryAudioHintNotif
     AVAudioSessionPortDescription's isSpatialAudioEnabled property to check if the current route supports
     spatialized playback.
 */
-OS_EXPORT NSNotificationName const  AVAudioSessionSpatialPlaybackCapabilitiesChangedNotification API_AVAILABLE(ios(15.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos) NS_SWIFT_NAME(AVAudioSession.spatialPlaybackCapabilitiesChangedNotification);
+OS_EXPORT NSNotificationName const  AVAudioSessionSpatialPlaybackCapabilitiesChangedNotification API_AVAILABLE(ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos) NS_SWIFT_NAME(AVAudioSession.spatialPlaybackCapabilitiesChangedNotification);
 
 /// Notification sent to registered listeners when the resolved rendering mode changes.
 OS_EXPORT NSNotificationName const  AVAudioSessionRenderingModeChangeNotification API_AVAILABLE(ios(17.2), tvos(17.2)) API_UNAVAILABLE(watchos, macos, visionos) NS_SWIFT_NAME(AVAudioSession.renderingModeChangeNotification);
@@ -626,7 +626,7 @@ OS_EXPORT NSNotificationName const AVAudioSessionRenderingCapabilitiesChangeNoti
 
 /// keys for AVAudioSessionSpatialPlaybackCapabilitiesChangedNotification
 /// value is an NSNumber whose boolean value indicates if spatial audio enabled.
-OS_EXPORT NSString *const AVAudioSessionSpatialAudioEnabledKey API_AVAILABLE(ios(15.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
+OS_EXPORT NSString *const AVAudioSessionSpatialAudioEnabledKey API_AVAILABLE(ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0)) API_UNAVAILABLE(macos);
 
 /// keys for AVAudioSessionInterruptionNotification
 /// Value is an NSNumber representing an AVAudioSessionInterruptionType

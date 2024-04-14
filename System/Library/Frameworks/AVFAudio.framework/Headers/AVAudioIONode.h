@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 		context. Care should be taken not to make any blocking call (e.g. calling libdispatch,
 		blocking on a mutex, allocating memory etc.) which may cause an overload at the lower layers.
 */
-typedef const AudioBufferList * __nullable (^AVAudioIONodeInputBlock)(AVAudioFrameCount inNumberOfFrames) API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+typedef const AudioBufferList * __nullable (^AVAudioIONodeInputBlock)(AVAudioFrameCount inNumberOfFrames) API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*!
 	@enum       AVAudioVoiceProcessingSpeechActivityEvent
@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, AVAudioVoiceProcessingSpeechActivityEvent)
 {
 	AVAudioVoiceProcessingSpeechActivityStarted = 0,
 	AVAudioVoiceProcessingSpeechActivityEnded = 1
-} API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*!
 	@enum	AVAudioVoiceProcessingOtherAudioDuckingLevel
@@ -124,7 +124,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
     @abstract
         Indicates whether voice processing is enabled.
 */
-@property (nonatomic, readonly, getter=isVoiceProcessingEnabled) BOOL voiceProcessingEnabled API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nonatomic, readonly, getter=isVoiceProcessingEnabled) BOOL voiceProcessingEnabled API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*! @method setVoiceProcessingEnabled:error:
     @abstract
@@ -149,7 +149,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))
         The output format of the input node and the input format of the output node have to be
         the same and they can only be changed when the engine is in a stopped state.
  */
-- (BOOL)setVoiceProcessingEnabled:(BOOL)enabled error:(NSError **)outError API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+- (BOOL)setVoiceProcessingEnabled:(BOOL)enabled error:(NSError **)outError API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 @end
 
@@ -196,7 +196,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(4.0), tvos(11.0))
 		Switching the engine to render to/from an audio device invalidates any previously set block, 
 		and makes this method ineffective.
 */
-- (BOOL)setManualRenderingInputPCMFormat:(AVAudioFormat *)format inputBlock:(AVAudioIONodeInputBlock)block API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (BOOL)setManualRenderingInputPCMFormat:(AVAudioFormat *)format inputBlock:(AVAudioIONodeInputBlock)block API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 /*! @property voiceProcessingBypassed
     @abstract
@@ -204,7 +204,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(4.0), tvos(11.0))
     @discussion
        Querying this property when voice processing is disabled will return false.
  */
-@property (nonatomic, getter=isVoiceProcessingBypassed) BOOL voiceProcessingBypassed API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nonatomic, getter=isVoiceProcessingBypassed) BOOL voiceProcessingBypassed API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*! @property voiceProcessingAGCEnabled
     @abstract
@@ -213,7 +213,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(4.0), tvos(11.0))
     @discussion
         Querying this property when voice processing is disabled will return false.
  */
-@property (nonatomic, getter=isVoiceProcessingAGCEnabled) BOOL voiceProcessingAGCEnabled API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nonatomic, getter=isVoiceProcessingAGCEnabled) BOOL voiceProcessingAGCEnabled API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*! @property voiceProcessingInputMuted
     @abstract
@@ -221,7 +221,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(4.0), tvos(11.0))
     @discussion
         Querying this property when voice processing is disabled will return false.
 */
-@property (nonatomic, getter=isVoiceProcessingInputMuted) BOOL voiceProcessingInputMuted API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+@property (nonatomic, getter=isVoiceProcessingInputMuted) BOOL voiceProcessingInputMuted API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*! @method setMutedSpeechActivityEventListener
 	@abstract
@@ -235,7 +235,7 @@ API_AVAILABLE(macos(10.10), ios(8.0), watchos(4.0), tvos(11.0))
 		Continuous presence of or lack of speech activity during mute will not cause redundant notification.
 		In order to use this API, it's expected to implement the mute via the voiceProcessingInputMuted.
 */
-- (BOOL)setMutedSpeechActivityEventListener:(nullable void (^)(AVAudioVoiceProcessingSpeechActivityEvent event))listenerBlock API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+- (BOOL)setMutedSpeechActivityEventListener:(nullable void (^)(AVAudioVoiceProcessingSpeechActivityEvent event))listenerBlock API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 /*! @property voiceProcessingOtherAudioDuckingConfiguration
 	@abstract

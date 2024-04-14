@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, NSBatchInsertRequestResultType) {
     NSBatchInsertRequestResultTypeStatusOnly = 0x0,            // Return a status boolean
     NSBatchInsertRequestResultTypeObjectIDs = 0x1,             // Return the object IDs of the rows that were inserted/updated
     NSBatchInsertRequestResultTypeCount = 0x2                  // Return the number of rows that were inserted/updated
-} API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0));
+} API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0));
 
 typedef NS_ENUM(NSUInteger, NSBatchUpdateRequestResultType) {
     NSStatusOnlyResultType = 0x0,            // Return a status boolean
@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, NSPersistentHistoryResultType) {
     NSPersistentHistoryResultTypeTransactionsOnly = 0x3,        // Return NSPersistentHistoryTransaction objects
     NSPersistentHistoryResultTypeChangesOnly = 0x4,             // Return NSPersistentHistoryChange objects
     NSPersistentHistoryResultTypeTransactionsAndChanges = 0x5,  // Return NSPersistentHistoryTransaction objects with related NSPersistentHistoryChange objects
-} API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0));
+} API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0));
 
 // Used to wrap the result of whatever is returned by the persistent store coordinator when
 // -[NSManagedObjectContext executeRequest:error:] is called
@@ -75,7 +75,7 @@ API_AVAILABLE(macosx(10.10),ios(8.0))
 @end
 
 // The result returned when executing an NSBatchInsertRequest
-API_AVAILABLE(macosx(10.15),ios(13.0),tvos(13.0),watchos(6.0))
+API_AVAILABLE(macosx(10.15),ios(13.0), bridgeos(4.0),tvos(13.0),watchos(6.0))
 @interface NSBatchInsertResult : NSPersistentStoreResult {
 }
 
@@ -110,7 +110,7 @@ API_AVAILABLE(macosx(10.11),ios(9.0))
 
 
 // The result returned when executing an NSPersistentHistoryChangeRequest
-API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0))
+API_AVAILABLE(macosx(10.13),ios(11.0), bridgeos(2.0),tvos(11.0),watchos(4.0))
 @interface NSPersistentHistoryResult : NSPersistentStoreResult {
 }
 
@@ -123,10 +123,10 @@ API_AVAILABLE(macosx(10.13),ios(11.0),tvos(11.0),watchos(4.0))
 typedef NS_ENUM(NSInteger, NSPersistentCloudKitContainerEventResultType) {
     NSPersistentCloudKitContainerEventResultTypeEvents = 0, //the result is an NSArray<NSPersistentCloudKitContainerEvent *>
     NSPersistentCloudKitContainerEventResultTypeCountEvents //the result is an NSArray<NSNumber *> indicating the count of events matching the request
-} API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainerEventResult.ResultType);
+} API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0)) NS_SWIFT_NAME(NSPersistentCloudKitContainerEventResult.ResultType);
 
 // The result returned when executing an NSPersistentCloudKitContainerEventRequest
-API_AVAILABLE(macosx(11.0),ios(14.0),tvos(14.0),watchos(7.0))
+API_AVAILABLE(macosx(11.0),ios(14.0), bridgeos(5.0),tvos(14.0),watchos(7.0))
 @interface NSPersistentCloudKitContainerEventResult : NSPersistentStoreResult
 
 // Return the result. See NSPersistentCloudKitContainerEventResultType for options

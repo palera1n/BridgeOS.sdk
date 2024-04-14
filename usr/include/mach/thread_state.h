@@ -54,7 +54,7 @@
  * that any particular size of buffer will be sufficient and should retry with
  * an appropriately sized buffer upon this error.
  */
-__API_AVAILABLE(macosx(10.14), ios(12.0), tvos(9.0), watchos(5.0))
+__API_AVAILABLE(macosx(10.14), ios(12.0), bridgeos(3.0), tvos(9.0), watchos(5.0))
 kern_return_t thread_get_register_pointer_values(thread_t thread,
     uintptr_t *sp, size_t *length, uintptr_t *values);
 

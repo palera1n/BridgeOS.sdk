@@ -204,10 +204,10 @@ typedef enum
 {
     kDNSServiceAAAAPolicyNone      = 0,
     kDNSServiceAAAAPolicyFallback  = 1  // If AAAA record doesn't exist, query for A.
-} DNS_SD_API_AVAILABLE(macos(12.0), ios(15.0), tvos(15.0), watchos(8.0)) DNSServiceAAAAPolicy;
+} DNS_SD_API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0)) DNSServiceAAAAPolicy;
 
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -1588,7 +1588,7 @@ DNSServiceErrorType DNSSD_API DNSServiceUpdateRecord
  *                  DNSServiceUpdateRecord().
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3153,7 +3153,7 @@ struct CompileTimeAssertionChecks_DNS_SD
  *                  Returns a DNSServiceAttribute pointer.
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3171,7 +3171,7 @@ DNSServiceAttributeRef DNSSD_API DNS_SD_NULLABLE DNSServiceAttributeCreate(void)
  *                  Returns kDNSServiceErr_NoError.
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3194,7 +3194,7 @@ DNSServiceErrorType DNSSD_API DNSServiceAttributeSetAAAAPolicy
  *                  Returns kDNSServiceErr_NoError.
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3212,7 +3212,7 @@ DNSServiceErrorType DNSSD_API DNSServiceAttributeSetTimestamp
  *                  An DNSServiceAttribute pointer(may be NULL).
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3283,7 +3283,7 @@ void DNSSD_API DNSServiceAttributeDeallocate
  *                  DNSServiceQueryRecord().
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3433,7 +3433,7 @@ DNSServiceErrorType DNSSD_API DNSServiceQueryRecordWithAttribute
  *                  DNSServiceRegister().
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3520,7 +3520,7 @@ DNSServiceErrorType DNSSD_API DNSServiceRegisterWithAttribute
  *                  DNSServiceRegister().
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif
@@ -3563,7 +3563,7 @@ DNSServiceErrorType DNSSD_API DNSServiceRegisterRecordWithAttribute
  *                  DNSServiceSendQueuedRequests(sdRef)                               //send the queued requests
  */
 #ifndef __OPEN_SOURCE__
-DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), tvos(16.0), watchos(9.0))
+DNS_SD_API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), tvos(16.0), watchos(9.0))
 #else
 DNSSD_EXPORT
 #endif

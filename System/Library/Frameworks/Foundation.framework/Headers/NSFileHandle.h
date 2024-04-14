@@ -22,31 +22,31 @@ NS_SWIFT_SENDABLE // All mutable state protected by locks
 - (nullable instancetype)initWithCoder:(NSCoder *)coder NS_DESIGNATED_INITIALIZER;
 
 - (nullable NSData *)readDataToEndOfFileAndReturnError:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
 
 - (nullable NSData *)readDataUpToLength:(NSUInteger)length error:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
 
 - (BOOL)writeData:(NSData *)data error:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
 
 - (BOOL)getOffset:(out unsigned long long *)offsetInFile error:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
 
 - (BOOL)seekToEndReturningOffset:(out unsigned long long *_Nullable)offsetInFile error:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0)) NS_REFINED_FOR_SWIFT;
 
 - (BOOL)seekToOffset:(unsigned long long)offset error:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 - (BOOL)truncateAtOffset:(unsigned long long)offset error:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 - (BOOL)synchronizeAndReturnError:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 - (BOOL)closeAndReturnError:(out NSError **)error
-    API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+    API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 @end
 

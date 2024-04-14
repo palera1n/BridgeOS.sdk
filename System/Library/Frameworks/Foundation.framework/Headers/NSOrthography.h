@@ -31,7 +31,7 @@ API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0))
 @property (readonly, copy) NSArray<NSString *> *allScripts API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 @property (readonly, copy) NSArray<NSString *> *allLanguages API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 
-+ (instancetype)defaultOrthographyForLanguage:(NSString *)language API_AVAILABLE(macosx(10.13), ios(11.0), watchos(4.0), tvos(11.0));
++ (instancetype)defaultOrthographyForLanguage:(NSString *)language API_AVAILABLE(macosx(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 @end
 

@@ -8,7 +8,7 @@
 
 NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 NS_REFINED_FOR_SWIFT
 @interface NSInflectionRule: NSObject <NSCopying, NSSecureCoding>
 
@@ -18,7 +18,7 @@ NS_REFINED_FOR_SWIFT
 
 @end
 
-API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 NS_REFINED_FOR_SWIFT
 @interface NSInflectionRuleExplicit: NSInflectionRule
 
@@ -33,11 +33,11 @@ NS_REFINED_FOR_SWIFT
 
 // Whether inflection will work in the specified language code.
 + (BOOL)canInflectLanguage:(NSString *)language
- API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+ API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
 
 // Whether inflection will work in the language of the main bundle's first preferred localization.
 @property (class, readonly) BOOL canInflectPreferredLocalization
- API_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0));
+ API_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0));
  
 @end
 

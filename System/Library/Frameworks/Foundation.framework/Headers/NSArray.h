@@ -50,7 +50,7 @@ NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 - (NSArray<ObjectType> *)sortedArrayUsingSelector:(SEL)comparator;
 - (NSArray<ObjectType> *)subarrayWithRange:(NSRange)range;
 /* Serializes this instance to the specified URL in the NSPropertyList format (using NSPropertyListXMLFormat_v1_0). For other formats use NSPropertyListSerialization directly. */
-- (BOOL)writeToURL:(NSURL *)url error:(NSError **)error API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (BOOL)writeToURL:(NSURL *)url error:(NSError **)error API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 
 
 - (void)makeObjectsPerformSelector:(SEL)aSelector NS_SWIFT_UNAVAILABLE("Use enumerateObjectsUsingBlock: or a for loop instead");
@@ -98,13 +98,13 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 - (instancetype)initWithArray:(NSArray<ObjectType> *)array copyItems:(BOOL)flag;
 
 /* Reads array stored in NSPropertyList format from the specified url. */
-- (nullable NSArray<ObjectType> *)initWithContentsOfURL:(NSURL *)url error:(NSError **)error  API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
+- (nullable NSArray<ObjectType> *)initWithContentsOfURL:(NSURL *)url error:(NSError **)error  API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0));
 /* Reads array stored in NSPropertyList format from the specified url. */
-+ (nullable NSArray<ObjectType> *)arrayWithContentsOfURL:(NSURL *)url error:(NSError **)error API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0)) NS_SWIFT_UNAVAILABLE("Use initializer instead");
++ (nullable NSArray<ObjectType> *)arrayWithContentsOfURL:(NSURL *)url error:(NSError **)error API_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0)) NS_SWIFT_UNAVAILABLE("Use initializer instead");
 
 @end
 
-API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NS_SWIFT_UNAVAILABLE("NSArray diffing methods are not available in Swift, use Collection.difference(from:) instead")
 @interface NSArray<ObjectType> (NSArrayDiffing)
 
@@ -191,7 +191,7 @@ NS_SWIFT_UNAVAILABLE("NSArray diffing methods are not available in Swift, use Co
 
 @end
 
-API_AVAILABLE(macosx(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 NS_SWIFT_UNAVAILABLE("NSMutableArray diffing methods are not available in Swift")
 @interface NSMutableArray<ObjectType> (NSMutableArrayDiffing)
 

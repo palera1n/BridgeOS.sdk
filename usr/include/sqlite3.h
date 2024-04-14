@@ -3837,7 +3837,7 @@ SQLITE_API int sqlite3_uri_boolean(sqlite3_filename z, const char *zParam, int b
 SQLITE_AVAILABLE(macos(10.8), ios(6.0))
 SQLITE_API sqlite3_int64 sqlite3_uri_int64(sqlite3_filename, const char*, sqlite3_int64);
 
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 SQLITE_API const char *sqlite3_uri_key(sqlite3_filename z, int N);
 
 /*
@@ -3867,13 +3867,13 @@ SQLITE_API const char *sqlite3_uri_key(sqlite3_filename z, int N);
 ** return value from [sqlite3_db_filename()], then the result is
 ** undefined and is likely a memory access violation.
 */
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 SQLITE_API const char *sqlite3_filename_database(sqlite3_filename);
 
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 SQLITE_API const char *sqlite3_filename_journal(sqlite3_filename);
 
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(7.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(7.0), tvos(14.0))
 SQLITE_API const char *sqlite3_filename_wal(sqlite3_filename);
 
 /*
@@ -3893,7 +3893,7 @@ SQLITE_API const char *sqlite3_filename_wal(sqlite3_filename);
 ** of this routine results in undefined and probably undesirable
 ** behavior.
 */
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(6.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(6.0), tvos(14.0))
 SQLITE_API sqlite3_file *sqlite3_database_file_object(const char*);
 
 /*
@@ -3941,7 +3941,7 @@ SQLITE_API sqlite3_file *sqlite3_database_file_object(const char*);
 ** then the corresponding [sqlite3_module.xClose() method should also be
 ** invoked prior to calling sqlite3_free_filename(Y).
 */
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(6.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(6.0), tvos(14.0))
 SQLITE_API sqlite3_filename sqlite3_create_filename(
   const char *zDatabase,
   const char *zJournal,
@@ -3950,7 +3950,7 @@ SQLITE_API sqlite3_filename sqlite3_create_filename(
   const char **azParam
 );
 
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(6.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(6.0), tvos(14.0))
 SQLITE_API void sqlite3_free_filename(sqlite3_filename);
 
 /*
@@ -4021,7 +4021,7 @@ SQLITE_API const void *sqlite3_errmsg16(sqlite3*);
 SQLITE_AVAILABLE(macos(10.10), ios(8.2))
 SQLITE_API const char *sqlite3_errstr(int);
 
-SQLITE_AVAILABLE(macosx(13.0),ios(16.0),tvos(16.0),watchos(9.0))
+SQLITE_AVAILABLE(macosx(13.0),ios(16.0), bridgeos(7.0),tvos(16.0),watchos(9.0))
 SQLITE_API int sqlite3_error_offset(sqlite3 *db);
 
 /*
@@ -4315,7 +4315,7 @@ SQLITE_API int sqlite3_prepare_v2(
   const char **pzTail     /* OUT: Pointer to unused portion of zSql */
 );
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_prepare_v3(
   sqlite3 *db,            /* Database handle */
   const char *zSql,       /* SQL statement, UTF-8 encoded */
@@ -4340,7 +4340,7 @@ SQLITE_API int sqlite3_prepare16_v2(
   const void **pzTail     /* OUT: Pointer to unused portion of zSql */
 );
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_prepare16_v3(
   sqlite3 *db,            /* Database handle */
   const void *zSql,       /* SQL statement, UTF-16 encoded */
@@ -4396,7 +4396,7 @@ SQLITE_API const char *sqlite3_sql(sqlite3_stmt *pStmt);
 SQLITE_AVAILABLE(macos(10.12), ios(10.0), watchos(3.0), tvos(10.0))
 SQLITE_API char *sqlite3_expanded_sql(sqlite3_stmt *pStmt);
 
-SQLITE_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+SQLITE_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 SQLITE_API const char *sqlite3_normalized_sql(sqlite3_stmt *pStmt);
 
 /*
@@ -4459,7 +4459,7 @@ SQLITE_API int sqlite3_stmt_readonly(sqlite3_stmt *pStmt);
 ** ^The sqlite3_stmt_isexplain(S) interface returns 0 if S is
 ** an ordinary statement or a NULL pointer.
 */
-SQLITE_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+SQLITE_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 SQLITE_API int sqlite3_stmt_isexplain(sqlite3_stmt *pStmt);
 
 /*
@@ -4731,7 +4731,7 @@ SQLITE_API int sqlite3_bind_text64(sqlite3_stmt*, int, const char*, sqlite3_uint
                          void(*)(void*), unsigned char encoding);
 SQLITE_API int sqlite3_bind_value(sqlite3_stmt*, int, const sqlite3_value*);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_bind_pointer(sqlite3_stmt*, int, void*, const char*,void(*)(void*));
 
 SQLITE_API int sqlite3_bind_zeroblob(sqlite3_stmt*, int, int n);
@@ -5529,7 +5529,7 @@ SQLITE_API int sqlite3_create_function_v2(
   void(*xDestroy)(void*)
 );
 
-SQLITE_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+SQLITE_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 SQLITE_API int sqlite3_create_window_function(
   sqlite3 *db,
   const char *zFunctionName,
@@ -5799,7 +5799,7 @@ SQLITE_API double sqlite3_value_double(sqlite3_value*);
 SQLITE_API int sqlite3_value_int(sqlite3_value*);
 SQLITE_API sqlite3_int64 sqlite3_value_int64(sqlite3_value*);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void *sqlite3_value_pointer(sqlite3_value*, const char*);
 
 SQLITE_API const unsigned char *sqlite3_value_text(sqlite3_value*);
@@ -5811,10 +5811,10 @@ SQLITE_API int sqlite3_value_bytes16(sqlite3_value*);
 SQLITE_API int sqlite3_value_type(sqlite3_value*);
 SQLITE_API int sqlite3_value_numeric_type(sqlite3_value*);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_value_nochange(sqlite3_value*);
 
-SQLITE_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0))
+SQLITE_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0))
 SQLITE_API int sqlite3_value_frombind(sqlite3_value*);
 
 /*
@@ -6192,7 +6192,7 @@ SQLITE_API void sqlite3_result_text16le(sqlite3_context*, const void*, int,void(
 SQLITE_API void sqlite3_result_text16be(sqlite3_context*, const void*, int,void(*)(void*));
 SQLITE_API void sqlite3_result_value(sqlite3_context*, sqlite3_value*);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void sqlite3_result_pointer(sqlite3_context*, void*,const char*,void(*)(void*));
 
 SQLITE_API void sqlite3_result_zeroblob(sqlite3_context*, int n);
@@ -6537,7 +6537,7 @@ SQLITE_API sqlite3 *sqlite3_db_handle(sqlite3_stmt*);
 ** threads should mutex-protect calls to this API and should make their own
 ** private copy of the result prior to releasing the mutex.
 */
-SQLITE_AVAILABLE(macosx(13.0),ios(16.0),tvos(16.0),watchos(9.0))
+SQLITE_AVAILABLE(macosx(13.0),ios(16.0), bridgeos(7.0),tvos(16.0),watchos(9.0))
 SQLITE_API const char *sqlite3_db_name(sqlite3 *db, int N);
 
 /*
@@ -6600,7 +6600,7 @@ SQLITE_API int sqlite3_db_readonly(sqlite3 *db, const char *zDbName);
 ** ^If the S argument to sqlite3_txn_state(D,S) is not the name of
 ** a valid schema, then -1 is returned.
 */
-SQLITE_AVAILABLE(macos(12.0), ios(15.0), watchos(8.0), tvos(15.0))
+SQLITE_AVAILABLE(macos(12.0), ios(15.0), bridgeos(6.0), watchos(8.0), tvos(15.0))
 SQLITE_API int sqlite3_txn_state(sqlite3*,const char *zSchema);
 
 /*
@@ -8179,13 +8179,13 @@ SQLITE_API int sqlite3_test_control(int op, ...);
 ** SQLite is compiled with the [-DSQLITE_OMIT_VACUUM] option.  Also,
 ** new keywords may be added to future releases of SQLite.
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_keyword_count(void);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_keyword_name(int,const char**,int*);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_keyword_check(const char*,int);
 
 /*
@@ -8231,7 +8231,7 @@ typedef struct sqlite3_str sqlite3_str;
 ** the value set for [sqlite3_limit](D,[SQLITE_LIMIT_LENGTH]) instead
 ** of [SQLITE_MAX_LENGTH].
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API sqlite3_str *sqlite3_str_new(sqlite3*);
 
 /*
@@ -8247,7 +8247,7 @@ SQLITE_API sqlite3_str *sqlite3_str_new(sqlite3*);
 ** [sqlite3_str_finish(X)] interface will also return a NULL pointer if the
 ** string in [sqlite3_str] object X is zero bytes long.
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API char *sqlite3_str_finish(sqlite3_str*);
 
 /*
@@ -8282,22 +8282,22 @@ SQLITE_API char *sqlite3_str_finish(sqlite3_str*);
 ** is recorded in the [sqlite3_str] object and can be recovered by a
 ** subsequent call to [sqlite3_str_errcode(X)].
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void sqlite3_str_appendf(sqlite3_str*, const char *zFormat, ...);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void sqlite3_str_vappendf(sqlite3_str*, const char *zFormat, va_list);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void sqlite3_str_append(sqlite3_str*, const char *zIn, int N);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void sqlite3_str_appendall(sqlite3_str*, const char *zIn);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void sqlite3_str_appendchar(sqlite3_str*, int N, char C);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API void sqlite3_str_reset(sqlite3_str*);
 
 /*
@@ -8329,13 +8329,13 @@ SQLITE_API void sqlite3_str_reset(sqlite3_str*);
 ** outside the range of 0 to [sqlite3_str_length(X)] and do not read or
 ** write any byte after any subsequent sqlite3_str method call.
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_str_errcode(sqlite3_str*);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_str_length(sqlite3_str*);
 
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API char *sqlite3_str_value(sqlite3_str*);
 
 /*
@@ -9570,7 +9570,7 @@ SQLITE_API int sqlite3_vtab_on_conflict(sqlite3 *);
 ** current implementation, the sqlite3_vtab_nochange() interface does always
 ** returns false for the enhanced [UPDATE FROM] statement.
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_vtab_nochange(sqlite3_context*);
 
 /*
@@ -9606,7 +9606,7 @@ SQLITE_API int sqlite3_vtab_nochange(sqlite3_context*);
 ** <li><p> Otherwise, "BINARY" is returned.
 ** </ol>
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API const char *sqlite3_vtab_collation(sqlite3_index_info*,int);
 
 /*
@@ -9680,7 +9680,7 @@ SQLITE_API const char *sqlite3_vtab_collation(sqlite3_index_info*,int);
 ** valid to do so, on the other hand, might cause SQLite to return incorrect
 ** results.
 */
-SQLITE_AVAILABLE(macosx(13.0),ios(16.0),tvos(16.0),watchos(9.0))
+SQLITE_AVAILABLE(macosx(13.0),ios(16.0), bridgeos(7.0),tvos(16.0),watchos(9.0))
 SQLITE_API int sqlite3_vtab_distinct(sqlite3_index_info*);
 
 /*
@@ -9754,7 +9754,7 @@ SQLITE_API int sqlite3_vtab_distinct(sqlite3_index_info*);
 ** [sqlite3_vtab_in_next()] to find all values on the right-hand side
 ** of the IN constraint.
 */
-SQLITE_AVAILABLE(macosx(13.0),ios(16.0),tvos(16.0),watchos(9.0))
+SQLITE_AVAILABLE(macosx(13.0),ios(16.0), bridgeos(7.0),tvos(16.0),watchos(9.0))
 SQLITE_API int sqlite3_vtab_in(sqlite3_index_info*, int iCons, int bHandle);
 
 /*
@@ -9802,10 +9802,10 @@ SQLITE_API int sqlite3_vtab_in(sqlite3_index_info*, int iCons, int bHandle);
 ** implementation needs to retain the *ppOut values for longer, it must make
 ** copies.  The *ppOut values are [protected sqlite3_value|protected].
 */
-SQLITE_AVAILABLE(macosx(13.0),ios(16.0),tvos(16.0),watchos(9.0))
+SQLITE_AVAILABLE(macosx(13.0),ios(16.0), bridgeos(7.0),tvos(16.0),watchos(9.0))
 SQLITE_API int sqlite3_vtab_in_first(sqlite3_value *pVal, sqlite3_value **ppOut);
 
-SQLITE_AVAILABLE(macosx(13.0),ios(16.0),tvos(16.0),watchos(9.0))
+SQLITE_AVAILABLE(macosx(13.0),ios(16.0), bridgeos(7.0),tvos(16.0),watchos(9.0))
 SQLITE_API int sqlite3_vtab_in_next(sqlite3_value *pVal, sqlite3_value **ppOut);
 
 /*
@@ -9848,7 +9848,7 @@ SQLITE_API int sqlite3_vtab_in_next(sqlite3_value *pVal, sqlite3_value **ppOut);
 ** The "_rhs_" in the name of this routine is an abbreviation for
 ** "Right-Hand Side".
 */
-SQLITE_AVAILABLE(macosx(13.0),ios(16.0),tvos(16.0),watchos(9.0))
+SQLITE_AVAILABLE(macosx(13.0),ios(16.0), bridgeos(7.0),tvos(16.0),watchos(9.0))
 SQLITE_API int sqlite3_vtab_rhs_value(sqlite3_index_info*, int, sqlite3_value **ppVal);
 
 /*
@@ -9978,7 +9978,7 @@ SQLITE_API int sqlite3_vtab_rhs_value(sqlite3_index_info*, int, sqlite3_value **
 **
 ** See also: [sqlite3_stmt_scanstatus_reset()]
 */
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(6.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(6.0), tvos(14.0))
 SQLITE_API int sqlite3_stmt_scanstatus(
   sqlite3_stmt *pStmt,      /* Prepared statement for which info desired */
   int idx,                  /* Index of loop to report on */
@@ -10010,7 +10010,7 @@ SQLITE_API int sqlite3_stmt_scanstatus_v2(
 ** This API is only available if the library is built with pre-processor
 ** symbol [SQLITE_ENABLE_STMT_SCANSTATUS] defined.
 */
-SQLITE_AVAILABLE(macos(11.0), ios(14.0), watchos(6.0), tvos(14.0))
+SQLITE_AVAILABLE(macos(11.0), ios(14.0), bridgeos(5.0), watchos(6.0), tvos(14.0))
 SQLITE_API void sqlite3_stmt_scanstatus_reset(sqlite3_stmt*);
 
 /*
@@ -10238,7 +10238,7 @@ SQLITE_API int sqlite3_snapshot_cmp(
 **
 ** SQLITE_OK is returned if successful, or an SQLite error code otherwise.
 */
-SQLITE_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0))
+SQLITE_AVAILABLE(macos(10.13), ios(11.0), bridgeos(2.0), watchos(4.0), tvos(11.0))
 SQLITE_API int sqlite3_snapshot_recover(sqlite3 *db, const char *zDb);
 
 /*
@@ -10277,7 +10277,7 @@ SQLITE_API int sqlite3_snapshot_recover(sqlite3 *db, const char *zDb);
 ** This interface is omitted if SQLite is compiled with the
 ** [SQLITE_OMIT_DESERIALIZE] option.
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API unsigned char *sqlite3_serialize(
   sqlite3 *db,           /* The database connection */
   const char *zSchema,   /* Which DB to serialize. ex: "main", "temp", ... */
@@ -10334,7 +10334,7 @@ SQLITE_API unsigned char *sqlite3_serialize(
 ** This interface is omitted if SQLite is compiled with the
 ** [SQLITE_OMIT_DESERIALIZE] option.
 */
-SQLITE_AVAILABLE(macos(10.14), ios(12.0), watchos(5.0), tvos(12.0))
+SQLITE_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), watchos(5.0), tvos(12.0))
 SQLITE_API int sqlite3_deserialize(
   sqlite3 *db,            /* The database connection */
   const char *zSchema,    /* Which DB to reopen with the deserialization */

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Instances of this class are thread safe.
  */
-API_AVAILABLE(macos(14.0), ios(17.0), tvos(17.0)) API_UNAVAILABLE(watchos)
+API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), tvos(17.0)) API_UNAVAILABLE(watchos)
 @interface NERelay : NSObject <NSCopying,NSSecureCoding>
 
 /*!

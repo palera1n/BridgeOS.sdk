@@ -35,7 +35,7 @@ __BEGIN_DECLS
 
 int backtrace(void**,int) __OSX_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);
 
-API_AVAILABLE(macosx(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macosx(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 OS_EXPORT
 int backtrace_from_fp(void *startfp, void **array, int size);
 
@@ -54,7 +54,7 @@ struct image_offset {
 	uint32_t offset;
 };
 
-API_AVAILABLE(macosx(10.14), ios(12.0), tvos(12.0), watchos(5.0))
+API_AVAILABLE(macosx(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(5.0))
 OS_EXPORT
 void backtrace_image_offsets(void* const* array,
 		struct image_offset *image_offsets, int size);
@@ -90,7 +90,7 @@ void backtrace_image_offsets(void* const* array,
  * @result
  * The number of pointers actually written.
  */
-API_AVAILABLE(macosx(12.0), ios(15.0), tvos(15.0), watchos(8.0))
+API_AVAILABLE(macosx(12.0), ios(15.0), bridgeos(6.0), tvos(15.0), watchos(8.0))
 size_t backtrace_async(void** array, size_t length, uint32_t *task_id);
 
 __END_DECLS

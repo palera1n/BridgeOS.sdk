@@ -2662,7 +2662,7 @@ typedef void (^AUVoiceIOMutedSpeechActivityEventListener)(AUVoiceIOSpeechActivit
  */
 CF_ENUM(AudioUnitPropertyID) {
 	kAUVoiceIOProperty_MutedSpeechActivityEventListener = 2106
-} API_AVAILABLE(ios(15.0), macos(14.0), tvos(17.0)) API_UNAVAILABLE(watchos);
+} API_AVAILABLE(ios(15.0), bridgeos(6.0), macos(14.0), tvos(17.0)) API_UNAVAILABLE(watchos);
 
 
 /*!
@@ -2708,7 +2708,7 @@ typedef struct AUVoiceIOOtherAudioDuckingConfiguration AUVoiceIOOtherAudioDuckin
  */
 CF_ENUM(AudioUnitPropertyID) {
 	kAUVoiceIOProperty_OtherAudioDuckingConfiguration =  2108
-} API_AVAILABLE(ios(17.0), macos(14.0)) API_UNAVAILABLE(watchos, tvos);
+} API_AVAILABLE(ios(17.0), bridgeos(8.0), macos(14.0)) API_UNAVAILABLE(watchos, tvos);
 
 #pragma mark - AUVoiceProcessing unit deprecated properties
 

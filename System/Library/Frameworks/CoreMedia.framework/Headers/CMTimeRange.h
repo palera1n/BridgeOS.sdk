@@ -233,7 +233,7 @@ CM_EXPORT CMTime
 CMTimeFoldIntoRange(
 				CMTime time,					/*! @param time				The CMTime to fold. */
 				CMTimeRange foldRange )			/*! @param foldRange		The CMTimeRange into which to fold it. */
-							API_AVAILABLE(macos(10.14), ios(12.0), tvos(12.0), watchos(6.0));
+							API_AVAILABLE(macos(10.14), ios(12.0), bridgeos(3.0), tvos(12.0), watchos(6.0));
 
 /*!
 	@function	CMTimeRangeFromTimeToTime

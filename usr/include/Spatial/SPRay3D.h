@@ -22,7 +22,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DMake(SPPoint3D origin,
                     SPVector3D direction)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -56,7 +56,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DMakeWithVector(simd_double3 origin,
                               simd_double3 direction)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -76,7 +76,7 @@ SPRay3D SPRay3DMakeWithVector(simd_double3 origin,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRay3DEqualToRay(SPRay3D ray1, SPRay3D ray2)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -100,7 +100,7 @@ bool SPRay3DEqualToRay(SPRay3D ray1, SPRay3D ray2) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DTranslate(SPRay3D ray, SPVector3D offset)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_SWIFT_NAME(Ray3D.translated(self:by:))
 SPATIAL_OVERLOADABLE
@@ -142,7 +142,7 @@ SPRay3D SPRay3DTranslate(SPRay3D ray, SPSize3D offset) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DRotate(SPRay3D ray, SPRotation3D rotation)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -166,7 +166,7 @@ SPRay3D SPRay3DRotate(SPRay3D ray, SPRotation3D rotation) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DRotateByQuaternion(SPRay3D ray, simd_quatd quaternion)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -190,7 +190,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DApplyPose(SPRay3D ray,
                                SPPose3D pose)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -215,7 +215,7 @@ SPRay3D SPRay3DApplyPose(SPRay3D ray,
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRay3DIntersectsRect(SPRay3D ray, SPRect3D rect)
-__API_AVAILABLE(macos(13.0), ios(16.0), watchos(9.0), tvos(16.0));
+__API_AVAILABLE(macos(13.0), ios(16.0), bridgeos(7.0), watchos(9.0), tvos(16.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -263,7 +263,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DApplyAffineTransform(SPRay3D ray,
                                     SPAffineTransform3D transform)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -285,7 +285,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DUnapplyAffineTransform(SPRay3D ray,
                                       SPAffineTransform3D transform)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -307,7 +307,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DApplyProjectiveTransform(SPRay3D ray,
                                         SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -329,7 +329,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DUnapplyProjectiveTransform(SPRay3D ray,
                                           SPProjectiveTransform3D transform)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -353,7 +353,7 @@ SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DUnapplyPose(SPRay3D ray,
                            SPPose3D pose)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -368,7 +368,7 @@ SPRay3D SPRay3DUnapplyPose(SPRay3D ray,
 /*!
  @abstract  The ray with the value zero.
  */
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 SPATIAL_SWIFT_NAME(Ray3D.zero)
 static const SPRay3D SPRay3DZero = {
     .origin = { 0, 0, 0 },
@@ -378,7 +378,7 @@ static const SPRay3D SPRay3DZero = {
 /*!
  @abstract The ray with an infinite origin and direction.
  */
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0))
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0))
 SPATIAL_SWIFT_NAME(Ray3D.infinity)
 static const SPRay3D SPRay3DInfinity = {
     .origin = { INFINITY, INFINITY, INFINITY },
@@ -394,7 +394,7 @@ static const SPRay3D SPRay3DInfinity = {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRay3DIsNaN(SPRay3D ray)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -413,7 +413,7 @@ bool SPRay3DIsNaN(SPRay3D ray) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRay3DIsFinite(SPRay3D ray)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -432,7 +432,7 @@ bool SPRay3DIsFinite(SPRay3D ray) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 bool SPRay3DIsZero(SPRay3D ray)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -452,7 +452,7 @@ bool SPRay3DIsZero(SPRay3D ray) {
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DRotateAroundPoint(SPRay3D ray, SPRotation3D rotation, SPPoint3D pivot)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE
@@ -479,7 +479,7 @@ SPRay3D SPRay3DRotateAroundPoint(SPRay3D ray, SPRotation3D rotation, SPPoint3D p
 SPATIAL_INLINE
 SPATIAL_OVERLOADABLE
 SPRay3D SPRay3DRotateByQuaternionAroundPoint(SPRay3D ray, simd_quatd quaternion, SPPoint3D pivot)
-__API_AVAILABLE(macos(14.0), ios(17.0), watchos(10.0), tvos(17.0));
+__API_AVAILABLE(macos(14.0), ios(17.0), bridgeos(8.0), watchos(10.0), tvos(17.0));
 
 SPATIAL_REFINED_FOR_SWIFT
 SPATIAL_OVERLOADABLE

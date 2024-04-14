@@ -216,7 +216,7 @@ CFN_EXPORT const CFStringRef kCFStreamPropertyConnectionIsCellular CF_AVAILABLE(
  *  disallows use of expensive interfaces.
  *
  */
-CFN_EXPORT const CFStringRef kCFStreamPropertyAllowExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+CFN_EXPORT const CFStringRef kCFStreamPropertyAllowExpensiveNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  *  kCFStreamPropertyConnectionIsExpensive
@@ -227,7 +227,7 @@ CFN_EXPORT const CFStringRef kCFStreamPropertyAllowExpensiveNetworkAccess API_AV
  *  It returns kCFBooleanFalse if the stream is connected over an "inexpensive"
  *  interface.  If the connection has not been established yet NULL will be returned.
  */
-CFN_EXPORT const CFStringRef kCFStreamPropertyConnectionIsExpensive API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+CFN_EXPORT const CFStringRef kCFStreamPropertyConnectionIsExpensive API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  *  kCFStreamPropertyAllowConstrainedNetworkAccess
@@ -240,7 +240,7 @@ CFN_EXPORT const CFStringRef kCFStreamPropertyConnectionIsExpensive API_AVAILABL
  *  disallows use of constrained interfaces.
  *
  */
-CFN_EXPORT const CFStringRef kCFStreamPropertyAllowConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), watchos(6.0), tvos(13.0));
+CFN_EXPORT const CFStringRef kCFStreamPropertyAllowConstrainedNetworkAccess API_AVAILABLE(macos(10.15), ios(13.0), bridgeos(4.0), watchos(6.0), tvos(13.0));
 
 /*
  *  kCFStreamErrorDomainWinSock
